@@ -6,13 +6,13 @@ from pathlib import Path
 import struct
 import zipfile
 
-WORKSPACE=Path('/workspace')
+WORKSPACE=Path(__file__).resolve().parents[2]
 CHARACTER=WORKSPACE/'assets/characters/inez'
 
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--browser-report',required=True)
-    parser.add_argument('--output',default='/workspace/artifacts/inez-playable-viewer.zip')
+    parser.add_argument('--output',default=str(Path(__file__).resolve().parents[2]/'artifacts/inez-playable-viewer.zip'))
     args=parser.parse_args()
     report_path=Path(args.browser_report)
     report=json.loads(report_path.read_text())

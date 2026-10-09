@@ -4,7 +4,7 @@ import json
 import math
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
-ROOT = Path('/workspace/assets/characters/inez')
+ROOT = Path(__file__).resolve().parents[2]/'assets/characters/inez'
 VIEWS = [
     '01_face_front_neutral', '02_face_left_profile', '03_face_right_profile', '04_face_three_quarter',
     '05_body_front', '06_body_side', '07_body_back', '08_eyes_closeup',

@@ -3,7 +3,7 @@ from pathlib import Path
 from PIL import Image
 import argparse, json, hashlib, shutil, datetime
 
-ROOT = Path('/workspace/assets/characters/inez')
+ROOT = Path(__file__).resolve().parents[2]/'assets/characters/inez'
 LEDGER = ROOT / 'qa/generation_ledger.json'
 
 def main():
@@ -27,7 +27,7 @@ def main():
         if not prompt.is_file():
             raise SystemExit('Missing retained prompt')
         item = dict(call=len(ledger['calls'])+1, view=a.view, version=len(attempts)+1,
-                    prompt=str(prompt.relative_to(Path('/workspace'))),
+                    prompt=str(prompt.relative_to(ROOT.parents[2])),
                     sent_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),
                     status='sent', anchors=['references/original/inez_portraits.jpg',
                                              'references/original/inez_turnaround.jpg'])

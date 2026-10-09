@@ -178,12 +178,16 @@ def apply_static_modifier(obj, modifier):
     obj.select_set(False)
 
 
-def actual_thickness(obj, thickness_m=0.0022):
-    """Applied thickness survives GLB rather than depending on render modifiers."""
+def actual_thickness(obj, thickness_m=0.0022, clamp=0.0, offset=-1.0):
+    """Applied thickness survives GLB rather than depending on render modifiers.
+
+    clamp > 0 limits the even-offset factor (v04+): near-folded faces in the
+    armpit otherwise produced v03's 0.4-0.9 m hem/forearm spikes."""
     modifier=obj.modifiers.new('Authored_real_cloth_thickness','SOLIDIFY')
     modifier.thickness=thickness_m
-    modifier.offset=-1.0
+    modifier.offset=offset
     modifier.use_even_offset=True
+    modifier.thickness_clamp=clamp
     apply_static_modifier(obj,modifier)
     obj['cloth_thickness_m']=thickness_m
 

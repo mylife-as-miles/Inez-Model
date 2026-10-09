@@ -2,7 +2,7 @@
 from pathlib import Path
 import hashlib,json,zipfile
 
-root=Path('/workspace')
+root=Path(__file__).resolve().parents[2]
 dest=root/'artifacts/inez-initial-reference-review.zip'
 dest.parent.mkdir(exist_ok=True)
 folders=['docs','reports','assets/characters/inez','tools/inez','viewer','references']

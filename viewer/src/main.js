@@ -462,7 +462,12 @@ try {
     $('asset-info').textContent = JSON.stringify({ modelLoaded: false, backend: state.backend, productionStatus: status }, null, 2);
   } else {
     $('notice').textContent = 'Loading authored character GLB…';
-    const modelResponse = await fetch(assetRoot + 'model/inez.glb', { cache: 'no-store' });
+    // ?model= selects another export below model/ (for example a staged work/
+    // revision under review). Anything outside that folder is refused.
+    const requestedModel = new URLSearchParams(location.search).get('model') || 'inez.glb';
+    if (!/^[\w-]+(\/[\w.-]+)*\.glb$/.test(requestedModel) || requestedModel.includes('..')) throw new Error(`Refused model path: ${requestedModel}`);
+    state.modelPath = 'model/' + requestedModel;
+    const modelResponse = await fetch(assetRoot + state.modelPath, { cache: 'no-store' });
     if (!modelResponse.ok) throw new Error('GLB missing: HTTP ' + modelResponse.status);
     const buffer = await modelResponse.arrayBuffer(); state.resourceBytes = buffer.byteLength;
     const gltf = await new GLTFLoader().parseAsync(buffer, assetRoot + 'model/');

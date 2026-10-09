@@ -3,7 +3,7 @@ import sys,bpy,bmesh
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from model_dress import export_glb
-root=Path('/workspace/assets/characters/inez/model')
+root=Path(__file__).resolve().parents[2]/'assets/characters/inez/model'
 for side in ['L','R']:
  o=bpy.data.objects['Inez_Boot_Sole_'+side];bm=bmesh.new();bm.from_mesh(o.data)
  caps=[f for f in bm.faces if len(f.verts)>4]

@@ -12,7 +12,7 @@ from pathlib import Path
 
 from playwright.async_api import async_playwright
 
-ROOT = Path('/workspace/assets/characters/inez')
+ROOT = Path(__file__).resolve().parents[2]/'assets/characters/inez'
 
 
 def maximum_change(first, second):

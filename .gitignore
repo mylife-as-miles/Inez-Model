@@ -13,3 +13,7 @@ __pycache__/
 /shared/
 /library-files/
 .DS_Store
+# Raw/working third-party scan data is never committed (size and licensing);
+# manifests, licenses and checksums under scans/ are.
+assets/characters/inez/scans/source/
+assets/characters/inez/scans/working/
