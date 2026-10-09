@@ -172,8 +172,21 @@ export class AnimationController {
     this.mixer.addEventListener('finished', event => this.onFinished?.(event.action));
   }
 
+  // External clip (for example a retargeted motion-capture GLB): a plain body
+  // action with its metadata (source label, in-place flag, matching speed).
+  addClip(clip, info = {}) {
+    const action = this.mixer.clipAction(clip);
+    this.clips.push(clip);
+    this.actions.set(clip.name, action);
+    this.clipInfo[clip.name] = { ...(this.clipInfo[clip.name] ?? {}), ...info };
+    if (info.one_shot) { action.setLoop(THREE.LoopOnce, 1); action.clampWhenFinished = true; }
+    return action;
+  }
+
   setClipInfo(info = {}) {
-    this.clipInfo = info;
+    // Keep metadata of external clips added before the manifest arrived.
+    const external = Object.fromEntries(Object.entries(this.clipInfo).filter(([, value]) => value?.external));
+    this.clipInfo = { ...info, ...external };
     for (const [name, action] of this.actions) {
       if (info[name]?.one_shot) { action.setLoop(THREE.LoopOnce, 1); action.clampWhenFinished = true; }
     }

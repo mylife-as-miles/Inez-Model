@@ -210,6 +210,23 @@ async def run(args):
                 await capture(page, image)
                 report['screenshots'].append(str(image.relative_to(ROOT)))
             await page.evaluate('window.inezViewer.setWireframe(false)')
+            # The reference comparison panel is HTML beside the canvas, so it
+            # needs a real page screenshot. These have timed out under
+            # SwiftShader before; a failure is recorded, never replaced.
+            await page.evaluate('''()=>{const v=window.inezViewer;v.captureMode(false);v.pause(true);v.controls.autoRotate=false;
+                v.setView('face_front');v.setLighting('studio');v.setExpression('Neutral');v.setAnimation('rest',{transition:0});
+                v.setReference('original/inez_portraits.jpg');}''')
+            await page.wait_for_function("document.getElementById('reference-image').complete", timeout=60000)
+            await page.wait_for_timeout(2500)
+            await page.evaluate('window.inezViewer.renderFrame()')
+            image = destination/'19_reference_comparison_page.png'
+            try:
+                await page.screenshot(path=str(image), timeout=180000, animations='disabled')
+                report['screenshots'].append(str(image.relative_to(ROOT)))
+                report['reference_comparison_screenshot'] = 'captured (full page, original A beside the live canvas)'
+            except Exception as error:
+                report['reference_comparison_screenshot'] = f'failed: {type(error).__name__}: {error}'
+            await page.evaluate("window.inezViewer.setReference('none')")
             report['viewer_errors'] = await page.evaluate('window.inezViewer.errors')
             report['viewer_warnings'] = await page.evaluate('window.inezViewer.warnings')
             report['checks']['browser_has_no_runtime_errors'] = not report['page_errors'] and not report['viewer_errors']

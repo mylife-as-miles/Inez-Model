@@ -106,9 +106,13 @@ def main():
                  '--level', '2', '--rdo', '--zstd', '18'], env=env)
         etc1s = work/f'{level}_etc1s.glb'
         run(NPX+['etc1s', uastc, etc1s, '--slots', '{baseColorTexture,emissiveTexture}', '--quality', '192'], env=env)
+        # The validator cannot decode meshopt buffers, so the accessor data is
+        # checked on the last uncompressed step and the structure on the output.
+        before_meshopt = validate(etc1s, work/f'{level}_etc1s_validation.json')
         out = CHAR/'model'/name
         run(NPX+['meshopt', etc1s, out, '--level', 'medium'], env=env)
         report['outputs'][name] = {'bytes': out.stat().st_size, 'level': level,
+                                   'validation_before_meshopt': before_meshopt,
                                    'validation': validate(out, CHAR/f'qa/technical/{Path(name).stem}_validation.json')}
     prefixes = [(str(work.resolve()), '<work>'), (str(Path(args.animated).resolve().parent), '<build>'),
                 (str(ROOT)+'/', '')]

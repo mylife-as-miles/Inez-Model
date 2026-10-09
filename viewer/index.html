@@ -18,6 +18,20 @@
       <label class="range">Clip time <output id="timeline-value">0.00 s</output><input id="timeline" type="range" min="0" max="1" step="0.001" value="0" disabled></label>
       <label class="check"><input id="follow" type="checkbox" checked> Follow the character</label>
     </details>
+    <details open><summary>Animation lab</summary>
+      <p id="clip-source" class="hint">Clip source: none.</p>
+      <div class="paired">
+        <label class="check"><input id="lab-skeleton" type="checkbox"> Skeleton</label>
+        <label class="check"><input id="lab-contacts" type="checkbox"> Foot contacts</label>
+        <label class="check"><input id="lab-trail" type="checkbox"> Root trajectory</label>
+        <label class="check"><input id="lab-comparison" type="checkbox"> Source motion</label>
+      </div>
+      <label class="check"><input id="lab-travel" type="checkbox" checked> Travel at the clip's matching speed</label>
+      <label>Test floor<select id="lab-terrain"></select></label>
+      <p class="hint">Clips are not terrain-adaptive yet (no runtime foot IK): on stairs, slopes and uneven floors the markers show the resulting floating or penetration.</p>
+      <label>Bone<select id="lab-bone" disabled><option value="">No character loaded</option></select></label>
+      <pre id="lab-info">No measurements yet.</pre>
+    </details>
     <details open><summary>Face and gaze</summary>
       <label>Performance clip<select id="performance" disabled><option value="">No facial clips</option></select></label>
       <button id="play-performance" disabled>Play facial clip</button>

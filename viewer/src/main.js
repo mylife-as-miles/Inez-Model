@@ -5,6 +5,7 @@ import { KTX2Loader } from 'three/addons/loaders/KTX2Loader.js';
 import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
 import { FacialControls, AnimationController, findBone } from './character-controls.js';
 import { MaterialInspector, describeMaterial } from './materials.js';
+import { AnimationLab, TERRAINS } from './animation-lab.js';
 import './style.css';
 
 const $ = id => document.getElementById(id);
@@ -60,7 +61,8 @@ key.shadow.camera.near = .1; key.shadow.camera.far = 15; key.shadow.bias = -.000
 scene.add(hemisphere, key, key.target, fill, fill.target, rim, rim.target);
 const ground = new THREE.Mesh(new THREE.PlaneGeometry(24, 24), new THREE.MeshStandardMaterial({ color: '#b6bcc1', roughness: .95 }));
 ground.rotation.x = -Math.PI / 2; ground.position.y = -.002; ground.receiveShadow = true; scene.add(ground);
-let avatar, motion, face, inspector;
+let avatar, motion, face, inspector, lab;
+const timing = { animation_ms: 0, render_ms: 0, lab_ms: 0 };
 let height = 1.7, span = 1.95;
 const allInitialMorphs = new Map();
 const keys = new Set();
@@ -287,6 +289,28 @@ function advance(seconds = 0) {
   characterRoot.updateMatrixWorld(true); renderFrame(); updateState(); syncAnimationUI(); return state.clipTime;
 }
 function renderFrame() { renderer.render(scene, camera); }
+function followCamera(step) {
+  if (!$('follow').checked) return;
+  controls.target.add(step); camera.position.add(step);
+}
+function syncLabUI() {
+  if (!lab || !motion) return;
+  const name = motion.mode === 'manual' ? motion.current : motion.mode;
+  const source = lab.source(name);
+  const info = motion.clipInfo[name] ?? {};
+  $('clip-source').textContent = !source ? 'Clip source: none (rest pose or automatic blend of procedural clips).'
+    : `Clip source: ${source.label}${source.terra ? '' : ' · not TERRA'}${info.matching_speed_m_s ? ` · in place, matching speed ${info.matching_speed_m_s.toFixed(2)} m/s` : ''}${source.licence ? ' · ' + source.licence : ''}`;
+  state.lab = { terrain: lab.terrain, options: { ...lab.options }, contacts: [...lab.stats.contacts],
+    lastPhaseSlipMm: [...lab.stats.lastPhaseSlipMm], maxPhaseSlipMm: [...lab.stats.maxPhaseSlipMm],
+    penetrationMm: [...lab.stats.penetrationMm], timing: { ...timing }, source: source ?? null };
+  const bone = $('lab-bone').value ? lab.boneInfo($('lab-bone').value) : null;
+  $('lab-info').textContent = JSON.stringify({ feet: { L: lab.stats.contacts[0], R: lab.stats.contacts[1] },
+    contact_slip_last_phase_mm: lab.stats.lastPhaseSlipMm, contact_slip_max_mm: lab.stats.maxPhaseSlipMm,
+    below_floor_mm: lab.stats.penetrationMm, cpu_ms: Object.fromEntries(Object.entries(timing).map(([k, v]) => [k, Math.round(v * 100) / 100])),
+    bone }, null, 1);
+}
+function setLab(option, on = true) { if (!lab) return false; const value = lab.set(option, on); const box = $('lab-' + option); if (box) box.checked = value; return value; }
+function setTerrain(name = 'studio') { if (!lab || !lab.setTerrain(name)) return false; $('lab-terrain').value = name; renderFrame(); return true; }
 function inspectMaterials(mode = state.inspection, selected = state.material) {
   if (!inspector) return false;
   try {
@@ -366,6 +390,9 @@ $('render').addEventListener('pointerdown', () => $('render').focus({ preventScr
 $('view').onchange = event => setView(event.target.value);
 $('lighting').onchange = event => setLighting(event.target.value);
 $('animation').onchange = event => setAnimation(event.target.value);
+$('lab-terrain').replaceChildren(...Object.entries(TERRAINS).map(([value, label]) => new Option(label, value)));
+$('lab-terrain').onchange = event => setTerrain(event.target.value);
+for (const option of ['skeleton', 'contacts', 'trail', 'comparison', 'travel']) $('lab-' + option).onchange = event => setLab(option, event.target.checked);
 $('transition').oninput = event => { state.transition = Number(event.target.value); if (motion) motion.transition = state.transition; $('transition-value').textContent = `${state.transition.toFixed(2)} s`; };
 $('playback-speed').oninput = event => setPlaybackSpeed(Number(event.target.value));
 $('movement-speed').oninput = event => setLocomotionSpeed(Number(event.target.value));
@@ -393,7 +420,8 @@ $('crouch').onclick = () => crouch(!state.crouching);
 
 window.inezViewer = { state, errors, warnings, setView, setLighting, setLightControls, setExpression, setViseme, setFaceControls, resetFace,
   setAnimation, setPlaybackSpeed, setLocomotionSpeed, pause, seek, advance, resetPosition, captureMode, inspectMaterials, setWireframe, setReference,
-  turn, crouch, playPerformance, stopPerformance,
+  turn, crouch, playPerformance, stopPerformance, setLab, setTerrain,
+  get lab() { return lab; }, boneInfo: name => lab?.boneInfo(name) ?? null,
   sampleDeformedVertices, boneWorldPositions, getBoneWorldPositions: boneWorldPositions, getMorphInfluences, renderFrame: refreshPose,
   getBone: name => findBone(avatar, name), getAvatar: () => avatar, get avatar() { return avatar; }, get assetInfo() { return state.assetInfo; },
   get meshInventory() { return state.assetInfo?.meshInventory ?? []; },
@@ -404,7 +432,11 @@ setView('body_front'); applyLighting();
 function enableAssetControls(gltf) {
   $('animation').replaceChildren(new Option('A-pose · exported rest', 'rest'));
   if (Object.keys(motion.roles).length) $('animation').add(new Option('Automatic · idle / walk / run', 'automatic'));
-  for (const name of motion.actions.keys()) $('animation').add(new Option(name, name));
+  for (const name of motion.actions.keys()) {
+    const source = lab?.source(name);
+    const tag = source?.terra ? 'TERRA' : source?.kind === 'cmu_mocap' ? 'CMU mocap' : source?.kind === 'synthetic' ? 'synthetic test' : 'procedural';
+    $('animation').add(new Option(`${name} · ${tag}`, name));
+  }
   $('animation').disabled = false;
   for (const id of ['pause', 'reset-position', 'reset-face']) $(id).disabled = false;
   $('performance').replaceChildren(...[...motion.overlays.keys()].map(name => new Option(name.replace(/^Expr_/, ''), name)));
@@ -428,6 +460,9 @@ function enableAssetControls(gltf) {
   $('material').replaceChildren(new Option('All materials', 'all'));
   for (const [uuid, material] of inspector.materials) $('material').add(new Option(material.name || '(unnamed)', uuid));
   $('material').disabled = false; syncFaceUI();
+  const boneNames = []; avatar.traverse(node => { if (node.isBone) boneNames.push(node.name); });
+  $('lab-bone').replaceChildren(new Option('Select a bone…', ''), ...boneNames.map(name => new Option(name, name)));
+  $('lab-bone').disabled = false;
 }
 function collectAssetInfo(gltf) {
   let meshCount = 0, skinnedCount = 0, vertexCount = 0, triangles = 0;
@@ -480,14 +515,21 @@ async function loadAnimationManifest() {
 let last = performance.now(), frames = 0, statsStart = last, uiLast = last;
 renderer.setAnimationLoop(() => {
   const now = performance.now(); const delta = state.paused ? 0 : Math.min(Math.max((now - last) / 1000, 0), .05); last = now;
-  face?.restore(); updateMovement(delta); motion?.update(delta, state.locomotionSpeed);
+  face?.restore(); updateMovement(delta);
+  const t0 = performance.now(); motion?.update(delta, state.locomotionSpeed); const t1 = performance.now();
   face?.apply(delta, characterRoot.getWorldQuaternion(new THREE.Quaternion()));
-  controls.update(); renderFrame(); updateState(); frames++;
-  if (now - uiLast > 120) { syncAnimationUI(); uiLast = now; }
+  lab?.update(delta, followCamera); const t2 = performance.now();
+  controls.update(); renderFrame(); const t3 = performance.now(); updateState(); frames++;
+  // Rolling averages of CPU time per frame (render time is the submission
+  // cost on the CPU; GPU time is not measurable here without timer queries).
+  timing.animation_ms += ((t1 - t0) - timing.animation_ms) * .05;
+  timing.lab_ms += ((t2 - t1) - timing.lab_ms) * .05;
+  timing.render_ms += ((t3 - t2) - timing.render_ms) * .05;
+  if (now - uiLast > 120) { syncAnimationUI(); syncLabUI(); uiLast = now; }
   if (now - statsStart > 1000) {
     state.fps = frames * 1000 / (now - statsStart); frames = 0; statsStart = now;
     const info = state.renderStats;
-    $('stats').textContent = `${state.backend} · ${state.fps.toFixed(0)} FPS · ${info.triangles.toLocaleString()} triangles · ${info.drawCalls} draws · ${info.geometries} geometries / ${info.textures} textures · ${(state.resourceBytes / 1048576).toFixed(1)} MB GLB`;
+    $('stats').textContent = `${state.backend} · ${state.fps.toFixed(0)} FPS · anim ${timing.animation_ms.toFixed(2)} ms · render ${timing.render_ms.toFixed(2)} ms · ${info.triangles.toLocaleString()} triangles · ${info.drawCalls} draws · ${info.geometries} geometries / ${info.textures} textures · ${(state.resourceBytes / 1048576).toFixed(1)} MB GLB`;
   }
 });
 
@@ -528,6 +570,8 @@ try {
     face = new FacialControls(avatar); motion = new AnimationController(avatar, gltf.animations, height); motion.transition = state.transition;
     motion.onFinished = clipFinished;
     await loadAnimationManifest();
+    lab = new AnimationLab({ scene, characterRoot, avatar, motion, assetRoot, warnings, findBone });
+    state.externalClips = await lab.loadClips();
     inspector = new MaterialInspector(avatar); state.assetInfo = collectAssetInfo(gltf);
     $('asset-info').textContent = JSON.stringify(state.assetInfo, null, 2);
     state.ready = true; enableAssetControls(gltf); inspectMaterials(state.inspection, state.material);

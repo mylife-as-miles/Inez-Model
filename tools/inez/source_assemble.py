@@ -65,12 +65,20 @@ def arguments():
     # The dressed build's --dump-fitted output: every source vertex, helpers
     # included, after all identity layers (teeth/tongue come from it).
     parser.add_argument('--fitted', default='')
-    parser.add_argument('--skin-gain', default='0.89,1.075,1.015')
+    # Linear gain on the skin albedo (head bake and body). Chroma measured
+    # with tools/inez/skin_tone_compare.py against both original portraits
+    # (0.89, 1.075, 1.015) at matched exposure. Level x0.42 so the cheek /
+    # grey-knit luminance ratio approaches the originals' 2.64-2.70: it read
+    # 4.4 at x1.0 and 3.67 at x0.70 (AgX compresses: on-screen ratio ~ level^0.54).
+    parser.add_argument('--skin-gain', default='0.3738,0.4515,0.4263')
     # Linear median of the hair albedo. The originals' hair reads R/G ~1.5-1.9,
     # G/B ~1.4-2.0 as rendered; the albedo is set more saturated (2.0, 2.4)
     # because the grey specular sheen desaturates dark strands (measured with
-    # the same landmark patches as the skin).
-    parser.add_argument('--hair-target-linear', default='0.042,0.021,0.0088')
+    # the same landmark patches as the skin). Pass 3: the render read 2x the
+    # originals' hair/cheek luminance at the crown (0.30 vs 0.14-0.16) and
+    # R/G 1.92 at the sides (originals 1.61-1.77), so the albedo is darker and
+    # less saturated (R/G 1.78, G/B 1.99) and the sheen lower.
+    parser.add_argument('--hair-target-linear', default='0.024,0.0135,0.0068')
     return parser.parse_args(sys.argv[sys.argv.index('--')+1:])
 
 
@@ -319,7 +327,7 @@ def hair_material(src_mat, hair_colours, texdir, target_linear=(0.042, 0.021, 0.
     for link in list(bsdf.inputs['Metallic'].links):
         mat.node_tree.links.remove(link)
     bsdf.inputs['Metallic'].default_value = 0.0
-    bsdf.inputs['Specular IOR Level'].default_value = 0.4
+    bsdf.inputs['Specular IOR Level'].default_value = 0.3
     bsdf.inputs['Specular Tint'].default_value = (1.0, 0.78, 0.58, 1.0)
     to_srgb = lambda c: [float(v) for v in np.where(c <= 0.0031308, c*12.92, 1.055*np.maximum(c, 0)**(1/2.4)-0.055)]
     return mat, {'source_median_srgb': to_srgb(median), 'source_median_linear': median.tolist(),
@@ -938,37 +946,99 @@ def prune_hair_near_eyes(hair, eyes, radius=0.022):
     return len(doomed)
 
 
+def smoothstep(v, a, b):
+    t = np.clip((v-a)/(b-a), 0, 1)
+    return t*t*(3-2*t)
+
+
+def box_blur(field, radius):
+    """Separable box blur (integer radius in texels) via cumulative sums."""
+    out = field.astype(np.float32)
+    for axis in (0, 1):
+        pad = np.pad(out, [(radius+1, radius) if a == axis else (0, 0) for a in (0, 1)], mode='edge')
+        c = np.cumsum(pad, axis=axis, dtype=np.float64)
+        hi = np.take(c, np.arange(2*radius+1, c.shape[axis]), axis=axis)
+        lo = np.take(c, np.arange(0, c.shape[axis]-2*radius-1), axis=axis)
+        out = ((hi-lo)/(2*radius+1)).astype(np.float32)
+    return out
+
+
+def texels_per_mm(positions, mask):
+    """Median texel spacing on the surface, from neighbouring texel positions."""
+    both = mask[:, 1:] & mask[:, :-1]
+    step = np.linalg.norm(positions[:, 1:]-positions[:, :-1], axis=-1)[both]
+    step = step[(step > 0) & (step < 0.002)]
+    return 0.001/float(np.median(step)) if len(step) else 6.0
+
+
 def eye_area_tone(rgb, positions, mask, eyes):
     """Brows and under-eye tone per the originals.
 
     Both originals show dense dark-brown brows and soft darkness under the
-    lower lids (age/fatigue cues that must not be beautified away). Asset B's
-    brows are lighter thin strokes and its under-eye skin is clean, so the
-    existing brow strokes are deepened (not redrawn: only texels already
-    darker than the surrounding skin in the brow band) and a soft crescent
-    below each lower lid is darkened by up to 12%."""
+    lower lids (fatigue cues that must not be beautified away). Asset B's
+    brows are thin strokes and its under-eye skin is clean.
+
+    Brows: only texels clearly darker than the skin around them (brow hair,
+    not skin) inside a soft window over each brow are taken; the stroke mask
+    is widened by about 1.3 mm and tinted dark brown, keeping the strokes'
+    own shape and placement from Asset B. The window has soft edges, so no
+    skin outside the brow changes and no rectangle shows. Run before the
+    freckles, which would otherwise read as brow hair."""
     x, y, z = positions[..., 0], positions[..., 1], positions[..., 2]
     lum = rgb@np.array([0.2126, 0.7152, 0.0722], np.float32)
     out = rgb.copy()
-    brow_texels = 0
+    per_mm = texels_per_mm(positions, mask)
+    strokes = np.zeros(mask.shape, np.float32)
+    window = np.zeros(mask.shape, np.float32)
+    for e in eyes:
+        side = 1.0 if e.x > 0 else -1.0
+        lat, dz = (x-e.x)*side, z-e.z
+        front = mask & (y < e.y+0.006)
+        win = (smoothstep(lat, -0.027, -0.020)*(1-smoothstep(lat, 0.031, 0.039))
+               * smoothstep(dz, 0.003, 0.008)*(1-smoothstep(dz, 0.027, 0.034)))*front
+        core = win > 0.5
+        if core.sum() < 100:
+            continue
+        ref = np.percentile(lum[core], 70)
+        hair = np.clip(((ref-lum)/max(ref, 1e-4)-0.10)/0.20, 0, 1)*win
+        strokes = np.maximum(strokes, hair)
+        window = np.maximum(window, win)
+    radius = max(1, int(round(1.3*per_mm)))
+    dense = np.clip(box_blur(strokes, radius)*2.6, 0, 1)
+    brow = np.maximum(strokes, dense*0.9)*window
+    brow_linear = np.array([0.022, 0.014, 0.009], np.float32)
+    alpha = (0.82*brow)[..., None]
+    out = out*(1-alpha)+brow_linear*alpha
     for e in eyes:
         dx, dz = x-e.x, z-e.z
         front = mask & (y < e.y+0.006)
-        band = front & (dz > 0.008) & (dz < 0.032) & (np.abs(dx) < 0.03)
-        if band.sum() < 100:
-            continue
-        ref = np.percentile(lum[band], 75)
-        dark = np.clip((ref-lum)/max(ref, 1e-4)/0.35, 0, 1)*band
-        # 3x3 max filter twice: strokes thicken by about 0.4 mm on the 4K map.
-        for _ in range(2):
-            pad = np.pad(dark, 1)
-            dark = np.max([pad[i:i+dark.shape[0], j:j+dark.shape[1]] for i in range(3) for j in range(3)], axis=0)*band
-        out *= (1-0.38*dark[..., None]*np.array([1.0, 1.05, 1.1], np.float32))
-        brow_texels += int((dark > 0.2).sum())
         crescent = np.exp(-((dx/0.016)**2+((dz+0.0135)/0.0055)**2))*front
-        out *= (1-crescent[..., None]*np.array([0.11, 0.13, 0.08], np.float32))
-    return out, {'brow_texels_deepened': brow_texels, 'brow_darkening_max': 0.38, 'under_eye_darkening_max': 0.13,
+        out *= (1-crescent[..., None]*np.array([0.15, 0.18, 0.12], np.float32))
+    return out, {'brow_texels': int((brow > 0.3).sum()), 'brow_widening_mm': round(radius/per_mm, 2),
+                 'texels_per_mm': round(per_mm, 2), 'brow_colour_linear': brow_linear.tolist(),
+                 'brow_opacity_max': 0.82, 'under_eye_darkening_max': 0.18,
                  'evidence': 'dense dark brows and under-eye darkness visible in both originals'}
+
+
+def lid_margin_tone(rgb, positions, mask, eyes, radius):
+    """Asset B's eyeballs bake onto the production lid margins (the thin lid
+    surfaces that touch the eyeball) as white rims. Texels within 1.2 mm of
+    the eyeball surface take the lid-margin tone, the surrounding skin darker
+    and redder, fading out by 2.0 mm."""
+    out = rgb.copy()
+    replaced = 0
+    for e in eyes:
+        c = np.array(e, np.float32)
+        gap = np.linalg.norm(positions-c, axis=-1)-radius
+        ring = mask & (gap > 0.004) & (gap < 0.010) & (positions[..., 1] < c[1])
+        if ring.sum() < 50:
+            continue
+        target = np.median(rgb[ring], axis=0)*np.array([0.74, 0.55, 0.52], np.float32)
+        w = (1-smoothstep(gap, 0.0012, 0.0020))*mask
+        out = out*(1-w[..., None])+target*w[..., None]
+        replaced += int((w > 0.5).sum())
+    return out, {'texels_replaced': replaced, 'eyeball_radius_m': round(float(radius), 4),
+                 'note': 'Asset B eyeball colour removed from the production lid margins'}
 
 
 def head_seam_points(body):
@@ -1023,9 +1093,9 @@ def build_mouth_interior(fitted_path, arm, texdir):
             elif line.startswith('f ') and cur in ('helper-upper-teeth', 'helper-lower-teeth', 'helper-tongue'):
                 groups.setdefault(cur, []).append([int(t.split('/')[0])-1 for t in line.split()[1:]])
     # Offsets (m): the helper incisal edges sat level with the upper lip's
-    # lower edge, so no tooth showed in an open mouth; ~2.5 mm of upper
+    # lower edge, so no tooth showed in an open mouth; ~3 mm of upper
     # incisor below a relaxed upper lip is typical for a young adult.
-    specs = {'helper-upper-teeth': ('Inez_TeethUpper', 'head', 2, (0, 0, -0.0025)),
+    specs = {'helper-upper-teeth': ('Inez_TeethUpper', 'head', 2, (0, 0, -0.0055)),
              'helper-lower-teeth': ('Inez_TeethLower', 'jaw', 2, (0, -0.002, 0.0015)),
              'helper-tongue': ('Inez_Tongue', 'jaw', 1, (0, 0, -0.001))}
     report = {}
@@ -1125,8 +1195,8 @@ def iris_albedo(resolution=1024, seed=11):
 
 
 def refine_eyes(scene, eyes, texdir):
-    """Iris colour from the originals, a near-invisible wet tearline and finer
-    lower lashes (the 30 thick strands read as a black comb at portrait range)."""
+    """Iris colour from the originals, no tearline strips and finer lower
+    lashes (the 30 thick strands read as a black comb at portrait range)."""
     report = {}
     img = save_image('inez_iris_hazel_albedo_v05', iris_albedo(), texdir)
     for obj in scene.objects:
@@ -1142,15 +1212,14 @@ def refine_eyes(scene, eyes, texdir):
                                          'cheek, applied to the calibrated skin albedo; shadow/cornea compensated')
     report['iris'] = {'albedo': img.name, 'outer_srgb': [0.50, 0.45, 0.31], 'inner_srgb': [0.53, 0.42, 0.25]}
     for side in ('L', 'R'):
+        # The tearline strips were fitted to the dressed base's lid margins;
+        # after the lid-opening layer they float off the lids and render as
+        # white polylines (eye close-ups, pass 3). The cornea's specular
+        # carries the wet look, so the strips are removed.
         tear = scene.objects.get(f'Inez_Tearline_{side}')
         if tear:
-            for mat in tear.data.materials:
-                bsdf = next(n for n in mat.node_tree.nodes if n.type == 'BSDF_PRINCIPLED')
-                bsdf.inputs['Base Color'].default_value = (0.72, 0.52, 0.50, 1)
-                bsdf.inputs['Alpha'].default_value = 0.28
-                bsdf.inputs['Roughness'].default_value = 0.06
-                mat.surface_render_method = 'BLENDED'
-                mat.blend_method = 'BLEND'
+            bpy.data.objects.remove(tear, do_unlink=True)
+            report[f'tearline_{side}'] = 'removed (misaligned after the lid-opening layer)'
         lashes = scene.objects.get(f'Inez_LashesLower_{side}')
         if lashes is None:
             continue
@@ -1475,6 +1544,8 @@ def main():
     # Byte images hold sRGB-encoded values; the bakes are linear radiance.
     proc[:, :, :3] = np.where(proc[:, :, :3] <= 0.04045, proc[:, :, :3]/12.92, ((proc[:, :, :3]+0.055)/1.055)**2.4)
     positions, raster_mask, ear_tex, ear_vertices = baked['raster']
+    eyeball = scene.objects['Inez_Eyeball_L']
+    eyeball_radius = float(np.median([(eyeball.matrix_world @ v.co-eyes[0]).length for v in eyeball.data.vertices]))
     skin_c = np.clip(baked['skin_cov'], 0, 1)[:, :, None]
     # Below the nape hairline (ear-lobe level) the hair/skin pass would paint
     # Asset B's shadowed neck; the neck takes the skin pass or the body skin.
@@ -1505,7 +1576,9 @@ def main():
     bl = blin.reshape(-1, 3)
     bl_lum = bl@np.array([0.2126, 0.7152, 0.0722], np.float32)
     current = np.median(bl[(bl_lum > 0.05)], axis=0)
-    body_gain = np.clip(target/np.maximum(current, 1e-4), 0.6, 1.6).astype(np.float32)
+    # The clamp only guards against a degenerate measurement; the face gain
+    # calibrated against the originals needs body gains near 0.5.
+    body_gain = np.clip(target/np.maximum(current, 1e-4), 0.3, 1.6).astype(np.float32)
     rgb = (baked['skin'][:, :, :3]*skin_gain*skin_c+full*full_c+proc[:, :, :3]*body_gain*(1-skin_c-full_c))
     # Feather the head bake into the body skin over 2 cm above the head/body
     # material seam so the neck shows no colour step.
@@ -1516,14 +1589,19 @@ def main():
     rgb = rgb*w+proc[:, :, :3]*body_gain*(1-w)
     # Asset B's ears sit elsewhere; its bake paints hair and scalp onto the
     # production ears. The ears take the tone-matched skin, slightly warmer.
+    # (The small separate UV islands at the atlas edge are the eye-socket and
+    # nasal/oral linings, hidden behind the eyes and lips; Asset B's eye colour
+    # baked there is not visible.)
     ear = np.clip(ear_tex, 0, 1)[:, :, None]
     rgb = rgb*(1-ear)+proc[:, :, :3]*body_gain*np.array([1.04, 0.97, 0.96], np.float32)*ear
     report['ears'] = {'ear_vertices': ear_vertices, 'ear_texels': int((ear[:, :, 0] > 0.5).sum()),
                       'note': 'ears coloured with the tone-matched production skin, not Asset B (misaligned ears)'}
-    freckles, freckle_count = freckle_field(positions, raster_mask, eye_mid)
-    rgb = rgb*(1-freckles[:, :, None]*np.array([0.40, 0.52, 0.60], np.float32))
+    rgb, report['lid_margins'] = lid_margin_tone(rgb, positions, raster_mask, eyes, eyeball_radius)
+    # Brows first: freckles in the brow window would otherwise read as hair.
     rgb, eye_area = eye_area_tone(rgb, positions, raster_mask, eyes)
     report['eye_area'] = eye_area
+    freckles, freckle_count = freckle_field(positions, raster_mask, eye_mid)
+    rgb = rgb*(1-freckles[:, :, None]*np.array([0.40, 0.52, 0.60], np.float32))
     report['freckles'] = {'count': freckle_count, 'note': 'procedural distribution per original A (nose bridge, upper cheeks, sparse forehead)'}
     srgb = np.clip(rgb, 0, 1)
     srgb = np.where(srgb <= 0.0031308, srgb*12.92, 1.055*srgb**(1/2.4)-0.055)

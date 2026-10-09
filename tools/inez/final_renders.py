@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from scan_common import Studio
 
 FACE = {'face_front': 0, 'face_three_quarter': 35, 'face_left': 90, 'face_right': -90, 'face_three_quarter_right': -35,
-        'face_yaw_p13': 13, 'face_yaw_m13': -13, 'face_yaw_p25': 25, 'face_yaw_m25': -25}
+        'face_yaw_p5': 5, 'face_yaw_p13': 13, 'face_yaw_p18': 18, 'face_yaw_m13': -13, 'face_yaw_p25': 25, 'face_yaw_m25': -25}
 BODY = {'body_front': 0, 'body_three_quarter': 35, 'body_left': 90, 'body_right': -90, 'body_back': 180}
 
 

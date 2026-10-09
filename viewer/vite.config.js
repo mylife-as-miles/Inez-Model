@@ -22,5 +22,9 @@ const basisTranscoder = {
   }
 };
 
+// The dev server serves ../assets directly. Builds do not copy it (several
+// GB of sources and work files); tools/inez/package_playable.py adds only the
+// runtime files a standalone viewer needs.
 export default defineConfig({ publicDir: '../assets', plugins: [basisTranscoder],
+  build: { copyPublicDir: false },
   server: { host: '0.0.0.0', port: 4173 }, preview: { port: 4174 } });
