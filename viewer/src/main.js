@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { KTX2Loader } from 'three/addons/loaders/KTX2Loader.js';
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
 import { FacialControls, AnimationController, findBone } from './character-controls.js';
 import { MaterialInspector, describeMaterial } from './materials.js';
 import './style.css';
@@ -153,6 +155,33 @@ function setAnimation(name = 'rest', options = {}) {
   if (motion.mode !== 'automatic') { state.previewSpeed = 0; velocity.set(0, 0, 0); scriptedMovement = false; $('movement-speed').value = 0; }
   refreshPose(); syncAnimationUI(); return true;
 }
+// One-shot body clips: a turn ends with the root rotated, so its yaw moves to
+// the character and the idle pose resumes seamlessly; crouch transitions
+// chain into the crouch loop or back to locomotion.
+function clipFinished(action) {
+  const name = motion?.clipName(action);
+  if (!name || motion.overlays.has(name)) { syncAnimationUI(); return; }
+  const info = motion.clipInfo[name] ?? {};
+  if (info.root_rotation_deg) {
+    characterRoot.rotation.y += THREE.MathUtils.degToRad(info.root_rotation_deg);
+    setAnimation(Object.keys(motion.roles).length ? 'automatic' : 'Idle', { transition: 0 });
+  } else if (name === 'CrouchDown') setAnimation('Crouch', { transition: 0 });
+  else if (name === 'CrouchUp') setAnimation(Object.keys(motion.roles).length ? 'automatic' : 'Idle', { transition: 0 });
+}
+function turn(direction = 'Left') {
+  const name = 'Turn' + (String(direction).toLowerCase().startsWith('r') ? 'Right' : 'Left');
+  return setAnimation(name, { transition: .15 });
+}
+function crouch(on = true) {
+  state.crouching = Boolean(on); $('crouch').textContent = state.crouching ? 'Stand up' : 'Crouch';
+  return setAnimation(state.crouching ? 'CrouchDown' : 'CrouchUp', { transition: .2 });
+}
+function playPerformance(name = $('performance').value, weight = 1) {
+  if (!motion) return false;
+  const played = motion.playOverlay(name, weight);
+  state.performance = played || null; return Boolean(played);
+}
+function stopPerformance() { if (!motion) return false; motion.stopOverlay(); state.performance = null; return true; }
 function setPlaybackSpeed(rate = 1) {
   if (!motion) return false;
   motion.setRate(rate); state.playbackRate = motion.playbackRate;
@@ -224,6 +253,7 @@ function updateState() {
   if (motion) {
     state.currentAnimation = motion.current; state.animationMode = motion.mode; state.actionWeights = motion.weights;
     state.clipTime = motion.time; state.clipDuration = motion.duration; state.playbackRate = motion.playbackRate;
+    state.performance = motion.overlayName;
   }
   if (face) state.facialControls = { ...face.values };
   state.renderStats = { triangles: renderer.info.render.triangles, drawCalls: renderer.info.render.calls,
@@ -356,9 +386,14 @@ $('material').onchange = event => inspectMaterials(state.inspection, event.targe
 $('wireframe').onchange = event => setWireframe(event.target.checked);
 $('rotate').onchange = event => { controls.autoRotate = event.target.checked; controls.autoRotateSpeed = 1; };
 $('reference').onchange = event => setReference(event.target.value);
+$('play-performance').onclick = () => playPerformance($('performance').value);
+$('turn-left').onclick = () => turn('Left');
+$('turn-right').onclick = () => turn('Right');
+$('crouch').onclick = () => crouch(!state.crouching);
 
 window.inezViewer = { state, errors, warnings, setView, setLighting, setLightControls, setExpression, setViseme, setFaceControls, resetFace,
   setAnimation, setPlaybackSpeed, setLocomotionSpeed, pause, seek, advance, resetPosition, captureMode, inspectMaterials, setWireframe, setReference,
+  turn, crouch, playPerformance, stopPerformance,
   sampleDeformedVertices, boneWorldPositions, getBoneWorldPositions: boneWorldPositions, getMorphInfluences, renderFrame: refreshPose,
   getBone: name => findBone(avatar, name), getAvatar: () => avatar, get avatar() { return avatar; }, get assetInfo() { return state.assetInfo; },
   get meshInventory() { return state.assetInfo?.meshInventory ?? []; },
@@ -369,9 +404,13 @@ setView('body_front'); applyLighting();
 function enableAssetControls(gltf) {
   $('animation').replaceChildren(new Option('A-pose · exported rest', 'rest'));
   if (Object.keys(motion.roles).length) $('animation').add(new Option('Automatic · idle / walk / run', 'automatic'));
-  for (const clip of gltf.animations) $('animation').add(new Option(clip.name, clip.name));
+  for (const name of motion.actions.keys()) $('animation').add(new Option(name, name));
   $('animation').disabled = false;
   for (const id of ['pause', 'reset-position', 'reset-face']) $(id).disabled = false;
+  $('performance').replaceChildren(...[...motion.overlays.keys()].map(name => new Option(name.replace(/^Expr_/, ''), name)));
+  $('performance').disabled = $('play-performance').disabled = !motion.overlays.size;
+  $('turn-left').disabled = !motion.actions.has('TurnLeft'); $('turn-right').disabled = !motion.actions.has('TurnRight');
+  $('crouch').disabled = !(motion.actions.has('CrouchDown') && motion.actions.has('Crouch') && motion.actions.has('CrouchUp'));
   $('playback-speed').disabled = !gltf.animations.length;
   $('movement-speed').disabled = !Object.keys(motion.roles).length; $('movement-speed').max = motion.runSpeed;
   $('expression').replaceChildren(new Option('Neutral', 'Neutral'));
@@ -429,6 +468,7 @@ async function loadAnimationManifest() {
     const response = await fetch(assetRoot + 'rig/animation_manifest.json', { cache: 'no-store' });
     if (!response.ok) { warnings.push('Animation speed manifest unavailable; viewer rates remain provisional.'); return false; }
     const manifest = await response.json(); state.animationManifest = manifest;
+    motion.setClipInfo(manifest.clip_info ?? {});
     const walk = Number(manifest.clip_info?.Walk?.matching_viewer_speed_m_s);
     const run = Number(manifest.clip_info?.Run?.matching_viewer_speed_m_s);
     if (Number.isFinite(walk) && walk > 0) motion.walkSpeed = walk;
@@ -464,13 +504,17 @@ try {
     $('notice').textContent = 'Loading authored character GLB…';
     // ?model= selects another export below model/ (for example a staged work/
     // revision under review). Anything outside that folder is refused.
-    const requestedModel = new URLSearchParams(location.search).get('model') || 'inez.glb';
+    const requestedModel = new URLSearchParams(location.search).get('model') || status.default_model || 'inez_runtime.glb';
     if (!/^[\w-]+(\/[\w.-]+)*\.glb$/.test(requestedModel) || requestedModel.includes('..')) throw new Error(`Refused model path: ${requestedModel}`);
     state.modelPath = 'model/' + requestedModel;
     const modelResponse = await fetch(assetRoot + state.modelPath, { cache: 'no-store' });
     if (!modelResponse.ok) throw new Error('GLB missing: HTTP ' + modelResponse.status);
     const buffer = await modelResponse.arrayBuffer(); state.resourceBytes = buffer.byteLength;
-    const gltf = await new GLTFLoader().parseAsync(buffer, assetRoot + 'model/');
+    // Runtime exports use KTX2 (Basis) textures and meshopt geometry; the
+    // master export uses JPEG/PNG. Both loaders are harmless when unused.
+    const ktx2 = new KTX2Loader().setTranscoderPath('/basis/').detectSupport(renderer);
+    const loader = new GLTFLoader().setKTX2Loader(ktx2).setMeshoptDecoder(MeshoptDecoder);
+    const gltf = await loader.parseAsync(buffer, assetRoot + 'model/');
     avatar = gltf.scene; characterRoot.add(avatar); avatar.updateMatrixWorld(true);
     const bounds = new THREE.Box3().setFromObject(avatar); const center = bounds.getCenter(new THREE.Vector3());
     height = bounds.max.y - bounds.min.y;
@@ -482,6 +526,7 @@ try {
       if (mesh.morphTargetInfluences) allInitialMorphs.set(mesh, [...mesh.morphTargetInfluences]);
     });
     face = new FacialControls(avatar); motion = new AnimationController(avatar, gltf.animations, height); motion.transition = state.transition;
+    motion.onFinished = clipFinished;
     await loadAnimationManifest();
     inspector = new MaterialInspector(avatar); state.assetInfo = collectAssetInfo(gltf);
     $('asset-info').textContent = JSON.stringify(state.assetInfo, null, 2);

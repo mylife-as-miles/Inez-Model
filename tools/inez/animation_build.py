@@ -24,7 +24,7 @@ from mathutils import Matrix, Quaternion, Vector
 from mathutils.kdtree import KDTree
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from animation_motion import arm_cycle, clamp, foot_cycle, gait_specs
+from animation_motion import arm_cycle, clamp, ease, foot_cycle, gait_specs
 
 
 EXPRESSION_NAMES = ('Neutral', 'Confused', 'Suspicious', 'SubtleFear',
@@ -32,6 +32,11 @@ EXPRESSION_NAMES = ('Neutral', 'Confused', 'Suspicious', 'SubtleFear',
 VISEME_NAMES = ('Viseme_AA', 'Viseme_EE', 'Viseme_OH', 'Viseme_MM', 'Viseme_FV')
 BLINK_NAMES = ('Blink_L', 'Blink_R')
 CONTROL_NAMES = EXPRESSION_NAMES + VISEME_NAMES + BLINK_NAMES
+# Identity layers (shape keys at their source defaults; never animated):
+# head fit revisions, CC0 refinement, the Asset A body fit, the Asset B head
+# wrap and the landmark face correction toward the original face panel.
+IDENTITY_PREFIXES = ('Inez_HeadFit_', 'Inez_HeadRefine_', 'Inez_SourceBodyFit_', 'Inez_SourceHeadWrap_',
+                     'Inez_FaceCorrect_', 'Inez_ScanWrap_')
 X, Y, Z = Vector((1, 0, 0)), Vector((0, 1, 0)), Vector((0, 0, 1))
 
 
@@ -261,11 +266,15 @@ def face_deltas(obj, arm, scale):
     pieces['LipPress'] = sum_delta(displacement(upper_lip, (0, 0.0002*scale, -0.0008*scale)),
                                     displacement(lower_lip, (0, 0.0002*scale, 0.0010*scale)))
     pieces['CornersDown'] = displacement(corners, (0, 0, -0.0016*scale))
-    pieces['CornersTense'] = [from_arm @ Vector((math.copysign(0.0015*scale, p.x)*v, 0, 0))
+    # Lateral lip motion fades to zero at the midline (|x| < 12 mm): a hard
+    # sign flip there folded the philtrum into a crease in the OH viseme.
+    def side(p):
+        return clamp(p.x/(0.012*scale), -1.0, 1.0)
+    pieces['CornersTense'] = [from_arm @ Vector((0.0015*scale*side(p)*v, 0, 0))
                              for p, v in zip(points, corners)]
-    pieces['Wide'] = [from_arm @ Vector((math.copysign(0.0032*scale, p.x)*v, 0, 0))
+    pieces['Wide'] = [from_arm @ Vector((0.0032*scale*side(p)*v, 0, 0))
                        for p, v in zip(points, lips)]
-    pieces['Pucker'] = [from_arm @ Vector((-math.copysign(0.0040*scale, p.x)*v, -0.0012*scale*v, 0))
+    pieces['Pucker'] = [from_arm @ Vector((-0.0040*scale*side(p)*v, -0.0012*scale*v, 0))
                          for p, v in zip(points, lips)]
     pieces['CheekTense'] = displacement(cheek, (0, -0.0008*scale, 0.0009*scale))
     jaw_mask = mask(weights, descendant_names(arm, 'jaw'), count)
@@ -353,8 +362,92 @@ def facial_shapes(body, arm, meshes, scale):
     return result
 
 
-def add_ponytail(arm, meshes):
+def add_ponytail_from_shell(arm, hair, body, bones=4):
+    """Ponytail chain inside Asset B's fused hair shell.
+
+    The shell is one connected surface (scalp, framing curls and a high
+    ponytail hanging behind the head). Vertices behind the skull that stand
+    more than ~1.5 cm off the head/neck skin form the ponytail; a chain of
+    four bones follows their centreline, parented to the head. Weights run
+    along the chain and blend to the head over the ponytail's root and
+    wherever the hair lies on the scalp, so the shell never tears."""
+    from mathutils.bvhtree import BVHTree
+    import bmesh
+    import numpy as np
+    depsgraph = bpy.context.evaluated_depsgraph_get()
+    bm = bmesh.new()
+    bm.from_object(body, depsgraph)
+    bm.transform(body.matrix_world)
+    bvh = BVHTree.FromBMesh(bm)
+    to_arm = arm.matrix_world.inverted() @ hair.matrix_world
+    world = [hair.matrix_world @ v.co for v in hair.data.vertices]
+    dist = np.array([bvh.find_nearest(p, 0.5)[3] for p in world])
+    bm.free()
+    P = np.array([tuple(to_arm @ v.co) for v in hair.data.vertices])
+    head = arm.data.bones['head']
+    skull_back = float(head.head_local.y)+0.09
+    pony = (P[:, 1] > skull_back) & (dist > 0.015)
+    if pony.sum() < 200:
+        return {'status': 'no ponytail mass found in hair shell', 'bones': []}
+    top, bottom = float(P[pony, 2].max()), float(P[pony, 2].min())
+    zs = np.linspace(top, bottom, bones+1)
+    centre = []
+    for z in zs:
+        sel = pony & (np.abs(P[:, 2]-z) < 0.02)
+        centre.append(P[sel].mean(0) if sel.sum() > 20 else None)
+    for i, c in enumerate(centre):
+        if c is None:
+            centre[i] = centre[i-1] if i else P[pony].mean(0)
+    bpy.ops.object.select_all(action='DESELECT')
+    arm.select_set(True)
+    bpy.context.view_layer.objects.active = arm
+    bpy.ops.object.mode_set(mode='EDIT')
+    names = ['hair.%02d' % (i+1) for i in range(bones)]
+    for i, name in enumerate(names):
+        bone = arm.data.edit_bones.get(name) or arm.data.edit_bones.new(name)
+        bone.head = Vector(tuple(centre[i]))
+        bone.tail = Vector(tuple(centre[i+1]))
+        bone.parent = arm.data.edit_bones['head' if i == 0 else names[i-1]]
+        bone.use_connect = i > 0
+        bone.use_deform = True
+    bpy.ops.object.mode_set(mode='OBJECT')
+    for g in list(hair.vertex_groups):
+        hair.vertex_groups.remove(g)
+    groups = {n: hair.vertex_groups.new(name=n) for n in ['head']+names}
+    span = max(top-bottom, 1e-3)
+    for i, (p, d) in enumerate(zip(P, dist)):
+        if not pony[i]:
+            groups['head'].add([i], 1.0, 'REPLACE')
+            continue
+        s = clamp((top-p[2])/span)*bones
+        k = min(bones-1, int(math.floor(s)))
+        frac = s-k
+        w = defaultdict(float)
+        # Root of the tail and hair lying near the scalp stay with the head.
+        root = clamp(1.0-(top-p[2])/0.05)
+        near = clamp((0.03-d)/0.015)
+        head_w = max(root*0.85, near)
+        w['head'] += head_w
+        w[names[k]] += (1.0-frac)*(1.0-head_w)
+        if k+1 < bones:
+            w[names[k+1]] += frac*(1.0-head_w)
+        else:
+            w[names[k]] += frac*(1.0-head_w)
+        for n, value in w.items():
+            if value > 1e-6:
+                groups[n].add([i], value, 'REPLACE')
+    modifier = next((m for m in hair.modifiers if m.type == 'ARMATURE'), None) or hair.modifiers.new('Ponytail_Skin', 'ARMATURE')
+    modifier.object = arm
+    return {'status': f'{bones} deforming bones inside the Asset B hair shell, head-blended root',
+            'bones': names, 'meshes': [hair.name], 'ponytail_vertices': int(pony.sum()),
+            'span_m': span, 'chain_heads_arm_space': [list(map(float, c)) for c in centre]}
+
+
+def add_ponytail(arm, meshes, body=None):
     hair = [obj for obj in meshes if 'ponytail' in obj.name.lower()]
+    shell = next((obj for obj in meshes if obj.name == 'Inez_Hair'), None)
+    if not hair and shell is not None and body is not None:
+        return add_ponytail_from_shell(arm, shell, body)
     if not hair:
         return {'status': 'no ponytail mesh available', 'bones': []}
     points = [arm.matrix_world.inverted() @ obj.matrix_world @ v.co
@@ -455,14 +548,98 @@ def root_drop(gait, arm, supports, lengths):
     return min(0.0, min(drops))-0.006*gait.scale
 
 
+HAIR_SPRING = {'frequency_hz': (3.2, 2.6, 2.1, 1.7), 'damping_ratio': 0.32}
+
+
+def leg_ik(arm, side, target, foot_rotation, lengths, pole_forward=-1.0):
+    sign = 1 if side == 'L' else -1
+    hip = base_matrix(arm.pose.bones['upperleg01.'+side]).translation
+    joint, reached, reach_error = two_bone_joint(hip, target, lengths[side]['thigh'], lengths[side]['shin'],
+                                                 (sign*0.025, pole_forward, 0.04))
+    aim_chain(arm, 'upperleg01.'+side, 'lowerleg01.'+side, joint)
+    aim_chain(arm, 'lowerleg01.'+side, 'foot.'+side, reached)
+    absolute_world_rotation(arm.pose.bones['foot.'+side], foot_rotation @ arm.data.bones['foot.'+side].matrix_local.to_quaternion())
+    update()
+    return joint, reach_error
+
+
+def ankle_height(supports, side, rotation, lift=0.0):
+    return -min((rotation @ v).z for v in supports[side]['vectors'])+lift
+
+
+def curl_fingers(arm, side, degrees):
+    """Extra flexion of every finger joint (loose fist for running)."""
+    if not degrees:
+        return
+    sign = 1 if side == 'L' else -1
+    wrist = arm.pose.bones['wrist.'+side]
+    for finger in range(2, 6):
+        for segment in range(1, 4):
+            name = 'finger%d-%d.%s' % (finger, segment, side)
+            if name not in arm.pose.bones:
+                continue
+            pb = arm.pose.bones[name]
+            direction = base_matrix(pb).to_quaternion() @ Y
+            palm_in = Vector((-sign, 0, 0))
+            axis = direction.cross(palm_in)
+            if axis.length > 1e-8:
+                world_delta(pb, Quaternion(axis.normalized(), math.radians(degrees*(1.0, 1.3, 0.9)[segment-1])))
+                update()
+
+
+def pose_arms(arm, gait, p, lengths, upper_extra=0.0, elbow_extra=0.0, bias=0.0, curl=0.0):
+    for side in ('L', 'R'):
+        sign = 1 if side == 'L' else -1
+        upper, lower = arm_cycle(gait, p, side)
+        # bias > 0 swings the whole cycle backward (hands nearer the hips).
+        upper += bias-upper_extra
+        lower += bias-upper_extra-elbow_extra
+        upper_direction = Vector((sign*0.15, math.sin(upper), -math.cos(upper))).normalized()
+        elbow = base_matrix(arm.pose.bones['upperarm01.'+side]).translation+upper_direction*lengths[side]['upper_arm']
+        aim_chain(arm, 'upperarm01.'+side, 'lowerarm01.'+side, elbow)
+        lower_direction = Vector((sign*0.10, math.sin(lower), -math.cos(lower))).normalized()
+        wrist = base_matrix(arm.pose.bones['lowerarm01.'+side]).translation+lower_direction*lengths[side]['forearm']
+        aim_chain(arm, 'lowerarm01.'+side, 'wrist.'+side, wrist)
+        aim_bone(arm.pose.bones['wrist.'+side], lower_direction)
+        relax_hand(arm, side, lower_direction)
+        curl_fingers(arm, side, curl)
+
+
+def gait_drops(gait, arm, supports, lengths, count):
+    """Per-frame pelvis height for an inverted-pendulum gait.
+
+    The pelvis rides as high as the planted feet allow (knee 1.5% short of
+    straight), so it rises over mid-stance and dips in double support. A
+    constant drop sized for the longest reach kept the knees bent through
+    the whole cycle (the crouched v01 gait)."""
+    raw = []
+    for i in range(count+1):
+        p = i/count
+        need = []
+        for side in ('L', 'R'):
+            sign = 1 if side == 'L' else -1
+            cycle = foot_cycle(gait, p+(0 if side == 'L' else 0.5))
+            hip = arm.data.bones['upperleg01.'+side].head_local
+            foot = arm.data.bones['foot.'+side].head_local
+            rotation = Quaternion(Z, math.radians(sign*2.5)) @ Quaternion(X, cycle['pitch'])
+            ankle = Vector((hip.x*1.02, foot.y+cycle['y'], ankle_height(supports, side, rotation, cycle['lift'])))
+            reach = (lengths[side]['thigh']+lengths[side]['shin'])*0.985
+            horizontal = (Vector((hip.x, hip.y, 0))-Vector((ankle.x, ankle.y, 0))).length
+            need.append(ankle.z+math.sqrt(max(1e-6, reach**2-horizontal**2))-hip.z)
+        raw.append(min(need))
+    n = len(raw)-1
+    smooth = []
+    for i in range(n+1):
+        window = [raw[(i+k) % n] for k in range(-3, 4)]
+        smooth.append(min(raw[i], sum(window)/len(window)))
+    return [min(-0.004*gait.scale, d) for d in smooth]
+
+
 def pose_gait(arm, gait, phase, supports, lengths, drop):
     reset_pose(arm)
     p = phase % 1.0
     idle = gait.name == 'Idle'
-    bob = gait.vertical_bob*(math.sin(2*math.pi*p)**2 if gait.name == 'Walk'
-                             else (0.5+0.5*math.cos(4*math.pi*(p-0.46))))
-    if idle:
-        bob = gait.vertical_bob*math.sin(2*math.pi*p)
+    bob = gait.vertical_bob*math.sin(2*math.pi*p) if idle else 0.0
     root = arm.pose.bones['root']
     yaw = math.radians(0.6 if idle else 2.5)*math.sin(2*math.pi*p)
     roll = math.radians(0.4 if idle else 1.1)*math.sin(2*math.pi*p)
@@ -471,10 +648,11 @@ def pose_gait(arm, gait, phase, supports, lengths, drop):
     world_translation(root, (gait.lateral_sway*math.sin(2*math.pi*p), 0, drop+bob))
     update()
     world_delta(arm.pose.bones['spine03'], Quaternion(Z, -yaw*0.55))
-    world_delta(arm.pose.bones['spine01'], Quaternion(Z, -yaw*0.35) @ Quaternion(X, math.radians(0.35)*math.sin(2*math.pi*p)))
+    # Idle breathing: a 4 s chest rise in the upper spine.
+    breath = math.radians(0.9 if idle else 0.35)*math.sin(2*math.pi*p)
+    world_delta(arm.pose.bones['spine01'], Quaternion(Z, -yaw*0.35) @ Quaternion(X, -breath))
     update()
-    # Most head stabilization lives in the neck, avoiding a stiff torso/head.
-    world_delta(arm.pose.bones['neck01'], Quaternion(X, -lean*0.3))
+    world_delta(arm.pose.bones['neck01'], Quaternion(X, -lean*0.3+breath*0.6))
     update()
     world_delta(arm.pose.bones['head'], Quaternion(Z, -yaw*0.2) @ Quaternion(X, math.radians(0.3)*math.sin(2*math.pi*p)))
     update()
@@ -484,34 +662,12 @@ def pose_gait(arm, gait, phase, supports, lengths, drop):
         cycle = foot_cycle(gait, p+(0 if side == 'L' else 0.5))
         rest_hip = arm.data.bones['upperleg01.'+side].head_local
         rest_foot = arm.data.bones['foot.'+side].head_local
-        foot_delta = Quaternion(Z, math.radians(sign*2.5)) @ Quaternion(X, cycle['pitch'])
-        ankle_z = -min((foot_delta @ v).z for v in supports[side]['vectors'])+cycle['lift']
-        target = Vector((rest_hip.x*1.02, rest_foot.y+cycle['y'], ankle_z))
-        hip = base_matrix(arm.pose.bones['upperleg01.'+side]).translation
-        joint, reached, reach_error = two_bone_joint(hip, target, lengths[side]['thigh'], lengths[side]['shin'],
-                                                     (sign*0.025, -1.0, 0.04))
-        aim_chain(arm, 'upperleg01.'+side, 'lowerleg01.'+side, joint)
-        aim_chain(arm, 'lowerleg01.'+side, 'foot.'+side, reached)
-        absolute_world_rotation(arm.pose.bones['foot.'+side], foot_delta @ arm.data.bones['foot.'+side].matrix_local.to_quaternion())
-        update()
-        feet[side] = dict(cycle, ankle_target=list(target), knee_target=list(joint), unreachable_error_m=reach_error)
-        upper, lower = arm_cycle(gait, p, side)
-        upper_direction = Vector((sign*0.15, math.sin(upper), -math.cos(upper))).normalized()
-        elbow = base_matrix(arm.pose.bones['upperarm01.'+side]).translation+upper_direction*lengths[side]['upper_arm']
-        aim_chain(arm, 'upperarm01.'+side, 'lowerarm01.'+side, elbow)
-        lower_direction = Vector((sign*0.10, math.sin(lower), -math.cos(lower))).normalized()
-        wrist = base_matrix(arm.pose.bones['lowerarm01.'+side]).translation+lower_direction*lengths[side]['forearm']
-        aim_chain(arm, 'lowerarm01.'+side, 'wrist.'+side, wrist)
-        aim_bone(arm.pose.bones['wrist.'+side], lower_direction)
-        relax_hand(arm, side, lower_direction)
-    for i in range(1, 4):
-        name = 'hair.%02d' % i
-        if name in arm.pose.bones:
-            amplitude = math.radians((0.7 if idle else 2.8 if gait.name == 'Walk' else 5.5)*(0.65+i*0.2))
-            world_delta(arm.pose.bones[name], Quaternion(X, amplitude*math.sin(2*math.pi*p-i*0.55))
-                        @ Quaternion(Z, amplitude*0.3*math.sin(2*math.pi*p-i*0.9)))
-            update()
-    # Actual eye pivots, a tiny changing gaze. The viewer can override after Mixer.update.
+        rotation = Quaternion(Z, math.radians(sign*2.5)) @ Quaternion(X, cycle['pitch'])
+        target = Vector((rest_hip.x*1.02, rest_foot.y+cycle['y'], ankle_height(supports, side, rotation, cycle['lift'])))
+        joint, error = leg_ik(arm, side, target, rotation, lengths)
+        feet[side] = dict(cycle, ankle_target=list(target), knee_target=list(joint), unreachable_error_m=error)
+    run = gait.name == 'Run'
+    pose_arms(arm, gait, p, lengths, bias=math.radians(12 if run else 0), curl=32 if run else (8 if not idle else 0))
     head_delta = arm.pose.bones['head'].matrix.to_quaternion() @ arm.data.bones['head'].matrix_local.to_quaternion().inverted()
     for side in ('L', 'R'):
         angle = math.radians(1.1 if idle else 0.35)*math.sin(2*math.pi*p)
@@ -520,45 +676,230 @@ def pose_gait(arm, gait, phase, supports, lengths, drop):
     return feet
 
 
+def gaze(arm, yaw, pitch=0.0):
+    head_delta = arm.pose.bones['head'].matrix.to_quaternion() @ arm.data.bones['head'].matrix_local.to_quaternion().inverted()
+    for side in ('L', 'R'):
+        world_delta(arm.pose.bones['eye.'+side], Quaternion(head_delta @ Z, yaw) @ Quaternion(head_delta @ X, pitch))
+    update()
+
+
+def pose_look_around(arm, idle, phase, supports, lengths, drop):
+    """Idle stance; head and neck sweep left, centre, right with the eyes
+    leading each turn (6 s loop)."""
+    feet = pose_gait(arm, idle, phase, supports, lengths, drop)
+    t = phase % 1.0
+    yaw = math.radians(38)*math.sin(2*math.pi*t)+math.radians(6)*math.sin(6*math.pi*t)
+    pitch = math.radians(4)*math.sin(4*math.pi*t+0.7)
+    world_delta(arm.pose.bones['neck01'], Quaternion(Z, yaw*0.45) @ Quaternion(X, pitch*0.4))
+    update()
+    world_delta(arm.pose.bones['head'], Quaternion(Z, yaw*0.4) @ Quaternion(X, pitch*0.6))
+    update()
+    world_delta(arm.pose.bones['spine03'], Quaternion(Z, yaw*0.15))
+    update()
+    lead = math.radians(14)*math.cos(2*math.pi*t)
+    gaze(arm, lead, math.radians(-2))
+    return feet
+
+
+def pose_turn(arm, idle, t, direction, supports, lengths, drop):
+    """In-place 90 degree turn with two steps (lead foot then trail foot).
+    The root ends rotated; the viewer applies the yaw to the character when
+    the one-shot finishes (root_rotation_deg in the manifest)."""
+    reset_pose(arm)
+    sign_turn = 1 if direction == 'Left' else -1
+    total = math.radians(90)*sign_turn
+    yaw = total*ease(t)
+    root = arm.pose.bones['root']
+    dip = -0.015*math.sin(math.pi*clamp(t))
+    world_delta(root, Quaternion(Z, yaw))
+    world_translation(root, (0, 0, drop+dip))
+    update()
+    # Upper body leads the hips slightly.
+    lead = total*0.10*math.sin(math.pi*clamp(t*1.2))
+    world_delta(arm.pose.bones['spine03'], Quaternion(Z, lead))
+    world_delta(arm.pose.bones['neck01'], Quaternion(Z, lead*0.8))
+    update()
+    first, second = ('L', 'R') if direction == 'Left' else ('R', 'L')
+    windows = {first: (0.08, 0.50), second: (0.42, 0.88)}
+    feet = {}
+    for side in ('L', 'R'):
+        sign = 1 if side == 'L' else -1
+        a, b = windows[side]
+        q = clamp((t-a)/(b-a))
+        foot_yaw = total*ease(q)
+        lift = 0.055*math.sin(math.pi*q) if 0 < q < 1 else 0.0
+        rest_foot = arm.data.bones['foot.'+side].head_local
+        rest_hip = arm.data.bones['upperleg01.'+side].head_local
+        pivot = arm.data.bones['root'].head_local
+        planted = Vector((rest_hip.x*1.02-pivot.x, rest_foot.y-pivot.y, 0.0))
+        rotation = Quaternion(Z, foot_yaw) @ Quaternion(Z, math.radians(sign*2.5))
+        target = Quaternion(Z, foot_yaw) @ planted+Vector((pivot.x, pivot.y, 0.0))
+        target.z = ankle_height(supports, side, rotation, lift)
+        joint, error = leg_ik(arm, side, target, rotation, lengths)
+        feet[side] = {'ankle_target': list(target), 'unreachable_error_m': error, 'contact': lift == 0.0, 'lift': lift}
+    pose_arms(arm, idle, 0.25, lengths, upper_extra=math.radians(4)*math.sin(math.pi*t))
+    gaze(arm, math.radians(12)*sign_turn*math.sin(math.pi*clamp(t*1.4)))
+    return feet
+
+
+def pose_crouch(arm, idle, depth, breath_phase, supports, lengths, drop):
+    """Crouch with planted feet: pelvis down and back, torso folded forward,
+    head kept level, forearms resting forward over the knees."""
+    reset_pose(arm)
+    d = clamp(depth)
+    root = arm.pose.bones['root']
+    breath = math.radians(0.8)*math.sin(2*math.pi*breath_phase)
+    world_delta(root, Quaternion(X, math.radians(16)*d))
+    world_translation(root, (0, 0.06*d, drop-0.34*d*arm.get('provisional_scale', 1.0)))
+    update()
+    world_delta(arm.pose.bones['spine01'], Quaternion(X, math.radians(14)*d-breath))
+    world_delta(arm.pose.bones['spine03'], Quaternion(X, math.radians(10)*d))
+    update()
+    world_delta(arm.pose.bones['neck01'], Quaternion(X, -math.radians(26)*d+breath*0.5))
+    world_delta(arm.pose.bones['head'], Quaternion(X, -math.radians(10)*d))
+    update()
+    feet = {}
+    for side in ('L', 'R'):
+        sign = 1 if side == 'L' else -1
+        rest_foot = arm.data.bones['foot.'+side].head_local
+        rest_hip = arm.data.bones['upperleg01.'+side].head_local
+        rotation = Quaternion(Z, math.radians(sign*(2.5+8*d)))
+        target = Vector((rest_hip.x*(1.02+0.25*d), rest_foot.y, ankle_height(supports, side, rotation)))
+        joint, error = leg_ik(arm, side, target, rotation, lengths)
+        feet[side] = {'ankle_target': list(target), 'unreachable_error_m': error, 'contact': True}
+    # Arms hang relaxed in front of the knees (no reaching): upper arms ~30
+    # degrees forward of vertical, slight elbow bend, loosely curled fingers.
+    pose_arms(arm, idle, 0.25, lengths, upper_extra=math.radians(30)*d, elbow_extra=math.radians(4)*d, curl=14*d)
+    gaze(arm, 0.0, math.radians(3)*d)
+    return feet
+
+
+def hair_chain(arm):
+    names = [n for n in ('hair.01', 'hair.02', 'hair.03', 'hair.04') if n in arm.pose.bones]
+    return names
+
+
+def simulate_hair(arm, names, state, dt):
+    """One step of a damped spring chain toward the head-rigid rest pose.
+    state: list of [position, velocity] per bone tail (armature space)."""
+    if not names:
+        return state
+    head_pb = arm.pose.bones['head']
+    head_m = head_pb.matrix @ head_pb.bone.matrix_local.inverted()
+    targets = [head_m @ arm.data.bones[n].tail_local for n in names]
+    lengths = [(arm.data.bones[n].tail_local-arm.data.bones[n].head_local).length for n in names]
+    if state is None:
+        return [[t.copy(), Vector()] for t in targets]
+    anchor = head_m @ arm.data.bones[names[0]].head_local
+    for i, (target, (pos, vel)) in enumerate(zip(targets, state)):
+        w = 2*math.pi*HAIR_SPRING['frequency_hz'][min(i, 3)]
+        z = HAIR_SPRING['damping_ratio']
+        acc = (target-pos)*w*w-vel*2*z*w
+        vel = vel+acc*dt
+        pos = pos+vel*dt
+        prev = anchor if i == 0 else state[i-1][0]
+        seg = pos-prev
+        if seg.length > 1e-8:
+            pos = prev+seg.normalized()*lengths[i]
+        state[i] = [pos, vel]
+    for i, n in enumerate(names):
+        pb = arm.pose.bones[n]
+        head_now = base_matrix(pb).translation
+        direction = state[i][0]-head_now
+        if direction.length > 1e-8:
+            aim_bone(pb, direction)
+    return state
+
+
+def bake_clip(arm, name, count, fps, pose_fn, driven, loop=True, preroll_cycles=2, extra=None):
+    """Key one clip. Looping clips run the ponytail simulation over earlier
+    cycles first so the baked cycle starts from its steady state."""
+    existing = bpy.data.actions.get(name)
+    if existing and existing.get('inez_generated_animation'):
+        bpy.data.actions.remove(existing)
+    action = bpy.data.actions.new(name)
+    action.use_fake_user = True
+    action['inez_generated_animation'] = True
+    action['in_place'] = True
+    arm.animation_data.action = action
+    names = hair_chain(arm)
+    dt = 1.0/fps
+    state = None
+    frames = []
+    if loop:
+        for _ in range(preroll_cycles):
+            for i in range(count):
+                pose_fn(i)
+                state = simulate_hair(arm, names, state, dt)
+    else:
+        for _ in range(int(0.5*fps)):
+            pose_fn(0)
+            state = simulate_hair(arm, names, state, dt)
+    max_error = 0.0
+    for i in range(count+1):
+        frame = i+1
+        bpy.context.scene.frame_set(frame)
+        feet = pose_fn(i)
+        state = simulate_hair(arm, names, state, dt)
+        if feet:
+            max_error = max([max_error]+[f.get('unreachable_error_m', 0.0) for f in feet.values()])
+        for bone in driven+names:
+            pb = arm.pose.bones[bone]
+            pb.keyframe_insert(data_path='rotation_quaternion', frame=frame, group=bone)
+            if bone == 'root':
+                pb.keyframe_insert(data_path='location', frame=frame, group=bone)
+        frames.append(feet)
+    for curve in action.fcurves:
+        for point in curve.keyframe_points:
+            point.interpolation = 'LINEAR'
+    report = {'duration_s': count/fps, 'sample_count': count+1, 'frame_range': [1, count+1], 'loop': loop,
+              'maximum_ik_reach_error_m': max_error, 'driven_bones': driven+names,
+              'ponytail': 'damped spring chain simulated per frame' if names else 'none'}
+    if extra:
+        report.update(extra)
+    return report
+
+
 def bake_actions(arm, specs, supports, lengths, fps):
     arm.animation_data_create()
     driven = ['root', 'spine03', 'spine01', 'neck01', 'head', 'eye.L', 'eye.R']
     for side in ('L', 'R'):
         driven += [prefix+'.'+side for prefix in ('upperleg01', 'lowerleg01', 'foot', 'upperarm01', 'lowerarm01', 'wrist')]
         driven += ['finger%d-%d.%s' % (finger, segment, side) for finger in range(2, 6) for segment in range(1, 4)]
-    driven += ['hair.%02d' % i for i in range(1, 4) if 'hair.%02d' % i in arm.pose.bones]
     report = {}
+    idle = specs['Idle']
+    idle_drop = root_drop(idle, arm, supports, lengths)
     for name, gait in specs.items():
-        existing = bpy.data.actions.get(name)
-        if existing and existing.get('inez_generated_animation'):
-            bpy.data.actions.remove(existing)
-        action = bpy.data.actions.new(name)
-        action.use_fake_user = True
-        action['inez_generated_animation'] = True
-        action['in_place'] = True
-        arm.animation_data.action = action
         count = max(2, round(gait.duration*fps))
-        duration = count/fps
-        drop = root_drop(gait, arm, supports, lengths)
-        maximum_reach_error = 0.0
-        for i in range(count+1):
-            frame = i+1
-            bpy.context.scene.frame_set(frame)
-            feet = pose_gait(arm, gait, i/count, supports, lengths, drop)
-            maximum_reach_error = max(maximum_reach_error, *(f['unreachable_error_m'] for f in feet.values()))
-            for bone in driven:
-                pb = arm.pose.bones[bone]
-                pb.keyframe_insert(data_path='rotation_quaternion', frame=frame, group=bone)
-                if bone == 'root':
-                    pb.keyframe_insert(data_path='location', frame=frame, group=bone)
-        for curve in action.fcurves:
-            for point in curve.keyframe_points:
-                point.interpolation = 'LINEAR'
-        report[name] = {'duration_s': duration, 'sample_count': count+1, 'frame_range': [1, count+1],
-                        'stance_fraction': gait.stance_fraction, 'stride_m': gait.stride,
-                        'matching_viewer_speed_m_s': 0.0 if name == 'Idle' else gait.stride/(duration*gait.stance_fraction),
-                        'maximum_ik_reach_error_m': maximum_reach_error, 'root_drop_m': drop,
-                        'root_motion': False, 'driven_bones': driven}
+        drops = [idle_drop]*(count+1) if name == 'Idle' else gait_drops(gait, arm, supports, lengths, count)
+        report[name] = bake_clip(arm, name, count, fps,
+                                 lambda i, g=gait, c=count, dr=drops: pose_gait(arm, g, i/c, supports, lengths, dr[i]),
+                                 driven, extra={'stance_fraction': gait.stance_fraction, 'stride_m': gait.stride,
+                                                'matching_viewer_speed_m_s': 0.0 if name == 'Idle' else gait.stride/(count/fps*gait.stance_fraction),
+                                                'pelvis_drop_range_m': [min(drops), max(drops)], 'root_motion': False})
+    count = round(6.0*fps)
+    report['LookAround'] = bake_clip(arm, 'LookAround', count, fps,
+                                     lambda i: pose_look_around(arm, idle, i/count, supports, lengths, idle_drop),
+                                     driven, extra={'root_motion': False, 'head_yaw_deg': 38})
+    for direction in ('Left', 'Right'):
+        count = round(1.2*fps)
+        report['Turn'+direction] = bake_clip(arm, 'Turn'+direction, count, fps,
+                                             lambda i, d=direction, c=count: pose_turn(arm, idle, i/c, d, supports, lengths, idle_drop),
+                                             driven, loop=False,
+                                             extra={'root_motion': False, 'one_shot': True,
+                                                    'root_rotation_deg': 90 if direction == 'Left' else -90,
+                                                    'viewer': 'apply the yaw to the character when the clip ends'})
+    count = round(0.8*fps)
+    report['CrouchDown'] = bake_clip(arm, 'CrouchDown', count, fps,
+                                     lambda i, c=count: pose_crouch(arm, idle, ease(i/c), 0.0, supports, lengths, idle_drop),
+                                     driven, loop=False, extra={'one_shot': True})
+    report['CrouchUp'] = bake_clip(arm, 'CrouchUp', count, fps,
+                                   lambda i, c=count: pose_crouch(arm, idle, 1-ease(i/c), 0.0, supports, lengths, idle_drop),
+                                   driven, loop=False, extra={'one_shot': True})
+    count = round(3.0*fps)
+    report['Crouch'] = bake_clip(arm, 'Crouch', count, fps,
+                                 lambda i, c=count: pose_crouch(arm, idle, 1.0, i/c, supports, lengths, idle_drop),
+                                 driven, extra={'root_motion': False})
     # A separate real lid-bone clip also permits an additive blink overlay.
     action = bpy.data.actions.new('Blink')
     action.use_fake_user = True
@@ -688,6 +1029,31 @@ def deformation_audit(arm, body, meshes, specs, clips, supports):
                         'maximum_stance_boot_ground_error_m': max(foot_contact_errors, default=None),
                         'sample_frames': records,
                         'clipping_review': 'Numerical support/loop check only; rendered body/clothes review still required'}
+    # Every other clip: boot-ground contact range and loop closure.
+    for name, clip in clips.items():
+        if name in result or name == 'Blink' or name not in bpy.data.actions:
+            continue
+        arm.animation_data.action = bpy.data.actions[name]
+        first, last = clip['frame_range']
+        frames = sorted({first+round((last-first)*i/12) for i in range(13)})
+        lows, ankles = [], []
+        for frame in frames:
+            bpy.context.scene.frame_set(frame)
+            update()
+            depsgraph = bpy.context.evaluated_depsgraph_get()
+            z = []
+            for side in ('L', 'R'):
+                for o in (o for o in meshes if o.name in supports[side]['meshes']):
+                    b = evaluated_bounds(o, depsgraph)
+                    if b:
+                        z.append(b[2][0])
+            lows.append(min(z) if z else None)
+            ankles.append({s: list(arm.matrix_world @ arm.pose.bones['foot.'+s].matrix.translation) for s in ('L', 'R')})
+        loop_error = max((Vector(ankles[0][s])-Vector(ankles[-1][s])).length for s in ('L', 'R'))
+        result[name] = {'sampled_frame_count': len(frames),
+                        'lowest_boot_z_range_m': [min(v for v in lows if v is not None), max(v for v in lows if v is not None)],
+                        'loop_ankle_error_m': loop_error if clip.get('loop', True) else None,
+                        'note': 'lowest boot point per sampled frame; 0 = on the ground plane'}
     arm.animation_data.action = bpy.data.actions['Idle']
     bpy.context.scene.frame_set(1)
     return result
@@ -742,15 +1108,15 @@ def main():
         raise RuntimeError('Actual licensed fitted humanoid/facial skeleton and continuous body are required')
     meshes = [o for o in bpy.context.scene.objects if o.type == 'MESH' and not o.hide_render]
     identity_defaults = {key.name: float(key.value)
-                         for key in body.data.shape_keys.key_blocks
-                         if key.name.startswith('Inez_HeadFit_')}
+                         for key in body.data.shape_keys.key_blocks[1:]
+                         if key.name.startswith(IDENTITY_PREFIXES)}
     reset_pose(arm)
     if arm.animation_data:
         arm.animation_data.action = None
     bpy.context.scene.render.fps = args.fps
     height = float(bpy.context.scene.get('provisional_height_m', 1.68))
     specs = gait_specs(height)
-    ponytail = add_ponytail(arm, meshes)
+    ponytail = add_ponytail(arm, meshes, body)
     reset_pose(arm)
     face = facial_shapes(body, arm, meshes, height/1.68)
     runtime_weights = runtime_skin_weights(meshes, arm)
@@ -760,8 +1126,8 @@ def main():
     weights = skin_audit(meshes, arm)
     deformation = deformation_audit(arm, body, meshes, specs, clips, supports)
     preserved_defaults = {key.name: float(key.value)
-                          for key in body.data.shape_keys.key_blocks
-                          if key.name.startswith('Inez_HeadFit_')}
+                          for key in body.data.shape_keys.key_blocks[1:]
+                          if key.name.startswith(IDENTITY_PREFIXES)}
     if preserved_defaults != identity_defaults:
         raise RuntimeError('Animation preparation changed an individual identity morph source default')
     bpy.context.scene.frame_start = 1
@@ -780,7 +1146,7 @@ def main():
               'expression_morph_names': list(EXPRESSION_NAMES), 'viseme_morph_names': list(VISEME_NAMES),
               'blink_morph_names': list(BLINK_NAMES),
               'identity_morph_source_defaults': identity_defaults,
-              'preserve_identity_morphs': 'Each pre-existing Inez_HeadFit_* key retains its exact individual source default; inactive revisions remain zero',
+              'preserve_identity_morphs': 'Every identity layer key (head fit revisions, refinement, Asset A body fit, Asset B head wrap, face correction) retains its exact source default; v01/v02 head fits remain zero',
               'ponytail': ponytail, 'bone_axes': face_bone_axes(arm), 'deformation_samples': deformation,
               'limitations': ['A procedural bake needs rendered and browser critique before any quality claim.',
                              'Morph expressions are restrained extrapolations; original references provide neutral/tension cues only.',

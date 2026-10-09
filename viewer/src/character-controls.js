@@ -6,6 +6,11 @@ const BLINK_NAMES = ['Blink_L', 'Blink_R'];
 const normalize = name => String(name).toLowerCase().replace(/[^a-z0-9]/g, '');
 const clamp = (n, lo, hi) => THREE.MathUtils.clamp(Number(n) || 0, lo, hi);
 
+// glTF animations added by glb_expression_clips.py animate morph weights only.
+export function isOverlayClip(clip) {
+  return /^Expr_/.test(clip.name) || (clip.tracks.length && clip.tracks.every(track => track.name.endsWith('.morphTargetInfluences')));
+}
+
 export function findBone(root, name) {
   const wanted = normalize(name);
   let result;
@@ -147,8 +152,8 @@ export class AnimationController {
       const clip = clips.find(item => normalize(item.name) === normalize(role));
       if (clip) this.roles[role] = this.actions.get(clip.name);
     }
-    this.walkSpeed = .95 * height / 1.68;
-    this.runSpeed = 2.65 * height / 1.68;
+    this.walkSpeed = .90 * height / 1.68;
+    this.runSpeed = 2.40 * height / 1.68;
     this.mode = 'rest';
     this.current = 'rest';
     this.active = null;
@@ -157,7 +162,41 @@ export class AnimationController {
     this.phase = 0;
     this.autoWeights = { Idle: 1, Walk: 0, Run: 0 };
     this.manualTransition = null;
+    // Facial performance clips (morph weights only) play on top of whatever
+    // drives the skeleton; they never stop or fade the body actions.
+    this.overlays = new Map(clips.filter(clip => isOverlayClip(clip)).map(clip => [clip.name, this.mixer.clipAction(clip)]));
+    for (const name of this.overlays.keys()) this.actions.delete(name);
+    this.overlay = null;
+    this.clipInfo = {};
+    this.onFinished = null;
+    this.mixer.addEventListener('finished', event => this.onFinished?.(event.action));
   }
+
+  setClipInfo(info = {}) {
+    this.clipInfo = info;
+    for (const [name, action] of this.actions) {
+      if (info[name]?.one_shot) { action.setLoop(THREE.LoopOnce, 1); action.clampWhenFinished = true; }
+    }
+  }
+
+  clipName(action) {
+    for (const [name, candidate] of this.actions) if (candidate === action) return name;
+    for (const [name, candidate] of this.overlays) if (candidate === action) return name;
+    return null;
+  }
+
+  playOverlay(name, weight = 1) {
+    const actualName = [...this.overlays.keys()].find(n => normalize(n) === normalize(name));
+    if (!actualName) return false;
+    this.overlay?.stop();
+    const action = this.overlays.get(actualName);
+    action.reset().setLoop(THREE.LoopOnce, 1).setEffectiveWeight(clamp(weight, 0, 1)).play();
+    action.clampWhenFinished = false;
+    this.overlay = action;
+    return actualName;
+  }
+
+  stopOverlay() { this.overlay?.stop(); this.overlay = null; return true; }
 
   setRate(rate) {
     this.playbackRate = clamp(rate, .1, 2);
@@ -282,4 +321,5 @@ export class AnimationController {
   }
   get time() { return this.mode === 'automatic' ? this.phase * this.duration : this.active?.time ?? 0; }
   get weights() { return Object.fromEntries([...this.actions].map(([name, action]) => [name, action.isScheduled() ? action.getEffectiveWeight() : 0])); }
+  get overlayName() { return this.overlay?.isRunning() ? this.clipName(this.overlay) : null; }
 }

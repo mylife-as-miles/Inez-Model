@@ -10,7 +10,8 @@ UV) with metric height and side priors from the aligned frame, then cleaned
 by a nearest-neighbour majority vote (96 neighbours, about 1 cm on Asset A). Labels steer which source surface each
 production part conforms to (sweater -> sweater, jeans -> jeans, ...) and
 which part of Asset B becomes the hair shell. They are segmentation aids,
-not artistic decisions.
+not artistic decisions. fine_labels repeat the vote over ~16 neighbours only
+(ears and nape skin stay skin there).
 """
 import argparse
 import io
@@ -120,10 +121,17 @@ def main():
         labels[warm_coloured & (ds >= dh)] = REGIONS.index('hair')
         white = (sat < 0.10) & (L > 0.55)
         labels[white] = REGIONS.index('eye')
-    labels = smooth_labels(P, labels)
+    raw = labels
+    labels = smooth_labels(P, raw)
+    # Fine labels: the same colour classes with a ~1-2 mm vote only. The broad
+    # vote above absorbs Asset B's ears and nape skin into the hair mass, so
+    # the hair shell is cut where the fine labels say skin.
+    fine = smooth_labels(P, raw, neighbours=16, passes=1)
     counts = {name: int((labels == k).sum()) for k, name in enumerate(REGIONS)}
-    np.savez_compressed(args.output, labels=labels.astype(np.int8), colours=c.astype(np.float16), names=np.array(REGIONS))
-    print(json.dumps({'mesh': args.mesh, 'counts': counts}))
+    fine_counts = {name: int((fine == k).sum()) for k, name in enumerate(REGIONS)}
+    np.savez_compressed(args.output, labels=labels.astype(np.int8), fine_labels=fine.astype(np.int8),
+                        colours=c.astype(np.float16), names=np.array(REGIONS))
+    print(json.dumps({'mesh': args.mesh, 'counts': counts, 'fine_counts': fine_counts}))
 
 
 if __name__ == '__main__':
