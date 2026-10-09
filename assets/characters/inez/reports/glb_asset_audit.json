@@ -1,0 +1,278 @@
+[
+  {
+    "magic": "glTF",
+    "version": 2,
+    "declared_length": 69695372,
+    "file_size": 69695372,
+    "valid_container": true,
+    "file": "assets/characters/inez/source/asset_a/Inez.glb",
+    "generator": "Tripo",
+    "extensions_used": [],
+    "nodes": [
+      {
+        "mesh": 0,
+        "name": "tripo_node_21c117bb-9a4b-42bb-92cc-7af6aa20f4a8",
+        "translation": [
+          0.000152587890625,
+          0,
+          -7.625669240951538e-06
+        ]
+      }
+    ],
+    "skins": [],
+    "animations": [],
+    "images": [
+      {
+        "index": 0,
+        "name": "Inez_normal",
+        "mime": "image/png",
+        "bytes": 4863703,
+        "size": [
+          4096,
+          4096
+        ],
+        "mode": "RGB"
+      },
+      {
+        "index": 1,
+        "name": "Inez_basecolor",
+        "mime": "image/jpeg",
+        "bytes": 5091008,
+        "size": [
+          4096,
+          4096
+        ],
+        "mode": "RGB"
+      },
+      {
+        "index": 2,
+        "name": "Inez_rm",
+        "mime": "image/jpeg",
+        "bytes": 1652836,
+        "size": [
+          4096,
+          4096
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "materials": [
+      {
+        "name": "tripo_mat_21c117bb-9a4b-42bb-92cc-7af6aa20f4a8",
+        "normalTexture": {
+          "index": 0
+        },
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 1
+          },
+          "metallicRoughnessTexture": {
+            "index": 2
+          }
+        }
+      }
+    ],
+    "primitives": [
+      {
+        "mesh": "tripo_mesh_21c117bb-9a4b-42bb-92cc-7af6aa20f4a8",
+        "primitive": 0,
+        "mode": 4,
+        "attributes": [
+          "NORMAL",
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "uv_sets": [
+          "TEXCOORD_0"
+        ],
+        "vertices": 1081995,
+        "triangles": 1955177,
+        "morph_targets": 0,
+        "skinned": false,
+        "bounds_min": [
+          -0.19466,
+          0.0,
+          -0.08869
+        ],
+        "bounds_max": [
+          0.19466,
+          0.97913,
+          0.08869
+        ],
+        "extent": [
+          0.38931,
+          0.97913,
+          0.17738
+        ],
+        "connectivity": {
+          "welded_vertices": 977485,
+          "shells": 1,
+          "boundary_edges": 2,
+          "non_manifold_edges": 8,
+          "degenerate_triangles": 0,
+          "largest_shell_triangles": [
+            1955177
+          ],
+          "triangles_outside_largest_shell": 0
+        },
+        "uv0_range": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ],
+        "uv0_area_sum": 0.6289858520030975
+      }
+    ],
+    "totals": {
+      "vertices": 1081995,
+      "triangles": 1955177,
+      "materials": 1,
+      "textures": 3,
+      "skeleton": false,
+      "morph_targets": 0,
+      "animations": 0
+    }
+  },
+  {
+    "magic": "glTF",
+    "version": 2,
+    "declared_length": 67019772,
+    "file_size": 67019772,
+    "valid_container": true,
+    "file": "assets/characters/inez/source/asset_b/Inez Facial Model.glb",
+    "generator": "Tripo",
+    "extensions_used": [
+      "KHR_materials_volume",
+      "FB_ngon_encoding"
+    ],
+    "nodes": [
+      {
+        "name": "tripo_node_c61b8efb-e957-4e25-a52c-3124988203ee",
+        "mesh": 0
+      }
+    ],
+    "skins": [],
+    "animations": [],
+    "images": [
+      {
+        "index": 0,
+        "name": "Inez+Facial+Model_basecolor.jpg",
+        "mime": "image/jpeg",
+        "bytes": 5427758,
+        "size": [
+          4096,
+          4096
+        ],
+        "mode": "RGB"
+      },
+      {
+        "index": 1,
+        "name": "Inez+Facial+Model_rm.jpg",
+        "mime": "image/jpeg",
+        "bytes": 1842021,
+        "size": [
+          4096,
+          4096
+        ],
+        "mode": "RGB"
+      },
+      {
+        "index": 2,
+        "name": "Inez+Facial+Model_normal.png",
+        "mime": "image/png",
+        "bytes": 5766803,
+        "size": [
+          4096,
+          4096
+        ],
+        "mode": "RGB"
+      }
+    ],
+    "materials": [
+      {
+        "name": "tripo_material_c61b8efb-e957-4e25-a52c-3124988203ee",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "metallicRoughnessTexture": {
+            "index": 1
+          }
+        },
+        "normalTexture": {
+          "index": 2
+        }
+      }
+    ],
+    "primitives": [
+      {
+        "mesh": "meshes[0]",
+        "primitive": 0,
+        "mode": 4,
+        "attributes": [
+          "NORMAL",
+          "POSITION",
+          "TEXCOORD_0"
+        ],
+        "uv_sets": [
+          "TEXCOORD_0"
+        ],
+        "vertices": 987311,
+        "triangles": 1865603,
+        "morph_targets": 0,
+        "skinned": false,
+        "bounds_min": [
+          -0.24669,
+          0.0,
+          -0.4129
+        ],
+        "bounds_max": [
+          0.24669,
+          0.97986,
+          0.4129
+        ],
+        "extent": [
+          0.49338,
+          0.97986,
+          0.82581
+        ],
+        "connectivity": {
+          "welded_vertices": 932496,
+          "shells": 1,
+          "boundary_edges": 5,
+          "non_manifold_edges": 11,
+          "degenerate_triangles": 0,
+          "largest_shell_triangles": [
+            1865603
+          ],
+          "triangles_outside_largest_shell": 0
+        },
+        "uv0_range": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ],
+        "uv0_area_sum": 0.522296130657196
+      }
+    ],
+    "totals": {
+      "vertices": 987311,
+      "triangles": 1865603,
+      "materials": 1,
+      "textures": 3,
+      "skeleton": false,
+      "morph_targets": 0,
+      "animations": 0
+    }
+  }
+]
