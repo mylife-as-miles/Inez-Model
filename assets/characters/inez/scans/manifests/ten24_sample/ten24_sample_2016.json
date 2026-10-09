@@ -1,0 +1,71 @@
+{
+  "id": "ten24_sample_2016",
+  "publisher": "Ten24 (ten24.info / 3D Scan Store)",
+  "publisher_page": "https://ten24.info/sample-scan/",
+  "publisher_page_sha256_at_retrieval": "4d090a2fed7697dab43a27ae00279485a967306a5422679c6fc9e8971be9e5d4",
+  "download_url": "https://s3-us-west-2.amazonaws.com/samplescan/OBJ+Package.zip",
+  "download_link_source": "Publisher-provided direct link on the sample-scan page (no account, form or paywall).",
+  "retrieved_utc": "2026-10-09",
+  "archive": {
+    "file": "OBJ_Package.zip",
+    "bytes": 1967870302,
+    "sha256": "1e7986ddfd0bcc4dc916313c893f089c91fbc1237158c10dced9edfc9a138cde",
+    "zbrush_export_version": "4.73",
+    "archive_dates": "2016-03-25"
+  },
+  "license": {
+    "verbatim": "Usage :: Feel free to use this scan as you wish for both commercial and personal projects. All we ask is that you provide us with a credit wherever it's used.",
+    "evidence_file": "scans/licenses/ten24_sample/usage_statement.txt",
+    "commercial_use": true,
+    "credit_required": true,
+    "credit_line": "Facial surface detail derived from the Ten24 sample scan (ten24.info), used under its published usage terms.",
+    "raw_redistribution": "Not explicitly addressed; the raw scan is not committed or redistributed by this project.",
+    "browser_glb_distribution": "FLAGGED for explicit legal clarification: the terms permit commercial use but do not explicitly address standalone downloadable derivative meshes/textures delivered in a browser GLB."
+  },
+  "subject": {
+    "description": "Adult male, full body, clothed (knit sweater, jeans, boots), short hair and beard stubble on the scanned surface, neutral closed-mouth expression.",
+    "not_inez": true,
+    "identity_policy": "Anatomical surface source only. Inez proportions come from the original references; donor colour texture is not reused; beard/brow/scalp-hair surface detail is masked."
+  },
+  "extracted_for_use": {
+    "directory": "scans/source/ten24_sample/extracted/ (git-ignored)",
+    "files": [
+      "OBJ/Export SubD/Ten24_Sample_OBJ_SubD_Level1..5.OBJ (+ .mtl)",
+      "Normal Maps/Level_01..06_Normal.PSD (8192x8192 8-bit RGB tangent-space)",
+      "Colour Maps/JPG/Colour_8k.jpg (inspection and masking only)"
+    ],
+    "not_extracted": [
+      "SubD Level6 OBJ (1.45 GB)",
+      "Decimated OBJs",
+      "Colour PSDs",
+      "Colour_16k.jpg"
+    ]
+  },
+  "inspection": {
+    "units": "metres (stature 1.847 m including boots; +Y up, +Z forward in the OBJ)",
+    "levels": {
+      "L1": {
+        "vertices": 7587,
+        "quads": 7587
+      },
+      "L2": {
+        "vertices": 30346,
+        "quads": 30344
+      },
+      "L3": {
+        "vertices": 121378,
+        "quads": 121376
+      },
+      "L4": {
+        "vertices": 485506,
+        "quads": 485504
+      },
+      "L5": {
+        "approx_vertices": 1942000
+      }
+    },
+    "uv": "Single 0-1 UV layout for the whole body; per-corner (unwelded) UVs; the head island occupies roughly 3600x2400 px of the 8K maps and the face roughly 800 px across.",
+    "normal_maps": "Level_0N_Normal holds detail above subdivision level N (Level_01 strongest: eyelids, nostrils, lips, ears, hair, stubble; Level_05/06 nearly flat on the face).",
+    "micro_detail_finding": "Forehead and cheeks carry little pore-scale relief in this scan; chin, jaw and neck carry stubble bumps. Pore-scale detail is therefore NOT sourced from the scan and must not be claimed as scanned."
+  }
+}

@@ -39,6 +39,7 @@ from model_hair_v04 import build_hair_v04
 from model_materials import material, detail_tile
 from model_materials_v04 import skin_pbr_v04, sweater_pbr_v04, denim_pbr_v04
 from model_source import CHARACTER, read_obj, shape_vertices, fit_vertices, rig_sources, joint_point
+from head_uv import head_islands, head_layout
 
 PLATFORM_UNITS = 0.434  # 4.6 cm platform under the foot (original B chunky soles)
 
@@ -55,6 +56,16 @@ def arguments():
     parser.add_argument('--texture-resolution', type=int, default=2048)
     parser.add_argument('--skip-hair', action='store_true')
     parser.add_argument('--refine', help='head refinement JSON (CC0 target weights) layered over the v03 fit')
+    parser.add_argument('--scan-wrap', help='scan_wrap.npz: per-source-vertex offsets onto the reshaped Ten24 scan')
+    parser.add_argument('--identity-layer', action='append', default=[],
+                        help='NAME=FILE.npz per-source-vertex offset layer (source_index, source_offsets, stage '
+                             'pre_pose|post_pose); becomes shape key Inez_<NAME>_<rev> = 1')
+    parser.add_argument('--dump-fitted', help='write the final fitted source points (all vertices, source units) to .npz')
+    parser.add_argument('--scan-detail', help='directory with scan_detail_normal.png/scan_detail_mask.png baked in the head UV')
+    parser.add_argument('--head-resolution', default='4096x2048', help='high-resolution head map size WxH')
+    parser.add_argument('--game-head-resolution', default='2048x1024', help='head map size embedded in the GLB')
+    parser.add_argument('--highres-dir', help='where the high-resolution head maps are written (default: texture dir)')
+    parser.add_argument('--manifest', help='manifest path (default qa/model/model_dressed_<rev>_manifest.json)')
     return parser.parse_args(sys.argv[sys.argv.index('--')+1:])
 
 
@@ -195,6 +206,81 @@ def delete_hidden_body(body, below_z):
     return len(doomed)
 
 
+def parse_size(text):
+    w, h = (int(v) for v in text.lower().split('x'))
+    return w, h
+
+
+def load_scan_detail(directory, size):
+    """Baked scan detail (tangent normal + transfer mask) in the head UV layout.
+
+    Blender saves images bottom row first; rasterized skin maps use the same
+    convention (UV origin lower left), so rows are flipped from PIL order.
+    """
+    def read(name):
+        img = bpy.data.images.load(str(Path(directory)/name), check_existing=False)
+        img.colorspace_settings.name = 'Non-Color'  # before the pixel buffer loads
+        if tuple(img.size) != tuple(size):
+            img.scale(*size)
+        pixels = np.empty(size[0]*size[1]*4, np.float32)
+        img.pixels.foreach_get(pixels)
+        bpy.data.images.remove(img)
+        return pixels.reshape(size[1], size[0], 4)
+    normal = read('scan_detail_normal.png')[:, :, :3]
+    mask = read('scan_detail_mask.png')[:, :, 0]
+    return {'normal': normal, 'mask': mask}
+
+
+def assign_head_material(body, fitted, uv, groups, bw, texdir, args, eye_center, ipd, lid_lines):
+    """Give the head islands their own UV layout and 4K-class skin material.
+
+    The MakeHuman head islands are moved rigidly (head_uv.py), so geometry,
+    weights and topology are untouched; the visible neck stays on the body map.
+    """
+    faces = groups['body']
+    size = parse_size(args.head_resolution)
+    game = parse_size(args.game_head_resolution)
+    islands = head_islands(fitted[:13380], faces, bw.head)
+    texcoords_head, faces_head, face_ids, placement = head_layout(uv, faces, islands, size)
+    texel_scale = placement['head_main']['px_per_atlas_unit']/args.texture_resolution
+    detail = load_scan_detail(args.scan_detail, size) if args.scan_detail else None
+    highres = Path(args.highres_dir) if args.highres_dir else Path(texdir)
+    mat = skin_pbr_v04(fitted, texcoords_head, faces_head, highres, eye_center, ipd, size, lid_lines=lid_lines,
+                       texel_scale=texel_scale, prefix='inez_head_skin', material_name='Inez_Head_Skin_PBR',
+                       scan_detail=detail, pore_scale=0.6)
+    # Embed game-resolution copies; the high-resolution maps stay as files.
+    for node in mat.node_tree.nodes:
+        if node.type == 'TEX_IMAGE' and node.image is not None:
+            img = node.image
+            img.scale(*game)
+            img.filepath_raw = str(Path(texdir)/(img.name+'.png'))
+            img.save()
+            img.pack()
+    body.data.materials.append(mat)
+    head_index = len(body.data.materials)-1
+    by_vertices = {frozenset(i for i, _ in faces[f]): k for k, f in enumerate(face_ids)}
+    source = body.data.attributes['makehuman_source_index'].data
+    layer = body.data.uv_layers['MakeHuman_CC0_UV'].data
+    assigned = 0
+    for poly in body.data.polygons:
+        key = frozenset(source[v].value for v in poly.vertices)
+        k = by_vertices.get(key)
+        if k is None:
+            continue
+        corner = {v: t for v, t in faces_head[k]}
+        poly.material_index = head_index
+        for li in poly.loop_indices:
+            t = corner[source[body.data.loops[li].vertex_index].value]
+            layer[li].uv = texcoords_head[t]
+        assigned += 1
+    if assigned != len(face_ids):
+        raise RuntimeError(f'Head material assigned to {assigned} of {len(face_ids)} head faces')
+    mat['uv_layout'] = 'MakeHuman head islands moved rigidly into a %dx%d head map (tools/inez/head_uv.py)' % size
+    return {'faces': assigned, 'highres_size': list(size), 'embedded_size': list(game), 'texel_scale_vs_body': texel_scale,
+            'highres_dir': str(highres), 'placement_px': {k: v['bbox_px'] for k, v in placement.items()},
+            'scan_detail': args.scan_detail}
+
+
 def main():
     args = arguments()
     config = json.loads(Path(args.config).read_text())
@@ -245,8 +331,35 @@ def main():
         refine = refinement_delta(fitted, refine_data['weights'], CHARACTER/'model/base-source/targets')
         refine_report = {'config': args.refine, 'weights': refine_data['weights'],
                          'max_displacement_m': float(np.linalg.norm(refine, axis=1).max()*scale)}
-    fitted = [list(np.asarray(p)+refine[i]) for i, p in enumerate(fitted)]
-    posed = fit_body_pose(fitted, config)
+    # Optional scan-wrap layer: face vertices moved onto the Ten24 scan
+    # reshaped to Inez's proportions (tools/inez/scan_fit.py, scan_wrap.py).
+    wrap = np.zeros((len(fitted), 3))
+    wrap_report = None
+    if args.scan_wrap:
+        wrap_data = np.load(args.scan_wrap)
+        wrap[wrap_data['source_index']] = wrap_data['source_offsets']
+        moved = np.linalg.norm(wrap, axis=1)*scale
+        wrap_report = {'file': args.scan_wrap, 'moved_vertices': int((moved > 1e-4).sum()),
+                       'max_displacement_m': float(moved.max()),
+                       'credit': 'Facial anatomy derived from the Ten24 sample scan (ten24.info), reshaped to Inez'}
+    # Generic identity layers (source-model transfer): pre-pose layers move
+    # head/face vertices like the refinement; post-pose layers (body fit to
+    # Asset A) are measured on the posed figure and added after posing.
+    layers, layer_reports = [], {}
+    for item in args.identity_layer:
+        name, path = item.split('=', 1)
+        data = np.load(path)
+        delta = np.zeros((len(fitted), 3))
+        delta[data['source_index']] = data['source_offsets']
+        stage = str(data['stage']) if 'stage' in data.files else 'pre_pose'
+        layers.append((name, delta, stage))
+        moved = np.linalg.norm(delta, axis=1)*scale
+        layer_reports[name] = {'file': path, 'stage': stage, 'moved_vertices': int((moved > 1e-4).sum()),
+                               'max_displacement_m': float(moved.max())}
+    pre = sum((d for _, d, st in layers if st == 'pre_pose'), np.zeros((len(fitted), 3)))
+    post = sum((d for _, d, st in layers if st == 'post_pose'), np.zeros((len(fitted), 3)))
+    fitted = [list(np.asarray(p)+refine[i]+wrap[i]+pre[i]) for i, p in enumerate(fitted)]
+    posed = [list(np.asarray(p)+post[i]) for i, p in enumerate(fit_body_pose(fitted, config))]
     # Lift every stored shape and helper mesh by the platform so the feet stand
     # on the sole. Identity fit key values are untouched.
     for key in keys:
@@ -256,7 +369,7 @@ def main():
         v.co.z += lift_m
     # The active v03 key carries the arm pose; the refinement is its own key.
     for vi, item in enumerate(attr.data):
-        unrefined = np.asarray(posed[item.value])-refine[item.value]
+        unrefined = np.asarray(posed[item.value])-refine[item.value]-wrap[item.value]-pre[item.value]-post[item.value]
         fitkey.data[vi].co = transform(unrefined)
     if args.refine:
         refkey = body.shape_key_add(name='Inez_HeadRefine_'+args.revision, from_mix=False)
@@ -267,7 +380,28 @@ def main():
         refkey.value = 1.0
         identity_defaults[refkey.name] = 1.0
         keys = body.data.shape_keys.key_blocks
+    if args.scan_wrap:
+        wrapkey = body.shape_key_add(name='Inez_ScanWrap_'+args.revision, from_mix=False)
+        wrapkey.relative_key = keys[0]
+        for vi, item in enumerate(attr.data):
+            d = wrap[item.value]
+            wrapkey.data[vi].co = keys[0].data[vi].co+Vector((d[0]*scale, -d[2]*scale, d[1]*scale))
+        wrapkey.value = 1.0
+        identity_defaults[wrapkey.name] = 1.0
+        keys = body.data.shape_keys.key_blocks
+    for name, delta, stage in layers:
+        key = body.shape_key_add(name='Inez_'+name+'_'+args.revision, from_mix=False)
+        key.relative_key = keys[0]
+        for vi, item in enumerate(attr.data):
+            d = delta[item.value]
+            key.data[vi].co = keys[0].data[vi].co+Vector((d[0]*scale, -d[2]*scale, d[1]*scale))
+        key.value = 1.0
+        identity_defaults[key.name] = 1.0
+        keys = body.data.shape_keys.key_blocks
     fitted = posed
+    if args.dump_fitted:
+        np.savez_compressed(args.dump_fitted, fitted=np.asarray(fitted, np.float64), scale=scale,
+                            ground_eff=ground_eff, note='world = (x*scale, -z*scale, (y-ground_eff)*scale)')
     for name in ('EyeGeometry_L', 'EyeGeometry_R', 'IrisQA_L', 'IrisQA_R', 'PupilQA_L', 'PupilQA_R'):
         obj = bpy.data.objects.get(name)
         if obj:
@@ -290,6 +424,8 @@ def main():
     body.data.materials.clear()
     body.data.materials.append(skin_pbr_v04(fitted, uv, groups['body'], texdir, (eye_l[0], eye_l[1]), ipd,
                                             args.texture_resolution, lid_lines=lid_lines))
+    head_report = assign_head_material(body, fitted, uv, groups, BodyWeights(rig_sources()[1]), texdir, args,
+                                       (eye_l[0], eye_l[1]), ipd, lid_lines)
     face_objects, face_report = build_face_v04(body, fitted, uv, groups, rig, weights, transform, arm, texdir)
     levels = garment_levels(fitted, rig)
     bw = BodyWeights(weights)
@@ -348,7 +484,7 @@ def main():
     hair, hair_report = ([], {}) if args.skip_hair else build_hair_v04(fitted, uv, groups, transform, arm, texdir)
     removed = delete_hidden_body(body, transform((0, levels['boot_top_y']-0.15, 0))[2])
     preserved = {k.name: float(k.value) for k in body.data.shape_keys.key_blocks
-                 if k.name.startswith(('Inez_HeadFit_', 'Inez_HeadRefine_'))}
+                 if k.name in identity_defaults}
     if preserved != identity_defaults:
         raise RuntimeError('Identity fit defaults changed: %s vs %s' % (preserved, identity_defaults))
     body['identity_status'] = 'Fitted dressed playable foundation v04; independent final artistic review pending'
@@ -372,7 +508,8 @@ def main():
         'revision': args.revision, 'stage': scene['INEZ_STAGE'], 'source_head_blend': bpy.data.filepath,
         'head_config': args.config, 'blend': str(blend), 'glb': str(glb), 'texture_dir': str(texdir),
         'identity_morph_source_defaults': identity_defaults, 'identity_morph_values_after_build': preserved,
-        'head_refinement': refine_report,
+        'head_refinement': refine_report, 'scan_wrap': wrap_report, 'identity_layers': layer_reports,
+        'head_material': head_report,
         'provisional_body_height_m': config['provisional_height_m'], 'platform_lift_m': lift_m,
         'garment_levels_source_units': levels, 'stripe_evidence': {
             'torso_dark_band_fractions_neckline_to_hem': [list(b) for b in __import__('model_clothing_v04').TORSO_DARK_BANDS],
@@ -393,7 +530,8 @@ def main():
         'final_artistic_identity_approved': False, 'production_complete': False,
         'units': 'meters; glTF Y up, +Z forward',
     }
-    report = CHARACTER/'qa/model'/('model_dressed_'+args.revision+'_manifest.json')
+    report = Path(args.manifest) if args.manifest else CHARACTER/'qa/model'/('model_dressed_'+args.revision+'_manifest.json')
+    report.parent.mkdir(parents=True, exist_ok=True)
     report.write_text(json.dumps(manifest, indent=2, default=float)+'\n')
     print('INEZ_DRESSED_V04_READY '+json.dumps({'blend': str(blend), 'glb': str(glb), 'removed_faces': removed,
                                                  'identity': preserved}), flush=True)

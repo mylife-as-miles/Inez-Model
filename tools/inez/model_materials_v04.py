@@ -20,23 +20,33 @@ from model_materials import material, save_image, connect_pbr, dilate_maps, norm
     actual_lip_color_field
 
 
+def texture_size(resolution):
+    """(width, height) from an int (square) or a (width, height) pair."""
+    if isinstance(resolution, (tuple, list)):
+        return int(resolution[0]), int(resolution[1])
+    return int(resolution), int(resolution)
+
+
 def raster_attributes(points, attributes, texcoords, faces, resolution):
     """Rasterize per-vertex 3D positions and extra per-vertex attributes into
-    every indexed UV triangle. Returns (positions HxWx3, attrs HxWxC, mask)."""
+    every indexed UV triangle. Returns (positions HxWx3, attrs HxWxC, mask).
+    `resolution` is an int (square) or (width, height)."""
+    width, height = texture_size(resolution)
     points = np.asarray(points, dtype=np.float32)
     attrs = np.asarray(attributes, dtype=np.float32) if attributes is not None else None
     texcoords = np.asarray(texcoords, dtype=np.float32)
     channels = 3+(attrs.shape[1] if attrs is not None else 0)
     data = np.concatenate((points, attrs), axis=1) if attrs is not None else points
-    raster = np.zeros((resolution, resolution, channels), np.float32)
-    mask = np.zeros((resolution, resolution), bool)
+    raster = np.zeros((height, width, channels), np.float32)
+    mask = np.zeros((height, width), bool)
+    limit = np.array([width-1, height-1])
     for face in faces:
         for j in range(1, len(face)-1):
             tri = [face[0], face[j], face[j+1]]
             values = data[[v for v, t in tri]]
-            uv = texcoords[[t for v, t in tri]]*(resolution-1)
+            uv = texcoords[[t for v, t in tri]]*limit
             lo = np.maximum(0, np.floor(uv.min(axis=0)).astype(int))
-            hi = np.minimum(resolution-1, np.ceil(uv.max(axis=0)).astype(int))
+            hi = np.minimum(limit, np.ceil(uv.max(axis=0)).astype(int))
             if (hi < lo).any():
                 continue
             xx, yy = np.meshgrid(np.arange(lo[0], hi[0]+1), np.arange(lo[1], hi[1]+1))
@@ -99,13 +109,26 @@ def brow_field(x, y, z, eye_center, ipd):
     return np.where(inside_u, soft, 0)*front
 
 
-def skin_pbr_v04(points, texcoords, faces, directory, eye_center, ipd, resolution=2048, lid_lines=()):
+def skin_pbr_v04(points, texcoords, faces, directory, eye_center, ipd, resolution=2048, lid_lines=(),
+                 texel_scale=1.0, prefix='inez_skin', material_name='Inez_Skin_Freckles_Pores_Lips_PBR',
+                 scan_detail=None, pore_scale=1.0):
+    """Procedural skin maps in any UV layout.
+
+    texel_scale: texels per world unit relative to the 2K MakeHuman atlas, so
+    noise features keep their physical size in denser head maps.
+    pore_scale: extra multiplier on the pore feature size (finer < 1).
+    scan_detail: optional {'normal': HxWx3 0-1 tangent normal, 'mask': HxW}
+    baked from the reshaped Ten24 scan in the same UV layout; blended over the
+    procedural pores (whiteout blend). Pores themselves stay procedural: the
+    scan does not contain pore-scale relief on the cheeks or forehead.
+    """
     positions, _, mask = raster_attributes(points, None, texcoords, faces, resolution)
     x, y, z = positions[:, :, 0], positions[:, :, 1], positions[:, :, 2]
     shape = mask.shape
-    fine = noise(shape, 1.2, 101)
-    pores = noise(shape, 0.8, 102)
-    mottling = noise(shape, 9, 103)
+    ts = float(texel_scale)
+    fine = noise(shape, 1.2*ts, 101)
+    pores = noise(shape, 0.8*ts*pore_scale, 102)
+    mottling = noise(shape, 9*ts, 103)
     # Base albedo calibrated so studio-lit renders land near original B's lit
     # cheek/forehead sRGB samples (~0.66-0.68, 0.50-0.54, 0.44-0.46).
     albedo = np.empty((*shape, 3), np.float32)
@@ -126,6 +149,9 @@ def skin_pbr_v04(points, texcoords, faces, directory, eye_center, ipd, resolutio
     hm = mask & head & (y > 6.25) & (y < 7.55) & (z > 0.70)
     hx, hy = x[hm], y[hm]
     spots = np.zeros(hx.shape, np.float32)
+    # Sort texels by x so each freckle only touches texels inside its window.
+    order = np.argsort(hx)
+    sx = hx[order]
     centers = []
     for _ in range(560):
         cx = rng.normal(0, 0.30)
@@ -136,9 +162,11 @@ def skin_pbr_v04(points, texcoords, faces, directory, eye_center, ipd, resolutio
     for _ in range(80):
         centers.append((rng.uniform(-.45, .45), rng.uniform(6.95, 7.40), rng.uniform(.003, .007), rng.uniform(.08, .18)))
     for cx, cy, radius, strength in centers:
-        d2 = ((hx-cx)**2+(hy-cy)**2)/radius**2
+        a, b = np.searchsorted(sx, (cx-3*radius, cx+3*radius))
+        ids = order[a:b]
+        d2 = ((hx[ids]-cx)**2+(hy[ids]-cy)**2)/radius**2
         near = d2 < 9
-        spots[near] += np.exp(-d2[near]*1.4)*strength
+        spots[ids[near]] += np.exp(-d2[near]*1.4)*strength
     freckle[hm] = spots*front[hm]
     albedo -= np.minimum(freckle, .50)[:, :, None]*np.array([.26, .22, .17], np.float32)
     # Upper lash line and lid crease shadow along the actual lid-margin rows.
@@ -164,16 +192,16 @@ def skin_pbr_v04(points, texcoords, faces, directory, eye_center, ipd, resolutio
     albedo = albedo*(1-0.70*lash[:, :, None])+srgb((0.10, 0.07, 0.06))*0.70*lash[:, :, None]
     albedo *= (1-0.18*crease)[:, :, None]
     # Brows painted into the albedo with hair-stroke breakup.
-    strokes = noise(shape, 0.7, 104)
+    strokes = noise(shape, 0.7*ts, 104)
     brow = brow_field(x, y, z, eye_center, ipd)*mask
     # Hair-stroke breakup elongated along the brow (outward/upward strokes).
-    stroke_dir = blur(noise(shape, 0.6, 107), 1)
+    stroke_dir = blur(noise(shape, 0.6*ts, 107), max(1, round(ts)))
     brow_alpha = np.clip(brow*(0.48+0.40*np.clip(strokes*0.6+stroke_dir*0.6, -1, 1)), 0, 0.78)
     browcolor = srgb((0.190, 0.130, 0.095))
     albedo = albedo*(1-brow_alpha[:, :, None])+browcolor*brow_alpha[:, :, None]
     # Lips: actual vermilion topology field, muted rose-brown.
     lipweight, lip_topology = actual_lip_color_field(positions, points)
-    lipgrain = noise(shape, 0.6, 105)*0.008
+    lipgrain = noise(shape, 0.6*ts, 105)*0.008
     lipcolor = srgb((0.585, 0.345, 0.312))+lipgrain[:, :, None]
     albedo = albedo*(1-lipweight[:, :, None])+lipcolor*lipweight[:, :, None]
     rough = np.full(shape, .56, np.float32)
@@ -183,14 +211,33 @@ def skin_pbr_v04(points, texcoords, faces, directory, eye_center, ipd, resolutio
     rough = rough*(1-lipweight)+(.40+lipgrain*1.5)*lipweight
     rough = rough*(1-brow_alpha*0.6)+0.72*brow_alpha*0.6
     height = pores*0.55+fine*0.25
-    height = height*(1-lipweight)+noise(shape, 0.9, 106)*0.6*lipweight
-    normal = normal_from_height(height, .055)
+    height = height*(1-lipweight)+noise(shape, 0.9*ts, 106)*0.6*lipweight
+    # Gradients are per texel: scale strength with texel density so the
+    # world-space relief matches the 2K atlas.
+    normal = normal_from_height(height, .055*ts*pore_scale)
+    detail_report = None
+    if scan_detail is not None:
+        sn = scan_detail['normal'].astype(np.float32)*2-1
+        weight = np.clip(scan_detail['mask'], 0, 1)[:, :, None]
+        sn[:, :, :2] *= weight
+        sn[:, :, 2] = sn[:, :, 2]*weight[:, :, 0]+(1-weight[:, :, 0])
+        pn = normal*2-1
+        # The material normal strength becomes 1.0 so the scan relief is
+        # reproduced at its measured depth; the pores keep their 0.35 look.
+        pn[:, :, :2] *= 0.35
+        pn /= np.linalg.norm(pn, axis=2, keepdims=True)
+        # Whiteout blend of two tangent-space normals.
+        blended = np.stack((pn[:, :, 0]+sn[:, :, 0], pn[:, :, 1]+sn[:, :, 1], pn[:, :, 2]*sn[:, :, 2]), axis=2)
+        blended /= np.maximum(np.linalg.norm(blended, axis=2, keepdims=True), 1e-6)
+        normal = blended*0.5+0.5
+        detail_report = {'scan_detail_coverage': float((scan_detail['mask'][mask] > 0.05).mean())}
     albedo, rough, normal = dilate_maps([albedo, rough, normal], mask, passes=8)
-    images = [save_image('inez_skin_albedo', albedo, directory),
-              save_image('inez_skin_roughness', rough, directory, True),
-              save_image('inez_skin_normal', normal, directory, True)]
-    mat = material('Inez_Skin_Freckles_Pores_Lips_PBR', tuple(albedo[resolution//2, resolution//2]), .56)
-    connect_pbr(mat, *images, normal_strength=.35)
+    images = [save_image(prefix+'_albedo', albedo, directory),
+              save_image(prefix+'_roughness', rough, directory, True),
+              save_image(prefix+'_normal', normal, directory, True)]
+    h, w = mask.shape
+    mat = material(material_name, tuple(albedo[h//2, w//2]), .56)
+    connect_pbr(mat, *images, normal_strength=1.0 if detail_report else .35)
     bsdf = mat.node_tree.nodes.get('Principled BSDF')
     bsdf.inputs['Subsurface Weight'].default_value = .05
     bsdf.inputs['Subsurface Radius'].default_value = (1.0, .42, .24)
@@ -200,6 +247,9 @@ def skin_pbr_v04(points, texcoords, faces, directory, eye_center, ipd, resolutio
                                'landmark-measured band; blurred-noise pores (no aliasing sinusoids)')
     mat['hidden_surface_status'] = 'Unseen marks and pores are extrapolated; not calibrated source albedo'
     mat['actual_vermilion_topology'] = json.dumps(lip_topology)
+    if detail_report:
+        mat['scan_detail'] = ('Mid-scale anatomical normal detail baked from the Ten24 sample scan reshaped to '
+                              'Inez proportions (credit: ten24.info); pores procedural. ' + json.dumps(detail_report))
     return mat
 
 

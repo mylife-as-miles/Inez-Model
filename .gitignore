@@ -17,3 +17,7 @@ __pycache__/
 # manifests, licenses and checksums under scans/ are.
 assets/characters/inez/scans/source/
 assets/characters/inez/scans/working/
+# Contains the raw Ten24 scan surface; rebuilt locally by tools/inez/scan_import.py.
+assets/characters/inez/model/inez_scan_base.blend
+# Heavy aligned copies of the user's source GLBs (rebuilt by tools/inez/source_prepare.py).
+assets/characters/inez/model/work/source_aligned/

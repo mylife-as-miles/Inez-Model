@@ -31,7 +31,7 @@ from scan_common import emission_material, look_at
 
 def arguments():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--glb', required=True)
+    parser.add_argument('--glb', default='')
     parser.add_argument('--output', required=True)
     parser.add_argument('--label', required=True)
     parser.add_argument('--views', default='all')
@@ -39,6 +39,8 @@ def arguments():
     parser.add_argument('--resolution', type=int, default=1000)
     parser.add_argument('--yaw-offset', type=float, default=0.0,
                         help='degrees added to every view so yaw 0 looks at the character\'s face')
+    parser.add_argument('--blend-objects', default='', help='render these objects of an opened .blend instead of importing --glb')
+    parser.add_argument('--body-frame', default='', help='cx,cy,cz,span: fixed full-body framing for comparisons')
     parser.add_argument('--face-probe-fraction', type=float, default=0.25,
                         help='upper fraction of the height rendered to find the face with landmarks')
     return parser.parse_args(sys.argv[sys.argv.index('--')+1:])
@@ -142,10 +144,23 @@ def locate_face(rig, meshes, co, lo, hi, size, args, out):
 
 def main():
     args = arguments()
-    bpy.ops.wm.read_factory_settings(use_empty=True)
-    bpy.ops.import_scene.gltf(filepath=str(Path(args.glb).resolve()))
-    meshes = [o for o in bpy.context.scene.objects if o.type == 'MESH']
+    if args.blend_objects:
+        keep = [n for n in args.blend_objects.split(',') if n]
+        for obj in bpy.context.scene.objects:
+            if obj.type in ('LIGHT', 'CAMERA') or obj.type == 'FONT':
+                obj.hide_render = True
+            if obj.type == 'MESH':
+                obj.hide_render = not any(obj.name.startswith(k) for k in keep)
+                for mod in obj.modifiers:
+                    if mod.type == 'SUBSURF':
+                        mod.show_render = False
+        meshes = [o for o in bpy.context.scene.objects if o.type == 'MESH' and not o.hide_render]
+    else:
+        bpy.ops.wm.read_factory_settings(use_empty=True)
+        bpy.ops.import_scene.gltf(filepath=str(Path(args.glb).resolve()))
+        meshes = [o for o in bpy.context.scene.objects if o.type == 'MESH']
     co = np.concatenate([np.array([o.matrix_world @ v.co for v in o.data.vertices]) for o in meshes])
+    co = co[np.isfinite(co).all(1)]
     lo, hi = co.min(0), co.max(0)
     size = float(hi[2]-lo[2])
     scene = bpy.context.scene
@@ -155,8 +170,13 @@ def main():
     views = args.views
     body_center = ((lo[0]+hi[0])/2, (lo[1]+hi[1])/2, (lo[2]+hi[2])/2)
     body_span = max(hi[2]-lo[2], hi[0]-lo[0], hi[1]-lo[1])*1.04
+    if args.body_frame:
+        cx, cy, cz, sp = (float(v) for v in args.body_frame.split(','))
+        body_center, body_span = (cx, cy, cz), sp
     tag = args.label
-    head_center, head_span = locate_face(rig, meshes, co, lo, hi, size, args, out)
+    head_center, head_span = (body_center, body_span*0.2)
+    if views != 'overview':
+        head_center, head_span = locate_face(rig, meshes, co, lo, hi, size, args, out)
     if views in ('overview', 'all'):
         for name, yaw in (('body_front', 0), ('body_three_quarter', 35), ('body_left', 90), ('body_back', 180), ('body_right', -90)):
             rig.render(body_center, body_span, yaw+args.yaw_offset, out/f'{name}.png', f'{tag} - {name} (source GLB as delivered)')
