@@ -1,0 +1,13 @@
+{
+  "accepted": [
+    "visually true right90",
+    "inferred coherent facial geometry"
+  ],
+  "excluded": "unknown historical sagittal detail and generated ponytail length",
+  "production_approved": false,
+  "authority": "OriginalA face;originalB body/costume/hair; original visible silhouette only for unresolved pendant",
+  "reports": [
+    "qa/identity/03_face_right_profile_v02.md",
+    "qa/technical/03_face_right_profile_v02.md"
+  ]
+}

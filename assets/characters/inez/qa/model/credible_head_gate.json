@@ -1,0 +1,28 @@
+{
+  "credible_head_geometry_passed": true,
+  "scope": "Provisional initial underlying geometry for further material/dressed authoring only",
+  "source": "model/work/inez_head_v03.blend",
+  "config": "/workspace/tools/inez/model_head_config_v03.json",
+  "reports": [
+    "qa/identity/head_3d_v03.md",
+    "qa/technical/head_3d_v03.md"
+  ],
+  "review_findings": "Actual upperlip roll/narrow restingseam and real superior/lower lid folds resolve prior construction blockers; v02 mouth/nose/chin gains preserved",
+  "scores": {
+    "identity_face": "26/28 eligible;7 reserved",
+    "identity_scope": "36.5/39;61 reserved",
+    "technical_face": "30/35 below final32 target",
+    "technical_scope": "39/44;56 reserved"
+  },
+  "remaining": [
+    "simplified nasal wing/tip planes",
+    "regular/restrained upperlip and lid arcs",
+    "smooth lowercheek/chin transition",
+    "unknown exact sagittal depth",
+    "full material/hair/body/rig/animation/browser likeness unreviewed"
+  ],
+  "production_approved": false,
+  "final_head_identity_approved": false,
+  "recorded_at": "2026-10-09T09:32:08.325262+00:00",
+  "explicit_root_gate_message": "CREDIBLE HEAD INITIAL GEOMETRY GATE PASSED. Execute actual dressed geometry/PBR using reviewed v03 source. Final likeness/rigged browser acceptance remains pending."
+}

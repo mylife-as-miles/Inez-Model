@@ -1,0 +1,13 @@
+{
+  "accepted": [
+    "fine silver chain/collar relationship",
+    "qualitative metal/material placement"
+  ],
+  "excluded": "resolved bead motif,bail/exact pendant geometry; original motif unresolved",
+  "production_approved": false,
+  "authority": "OriginalA face;originalB body/costume/hair; original visible silhouette only for unresolved pendant",
+  "reports": [
+    "qa/identity/11_necklace_closeup_v01.md",
+    "qa/technical/11_necklace_closeup_v01.md"
+  ]
+}

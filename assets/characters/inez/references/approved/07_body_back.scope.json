@@ -1,0 +1,12 @@
+{
+  "accepted": [
+    "rear overall geometry,ponytail silhouette,garmentplacement"
+  ],
+  "excluded": "warm bootwelt,scratchdenim, exactmaterialmatch, sharedarmangle",
+  "original_authority": "OriginalA face;originalB body/costume;sourceoverridesgeneratedguide",
+  "production_approved": false,
+  "reports": [
+    "qa/identity/07_body_back_v01.md",
+    "qa/technical/07_body_back_v01.md"
+  ]
+}

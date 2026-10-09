@@ -1,0 +1,12 @@
+{
+  "accepted": [
+    "qualitative skin material microvariation"
+  ],
+  "excluded": "exact freckle map/density/roughness historicalclaim",
+  "original_authority": "OriginalA face;originalB body/costume;sourceoverridesgeneratedguide",
+  "production_approved": false,
+  "reports": [
+    "qa/identity/10_skin_freckles_closeup_v01.md",
+    "qa/technical/10_skin_freckles_closeup_v01.md"
+  ]
+}

@@ -1,0 +1,1152 @@
+{
+  "revision": "v02",
+  "stage": "Actual original-based fitted clay head v02; targeted reviewed geometry corrections; unapproved independent review pending",
+  "provisional_height_m": 1.7,
+  "source_shape_weights": {
+    "caucasian-female-young.target": 1.0
+  },
+  "source_shape_note": "Licensed source filename describes a selectable base shape, not an inference of Inez's ethnicity. This base is only topology and an editable fitting substrate; it is never approved as Inez.",
+  "fit_controls": [
+    {
+      "name": "compact_chin_vertical_length",
+      "center": [
+        0,
+        5.78,
+        1.12
+      ],
+      "radius": [
+        0.6,
+        0.46,
+        0.68
+      ],
+      "delta": [
+        0,
+        0.103,
+        0
+      ],
+      "front_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "rounded_chin_width_L",
+      "center": [
+        0.18,
+        5.87,
+        1.18
+      ],
+      "radius": [
+        0.2,
+        0.22,
+        0.27
+      ],
+      "delta": [
+        0.012,
+        0,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "rounded_chin_width_R",
+      "center": [
+        -0.18,
+        5.87,
+        1.18
+      ],
+      "radius": [
+        0.2,
+        0.22,
+        0.27
+      ],
+      "delta": [
+        -0.012,
+        0,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_jaw_contour_L",
+      "center": [
+        0.5,
+        6.05,
+        0.83
+      ],
+      "radius": [
+        0.29,
+        0.39,
+        0.37
+      ],
+      "delta": [
+        -0.024,
+        0.025,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_jaw_contour_R",
+      "center": [
+        -0.5,
+        6.05,
+        0.83
+      ],
+      "radius": [
+        0.29,
+        0.39,
+        0.37
+      ],
+      "delta": [
+        0.024,
+        0.025,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "soft_cheek_width_L",
+      "center": [
+        0.6,
+        6.49,
+        0.98
+      ],
+      "radius": [
+        0.28,
+        0.43,
+        0.4
+      ],
+      "delta": [
+        -0.037,
+        0,
+        0.018
+      ],
+      "front_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "soft_cheek_width_R",
+      "center": [
+        -0.6,
+        6.49,
+        0.98
+      ],
+      "radius": [
+        0.28,
+        0.43,
+        0.4
+      ],
+      "delta": [
+        0.037,
+        0,
+        0.018
+      ],
+      "front_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "mouth_corner_natural_width_L",
+      "center": [
+        0.231,
+        6.24,
+        1.37
+      ],
+      "radius": [
+        0.125,
+        0.13,
+        0.18
+      ],
+      "delta": [
+        -0.038,
+        0.007,
+        0.008
+      ],
+      "front_only": true
+    },
+    {
+      "name": "mouth_corner_natural_width_R",
+      "center": [
+        -0.231,
+        6.24,
+        1.37
+      ],
+      "radius": [
+        0.125,
+        0.13,
+        0.18
+      ],
+      "delta": [
+        0.038,
+        0.007,
+        0.008
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_lip_soft_volume",
+      "center": [
+        0,
+        6.168,
+        1.41
+      ],
+      "radius": [
+        0.16,
+        0.065,
+        0.1
+      ],
+      "delta": [
+        0,
+        0.008,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "restrained_upper_lip_projection",
+      "center": [
+        0,
+        6.3,
+        1.455
+      ],
+      "radius": [
+        0.12,
+        0.075,
+        0.12
+      ],
+      "delta": [
+        0,
+        -0.004,
+        -0.008
+      ],
+      "front_only": true
+    },
+    {
+      "name": "nose_tip_soft_rounding",
+      "center": [
+        0,
+        6.526,
+        1.571
+      ],
+      "radius": [
+        0.107,
+        0.103,
+        0.12
+      ],
+      "delta": [
+        0,
+        -0.007,
+        0.008
+      ],
+      "front_only": true
+    },
+    {
+      "name": "alar_volume_L",
+      "center": [
+        0.157,
+        6.489,
+        1.343
+      ],
+      "radius": [
+        0.075,
+        0.095,
+        0.15
+      ],
+      "delta": [
+        0.007,
+        0,
+        0.007
+      ],
+      "front_only": true
+    },
+    {
+      "name": "alar_volume_R",
+      "center": [
+        -0.157,
+        6.489,
+        1.343
+      ],
+      "radius": [
+        0.075,
+        0.095,
+        0.15
+      ],
+      "delta": [
+        -0.007,
+        0,
+        0.007
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_lid_soft_transition_L",
+      "center": [
+        0.29,
+        6.692,
+        1.265
+      ],
+      "radius": [
+        0.18,
+        0.08,
+        0.16
+      ],
+      "delta": [
+        0,
+        0.004,
+        0.004
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_lid_soft_transition_R",
+      "center": [
+        -0.29,
+        6.692,
+        1.265
+      ],
+      "radius": [
+        0.18,
+        0.08,
+        0.16
+      ],
+      "delta": [
+        0,
+        0.004,
+        0.004
+      ],
+      "front_only": true
+    },
+    {
+      "name": "v02_alar_wing_broaden_L",
+      "center": [
+        0.166,
+        6.5,
+        1.35
+      ],
+      "radius": [
+        0.095,
+        0.092,
+        0.15
+      ],
+      "delta": [
+        0.037,
+        0.001,
+        0.015
+      ],
+      "front_only": true,
+      "body_only": true
+    },
+    {
+      "name": "v02_tip_round_transverse_L",
+      "center": [
+        0.075,
+        6.555,
+        1.55
+      ],
+      "radius": [
+        0.08,
+        0.094,
+        0.1
+      ],
+      "delta": [
+        0.012,
+        0,
+        0.004
+      ],
+      "front_only": true,
+      "body_only": true
+    },
+    {
+      "name": "v02_restore_natural_mouth_width_L",
+      "center": [
+        0.231,
+        6.24,
+        1.37
+      ],
+      "radius": [
+        0.125,
+        0.13,
+        0.18
+      ],
+      "delta": [
+        0.027,
+        0,
+        0
+      ],
+      "front_only": true,
+      "body_only": true
+    },
+    {
+      "name": "v02_round_chin_shoulders_L",
+      "center": [
+        0.29,
+        5.865,
+        1.145
+      ],
+      "radius": [
+        0.22,
+        0.24,
+        0.29
+      ],
+      "delta": [
+        -0.012,
+        0.046,
+        0.016
+      ],
+      "front_only": true,
+      "body_only": true
+    },
+    {
+      "name": "v02_soft_lower_cheek_plane_L",
+      "center": [
+        0.47,
+        6.18,
+        1.02
+      ],
+      "radius": [
+        0.27,
+        0.3,
+        0.25
+      ],
+      "delta": [
+        0.008,
+        0.012,
+        0.024
+      ],
+      "front_only": true,
+      "body_only": true
+    },
+    {
+      "name": "v02_modest_upper_aperture_L",
+      "center": [
+        0.294,
+        6.837,
+        1.28
+      ],
+      "radius": [
+        0.154,
+        0.058,
+        0.075
+      ],
+      "delta": [
+        0,
+        0.009,
+        0.009
+      ],
+      "front_only": true,
+      "body_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "v02_upper_lid_soft_fold_volume_L",
+      "center": [
+        0.292,
+        6.88,
+        1.27
+      ],
+      "radius": [
+        0.168,
+        0.038,
+        0.1
+      ],
+      "delta": [
+        0,
+        0,
+        0.025
+      ],
+      "front_only": true,
+      "body_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "v02_upper_lid_restrained_crease_L",
+      "center": [
+        0.299,
+        6.932,
+        1.26
+      ],
+      "radius": [
+        0.174,
+        0.028,
+        0.13
+      ],
+      "delta": [
+        0,
+        0,
+        -0.013
+      ],
+      "front_only": true,
+      "body_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "v02_lower_lid_soft_roll_contact_L",
+      "center": [
+        0.286,
+        6.738,
+        1.27
+      ],
+      "radius": [
+        0.17,
+        0.041,
+        0.085
+      ],
+      "delta": [
+        0,
+        -0.002,
+        0.014
+      ],
+      "front_only": true,
+      "body_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "v02_upper_lid_outer_contact_L",
+      "center": [
+        0.373,
+        6.831,
+        1.249
+      ],
+      "radius": [
+        0.079,
+        0.058,
+        0.075
+      ],
+      "delta": [
+        0,
+        0.004,
+        0.012
+      ],
+      "front_only": true,
+      "body_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "v02_alar_wing_broaden_R",
+      "center": [
+        -0.166,
+        6.5,
+        1.35
+      ],
+      "radius": [
+        0.095,
+        0.092,
+        0.15
+      ],
+      "delta": [
+        -0.037,
+        0.001,
+        0.015
+      ],
+      "front_only": true,
+      "body_only": true
+    },
+    {
+      "name": "v02_tip_round_transverse_R",
+      "center": [
+        -0.075,
+        6.555,
+        1.55
+      ],
+      "radius": [
+        0.08,
+        0.094,
+        0.1
+      ],
+      "delta": [
+        -0.012,
+        0,
+        0.004
+      ],
+      "front_only": true,
+      "body_only": true
+    },
+    {
+      "name": "v02_restore_natural_mouth_width_R",
+      "center": [
+        -0.231,
+        6.24,
+        1.37
+      ],
+      "radius": [
+        0.125,
+        0.13,
+        0.18
+      ],
+      "delta": [
+        -0.027,
+        0,
+        0
+      ],
+      "front_only": true,
+      "body_only": true
+    },
+    {
+      "name": "v02_round_chin_shoulders_R",
+      "center": [
+        -0.29,
+        5.865,
+        1.145
+      ],
+      "radius": [
+        0.22,
+        0.24,
+        0.29
+      ],
+      "delta": [
+        0.012,
+        0.046,
+        0.016
+      ],
+      "front_only": true,
+      "body_only": true
+    },
+    {
+      "name": "v02_soft_lower_cheek_plane_R",
+      "center": [
+        -0.47,
+        6.18,
+        1.02
+      ],
+      "radius": [
+        0.27,
+        0.3,
+        0.25
+      ],
+      "delta": [
+        -0.008,
+        0.012,
+        0.024
+      ],
+      "front_only": true,
+      "body_only": true
+    },
+    {
+      "name": "v02_modest_upper_aperture_R",
+      "center": [
+        -0.294,
+        6.837,
+        1.28
+      ],
+      "radius": [
+        0.154,
+        0.058,
+        0.075
+      ],
+      "delta": [
+        0,
+        0.009,
+        0.009
+      ],
+      "front_only": true,
+      "body_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "v02_upper_lid_soft_fold_volume_R",
+      "center": [
+        -0.292,
+        6.88,
+        1.27
+      ],
+      "radius": [
+        0.168,
+        0.038,
+        0.1
+      ],
+      "delta": [
+        0,
+        0,
+        0.025
+      ],
+      "front_only": true,
+      "body_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "v02_upper_lid_restrained_crease_R",
+      "center": [
+        -0.299,
+        6.932,
+        1.26
+      ],
+      "radius": [
+        0.174,
+        0.028,
+        0.13
+      ],
+      "delta": [
+        0,
+        0,
+        -0.013
+      ],
+      "front_only": true,
+      "body_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "v02_lower_lid_soft_roll_contact_R",
+      "center": [
+        -0.286,
+        6.738,
+        1.27
+      ],
+      "radius": [
+        0.17,
+        0.041,
+        0.085
+      ],
+      "delta": [
+        0,
+        -0.002,
+        0.014
+      ],
+      "front_only": true,
+      "body_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "v02_upper_lid_outer_contact_R",
+      "center": [
+        -0.373,
+        6.831,
+        1.249
+      ],
+      "radius": [
+        0.079,
+        0.058,
+        0.075
+      ],
+      "delta": [
+        0,
+        0.004,
+        0.012
+      ],
+      "front_only": true,
+      "body_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "v02_lower_lip_restore_vermilion",
+      "center": [
+        0,
+        6.106,
+        1.41
+      ],
+      "radius": [
+        0.215,
+        0.073,
+        0.073
+      ],
+      "delta": [
+        0,
+        -0.024,
+        0.013
+      ],
+      "front_only": true,
+      "body_only": true
+    },
+    {
+      "name": "v02_upper_lip_restore_volume",
+      "center": [
+        0,
+        6.27,
+        1.473
+      ],
+      "radius": [
+        0.18,
+        0.05,
+        0.055
+      ],
+      "delta": [
+        0,
+        0.004,
+        0.011
+      ],
+      "front_only": true,
+      "body_only": true
+    },
+    {
+      "name": "v02_close_upper_rest_seam",
+      "center": [
+        0,
+        6.209,
+        1.432
+      ],
+      "radius": [
+        0.226,
+        0.022,
+        0.031
+      ],
+      "delta": [
+        0,
+        -0.005,
+        -0.002
+      ],
+      "front_only": true,
+      "body_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "v02_close_lower_rest_seam",
+      "center": [
+        0,
+        6.196,
+        1.406
+      ],
+      "radius": [
+        0.222,
+        0.02,
+        0.028
+      ],
+      "delta": [
+        0,
+        0.005,
+        0.004
+      ],
+      "front_only": true,
+      "body_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "v02_round_chin_central_surface",
+      "center": [
+        0,
+        5.875,
+        1.18
+      ],
+      "radius": [
+        0.24,
+        0.24,
+        0.17
+      ],
+      "delta": [
+        0,
+        -0.008,
+        0.013
+      ],
+      "front_only": true,
+      "body_only": true,
+      "falloff": "compact"
+    }
+  ],
+  "fit_control_status": "16 preserved v01 controls plus 25 actual-render-reviewed v02 corrections; separate Basis, v01, and v02 geometry keys",
+  "camera_head_target_source": [
+    0,
+    6.82,
+    0.43
+  ],
+  "camera_head_ortho_source": 2.65,
+  "clay_only": true,
+  "render_resolution": 768,
+  "render_samples": 96,
+  "fit_control_evidence": "Original A/B and actual v01 critics: alar/tip appeared too narrow; mouth .64-.66 IPD and weak vermilion; missing lid fold and exposed eye sphere; flat chin and sharp cheek-jaw plane. v02 is a hypothesis requiring actual four-view clay review.",
+  "previous_fit_controls": [
+    {
+      "name": "compact_chin_vertical_length",
+      "center": [
+        0,
+        5.78,
+        1.12
+      ],
+      "radius": [
+        0.6,
+        0.46,
+        0.68
+      ],
+      "delta": [
+        0,
+        0.103,
+        0
+      ],
+      "front_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "rounded_chin_width_L",
+      "center": [
+        0.18,
+        5.87,
+        1.18
+      ],
+      "radius": [
+        0.2,
+        0.22,
+        0.27
+      ],
+      "delta": [
+        0.012,
+        0,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "rounded_chin_width_R",
+      "center": [
+        -0.18,
+        5.87,
+        1.18
+      ],
+      "radius": [
+        0.2,
+        0.22,
+        0.27
+      ],
+      "delta": [
+        -0.012,
+        0,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_jaw_contour_L",
+      "center": [
+        0.5,
+        6.05,
+        0.83
+      ],
+      "radius": [
+        0.29,
+        0.39,
+        0.37
+      ],
+      "delta": [
+        -0.024,
+        0.025,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_jaw_contour_R",
+      "center": [
+        -0.5,
+        6.05,
+        0.83
+      ],
+      "radius": [
+        0.29,
+        0.39,
+        0.37
+      ],
+      "delta": [
+        0.024,
+        0.025,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "soft_cheek_width_L",
+      "center": [
+        0.6,
+        6.49,
+        0.98
+      ],
+      "radius": [
+        0.28,
+        0.43,
+        0.4
+      ],
+      "delta": [
+        -0.037,
+        0,
+        0.018
+      ],
+      "front_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "soft_cheek_width_R",
+      "center": [
+        -0.6,
+        6.49,
+        0.98
+      ],
+      "radius": [
+        0.28,
+        0.43,
+        0.4
+      ],
+      "delta": [
+        0.037,
+        0,
+        0.018
+      ],
+      "front_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "mouth_corner_natural_width_L",
+      "center": [
+        0.231,
+        6.24,
+        1.37
+      ],
+      "radius": [
+        0.125,
+        0.13,
+        0.18
+      ],
+      "delta": [
+        -0.038,
+        0.007,
+        0.008
+      ],
+      "front_only": true
+    },
+    {
+      "name": "mouth_corner_natural_width_R",
+      "center": [
+        -0.231,
+        6.24,
+        1.37
+      ],
+      "radius": [
+        0.125,
+        0.13,
+        0.18
+      ],
+      "delta": [
+        0.038,
+        0.007,
+        0.008
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_lip_soft_volume",
+      "center": [
+        0,
+        6.168,
+        1.41
+      ],
+      "radius": [
+        0.16,
+        0.065,
+        0.1
+      ],
+      "delta": [
+        0,
+        0.008,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "restrained_upper_lip_projection",
+      "center": [
+        0,
+        6.3,
+        1.455
+      ],
+      "radius": [
+        0.12,
+        0.075,
+        0.12
+      ],
+      "delta": [
+        0,
+        -0.004,
+        -0.008
+      ],
+      "front_only": true
+    },
+    {
+      "name": "nose_tip_soft_rounding",
+      "center": [
+        0,
+        6.526,
+        1.571
+      ],
+      "radius": [
+        0.107,
+        0.103,
+        0.12
+      ],
+      "delta": [
+        0,
+        -0.007,
+        0.008
+      ],
+      "front_only": true
+    },
+    {
+      "name": "alar_volume_L",
+      "center": [
+        0.157,
+        6.489,
+        1.343
+      ],
+      "radius": [
+        0.075,
+        0.095,
+        0.15
+      ],
+      "delta": [
+        0.007,
+        0,
+        0.007
+      ],
+      "front_only": true
+    },
+    {
+      "name": "alar_volume_R",
+      "center": [
+        -0.157,
+        6.489,
+        1.343
+      ],
+      "radius": [
+        0.075,
+        0.095,
+        0.15
+      ],
+      "delta": [
+        -0.007,
+        0,
+        0.007
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_lid_soft_transition_L",
+      "center": [
+        0.29,
+        6.692,
+        1.265
+      ],
+      "radius": [
+        0.18,
+        0.08,
+        0.16
+      ],
+      "delta": [
+        0,
+        0.004,
+        0.004
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_lid_soft_transition_R",
+      "center": [
+        -0.29,
+        6.692,
+        1.265
+      ],
+      "radius": [
+        0.18,
+        0.08,
+        0.16
+      ],
+      "delta": [
+        0,
+        0.004,
+        0.004
+      ],
+      "front_only": true
+    }
+  ],
+  "previous_fit_revision": "v01"
+}

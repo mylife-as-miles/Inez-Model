@@ -1,0 +1,329 @@
+{
+  "revision": "v01",
+  "stage": "Actual original-based fitted clay head v01; unapproved independent geometry review pending",
+  "provisional_height_m": 1.7,
+  "source_shape_weights": {
+    "caucasian-female-young.target": 1.0
+  },
+  "source_shape_note": "Licensed source filename describes a selectable base shape, not an inference of Inez's ethnicity. This base is only topology and an editable fitting substrate; it is never approved as Inez.",
+  "fit_controls": [
+    {
+      "name": "compact_chin_vertical_length",
+      "center": [
+        0,
+        5.78,
+        1.12
+      ],
+      "radius": [
+        0.6,
+        0.46,
+        0.68
+      ],
+      "delta": [
+        0,
+        0.103,
+        0
+      ],
+      "front_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "rounded_chin_width_L",
+      "center": [
+        0.18,
+        5.87,
+        1.18
+      ],
+      "radius": [
+        0.2,
+        0.22,
+        0.27
+      ],
+      "delta": [
+        0.012,
+        0,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "rounded_chin_width_R",
+      "center": [
+        -0.18,
+        5.87,
+        1.18
+      ],
+      "radius": [
+        0.2,
+        0.22,
+        0.27
+      ],
+      "delta": [
+        -0.012,
+        0,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_jaw_contour_L",
+      "center": [
+        0.5,
+        6.05,
+        0.83
+      ],
+      "radius": [
+        0.29,
+        0.39,
+        0.37
+      ],
+      "delta": [
+        -0.024,
+        0.025,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_jaw_contour_R",
+      "center": [
+        -0.5,
+        6.05,
+        0.83
+      ],
+      "radius": [
+        0.29,
+        0.39,
+        0.37
+      ],
+      "delta": [
+        0.024,
+        0.025,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "soft_cheek_width_L",
+      "center": [
+        0.6,
+        6.49,
+        0.98
+      ],
+      "radius": [
+        0.28,
+        0.43,
+        0.4
+      ],
+      "delta": [
+        -0.037,
+        0,
+        0.018
+      ],
+      "front_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "soft_cheek_width_R",
+      "center": [
+        -0.6,
+        6.49,
+        0.98
+      ],
+      "radius": [
+        0.28,
+        0.43,
+        0.4
+      ],
+      "delta": [
+        0.037,
+        0,
+        0.018
+      ],
+      "front_only": true,
+      "falloff": "compact"
+    },
+    {
+      "name": "mouth_corner_natural_width_L",
+      "center": [
+        0.231,
+        6.24,
+        1.37
+      ],
+      "radius": [
+        0.125,
+        0.13,
+        0.18
+      ],
+      "delta": [
+        -0.038,
+        0.007,
+        0.008
+      ],
+      "front_only": true
+    },
+    {
+      "name": "mouth_corner_natural_width_R",
+      "center": [
+        -0.231,
+        6.24,
+        1.37
+      ],
+      "radius": [
+        0.125,
+        0.13,
+        0.18
+      ],
+      "delta": [
+        0.038,
+        0.007,
+        0.008
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_lip_soft_volume",
+      "center": [
+        0,
+        6.168,
+        1.41
+      ],
+      "radius": [
+        0.16,
+        0.065,
+        0.1
+      ],
+      "delta": [
+        0,
+        0.008,
+        0.012
+      ],
+      "front_only": true
+    },
+    {
+      "name": "restrained_upper_lip_projection",
+      "center": [
+        0,
+        6.3,
+        1.455
+      ],
+      "radius": [
+        0.12,
+        0.075,
+        0.12
+      ],
+      "delta": [
+        0,
+        -0.004,
+        -0.008
+      ],
+      "front_only": true
+    },
+    {
+      "name": "nose_tip_soft_rounding",
+      "center": [
+        0,
+        6.526,
+        1.571
+      ],
+      "radius": [
+        0.107,
+        0.103,
+        0.12
+      ],
+      "delta": [
+        0,
+        -0.007,
+        0.008
+      ],
+      "front_only": true
+    },
+    {
+      "name": "alar_volume_L",
+      "center": [
+        0.157,
+        6.489,
+        1.343
+      ],
+      "radius": [
+        0.075,
+        0.095,
+        0.15
+      ],
+      "delta": [
+        0.007,
+        0,
+        0.007
+      ],
+      "front_only": true
+    },
+    {
+      "name": "alar_volume_R",
+      "center": [
+        -0.157,
+        6.489,
+        1.343
+      ],
+      "radius": [
+        0.075,
+        0.095,
+        0.15
+      ],
+      "delta": [
+        -0.007,
+        0,
+        0.007
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_lid_soft_transition_L",
+      "center": [
+        0.29,
+        6.692,
+        1.265
+      ],
+      "radius": [
+        0.18,
+        0.08,
+        0.16
+      ],
+      "delta": [
+        0,
+        0.004,
+        0.004
+      ],
+      "front_only": true
+    },
+    {
+      "name": "lower_lid_soft_transition_R",
+      "center": [
+        -0.29,
+        6.692,
+        1.265
+      ],
+      "radius": [
+        0.18,
+        0.08,
+        0.16
+      ],
+      "delta": [
+        0,
+        0.004,
+        0.004
+      ],
+      "front_only": true
+    }
+  ],
+  "fit_control_status": "16 explicit original-based controls; source Basis remains separately editable; actual clay review pending",
+  "camera_head_target_source": [
+    0,
+    6.82,
+    0.43
+  ],
+  "camera_head_ortho_source": 2.65,
+  "clay_only": true,
+  "render_resolution": 768,
+  "render_samples": 96,
+  "fit_control_evidence": "Original B IPD/head bands; original A rounded compact chin, soft cheek volume, narrower natural full lips, rounded nose. Controls are hypotheses until actual clay critique, not approval."
+}

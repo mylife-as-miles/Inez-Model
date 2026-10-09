@@ -1,0 +1,12 @@
+{
+  "accepted": [
+    "qualitative lip surface and coherent lowerface"
+  ],
+  "excluded": "overresolved pores/gloss and unknown hidden detail",
+  "original_authority": "OriginalA face;originalB body/costume;sourceoverridesgeneratedguide",
+  "production_approved": false,
+  "reports": [
+    "qa/identity/09_lips_closeup_v01.md",
+    "qa/technical/09_lips_closeup_v01.md"
+  ]
+}

@@ -1,0 +1,696 @@
+Blender 4.3.2
+Read blend: "/workspace/assets/characters/inez/model/work/inez_dressed_v03.blend"
+Fra:1 Mem:119.15M (Peak 149.12M) | Time:00:00.55 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_ContinuousHumanMesh_UNAPPROVED
+Fra:1 Mem:124.06M (Peak 149.12M) | Time:00:00.55 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Eyeball_L
+Fra:1 Mem:124.39M (Peak 149.12M) | Time:00:00.55 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_UnevenFineFlyaways
+Fra:1 Mem:124.69M (Peak 149.12M) | Time:00:00.55 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Eyeball_R
+Fra:1 Mem:135.83M (Peak 149.12M) | Time:00:00.56 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Iris_L
+Fra:1 Mem:136.03M (Peak 149.12M) | Time:00:00.56 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Pupil_L
+Fra:1 Mem:136.03M (Peak 149.12M) | Time:00:00.56 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Iris_R
+Fra:1 Mem:136.04M (Peak 149.12M) | Time:00:00.56 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Pupil_R
+Fra:1 Mem:136.05M (Peak 149.12M) | Time:00:00.56 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Cornea_L
+Fra:1 Mem:136.15M (Peak 149.12M) | Time:00:00.56 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Cornea_R
+Fra:1 Mem:139.66M (Peak 149.12M) | Time:00:00.56 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Brows_L
+Fra:1 Mem:142.89M (Peak 149.12M) | Time:00:00.56 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesUpper_L
+Fra:1 Mem:143.10M (Peak 149.12M) | Time:00:00.56 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesLower_L
+Fra:1 Mem:143.17M (Peak 149.12M) | Time:00:00.56 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Tearline_L
+Fra:1 Mem:143.36M (Peak 149.12M) | Time:00:00.56 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Brows_R
+Fra:1 Mem:144.68M (Peak 149.12M) | Time:00:00.57 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesUpper_R
+Fra:1 Mem:144.80M (Peak 149.12M) | Time:00:00.57 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesLower_R
+Fra:1 Mem:146.90M (Peak 149.12M) | Time:00:00.57 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Tearline_R
+Fra:1 Mem:150.99M (Peak 150.99M) | Time:00:00.57 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater
+Fra:1 Mem:157.81M (Peak 158.92M) | Time:00:00.59 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_FramingCurls
+Fra:1 Mem:162.79M (Peak 164.32M) | Time:00:00.63 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans
+Fra:1 Mem:180.66M (Peak 182.12M) | Time:00:00.63 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Ponytail_WarmAccentCurls
+Fra:1 Mem:201.66M (Peak 201.66M) | Time:00:00.64 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Ponytail_Curls
+Fra:1 Mem:206.56M (Peak 206.56M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_CrewNeck_0
+Fra:1 Mem:206.67M (Peak 206.67M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_Cuff_1
+Fra:1 Mem:206.73M (Peak 206.73M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_RibbedHem_2
+Fra:1 Mem:211.75M (Peak 211.75M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_Cuff_3
+Fra:1 Mem:211.81M (Peak 211.81M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_RearPatchPocket_R
+Fra:1 Mem:211.81M (Peak 211.81M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_RearPatchPocket_L
+Fra:1 Mem:211.82M (Peak 211.82M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_SewnSeams
+Fra:1 Mem:212.69M (Peak 212.69M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_0
+Fra:1 Mem:212.69M (Peak 212.69M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_1
+Fra:1 Mem:212.69M (Peak 212.69M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_2
+Fra:1 Mem:212.69M (Peak 212.69M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_3
+Fra:1 Mem:212.69M (Peak 212.69M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_4
+Fra:1 Mem:212.70M (Peak 212.70M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_0
+Fra:1 Mem:212.71M (Peak 212.71M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_1
+Fra:1 Mem:212.72M (Peak 212.72M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_2
+Fra:1 Mem:212.74M (Peak 212.74M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_3
+Fra:1 Mem:212.75M (Peak 212.75M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_4
+Fra:1 Mem:212.77M (Peak 212.77M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Sole_L
+Fra:1 Mem:212.83M (Peak 212.83M) | Time:00:00.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_L
+Fra:1 Mem:215.16M (Peak 215.16M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Tongue_L
+Fra:1 Mem:215.18M (Peak 215.18M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_0_-1
+Fra:1 Mem:215.19M (Peak 215.19M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_0_1
+Fra:1 Mem:218.70M (Peak 218.70M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_1_-1
+Fra:1 Mem:218.71M (Peak 218.71M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_1_1
+Fra:1 Mem:218.72M (Peak 218.72M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_2_-1
+Fra:1 Mem:218.74M (Peak 218.74M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_2_1
+Fra:1 Mem:218.75M (Peak 218.75M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_3_-1
+Fra:1 Mem:218.77M (Peak 218.77M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_3_1
+Fra:1 Mem:218.78M (Peak 218.78M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_4_-1
+Fra:1 Mem:218.80M (Peak 218.80M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_4_1
+Fra:1 Mem:218.81M (Peak 218.81M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_5_-1
+Fra:1 Mem:218.83M (Peak 218.83M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_5_1
+Fra:1 Mem:218.84M (Peak 218.84M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_6_-1
+Fra:1 Mem:218.85M (Peak 218.85M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_6_1
+Fra:1 Mem:218.87M (Peak 218.87M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Laces_L
+Fra:1 Mem:218.94M (Peak 218.94M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_StitchedPanels_L
+Fra:1 Mem:219.02M (Peak 219.02M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_SoleTread_L
+Fra:1 Mem:219.10M (Peak 219.10M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Sole_R
+Fra:1 Mem:219.16M (Peak 219.16M) | Time:00:00.66 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_R
+Fra:1 Mem:220.33M (Peak 223.82M) | Time:00:00.75 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Crown_WarmAccentLocks
+Fra:1 Mem:221.76M (Peak 223.82M) | Time:00:00.75 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Tongue_R
+Fra:1 Mem:221.95M (Peak 223.82M) | Time:00:00.75 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_0_-1
+Fra:1 Mem:221.60M (Peak 223.82M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Crown_PulledCurlyLocks
+Fra:1 Mem:224.71M (Peak 224.71M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_0_1
+Fra:1 Mem:224.72M (Peak 224.72M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_1_-1
+Fra:1 Mem:224.74M (Peak 224.74M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_1_1
+Fra:1 Mem:225.49M (Peak 225.49M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_2_-1
+Fra:1 Mem:225.75M (Peak 225.75M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_2_1
+Fra:1 Mem:225.76M (Peak 225.76M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_3_-1
+Fra:1 Mem:225.78M (Peak 225.78M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_3_1
+Fra:1 Mem:225.79M (Peak 225.79M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_4_-1
+Fra:1 Mem:225.81M (Peak 225.81M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_4_1
+Fra:1 Mem:225.82M (Peak 225.82M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_5_-1
+Fra:1 Mem:225.83M (Peak 225.83M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_5_1
+Fra:1 Mem:225.85M (Peak 225.85M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_6_-1
+Fra:1 Mem:225.86M (Peak 225.86M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_6_1
+Fra:1 Mem:225.88M (Peak 225.88M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Laces_R
+Fra:1 Mem:225.95M (Peak 225.95M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_StitchedPanels_R
+Fra:1 Mem:226.03M (Peak 226.03M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_SoleTread_R
+Fra:1 Mem:226.11M (Peak 226.11M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_FineSilverNecklace
+Fra:1 Mem:226.24M (Peak 226.24M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_TinyUnknownMotifPendant
+Fra:1 Mem:226.24M (Peak 226.24M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_ScalpHair
+Fra:1 Mem:232.34M (Peak 251.94M) | Time:00:00.94 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:169.63M (Peak 251.94M) | Time:00:00.96 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading FineBrownFlyawayHair_normal
+Fra:1 Mem:169.63M (Peak 251.94M) | Time:00:00.96 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading inez_skin_roughness
+Fra:1 Mem:202.65M (Peak 251.94M) | Time:00:00.97 | Mem:1.00M, Peak:1.00M | Scene, ViewLayer | Updating Images | Loading FineBrownFlyawayHair_roughness
+Fra:1 Mem:203.65M (Peak 251.94M) | Time:00:00.97 | Mem:2.00M, Peak:2.00M | Scene, ViewLayer | Updating Images | Loading FineBrownFlyawayHair_albedo
+Fra:1 Mem:204.65M (Peak 251.94M) | Time:00:00.98 | Mem:3.00M, Peak:3.00M | Scene, ViewLayer | Updating Images | Loading RestrainedWarmHairHighlights_normal
+Fra:1 Mem:205.65M (Peak 251.94M) | Time:00:00.98 | Mem:4.00M, Peak:4.00M | Scene, ViewLayer | Updating Images | Loading RestrainedWarmHairHighlights_roughness
+Fra:1 Mem:206.65M (Peak 251.94M) | Time:00:00.98 | Mem:5.00M, Peak:5.00M | Scene, ViewLayer | Updating Images | Loading RestrainedWarmHairHighlights_albedo
+Fra:1 Mem:207.65M (Peak 251.94M) | Time:00:00.98 | Mem:6.00M, Peak:6.00M | Scene, ViewLayer | Updating Images | Loading MediumBrownHair_normal
+Fra:1 Mem:208.65M (Peak 251.94M) | Time:00:00.99 | Mem:7.00M, Peak:7.00M | Scene, ViewLayer | Updating Images | Loading MediumBrownHair_roughness
+Fra:1 Mem:209.65M (Peak 251.94M) | Time:00:00.99 | Mem:8.00M, Peak:8.00M | Scene, ViewLayer | Updating Images | Loading MediumBrownHair_albedo
+Fra:1 Mem:210.65M (Peak 251.94M) | Time:00:00.99 | Mem:9.00M, Peak:9.00M | Scene, ViewLayer | Updating Images | Loading FineSilverChainAndTinyPendant_normal
+Fra:1 Mem:210.90M (Peak 251.94M) | Time:00:01.00 | Mem:9.25M, Peak:9.25M | Scene, ViewLayer | Updating Images | Loading FineSilverChainAndTinyPendant_roughness
+Fra:1 Mem:211.15M (Peak 251.94M) | Time:00:01.00 | Mem:9.50M, Peak:9.50M | Scene, ViewLayer | Updating Images | Loading FineSilverChainAndTinyPendant_albedo
+Fra:1 Mem:211.40M (Peak 251.94M) | Time:00:01.00 | Mem:9.75M, Peak:9.75M | Scene, ViewLayer | Updating Images | Loading BootBlackLeather_normal
+Fra:1 Mem:212.40M (Peak 251.94M) | Time:00:01.00 | Mem:10.75M, Peak:10.75M | Scene, ViewLayer | Updating Images | Loading BootBlackLeather_roughness
+Fra:1 Mem:213.40M (Peak 251.94M) | Time:00:01.00 | Mem:11.75M, Peak:11.75M | Scene, ViewLayer | Updating Images | Loading BootBlackLeather_albedo
+Fra:1 Mem:214.40M (Peak 251.94M) | Time:00:01.02 | Mem:12.75M, Peak:12.75M | Scene, ViewLayer | Updating Images | Loading BootBlackRubberSole_normal
+Fra:1 Mem:247.41M (Peak 251.94M) | Time:00:01.02 | Mem:13.75M, Peak:13.75M | Scene, ViewLayer | Updating Images | Loading BootBlackRubberSole_roughness
+Fra:1 Mem:216.40M (Peak 251.94M) | Time:00:01.03 | Mem:29.75M, Peak:29.75M | Scene, ViewLayer | Updating Images | Loading inez_skin_normal
+Fra:1 Mem:232.40M (Peak 251.94M) | Time:00:01.03 | Mem:30.75M, Peak:30.75M | Scene, ViewLayer | Updating Images | Loading BootBlackRubberSole_albedo
+Fra:1 Mem:233.40M (Peak 251.94M) | Time:00:01.04 | Mem:31.75M, Peak:31.75M | Scene, ViewLayer | Updating Images | Loading CharcoalRibbedKnitTrims_normal
+Fra:1 Mem:234.40M (Peak 251.94M) | Time:00:01.04 | Mem:32.75M, Peak:32.75M | Scene, ViewLayer | Updating Images | Loading CharcoalRibbedKnitTrims_roughness
+Fra:1 Mem:235.40M (Peak 251.94M) | Time:00:01.04 | Mem:33.75M, Peak:33.75M | Scene, ViewLayer | Updating Images | Loading CharcoalRibbedKnitTrims_albedo
+Fra:1 Mem:236.40M (Peak 251.94M) | Time:00:01.05 | Mem:34.75M, Peak:34.75M | Scene, ViewLayer | Updating Images | Loading WashedBlackDenim_normal
+Fra:1 Mem:252.40M (Peak 284.41M) | Time:00:01.08 | Mem:50.75M, Peak:50.75M | Scene, ViewLayer | Updating Images | Loading ScleraOffWhite_albedo
+Fra:1 Mem:285.41M (Peak 286.42M) | Time:00:01.12 | Mem:51.75M, Peak:51.75M | Scene, ViewLayer | Updating Images | Loading ScleraOffWhite_roughness
+Fra:1 Mem:286.41M (Peak 287.42M) | Time:00:01.13 | Mem:52.75M, Peak:52.75M | Scene, ViewLayer | Updating Images | Loading ScleraOffWhite_normal
+Fra:1 Mem:287.41M (Peak 288.42M) | Time:00:01.13 | Mem:53.75M, Peak:53.75M | Scene, ViewLayer | Updating Images | Loading inez_iris_olive_hazel_albedo
+Fra:1 Mem:320.42M (Peak 321.43M) | Time:00:01.14 | Mem:54.75M, Peak:54.75M | Scene, ViewLayer | Updating Images | Loading inez_iris_roughness
+Fra:1 Mem:289.41M (Peak 321.43M) | Time:00:01.14 | Mem:70.75M, Peak:70.75M | Scene, ViewLayer | Updating Images | Loading inez_iris_normal
+Fra:1 Mem:290.41M (Peak 321.43M) | Time:00:01.15 | Mem:71.75M, Peak:71.75M | Scene, ViewLayer | Updating Images | Loading ClearCornea_L_albedo
+Fra:1 Mem:290.66M (Peak 321.43M) | Time:00:01.15 | Mem:72.00M, Peak:72.00M | Scene, ViewLayer | Updating Images | Loading ClearCornea_L_roughness
+Fra:1 Mem:290.91M (Peak 321.43M) | Time:00:01.15 | Mem:72.25M, Peak:72.25M | Scene, ViewLayer | Updating Images | Loading ClearCornea_L_normal
+Fra:1 Mem:291.16M (Peak 321.43M) | Time:00:01.15 | Mem:72.50M, Peak:72.50M | Scene, ViewLayer | Updating Images | Loading ClearCornea_R_albedo
+Fra:1 Mem:259.40M (Peak 321.43M) | Time:00:01.15 | Mem:88.50M, Peak:88.50M | Scene, ViewLayer | Updating Images | Loading WashedBlackDenim_roughness
+Fra:1 Mem:275.91M (Peak 321.43M) | Time:00:01.15 | Mem:89.50M, Peak:89.50M | Scene, ViewLayer | Updating Images | Loading ClearCornea_R_roughness
+Fra:1 Mem:276.16M (Peak 321.43M) | Time:00:01.15 | Mem:89.75M, Peak:89.75M | Scene, ViewLayer | Updating Images | Loading ClearCornea_R_normal
+Fra:1 Mem:275.90M (Peak 321.43M) | Time:00:01.15 | Mem:90.00M, Peak:90.00M | Scene, ViewLayer | Updating Images | Loading Sweater_ThreeDarkBands_albedo
+Fra:1 Mem:275.90M (Peak 321.43M) | Time:00:01.15 | Mem:90.25M, Peak:90.25M | Scene, ViewLayer | Updating Images | Loading Sweater_ThreeDarkBands_roughness
+Fra:1 Mem:371.92M (Peak 403.93M) | Time:00:01.24 | Mem:106.25M, Peak:106.25M | Scene, ViewLayer | Updating Images | Loading WashedBlackDenim_albedo
+Fra:1 Mem:355.91M (Peak 403.93M) | Time:00:01.24 | Mem:122.25M, Peak:122.25M | Scene, ViewLayer | Updating Images | Loading Sweater_ThreeDarkBands_normal
+Fra:1 Mem:334.59M (Peak 403.93M) | Time:00:01.30 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:334.59M (Peak 403.93M) | Time:00:01.30 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:334.59M (Peak 403.93M) | Time:00:01.30 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:334.59M (Peak 403.93M) | Time:00:01.30 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:334.69M (Peak 403.93M) | Time:00:01.30 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:334.69M (Peak 403.93M) | Time:00:01.30 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:334.69M (Peak 403.93M) | Time:00:01.30 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:334.69M (Peak 403.93M) | Time:00:01.30 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:334.69M (Peak 403.93M) | Time:00:01.30 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:334.69M (Peak 403.93M) | Time:00:01.30 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:334.71M (Peak 403.93M) | Time:00:01.30 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:334.71M (Peak 403.93M) | Time:00:01.30 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:334.71M (Peak 403.93M) | Time:00:01.30 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:334.71M (Peak 403.93M) | Time:00:01.30 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:346.03M (Peak 403.93M) | Time:00:01.32 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:399.21M (Peak 403.93M) | Time:00:01.34 | Mem:170.30M, Peak:170.30M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:399.19M (Peak 403.93M) | Time:00:01.34 | Mem:223.44M, Peak:223.44M | Scene, ViewLayer | Updating Geometry BVH EyeGeometry_L_Geometry 2/3 | Building BVH
+Fra:1 Mem:399.19M (Peak 403.93M) | Time:00:01.34 | Mem:223.44M, Peak:223.44M | Scene, ViewLayer | Updating Geometry BVH EyeGeometry_R_Geometry 3/3 | Building BVH
+Fra:1 Mem:399.19M (Peak 403.93M) | Time:00:01.34 | Mem:223.44M, Peak:223.44M | Scene, ViewLayer | Updating Geometry BVH Inez_ContinuousHumanMesh_UNAPPROVED_Geometry 1/3 | Building BVH
+Fra:1 Mem:399.19M (Peak 403.93M) | Time:00:01.34 | Mem:223.58M, Peak:223.58M | Scene, ViewLayer | Updating Geometry BVH Inez_ContinuousHumanMesh_UNAPPROVED_Geometry 1/3 | Building BVH 0%
+Fra:1 Mem:399.19M (Peak 403.93M) | Time:00:01.43 | Mem:251.01M, Peak:264.07M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:399.19M (Peak 403.93M) | Time:00:01.43 | Mem:251.01M, Peak:264.07M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:399.19M (Peak 403.93M) | Time:00:01.52 | Mem:270.76M, Peak:280.22M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:399.19M (Peak 403.93M) | Time:00:01.52 | Mem:270.76M, Peak:280.22M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.53 | Mem:270.76M, Peak:280.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.53 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.53 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.53 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.53 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.53 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.53 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.53 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.53 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.53 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:01.53 | Mem:296.37M, Peak:296.45M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:01.53 | Mem:296.46M, Peak:296.46M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:01.53 | Mem:296.46M, Peak:296.46M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:01.53 | Mem:296.46M, Peak:296.46M | Scene, ViewLayer | Sample 0/32
+Fra:1 Mem:460.82M (Peak 460.82M) | Time:00:02.06 | Remaining:00:16.48 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Sample 1/32
+Fra:1 Mem:476.82M (Peak 508.82M) | Time:00:19.14 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Sample 32/32
+Fra:1 Mem:476.82M (Peak 508.82M) | Time:00:19.14 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Finished
+Saved: 'assets/characters/inez/renders/dressed_v03/front.png'
+Time: 00:19.55 (Saving: 00:00.40)
+
+ACTUAL_DRESSED_RENDER_READY front
+Fra:1 Mem:123.31M (Peak 153.29M) | Time:00:00.71 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_ContinuousHumanMesh_UNAPPROVED
+Fra:1 Mem:128.22M (Peak 153.29M) | Time:00:00.71 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_UnevenFineFlyaways
+Fra:1 Mem:141.89M (Peak 153.29M) | Time:00:00.72 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Eyeball_L
+Fra:1 Mem:142.24M (Peak 153.29M) | Time:00:00.72 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Eyeball_R
+Fra:1 Mem:142.58M (Peak 153.29M) | Time:00:00.72 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Iris_L
+Fra:1 Mem:142.59M (Peak 153.29M) | Time:00:00.72 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Pupil_L
+Fra:1 Mem:142.60M (Peak 153.29M) | Time:00:00.72 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Iris_R
+Fra:1 Mem:142.61M (Peak 153.29M) | Time:00:00.72 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Pupil_R
+Fra:1 Mem:142.61M (Peak 153.29M) | Time:00:00.72 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Cornea_L
+Fra:1 Mem:148.42M (Peak 153.29M) | Time:00:00.72 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_FramingCurls
+Fra:1 Mem:152.97M (Peak 153.29M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Cornea_R
+Fra:1 Mem:153.07M (Peak 153.29M) | Time:00:00.76 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Brows_L
+Fra:1 Mem:154.30M (Peak 154.30M) | Time:00:00.77 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesUpper_L
+Fra:1 Mem:154.40M (Peak 154.40M) | Time:00:00.77 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesLower_L
+Fra:1 Mem:154.46M (Peak 154.46M) | Time:00:00.77 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Tearline_L
+Fra:1 Mem:154.46M (Peak 154.46M) | Time:00:00.77 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Brows_R
+Fra:1 Mem:154.88M (Peak 154.88M) | Time:00:00.77 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesUpper_R
+Fra:1 Mem:154.98M (Peak 154.98M) | Time:00:00.77 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesLower_R
+Fra:1 Mem:155.03M (Peak 155.03M) | Time:00:00.77 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Tearline_R
+Fra:1 Mem:155.04M (Peak 155.04M) | Time:00:00.77 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater
+Fra:1 Mem:156.85M (Peak 158.31M) | Time:00:00.77 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Ponytail_WarmAccentCurls
+Fra:1 Mem:164.77M (Peak 164.77M) | Time:00:00.78 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Ponytail_Curls
+Fra:1 Mem:179.17M (Peak 182.66M) | Time:00:00.86 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Crown_WarmAccentLocks
+Fra:1 Mem:178.78M (Peak 182.66M) | Time:00:00.86 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans
+Fra:1 Mem:180.51M (Peak 182.66M) | Time:00:00.87 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Crown_PulledCurlyLocks
+Fra:1 Mem:195.47M (Peak 195.94M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_CrewNeck_0
+Fra:1 Mem:205.45M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_ScalpHair
+Fra:1 Mem:205.79M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_Cuff_1
+Fra:1 Mem:205.87M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_TinyUnknownMotifPendant
+Fra:1 Mem:205.85M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_FineSilverNecklace
+Fra:1 Mem:206.08M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_SoleTread_R
+Fra:1 Mem:206.17M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_Cuff_3
+Fra:1 Mem:206.21M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_StitchedPanels_R
+Fra:1 Mem:206.26M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_RearPatchPocket_R
+Fra:1 Mem:206.28M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Laces_R
+Fra:1 Mem:206.34M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_RearPatchPocket_L
+Fra:1 Mem:206.34M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_6_1
+Fra:1 Mem:206.36M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_6_-1
+Fra:1 Mem:206.36M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_5_1
+Fra:1 Mem:206.37M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_5_-1
+Fra:1 Mem:206.39M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_4_1
+Fra:1 Mem:206.40M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_4_-1
+Fra:1 Mem:206.41M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_3_1
+Fra:1 Mem:206.42M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_3_-1
+Fra:1 Mem:206.43M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_2_1
+Fra:1 Mem:206.45M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_2_-1
+Fra:1 Mem:206.46M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_1_1
+Fra:1 Mem:206.47M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_1_-1
+Fra:1 Mem:206.48M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_0_1
+Fra:1 Mem:206.49M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_0_-1
+Fra:1 Mem:206.51M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Tongue_R
+Fra:1 Mem:206.51M (Peak 208.36M) | Time:00:00.91 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_R
+Fra:1 Mem:206.79M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Sole_R
+Fra:1 Mem:206.84M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_SoleTread_L
+Fra:1 Mem:206.92M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_StitchedPanels_L
+Fra:1 Mem:206.98M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Laces_L
+Fra:1 Mem:207.04M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_6_1
+Fra:1 Mem:207.05M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_6_-1
+Fra:1 Mem:207.07M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_5_1
+Fra:1 Mem:207.08M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_5_-1
+Fra:1 Mem:207.09M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_4_1
+Fra:1 Mem:207.10M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_4_-1
+Fra:1 Mem:207.11M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_3_1
+Fra:1 Mem:207.13M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_3_-1
+Fra:1 Mem:207.14M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_2_1
+Fra:1 Mem:207.15M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_2_-1
+Fra:1 Mem:207.16M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_1_1
+Fra:1 Mem:207.17M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_1_-1
+Fra:1 Mem:207.18M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_0_1
+Fra:1 Mem:207.20M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_0_-1
+Fra:1 Mem:207.21M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Tongue_L
+Fra:1 Mem:207.22M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_L
+Fra:1 Mem:207.72M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_0
+Fra:1 Mem:207.72M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_1
+Fra:1 Mem:207.72M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_2
+Fra:1 Mem:207.73M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_3
+Fra:1 Mem:207.73M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_4
+Fra:1 Mem:207.73M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_0
+Fra:1 Mem:207.74M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_1
+Fra:1 Mem:207.75M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_2
+Fra:1 Mem:207.77M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_3
+Fra:1 Mem:207.78M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Sole_L
+Fra:1 Mem:207.83M (Peak 208.36M) | Time:00:00.92 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_4
+Fra:1 Mem:232.34M (Peak 251.94M) | Time:00:01.22 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:169.63M (Peak 251.94M) | Time:00:01.23 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading inez_skin_albedo
+Fra:1 Mem:185.63M (Peak 251.94M) | Time:00:01.23 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading FineBrownFlyawayHair_normal
+Fra:1 Mem:202.65M (Peak 251.94M) | Time:00:01.24 | Mem:1.00M, Peak:1.00M | Scene, ViewLayer | Updating Images | Loading FineBrownFlyawayHair_roughness
+Fra:1 Mem:203.65M (Peak 251.94M) | Time:00:01.24 | Mem:2.00M, Peak:2.00M | Scene, ViewLayer | Updating Images | Loading FineBrownFlyawayHair_albedo
+Fra:1 Mem:204.65M (Peak 251.94M) | Time:00:01.26 | Mem:3.00M, Peak:3.00M | Scene, ViewLayer | Updating Images | Loading RestrainedWarmHairHighlights_normal
+Fra:1 Mem:205.65M (Peak 251.94M) | Time:00:01.27 | Mem:4.00M, Peak:4.00M | Scene, ViewLayer | Updating Images | Loading RestrainedWarmHairHighlights_roughness
+Fra:1 Mem:206.65M (Peak 251.94M) | Time:00:01.28 | Mem:5.00M, Peak:5.00M | Scene, ViewLayer | Updating Images | Loading RestrainedWarmHairHighlights_albedo
+Fra:1 Mem:207.65M (Peak 251.94M) | Time:00:01.28 | Mem:6.00M, Peak:6.00M | Scene, ViewLayer | Updating Images | Loading MediumBrownHair_normal
+Fra:1 Mem:208.65M (Peak 251.94M) | Time:00:01.29 | Mem:7.00M, Peak:7.00M | Scene, ViewLayer | Updating Images | Loading MediumBrownHair_roughness
+Fra:1 Mem:209.65M (Peak 251.94M) | Time:00:01.30 | Mem:8.00M, Peak:8.00M | Scene, ViewLayer | Updating Images | Loading MediumBrownHair_albedo
+Fra:1 Mem:210.65M (Peak 251.94M) | Time:00:01.30 | Mem:9.00M, Peak:9.00M | Scene, ViewLayer | Updating Images | Loading FineSilverChainAndTinyPendant_normal
+Fra:1 Mem:210.90M (Peak 251.94M) | Time:00:01.30 | Mem:9.25M, Peak:9.25M | Scene, ViewLayer | Updating Images | Loading FineSilverChainAndTinyPendant_roughness
+Fra:1 Mem:211.15M (Peak 251.94M) | Time:00:01.30 | Mem:9.50M, Peak:9.50M | Scene, ViewLayer | Updating Images | Loading FineSilverChainAndTinyPendant_albedo
+Fra:1 Mem:211.40M (Peak 251.94M) | Time:00:01.30 | Mem:9.75M, Peak:9.75M | Scene, ViewLayer | Updating Images | Loading BootBlackLeather_normal
+Fra:1 Mem:244.41M (Peak 251.94M) | Time:00:01.31 | Mem:10.75M, Peak:10.75M | Scene, ViewLayer | Updating Images | Loading BootBlackLeather_roughness
+Fra:1 Mem:213.40M (Peak 251.94M) | Time:00:01.31 | Mem:26.75M, Peak:26.75M | Scene, ViewLayer | Updating Images | Loading inez_skin_normal
+Fra:1 Mem:229.40M (Peak 251.94M) | Time:00:01.32 | Mem:27.75M, Peak:27.75M | Scene, ViewLayer | Updating Images | Loading BootBlackLeather_albedo
+Fra:1 Mem:230.40M (Peak 251.94M) | Time:00:01.32 | Mem:28.75M, Peak:28.75M | Scene, ViewLayer | Updating Images | Loading BootBlackRubberSole_normal
+Fra:1 Mem:231.40M (Peak 251.94M) | Time:00:01.33 | Mem:29.75M, Peak:29.75M | Scene, ViewLayer | Updating Images | Loading BootBlackRubberSole_roughness
+Fra:1 Mem:232.40M (Peak 251.94M) | Time:00:01.37 | Mem:30.75M, Peak:30.75M | Scene, ViewLayer | Updating Images | Loading BootBlackRubberSole_albedo
+Fra:1 Mem:233.40M (Peak 251.94M) | Time:00:01.38 | Mem:31.75M, Peak:31.75M | Scene, ViewLayer | Updating Images | Loading CharcoalRibbedKnitTrims_normal
+Fra:1 Mem:234.40M (Peak 251.94M) | Time:00:01.38 | Mem:32.75M, Peak:32.75M | Scene, ViewLayer | Updating Images | Loading CharcoalRibbedKnitTrims_roughness
+Fra:1 Mem:235.40M (Peak 251.94M) | Time:00:01.39 | Mem:33.75M, Peak:33.75M | Scene, ViewLayer | Updating Images | Loading CharcoalRibbedKnitTrims_albedo
+Fra:1 Mem:236.40M (Peak 251.94M) | Time:00:01.39 | Mem:34.75M, Peak:34.75M | Scene, ViewLayer | Updating Images | Loading WashedBlackDenim_normal
+Fra:1 Mem:284.41M (Peak 316.42M) | Time:00:01.46 | Mem:50.75M, Peak:50.75M | Scene, ViewLayer | Updating Images | Loading ScleraOffWhite_albedo
+Fra:1 Mem:285.41M (Peak 316.42M) | Time:00:01.47 | Mem:51.75M, Peak:51.75M | Scene, ViewLayer | Updating Images | Loading ScleraOffWhite_roughness
+Fra:1 Mem:286.41M (Peak 316.42M) | Time:00:01.47 | Mem:52.75M, Peak:52.75M | Scene, ViewLayer | Updating Images | Loading ScleraOffWhite_normal
+Fra:1 Mem:255.40M (Peak 316.42M) | Time:00:01.47 | Mem:68.75M, Peak:68.75M | Scene, ViewLayer | Updating Images | Loading inez_iris_olive_hazel_albedo
+Fra:1 Mem:256.40M (Peak 316.42M) | Time:00:01.48 | Mem:69.75M, Peak:69.75M | Scene, ViewLayer | Updating Images | Loading inez_iris_roughness
+Fra:1 Mem:257.40M (Peak 316.42M) | Time:00:01.48 | Mem:70.75M, Peak:70.75M | Scene, ViewLayer | Updating Images | Loading inez_iris_normal
+Fra:1 Mem:258.40M (Peak 316.42M) | Time:00:01.48 | Mem:71.75M, Peak:71.75M | Scene, ViewLayer | Updating Images | Loading ClearCornea_L_albedo
+Fra:1 Mem:258.65M (Peak 316.42M) | Time:00:01.48 | Mem:72.00M, Peak:72.00M | Scene, ViewLayer | Updating Images | Loading ClearCornea_L_roughness
+Fra:1 Mem:258.90M (Peak 316.42M) | Time:00:01.49 | Mem:72.25M, Peak:72.25M | Scene, ViewLayer | Updating Images | Loading ClearCornea_L_normal
+Fra:1 Mem:259.15M (Peak 316.42M) | Time:00:01.49 | Mem:72.50M, Peak:72.50M | Scene, ViewLayer | Updating Images | Loading ClearCornea_R_albedo
+Fra:1 Mem:259.40M (Peak 316.42M) | Time:00:01.49 | Mem:72.75M, Peak:72.75M | Scene, ViewLayer | Updating Images | Loading ClearCornea_R_roughness
+Fra:1 Mem:259.65M (Peak 316.42M) | Time:00:01.49 | Mem:73.00M, Peak:73.00M | Scene, ViewLayer | Updating Images | Loading ClearCornea_R_normal
+Fra:1 Mem:259.90M (Peak 316.42M) | Time:00:01.49 | Mem:73.25M, Peak:73.25M | Scene, ViewLayer | Updating Images | Loading Sweater_ThreeDarkBands_albedo
+Fra:1 Mem:291.91M (Peak 316.42M) | Time:00:01.50 | Mem:74.25M, Peak:74.25M | Scene, ViewLayer | Updating Images | Loading Sweater_ThreeDarkBands_roughness
+Fra:1 Mem:291.90M (Peak 323.91M) | Time:00:01.51 | Mem:90.25M, Peak:90.25M | Scene, ViewLayer | Updating Images | Loading WashedBlackDenim_roughness
+Fra:1 Mem:307.90M (Peak 339.91M) | Time:00:01.58 | Mem:106.25M, Peak:106.25M | Scene, ViewLayer | Updating Images | Loading Sweater_ThreeDarkBands_normal
+Fra:1 Mem:323.90M (Peak 355.91M) | Time:00:01.60 | Mem:122.25M, Peak:122.25M | Scene, ViewLayer | Updating Images | Loading WashedBlackDenim_albedo
+Fra:1 Mem:334.59M (Peak 371.91M) | Time:00:01.69 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:334.59M (Peak 371.91M) | Time:00:01.69 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:334.59M (Peak 371.91M) | Time:00:01.69 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:334.59M (Peak 371.91M) | Time:00:01.69 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:334.69M (Peak 371.91M) | Time:00:01.69 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:334.69M (Peak 371.91M) | Time:00:01.69 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:334.69M (Peak 371.91M) | Time:00:01.69 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:334.69M (Peak 371.91M) | Time:00:01.69 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:334.69M (Peak 371.91M) | Time:00:01.69 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:334.69M (Peak 371.91M) | Time:00:01.69 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:334.71M (Peak 371.91M) | Time:00:01.69 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:334.71M (Peak 371.91M) | Time:00:01.69 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:334.71M (Peak 371.91M) | Time:00:01.69 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:334.71M (Peak 371.91M) | Time:00:01.69 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:346.04M (Peak 371.91M) | Time:00:01.71 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:399.21M (Peak 399.21M) | Time:00:01.73 | Mem:170.30M, Peak:170.30M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:399.19M (Peak 399.21M) | Time:00:01.73 | Mem:223.44M, Peak:223.44M | Scene, ViewLayer | Updating Geometry BVH Inez_ContinuousHumanMesh_UNAPPROVED_Geometry 1/3 | Building BVH
+Fra:1 Mem:399.19M (Peak 399.21M) | Time:00:01.73 | Mem:236.51M, Peak:236.51M | Scene, ViewLayer | Updating Geometry BVH Inez_ContinuousHumanMesh_UNAPPROVED_Geometry 1/3 | Building BVH 0%
+Fra:1 Mem:399.19M (Peak 399.21M) | Time:00:01.73 | Mem:236.51M, Peak:236.51M | Scene, ViewLayer | Updating Geometry BVH EyeGeometry_R_Geometry 3/3 | Building BVH
+Fra:1 Mem:399.19M (Peak 399.21M) | Time:00:01.73 | Mem:236.65M, Peak:236.72M | Scene, ViewLayer | Updating Geometry BVH EyeGeometry_L_Geometry 2/3 | Building BVH
+Fra:1 Mem:399.19M (Peak 399.21M) | Time:00:01.83 | Mem:251.01M, Peak:264.07M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:399.19M (Peak 399.21M) | Time:00:01.83 | Mem:251.01M, Peak:264.07M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:399.19M (Peak 399.21M) | Time:00:01.93 | Mem:270.76M, Peak:280.22M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:399.19M (Peak 399.21M) | Time:00:01.93 | Mem:270.76M, Peak:280.22M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.96 | Mem:270.76M, Peak:280.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.96 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.96 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.96 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.96 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.96 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.96 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.96 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.96 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:01.96 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:01.98 | Mem:296.37M, Peak:296.45M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:01.98 | Mem:296.46M, Peak:296.46M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:01.98 | Mem:296.46M, Peak:296.46M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:01.98 | Mem:296.46M, Peak:296.46M | Scene, ViewLayer | Sample 0/32
+Fra:1 Mem:460.82M (Peak 460.82M) | Time:00:03.61 | Remaining:00:50.57 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Sample 1/32
+Fra:1 Mem:460.82M (Peak 460.82M) | Time:00:29.48 | Remaining:00:24.26 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Sample 17/32
+Fra:1 Mem:476.82M (Peak 508.83M) | Time:00:54.40 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Sample 32/32
+Fra:1 Mem:476.82M (Peak 508.83M) | Time:00:54.40 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Finished
+Saved: 'assets/characters/inez/renders/dressed_v03/portrait_front.png'
+Time: 00:54.79 (Saving: 00:00.36)
+
+ACTUAL_DRESSED_RENDER_READY portrait_front
+Fra:1 Mem:123.31M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_ContinuousHumanMesh_UNAPPROVED
+Fra:1 Mem:128.22M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_UnevenFineFlyaways
+Fra:1 Mem:143.02M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Eyeball_L
+Fra:1 Mem:144.12M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Eyeball_R
+Fra:1 Mem:145.85M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Iris_L
+Fra:1 Mem:145.86M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Pupil_L
+Fra:1 Mem:145.86M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Iris_R
+Fra:1 Mem:145.87M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Pupil_R
+Fra:1 Mem:145.88M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Cornea_L
+Fra:1 Mem:145.97M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Cornea_R
+Fra:1 Mem:146.06M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Brows_L
+Fra:1 Mem:146.48M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesUpper_L
+Fra:1 Mem:146.58M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesLower_L
+Fra:1 Mem:146.64M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Tearline_L
+Fra:1 Mem:146.64M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Brows_R
+Fra:1 Mem:147.06M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesUpper_R
+Fra:1 Mem:147.16M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesLower_R
+Fra:1 Mem:147.22M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Tearline_R
+Fra:1 Mem:147.22M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater
+Fra:1 Mem:155.23M (Peak 156.34M) | Time:00:01.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_FramingCurls
+Fra:1 Mem:165.50M (Peak 167.02M) | Time:00:01.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Ponytail_WarmAccentCurls
+Fra:1 Mem:166.78M (Peak 167.02M) | Time:00:01.10 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Ponytail_Curls
+Fra:1 Mem:170.50M (Peak 170.50M) | Time:00:01.10 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans
+Fra:1 Mem:214.84M (Peak 214.84M) | Time:00:01.18 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_CrewNeck_0
+Fra:1 Mem:214.94M (Peak 214.94M) | Time:00:01.18 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_Cuff_1
+Fra:1 Mem:215.00M (Peak 215.00M) | Time:00:01.18 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_RibbedHem_2
+Fra:1 Mem:215.11M (Peak 215.11M) | Time:00:01.18 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_Cuff_3
+Fra:1 Mem:215.16M (Peak 215.16M) | Time:00:01.18 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_RearPatchPocket_R
+Fra:1 Mem:215.16M (Peak 215.16M) | Time:00:01.18 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_RearPatchPocket_L
+Fra:1 Mem:215.17M (Peak 215.17M) | Time:00:01.18 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_SewnSeams
+Fra:1 Mem:215.40M (Peak 215.40M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_0
+Fra:1 Mem:215.40M (Peak 215.40M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_1
+Fra:1 Mem:215.40M (Peak 215.40M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_2
+Fra:1 Mem:215.40M (Peak 215.40M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_3
+Fra:1 Mem:215.40M (Peak 215.40M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_4
+Fra:1 Mem:215.41M (Peak 215.41M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_0
+Fra:1 Mem:215.42M (Peak 215.42M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_1
+Fra:1 Mem:215.43M (Peak 215.43M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_2
+Fra:1 Mem:215.44M (Peak 215.44M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_3
+Fra:1 Mem:215.45M (Peak 215.45M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_4
+Fra:1 Mem:215.46M (Peak 215.46M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Sole_L
+Fra:1 Mem:215.52M (Peak 215.52M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_L
+Fra:1 Mem:215.79M (Peak 215.79M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Tongue_L
+Fra:1 Mem:215.80M (Peak 215.80M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_0_-1
+Fra:1 Mem:215.82M (Peak 215.82M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_0_1
+Fra:1 Mem:215.83M (Peak 215.83M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_1_-1
+Fra:1 Mem:215.84M (Peak 215.84M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_1_1
+Fra:1 Mem:215.85M (Peak 215.85M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_2_-1
+Fra:1 Mem:215.86M (Peak 215.86M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_2_1
+Fra:1 Mem:215.88M (Peak 215.88M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_3_-1
+Fra:1 Mem:215.89M (Peak 215.89M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_3_1
+Fra:1 Mem:215.90M (Peak 215.90M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_4_-1
+Fra:1 Mem:215.91M (Peak 215.91M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_4_1
+Fra:1 Mem:215.92M (Peak 215.92M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_5_-1
+Fra:1 Mem:215.93M (Peak 215.93M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_5_1
+Fra:1 Mem:215.95M (Peak 215.95M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_6_-1
+Fra:1 Mem:215.96M (Peak 215.96M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_6_1
+Fra:1 Mem:215.97M (Peak 215.97M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Laces_L
+Fra:1 Mem:216.03M (Peak 216.03M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_StitchedPanels_L
+Fra:1 Mem:216.09M (Peak 216.09M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_SoleTread_L
+Fra:1 Mem:216.17M (Peak 216.17M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Sole_R
+Fra:1 Mem:221.12M (Peak 221.12M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_R
+Fra:1 Mem:221.40M (Peak 221.40M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Tongue_R
+Fra:1 Mem:221.41M (Peak 221.41M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_0_-1
+Fra:1 Mem:221.42M (Peak 221.42M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_0_1
+Fra:1 Mem:221.43M (Peak 221.43M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_1_-1
+Fra:1 Mem:221.44M (Peak 221.44M) | Time:00:01.19 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_1_1
+Fra:1 Mem:221.45M (Peak 221.45M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_2_-1
+Fra:1 Mem:221.47M (Peak 221.47M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_2_1
+Fra:1 Mem:221.48M (Peak 221.48M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_3_-1
+Fra:1 Mem:221.49M (Peak 221.49M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_3_1
+Fra:1 Mem:221.50M (Peak 221.50M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_4_-1
+Fra:1 Mem:221.51M (Peak 221.51M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_4_1
+Fra:1 Mem:221.53M (Peak 221.53M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_5_-1
+Fra:1 Mem:221.54M (Peak 221.54M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_5_1
+Fra:1 Mem:221.55M (Peak 221.55M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_6_-1
+Fra:1 Mem:221.56M (Peak 221.56M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_6_1
+Fra:1 Mem:221.57M (Peak 221.57M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Laces_R
+Fra:1 Mem:221.64M (Peak 221.64M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_StitchedPanels_R
+Fra:1 Mem:221.70M (Peak 221.70M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_SoleTread_R
+Fra:1 Mem:221.77M (Peak 221.77M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_FineSilverNecklace
+Fra:1 Mem:221.89M (Peak 221.89M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_TinyUnknownMotifPendant
+Fra:1 Mem:221.89M (Peak 221.89M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_ScalpHair
+Fra:1 Mem:222.14M (Peak 222.14M) | Time:00:01.20 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Crown_PulledCurlyLocks
+Fra:1 Mem:231.21M (Peak 233.97M) | Time:00:01.23 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Crown_WarmAccentLocks
+Fra:1 Mem:232.34M (Peak 251.94M) | Time:00:01.61 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:169.63M (Peak 251.94M) | Time:00:01.61 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading FineBrownFlyawayHair_normal
+Fra:1 Mem:169.63M (Peak 251.94M) | Time:00:01.62 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading inez_skin_roughness
+Fra:1 Mem:202.65M (Peak 251.94M) | Time:00:01.62 | Mem:1.00M, Peak:1.00M | Scene, ViewLayer | Updating Images | Loading FineBrownFlyawayHair_roughness
+Fra:1 Mem:203.65M (Peak 251.94M) | Time:00:01.62 | Mem:2.00M, Peak:2.00M | Scene, ViewLayer | Updating Images | Loading FineBrownFlyawayHair_albedo
+Fra:1 Mem:204.65M (Peak 251.94M) | Time:00:01.62 | Mem:3.00M, Peak:3.00M | Scene, ViewLayer | Updating Images | Loading RestrainedWarmHairHighlights_normal
+Fra:1 Mem:205.65M (Peak 251.94M) | Time:00:01.63 | Mem:4.00M, Peak:4.00M | Scene, ViewLayer | Updating Images | Loading RestrainedWarmHairHighlights_roughness
+Fra:1 Mem:206.65M (Peak 251.94M) | Time:00:01.63 | Mem:5.00M, Peak:5.00M | Scene, ViewLayer | Updating Images | Loading RestrainedWarmHairHighlights_albedo
+Fra:1 Mem:207.65M (Peak 251.94M) | Time:00:01.66 | Mem:6.00M, Peak:6.00M | Scene, ViewLayer | Updating Images | Loading MediumBrownHair_normal
+Fra:1 Mem:208.65M (Peak 251.94M) | Time:00:01.69 | Mem:7.00M, Peak:7.00M | Scene, ViewLayer | Updating Images | Loading MediumBrownHair_roughness
+Fra:1 Mem:209.65M (Peak 251.94M) | Time:00:01.69 | Mem:8.00M, Peak:8.00M | Scene, ViewLayer | Updating Images | Loading MediumBrownHair_albedo
+Fra:1 Mem:210.65M (Peak 251.94M) | Time:00:01.70 | Mem:9.00M, Peak:9.00M | Scene, ViewLayer | Updating Images | Loading FineSilverChainAndTinyPendant_normal
+Fra:1 Mem:210.90M (Peak 251.94M) | Time:00:01.70 | Mem:9.25M, Peak:9.25M | Scene, ViewLayer | Updating Images | Loading FineSilverChainAndTinyPendant_roughness
+Fra:1 Mem:211.15M (Peak 251.94M) | Time:00:01.71 | Mem:9.50M, Peak:9.50M | Scene, ViewLayer | Updating Images | Loading FineSilverChainAndTinyPendant_albedo
+Fra:1 Mem:211.40M (Peak 251.94M) | Time:00:01.71 | Mem:9.75M, Peak:9.75M | Scene, ViewLayer | Updating Images | Loading BootBlackLeather_normal
+Fra:1 Mem:212.40M (Peak 251.94M) | Time:00:01.72 | Mem:10.75M, Peak:10.75M | Scene, ViewLayer | Updating Images | Loading BootBlackLeather_roughness
+Fra:1 Mem:213.40M (Peak 251.94M) | Time:00:01.73 | Mem:11.75M, Peak:11.75M | Scene, ViewLayer | Updating Images | Loading BootBlackLeather_albedo
+Fra:1 Mem:214.40M (Peak 251.94M) | Time:00:01.77 | Mem:12.75M, Peak:12.75M | Scene, ViewLayer | Updating Images | Loading BootBlackRubberSole_normal
+Fra:1 Mem:215.40M (Peak 251.94M) | Time:00:01.79 | Mem:13.75M, Peak:13.75M | Scene, ViewLayer | Updating Images | Loading BootBlackRubberSole_roughness
+Fra:1 Mem:216.40M (Peak 251.94M) | Time:00:01.80 | Mem:14.75M, Peak:14.75M | Scene, ViewLayer | Updating Images | Loading BootBlackRubberSole_albedo
+Fra:1 Mem:249.41M (Peak 251.94M) | Time:00:01.81 | Mem:15.75M, Peak:15.75M | Scene, ViewLayer | Updating Images | Loading CharcoalRibbedKnitTrims_normal
+Fra:1 Mem:218.40M (Peak 251.94M) | Time:00:01.82 | Mem:31.75M, Peak:31.75M | Scene, ViewLayer | Updating Images | Loading inez_skin_normal
+Fra:1 Mem:234.40M (Peak 251.94M) | Time:00:01.83 | Mem:32.75M, Peak:32.75M | Scene, ViewLayer | Updating Images | Loading CharcoalRibbedKnitTrims_roughness
+Fra:1 Mem:267.41M (Peak 269.42M) | Time:00:01.87 | Mem:33.75M, Peak:33.75M | Scene, ViewLayer | Updating Images | Loading CharcoalRibbedKnitTrims_albedo
+Fra:1 Mem:268.41M (Peak 269.42M) | Time:00:01.89 | Mem:34.75M, Peak:34.75M | Scene, ViewLayer | Updating Images | Loading WashedBlackDenim_normal
+Fra:1 Mem:252.40M (Peak 284.41M) | Time:00:01.90 | Mem:50.75M, Peak:50.75M | Scene, ViewLayer | Updating Images | Loading ScleraOffWhite_albedo
+Fra:1 Mem:253.40M (Peak 284.41M) | Time:00:01.90 | Mem:51.75M, Peak:51.75M | Scene, ViewLayer | Updating Images | Loading ScleraOffWhite_roughness
+Fra:1 Mem:254.40M (Peak 284.41M) | Time:00:01.92 | Mem:52.75M, Peak:52.75M | Scene, ViewLayer | Updating Images | Loading ScleraOffWhite_normal
+Fra:1 Mem:255.40M (Peak 284.41M) | Time:00:01.97 | Mem:53.75M, Peak:53.75M | Scene, ViewLayer | Updating Images | Loading inez_iris_olive_hazel_albedo
+Fra:1 Mem:256.40M (Peak 284.41M) | Time:00:01.98 | Mem:54.75M, Peak:54.75M | Scene, ViewLayer | Updating Images | Loading inez_iris_roughness
+Fra:1 Mem:291.42M (Peak 322.43M) | Time:00:01.99 | Mem:70.75M, Peak:70.75M | Scene, ViewLayer | Updating Images | Loading inez_iris_normal
+Fra:1 Mem:292.42M (Peak 322.43M) | Time:00:02.00 | Mem:71.75M, Peak:71.75M | Scene, ViewLayer | Updating Images | Loading ClearCornea_L_albedo
+Fra:1 Mem:290.66M (Peak 322.43M) | Time:00:02.00 | Mem:72.75M, Peak:72.75M | Scene, ViewLayer | Updating Images | Loading ClearCornea_L_roughness
+Fra:1 Mem:290.91M (Peak 322.43M) | Time:00:02.00 | Mem:73.00M, Peak:73.00M | Scene, ViewLayer | Updating Images | Loading ClearCornea_L_normal
+Fra:1 Mem:291.16M (Peak 322.43M) | Time:00:02.00 | Mem:73.25M, Peak:73.25M | Scene, ViewLayer | Updating Images | Loading ClearCornea_R_albedo
+Fra:1 Mem:291.41M (Peak 322.43M) | Time:00:02.00 | Mem:73.50M, Peak:73.50M | Scene, ViewLayer | Updating Images | Loading ClearCornea_R_roughness
+Fra:1 Mem:291.66M (Peak 322.43M) | Time:00:02.00 | Mem:73.75M, Peak:73.75M | Scene, ViewLayer | Updating Images | Loading ClearCornea_R_normal
+Fra:1 Mem:291.91M (Peak 322.43M) | Time:00:02.00 | Mem:74.00M, Peak:74.00M | Scene, ViewLayer | Updating Images | Loading Sweater_ThreeDarkBands_albedo
+Fra:1 Mem:275.90M (Peak 322.43M) | Time:00:02.00 | Mem:90.00M, Peak:90.00M | Scene, ViewLayer | Updating Images | Loading WashedBlackDenim_roughness
+Fra:1 Mem:291.90M (Peak 322.43M) | Time:00:02.01 | Mem:90.25M, Peak:90.25M | Scene, ViewLayer | Updating Images | Loading Sweater_ThreeDarkBands_roughness
+Fra:1 Mem:339.91M (Peak 371.92M) | Time:00:02.09 | Mem:106.25M, Peak:106.25M | Scene, ViewLayer | Updating Images | Loading Sweater_ThreeDarkBands_normal
+Fra:1 Mem:323.90M (Peak 371.92M) | Time:00:02.11 | Mem:122.25M, Peak:122.25M | Scene, ViewLayer | Updating Images | Loading WashedBlackDenim_albedo
+Fra:1 Mem:334.59M (Peak 403.92M) | Time:00:02.23 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:334.59M (Peak 403.92M) | Time:00:02.23 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:334.59M (Peak 403.92M) | Time:00:02.23 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:334.59M (Peak 403.92M) | Time:00:02.23 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:334.69M (Peak 403.92M) | Time:00:02.23 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:334.69M (Peak 403.92M) | Time:00:02.23 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:334.69M (Peak 403.92M) | Time:00:02.23 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:334.69M (Peak 403.92M) | Time:00:02.23 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:334.69M (Peak 403.92M) | Time:00:02.23 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:334.69M (Peak 403.92M) | Time:00:02.23 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:334.71M (Peak 403.92M) | Time:00:02.23 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:334.71M (Peak 403.92M) | Time:00:02.23 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:334.71M (Peak 403.92M) | Time:00:02.23 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:334.71M (Peak 403.92M) | Time:00:02.23 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:346.04M (Peak 403.92M) | Time:00:02.27 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:399.21M (Peak 403.92M) | Time:00:02.33 | Mem:170.30M, Peak:170.30M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.33 | Mem:223.44M, Peak:223.44M | Scene, ViewLayer | Updating Geometry BVH Inez_ContinuousHumanMesh_UNAPPROVED_Geometry 1/3 | Building BVH
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.33 | Mem:236.51M, Peak:236.51M | Scene, ViewLayer | Updating Geometry BVH Inez_ContinuousHumanMesh_UNAPPROVED_Geometry 1/3 | Building BVH 0%
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.33 | Mem:236.51M, Peak:236.51M | Scene, ViewLayer | Updating Geometry BVH EyeGeometry_R_Geometry 3/3 | Building BVH
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.36 | Mem:236.65M, Peak:236.72M | Scene, ViewLayer | Updating Geometry BVH EyeGeometry_L_Geometry 2/3 | Building BVH
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.57 | Mem:251.01M, Peak:264.07M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.57 | Mem:251.01M, Peak:264.07M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.59 | Mem:261.46M, Peak:264.07M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.71 | Mem:270.76M, Peak:280.22M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.71 | Mem:270.76M, Peak:280.22M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.73 | Mem:270.76M, Peak:280.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.73 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.73 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.73 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.73 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.73 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.73 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.73 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.73 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.73 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:02.73 | Mem:296.37M, Peak:296.45M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:02.73 | Mem:296.46M, Peak:296.46M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:02.73 | Mem:296.46M, Peak:296.46M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:02.73 | Mem:296.46M, Peak:296.46M | Scene, ViewLayer | Sample 0/32
+Fra:1 Mem:460.82M (Peak 460.82M) | Time:00:07.18 | Remaining:02:17.93 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Sample 1/32
+Fra:1 Mem:460.82M (Peak 460.82M) | Time:00:36.29 | Remaining:01:25.75 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Sample 9/32
+Fra:1 Mem:460.82M (Peak 460.82M) | Time:00:58.03 | Remaining:00:48.79 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Sample 17/32
+Fra:1 Mem:460.82M (Peak 460.82M) | Time:01:19.98 | Remaining:00:21.63 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Sample 25/32
+Fra:1 Mem:476.83M (Peak 508.83M) | Time:01:38.97 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Sample 32/32
+Fra:1 Mem:476.83M (Peak 508.83M) | Time:01:38.97 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Finished
+Saved: 'assets/characters/inez/renders/dressed_v03/portrait_three_quarter.png'
+Time: 01:39.21 (Saving: 00:00.22)
+
+ACTUAL_DRESSED_RENDER_READY portrait_three_quarter
+Fra:1 Mem:123.31M (Peak 153.29M) | Time:00:00.96 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_ContinuousHumanMesh_UNAPPROVED
+Fra:1 Mem:128.22M (Peak 153.29M) | Time:00:00.96 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_UnevenFineFlyaways
+Fra:1 Mem:129.74M (Peak 153.29M) | Time:00:00.97 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Eyeball_L
+Fra:1 Mem:145.50M (Peak 153.29M) | Time:00:00.97 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Eyeball_R
+Fra:1 Mem:145.85M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Iris_L
+Fra:1 Mem:145.86M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Pupil_L
+Fra:1 Mem:145.87M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Iris_R
+Fra:1 Mem:145.87M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Pupil_R
+Fra:1 Mem:145.88M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Cornea_L
+Fra:1 Mem:145.97M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Cornea_R
+Fra:1 Mem:146.07M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Brows_L
+Fra:1 Mem:146.48M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesUpper_L
+Fra:1 Mem:146.59M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesLower_L
+Fra:1 Mem:149.09M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Tearline_L
+Fra:1 Mem:149.09M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Brows_R
+Fra:1 Mem:149.51M (Peak 153.29M) | Time:00:00.98 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesUpper_R
+Fra:1 Mem:150.72M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_LashesLower_R
+Fra:1 Mem:149.67M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Tearline_R
+Fra:1 Mem:149.67M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater
+Fra:1 Mem:150.87M (Peak 153.29M) | Time:00:00.99 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_FramingCurls
+Fra:1 Mem:165.50M (Peak 167.02M) | Time:00:01.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans
+Fra:1 Mem:168.40M (Peak 169.86M) | Time:00:01.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Ponytail_WarmAccentCurls
+Fra:1 Mem:170.61M (Peak 170.61M) | Time:00:01.10 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Ponytail_Curls
+Fra:1 Mem:180.54M (Peak 180.54M) | Time:00:01.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_CrewNeck_0
+Fra:1 Mem:180.65M (Peak 180.65M) | Time:00:01.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_Cuff_1
+Fra:1 Mem:180.70M (Peak 180.70M) | Time:00:01.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_RibbedHem_2
+Fra:1 Mem:180.81M (Peak 180.81M) | Time:00:01.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Sweater_Cuff_3
+Fra:1 Mem:180.87M (Peak 180.87M) | Time:00:01.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_RearPatchPocket_R
+Fra:1 Mem:180.87M (Peak 180.87M) | Time:00:01.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_RearPatchPocket_L
+Fra:1 Mem:180.87M (Peak 180.87M) | Time:00:01.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_SewnSeams
+Fra:1 Mem:184.37M (Peak 184.37M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_0
+Fra:1 Mem:184.37M (Peak 184.37M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_1
+Fra:1 Mem:184.37M (Peak 184.37M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_2
+Fra:1 Mem:184.37M (Peak 184.37M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_3
+Fra:1 Mem:184.38M (Peak 184.38M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_BeltLoop_4
+Fra:1 Mem:184.38M (Peak 184.38M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_0
+Fra:1 Mem:184.39M (Peak 184.39M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_1
+Fra:1 Mem:184.40M (Peak 184.40M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_2
+Fra:1 Mem:184.41M (Peak 184.41M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_3
+Fra:1 Mem:184.43M (Peak 184.43M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Jeans_ButtonOrRivet_4
+Fra:1 Mem:184.44M (Peak 184.44M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Sole_L
+Fra:1 Mem:184.49M (Peak 184.49M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_L
+Fra:1 Mem:184.77M (Peak 184.77M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Tongue_L
+Fra:1 Mem:184.78M (Peak 184.78M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_0_-1
+Fra:1 Mem:184.79M (Peak 184.79M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_0_1
+Fra:1 Mem:184.80M (Peak 184.80M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_1_-1
+Fra:1 Mem:184.81M (Peak 184.81M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_1_1
+Fra:1 Mem:184.82M (Peak 184.82M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_2_-1
+Fra:1 Mem:184.84M (Peak 184.84M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_2_1
+Fra:1 Mem:184.85M (Peak 184.85M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_3_-1
+Fra:1 Mem:184.86M (Peak 184.86M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_3_1
+Fra:1 Mem:184.87M (Peak 184.87M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_4_-1
+Fra:1 Mem:184.88M (Peak 184.88M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_4_1
+Fra:1 Mem:184.90M (Peak 184.90M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_5_-1
+Fra:1 Mem:184.91M (Peak 184.91M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_5_1
+Fra:1 Mem:184.92M (Peak 184.92M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_6_-1
+Fra:1 Mem:184.93M (Peak 184.93M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_L_6_1
+Fra:1 Mem:184.94M (Peak 184.94M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Laces_L
+Fra:1 Mem:185.01M (Peak 185.01M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_StitchedPanels_L
+Fra:1 Mem:185.07M (Peak 185.07M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_SoleTread_L
+Fra:1 Mem:185.14M (Peak 185.14M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Sole_R
+Fra:1 Mem:185.20M (Peak 185.20M) | Time:00:01.16 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_R
+Fra:1 Mem:185.47M (Peak 185.47M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Tongue_R
+Fra:1 Mem:185.48M (Peak 185.48M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_0_-1
+Fra:1 Mem:185.49M (Peak 185.49M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_0_1
+Fra:1 Mem:185.50M (Peak 185.50M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_1_-1
+Fra:1 Mem:185.52M (Peak 185.52M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_1_1
+Fra:1 Mem:185.53M (Peak 185.53M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_2_-1
+Fra:1 Mem:185.54M (Peak 185.54M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_2_1
+Fra:1 Mem:185.55M (Peak 185.55M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_3_-1
+Fra:1 Mem:185.56M (Peak 185.56M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_3_1
+Fra:1 Mem:185.58M (Peak 185.58M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_4_-1
+Fra:1 Mem:185.59M (Peak 185.59M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_4_1
+Fra:1 Mem:185.60M (Peak 185.60M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_5_-1
+Fra:1 Mem:185.61M (Peak 185.61M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_5_1
+Fra:1 Mem:185.62M (Peak 185.62M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_6_-1
+Fra:1 Mem:185.64M (Peak 185.64M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Eyelet_R_6_1
+Fra:1 Mem:185.65M (Peak 185.65M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_Laces_R
+Fra:1 Mem:185.71M (Peak 185.71M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_StitchedPanels_R
+Fra:1 Mem:185.77M (Peak 185.77M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Boot_SoleTread_R
+Fra:1 Mem:185.84M (Peak 185.84M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_FineSilverNecklace
+Fra:1 Mem:185.96M (Peak 185.96M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_TinyUnknownMotifPendant
+Fra:1 Mem:185.97M (Peak 185.97M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_ScalpHair
+Fra:1 Mem:186.21M (Peak 186.21M) | Time:00:01.17 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Crown_PulledCurlyLocks
+Fra:1 Mem:234.12M (Peak 237.61M) | Time:00:01.31 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Inez_Crown_WarmAccentLocks
+Fra:1 Mem:232.34M (Peak 251.94M) | Time:00:01.62 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:169.63M (Peak 251.94M) | Time:00:01.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading inez_skin_albedo
+Fra:1 Mem:169.63M (Peak 251.94M) | Time:00:01.65 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Images | Loading inez_skin_roughness
+Fra:1 Mem:186.65M (Peak 251.94M) | Time:00:01.65 | Mem:1.00M, Peak:1.00M | Scene, ViewLayer | Updating Images | Loading FineBrownFlyawayHair_roughness
+Fra:1 Mem:203.65M (Peak 251.94M) | Time:00:01.66 | Mem:2.00M, Peak:2.00M | Scene, ViewLayer | Updating Images | Loading FineBrownFlyawayHair_albedo
+Fra:1 Mem:204.65M (Peak 251.94M) | Time:00:01.67 | Mem:3.00M, Peak:3.00M | Scene, ViewLayer | Updating Images | Loading RestrainedWarmHairHighlights_normal
+Fra:1 Mem:205.65M (Peak 251.94M) | Time:00:01.68 | Mem:4.00M, Peak:4.00M | Scene, ViewLayer | Updating Images | Loading RestrainedWarmHairHighlights_roughness
+Fra:1 Mem:206.65M (Peak 251.94M) | Time:00:01.68 | Mem:5.00M, Peak:5.00M | Scene, ViewLayer | Updating Images | Loading RestrainedWarmHairHighlights_albedo
+Fra:1 Mem:207.65M (Peak 251.94M) | Time:00:01.68 | Mem:6.00M, Peak:6.00M | Scene, ViewLayer | Updating Images | Loading MediumBrownHair_normal
+Fra:1 Mem:208.65M (Peak 251.94M) | Time:00:01.69 | Mem:7.00M, Peak:7.00M | Scene, ViewLayer | Updating Images | Loading MediumBrownHair_roughness
+Fra:1 Mem:209.65M (Peak 251.94M) | Time:00:01.69 | Mem:8.00M, Peak:8.00M | Scene, ViewLayer | Updating Images | Loading MediumBrownHair_albedo
+Fra:1 Mem:210.65M (Peak 251.94M) | Time:00:01.69 | Mem:9.00M, Peak:9.00M | Scene, ViewLayer | Updating Images | Loading FineSilverChainAndTinyPendant_normal
+Fra:1 Mem:210.90M (Peak 251.94M) | Time:00:01.69 | Mem:9.25M, Peak:9.25M | Scene, ViewLayer | Updating Images | Loading FineSilverChainAndTinyPendant_roughness
+Fra:1 Mem:211.15M (Peak 251.94M) | Time:00:01.69 | Mem:9.50M, Peak:9.50M | Scene, ViewLayer | Updating Images | Loading FineSilverChainAndTinyPendant_albedo
+Fra:1 Mem:211.40M (Peak 251.94M) | Time:00:01.69 | Mem:9.75M, Peak:9.75M | Scene, ViewLayer | Updating Images | Loading BootBlackLeather_normal
+Fra:1 Mem:212.40M (Peak 251.94M) | Time:00:01.70 | Mem:10.75M, Peak:10.75M | Scene, ViewLayer | Updating Images | Loading BootBlackLeather_roughness
+Fra:1 Mem:213.40M (Peak 251.94M) | Time:00:01.70 | Mem:11.75M, Peak:11.75M | Scene, ViewLayer | Updating Images | Loading BootBlackLeather_albedo
+Fra:1 Mem:214.40M (Peak 251.94M) | Time:00:01.71 | Mem:12.75M, Peak:12.75M | Scene, ViewLayer | Updating Images | Loading BootBlackRubberSole_normal
+Fra:1 Mem:215.40M (Peak 251.94M) | Time:00:01.71 | Mem:13.75M, Peak:13.75M | Scene, ViewLayer | Updating Images | Loading BootBlackRubberSole_roughness
+Fra:1 Mem:216.40M (Peak 251.94M) | Time:00:01.71 | Mem:14.75M, Peak:14.75M | Scene, ViewLayer | Updating Images | Loading BootBlackRubberSole_albedo
+Fra:1 Mem:217.40M (Peak 251.94M) | Time:00:01.72 | Mem:15.75M, Peak:15.75M | Scene, ViewLayer | Updating Images | Loading CharcoalRibbedKnitTrims_normal
+Fra:1 Mem:218.40M (Peak 251.94M) | Time:00:01.75 | Mem:16.75M, Peak:16.75M | Scene, ViewLayer | Updating Images | Loading CharcoalRibbedKnitTrims_roughness
+Fra:1 Mem:219.40M (Peak 251.94M) | Time:00:01.75 | Mem:17.75M, Peak:17.75M | Scene, ViewLayer | Updating Images | Loading CharcoalRibbedKnitTrims_albedo
+Fra:1 Mem:220.40M (Peak 251.94M) | Time:00:01.75 | Mem:18.75M, Peak:18.75M | Scene, ViewLayer | Updating Images | Loading WashedBlackDenim_normal
+Fra:1 Mem:268.41M (Peak 300.42M) | Time:00:01.80 | Mem:34.75M, Peak:34.75M | Scene, ViewLayer | Updating Images | Loading WashedBlackDenim_roughness
+Fra:1 Mem:252.40M (Peak 300.42M) | Time:00:01.81 | Mem:50.75M, Peak:50.75M | Scene, ViewLayer | Updating Images | Loading inez_skin_normal
+Fra:1 Mem:300.41M (Peak 332.42M) | Time:00:01.88 | Mem:66.75M, Peak:66.75M | Scene, ViewLayer | Updating Images | Loading WashedBlackDenim_albedo
+Fra:1 Mem:284.40M (Peak 332.42M) | Time:00:01.89 | Mem:82.75M, Peak:82.75M | Scene, ViewLayer | Updating Images | Loading ScleraOffWhite_albedo
+Fra:1 Mem:285.40M (Peak 332.42M) | Time:00:01.89 | Mem:83.75M, Peak:83.75M | Scene, ViewLayer | Updating Images | Loading ScleraOffWhite_roughness
+Fra:1 Mem:286.40M (Peak 332.42M) | Time:00:01.89 | Mem:84.75M, Peak:84.75M | Scene, ViewLayer | Updating Images | Loading ScleraOffWhite_normal
+Fra:1 Mem:287.40M (Peak 332.42M) | Time:00:01.90 | Mem:85.75M, Peak:85.75M | Scene, ViewLayer | Updating Images | Loading inez_iris_olive_hazel_albedo
+Fra:1 Mem:288.40M (Peak 332.42M) | Time:00:01.91 | Mem:86.75M, Peak:86.75M | Scene, ViewLayer | Updating Images | Loading inez_iris_roughness
+Fra:1 Mem:321.41M (Peak 332.42M) | Time:00:01.91 | Mem:87.75M, Peak:87.75M | Scene, ViewLayer | Updating Images | Loading inez_iris_normal
+Fra:1 Mem:322.41M (Peak 332.42M) | Time:00:01.95 | Mem:88.75M, Peak:88.75M | Scene, ViewLayer | Updating Images | Loading ClearCornea_L_albedo
+Fra:1 Mem:322.66M (Peak 332.42M) | Time:00:01.95 | Mem:89.00M, Peak:89.00M | Scene, ViewLayer | Updating Images | Loading ClearCornea_L_roughness
+Fra:1 Mem:322.91M (Peak 332.42M) | Time:00:01.95 | Mem:89.25M, Peak:89.25M | Scene, ViewLayer | Updating Images | Loading ClearCornea_L_normal
+Fra:1 Mem:323.16M (Peak 332.42M) | Time:00:01.95 | Mem:89.50M, Peak:89.50M | Scene, ViewLayer | Updating Images | Loading ClearCornea_R_albedo
+Fra:1 Mem:291.40M (Peak 332.42M) | Time:00:01.95 | Mem:105.50M, Peak:105.50M | Scene, ViewLayer | Updating Images | Loading Sweater_ThreeDarkBands_normal
+Fra:1 Mem:307.40M (Peak 332.42M) | Time:00:01.96 | Mem:105.75M, Peak:105.75M | Scene, ViewLayer | Updating Images | Loading ClearCornea_R_roughness
+Fra:1 Mem:307.65M (Peak 332.42M) | Time:00:01.96 | Mem:106.00M, Peak:106.00M | Scene, ViewLayer | Updating Images | Loading ClearCornea_R_normal
+Fra:1 Mem:307.90M (Peak 332.42M) | Time:00:01.96 | Mem:106.25M, Peak:106.25M | Scene, ViewLayer | Updating Images | Loading Sweater_ThreeDarkBands_albedo
+Fra:1 Mem:355.91M (Peak 387.92M) | Time:00:02.01 | Mem:122.25M, Peak:122.25M | Scene, ViewLayer | Updating Images | Loading Sweater_ThreeDarkBands_roughness
+Fra:1 Mem:334.59M (Peak 403.92M) | Time:00:02.12 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:334.59M (Peak 403.92M) | Time:00:02.12 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:334.59M (Peak 403.92M) | Time:00:02.12 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:334.59M (Peak 403.92M) | Time:00:02.12 | Mem:170.25M, Peak:170.25M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:334.69M (Peak 403.92M) | Time:00:02.12 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:334.69M (Peak 403.92M) | Time:00:02.12 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:334.69M (Peak 403.92M) | Time:00:02.12 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:334.69M (Peak 403.92M) | Time:00:02.12 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:334.69M (Peak 403.92M) | Time:00:02.12 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:334.69M (Peak 403.92M) | Time:00:02.12 | Mem:170.27M, Peak:170.27M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:334.71M (Peak 403.92M) | Time:00:02.12 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:334.71M (Peak 403.92M) | Time:00:02.12 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:334.71M (Peak 403.92M) | Time:00:02.12 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:334.71M (Peak 403.92M) | Time:00:02.12 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:346.04M (Peak 403.92M) | Time:00:02.15 | Mem:170.29M, Peak:170.29M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:399.21M (Peak 403.92M) | Time:00:02.17 | Mem:170.30M, Peak:170.30M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.17 | Mem:223.44M, Peak:223.44M | Scene, ViewLayer | Updating Geometry BVH Inez_ContinuousHumanMesh_UNAPPROVED_Geometry 1/3 | Building BVH
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.17 | Mem:236.51M, Peak:236.51M | Scene, ViewLayer | Updating Geometry BVH Inez_ContinuousHumanMesh_UNAPPROVED_Geometry 1/3 | Building BVH 0%
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.18 | Mem:236.51M, Peak:236.51M | Scene, ViewLayer | Updating Geometry BVH EyeGeometry_L_Geometry 2/3 | Building BVH
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.18 | Mem:236.58M, Peak:236.58M | Scene, ViewLayer | Updating Geometry BVH EyeGeometry_R_Geometry 3/3 | Building BVH
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.35 | Mem:251.01M, Peak:264.07M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.35 | Mem:251.01M, Peak:264.07M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.45 | Mem:277.25M, Peak:277.25M | Scene, ViewLayer | Updating Scene BVH | Building BVH 86%
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.45 | Mem:270.76M, Peak:280.22M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:399.19M (Peak 403.92M) | Time:00:02.45 | Mem:270.76M, Peak:280.22M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.46 | Mem:270.76M, Peak:280.22M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.46 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.46 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.46 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.46 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.46 | Mem:296.37M, Peak:296.37M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.46 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:424.80M (Peak 424.80M) | Time:00:02.46 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:02.46 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:02.46 | Mem:296.45M, Peak:296.45M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:02.46 | Mem:296.37M, Peak:296.45M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:02.46 | Mem:296.46M, Peak:296.46M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:02.46 | Mem:296.46M, Peak:296.46M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:424.81M (Peak 424.81M) | Time:00:02.46 | Mem:296.46M, Peak:296.46M | Scene, ViewLayer | Sample 0/32
+Fra:1 Mem:460.83M (Peak 460.83M) | Time:00:03.26 | Remaining:00:24.52 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Sample 1/32
+Fra:1 Mem:476.83M (Peak 508.83M) | Time:00:19.91 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Sample 32/32
+Fra:1 Mem:476.83M (Peak 508.83M) | Time:00:19.91 | Mem:332.47M, Peak:332.47M | Scene, ViewLayer | Finished
+Saved: 'assets/characters/inez/renders/dressed_v03/back.png'
+Time: 00:20.19 (Saving: 00:00.27)
+
+ACTUAL_DRESSED_RENDER_READY back
+
+Blender quit

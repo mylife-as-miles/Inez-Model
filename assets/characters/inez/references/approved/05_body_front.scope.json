@@ -1,0 +1,24 @@
+{
+  "status": "approved_geometry_only",
+  "source_version": "05_body_front_v02.png",
+  "accepted": [
+    "front global body proportions",
+    "visible front identity subordinate to original A",
+    "neutral low A-pose",
+    "complete limb and garment silhouette"
+  ],
+  "excluded": [
+    "warm boot welt/stitch material",
+    "strong denim wash",
+    "all unverified microtexture",
+    "hidden anatomy",
+    "full costume fidelity"
+  ],
+  "authority": "Original A face, original B body/costume, approved13 only neutral black seam color",
+  "full_image_approved": false,
+  "production_approved": false,
+  "critics": [
+    "qa/identity/05_body_front_v05.md",
+    "qa/technical/05_body_front_v05.md"
+  ]
+}

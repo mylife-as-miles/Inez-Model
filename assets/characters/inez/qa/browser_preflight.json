@@ -1,0 +1,19 @@
+{
+  "state": {
+    "ready": false,
+    "backend": "WebGL2",
+    "error": null,
+    "animationNames": [],
+    "morphNames": [],
+    "resourceBytes": 0,
+    "productionStatus": {
+      "label": "Reference reconstruction in progress",
+      "model_available": false,
+      "production_approved": false,
+      "blocker": "Canonical portrait is provisionally accepted. Body and profile review gates remain pending; no 3D character has been authored yet."
+    }
+  },
+  "errors": [],
+  "referenceLoaded": true,
+  "pageErrors": []
+}

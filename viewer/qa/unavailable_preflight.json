@@ -1,0 +1,238 @@
+{
+  "scope": "Viewer foundation only. Authored GLB unavailable; no character or deformation approval.",
+  "timestamp": "2026-10-09T09:17:52.832087+00:00",
+  "browser": "Chromium / SwiftShader WebGL2",
+  "checks": {
+    "truthful_unavailable_state": true,
+    "asset_controls_disabled": true,
+    "all_camera_presets_work": true,
+    "lighting_controls_work": true,
+    "no_fake_asset_api_results": true,
+    "original_reference_loaded": true,
+    "capture_freezes_and_hides_ui": true,
+    "capture_restores_playback": true,
+    "material_module_fixtures_pass": true,
+    "no_glb_requested": true,
+    "no_runtime_errors": true
+  },
+  "pageErrors": [],
+  "consoleErrors": [],
+  "consoleWarnings": [],
+  "glbRequests": [],
+  "screenshots": [
+    "unavailable_reference_comparison.png",
+    "unavailable_capture_mode.png"
+  ],
+  "initial": {
+    "state": {
+      "ready": false,
+      "loading": false,
+      "backend": "WebGL2",
+      "requestedBackend": "WebGL2",
+      "error": null,
+      "animationNames": [],
+      "morphNames": [],
+      "resourceBytes": 0,
+      "assetInfo": null,
+      "paused": false,
+      "currentAnimation": "rest",
+      "animationMode": "rest",
+      "actionWeights": {},
+      "clipTime": 0,
+      "clipDuration": 0,
+      "playbackRate": 1,
+      "transition": 0.35,
+      "locomotionSpeed": 0,
+      "previewSpeed": 0,
+      "characterPosition": [
+        0,
+        0,
+        0
+      ],
+      "characterYaw": 0,
+      "velocity": [
+        0,
+        0,
+        0
+      ],
+      "view": "body_front",
+      "lighting": "studio",
+      "inspection": "pbr",
+      "material": "all",
+      "wireframe": false,
+      "capture": false,
+      "lightControls": {
+        "exposure": 1,
+        "key": 1,
+        "fill": 1,
+        "ambient": 1
+      },
+      "facialControls": {},
+      "fps": 0,
+      "renderStats": {
+        "triangles": 2,
+        "drawCalls": 1,
+        "geometries": 1,
+        "textures": 1
+      },
+      "productionStatus": {
+        "label": "Actual clay geometry fitting underway",
+        "model_available": false,
+        "production_approved": false,
+        "blocker": "Initial front/profile/body geometry evidence accepted with explicit restrictions. Actual fitted head is being built; no GLB has been validated in browser yet. Generated full-body materials remain rejected.",
+        "generation_calls": 14,
+        "global_call_cap": 24,
+        "body_refinement_passes_used": 4,
+        "keeper_body_candidate": "references/generated/05_body_front_v02.png",
+        "authorization_id": "boots_extension_01",
+        "body_reference_scope": "geometry only; exact materials rejected"
+      }
+    },
+    "errors": [],
+    "warnings": [],
+    "api": [
+      "state",
+      "errors",
+      "warnings",
+      "setView",
+      "setLighting",
+      "setLightControls",
+      "setExpression",
+      "setViseme",
+      "setFaceControls",
+      "resetFace",
+      "setAnimation",
+      "setPlaybackSpeed",
+      "setLocomotionSpeed",
+      "pause",
+      "seek",
+      "advance",
+      "resetPosition",
+      "captureMode",
+      "inspectMaterials",
+      "setWireframe",
+      "setReference",
+      "sampleDeformedVertices",
+      "boneWorldPositions",
+      "getBoneWorldPositions",
+      "getMorphInfluences",
+      "renderFrame",
+      "getBone",
+      "getAvatar",
+      "avatar",
+      "assetInfo",
+      "meshInventory",
+      "mixer",
+      "camera",
+      "controls",
+      "effectiveWeights",
+      "actorPosition"
+    ],
+    "disabled": [
+      {
+        "id": "animation",
+        "disabled": true
+      },
+      {
+        "id": "expression",
+        "disabled": true
+      },
+      {
+        "id": "viseme",
+        "disabled": true
+      },
+      {
+        "id": "jaw",
+        "disabled": true
+      },
+      {
+        "id": "eye-yaw",
+        "disabled": true
+      },
+      {
+        "id": "head-yaw",
+        "disabled": true
+      },
+      {
+        "id": "pause",
+        "disabled": true
+      },
+      {
+        "id": "timeline",
+        "disabled": true
+      },
+      {
+        "id": "movement-speed",
+        "disabled": true
+      },
+      {
+        "id": "material",
+        "disabled": true
+      }
+    ]
+  },
+  "views": [
+    {
+      "name": "body_front",
+      "ok": true
+    },
+    {
+      "name": "body_left",
+      "ok": true
+    },
+    {
+      "name": "body_right",
+      "ok": true
+    },
+    {
+      "name": "body_three_quarter",
+      "ok": true
+    },
+    {
+      "name": "body_back",
+      "ok": true
+    },
+    {
+      "name": "face_front",
+      "ok": true
+    },
+    {
+      "name": "face_left",
+      "ok": true
+    },
+    {
+      "name": "face_right",
+      "ok": true
+    },
+    {
+      "name": "face_three_quarter",
+      "ok": true
+    },
+    {
+      "name": "face_back",
+      "ok": true
+    }
+  ],
+  "lightControls": {
+    "exposure": 1.2,
+    "key": 1.4,
+    "fill": 0.7,
+    "ambient": 0.4
+  },
+  "materialModuleFixtures": {
+    "scope": "Synthetic detached material fixtures only; no character GLB used.",
+    "checks": {
+      "albedo_retains_base_color_alpha": true,
+      "roughness_retains_base_color_alpha": true,
+      "roughness_uses_green_times_factor": true,
+      "normal_map_retains_base_color_alpha": true,
+      "normals_retains_base_color_alpha": true,
+      "restores_original_material": true,
+      "rejects_unknown_mode": true,
+      "rejects_unknown_material": true
+    }
+  },
+  "viewerErrors": [],
+  "foundation_passed": true,
+  "actual_character_validated": false
+}

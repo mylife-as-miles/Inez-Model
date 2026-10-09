@@ -1,0 +1,15 @@
+node_modules/
+dist/
+__pycache__/
+*.py[cod]
+*.blend1
+*.blend2
+.env
+.env.*
+!.env.example
+/artifacts/
+/generated_images/
+/scratch/
+/shared/
+/library-files/
+.DS_Store

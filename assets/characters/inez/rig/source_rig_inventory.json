@@ -1,0 +1,41 @@
+{
+  "status": "source inventory only; imported actual rig not yet tested",
+  "source_license": "CC0",
+  "source_bones": 163,
+  "source_weight_groups": 139,
+  "body_vertex_count": 13380,
+  "raw_body_weight_sum_range": [
+    0.954,
+    1.0630000000000002
+  ],
+  "raw_unweighted_body_vertices": 0,
+  "normalization_required": true,
+  "parent_bones_without_direct_weights": [
+    "levator02.L",
+    "levator02.R",
+    "levator03.L",
+    "levator03.R",
+    "levator04.L",
+    "levator04.R",
+    "oculi02.L",
+    "oculi02.R",
+    "oris02",
+    "oris04.L",
+    "oris04.R",
+    "oris06",
+    "oris06.L",
+    "oris06.R",
+    "risorius02.L",
+    "risorius02.R",
+    "special01",
+    "special03",
+    "special06.L",
+    "special06.R",
+    "temporalis01.L",
+    "temporalis01.R",
+    "temporalis02.L",
+    "temporalis02.R"
+  ],
+  "animation_script_prepared": true,
+  "model_source_execution_enabled": false
+}

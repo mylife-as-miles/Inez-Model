@@ -1,0 +1,205 @@
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Applied modifier was not first, result may not be as expected
+Info: Saved "inez.blend"
+Info: Saved "inez_dressed_v03.blend"
+ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+09:33:08 | INFO: Starting glTF 2.0 export
+09:33:08 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_0_-1_Geometry
+09:33:08 | INFO: Primitives created: 1
+09:33:08 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_0_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_1_-1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_1_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_2_-1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_2_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_3_-1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_3_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_4_-1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_4_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_5_-1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_5_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_6_-1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_L_6_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_0_-1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_0_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_1_-1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_1_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_2_-1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_2_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_3_-1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_3_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_4_-1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_4_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_5_-1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_5_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_6_-1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Eyelet_R_6_1_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_L_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Laces_L_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Laces_R_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_R_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Sole_L_Geometry
+Blender 4.3.2
+Read blend: "/workspace/assets/characters/inez/model/work/inez_head_v03.blend"
+Error: Tangent space can only be computed for tris/quads, aborting
+09:33:09 | WARNING: Inez_Boot_Sole_L_Geometry: Could not calculate tangents. Please try to triangulate the mesh first.
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Sole_R_Geometry
+Error: Tangent space can only be computed for tris/quads, aborting
+09:33:09 | WARNING: Inez_Boot_Sole_R_Geometry: Could not calculate tangents. Please try to triangulate the mesh first.
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_SoleTread_L_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_SoleTread_R_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_StitchedPanels_L_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_StitchedPanels_R_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Tongue_L_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Boot_Tongue_R_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Brows_L_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Brows_R_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_ContinuousHumanMesh_UNAPPROVED_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | WARNING: There are more than 4 joint vertex influences.The 4 with highest weight will be used (and normalized).
+09:33:09 | INFO: Extracting primitive: Inez_Cornea_L_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Cornea_R_Geometry
+09:33:09 | INFO: Primitives created: 1
+09:33:09 | INFO: Extracting primitive: Inez_Crown_PulledCurlyLocks_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Crown_WarmAccentLocks_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: EyeGeometry_L_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: EyeGeometry_R_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_FineSilverNecklace_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_FramingCurls_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: IrisQA_L_Mesh
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: IrisQA_R_Mesh
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_BeltLoop_0_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_BeltLoop_1_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_BeltLoop_2_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_BeltLoop_3_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_BeltLoop_4_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_ButtonOrRivet_0_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_ButtonOrRivet_1_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_ButtonOrRivet_2_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_ButtonOrRivet_3_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_ButtonOrRivet_4_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_RearPatchPocket_L_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_RearPatchPocket_R_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Jeans_SewnSeams_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_LashesLower_L_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_LashesLower_R_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_LashesUpper_L_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_LashesUpper_R_Geometry
+09:33:10 | INFO: Primitives created: 1
+09:33:10 | INFO: Extracting primitive: Inez_Ponytail_Curls_Geometry
+09:33:11 | INFO: Primitives created: 1
+09:33:11 | INFO: Extracting primitive: Inez_Ponytail_WarmAccentCurls_Geometry
+09:33:11 | INFO: Primitives created: 1
+09:33:11 | INFO: Extracting primitive: PupilQA_L_Mesh
+09:33:11 | INFO: Primitives created: 1
+09:33:11 | INFO: Extracting primitive: PupilQA_R_Mesh
+09:33:11 | INFO: Primitives created: 1
+09:33:11 | INFO: Extracting primitive: Inez_ScalpHair_Geometry
+09:33:11 | INFO: Primitives created: 1
+09:33:11 | INFO: Extracting primitive: Inez_Sweater_Geometry
+09:33:11 | INFO: Primitives created: 1
+09:33:11 | INFO: Extracting primitive: Inez_Sweater_CrewNeck_0_Geometry
+09:33:11 | INFO: Primitives created: 1
+09:33:11 | INFO: Extracting primitive: Inez_Sweater_Cuff_1_Geometry
+09:33:11 | INFO: Primitives created: 1
+09:33:11 | INFO: Extracting primitive: Inez_Sweater_Cuff_3_Geometry
+09:33:11 | INFO: Primitives created: 1
+09:33:11 | INFO: Extracting primitive: Inez_Sweater_RibbedHem_2_Geometry
+09:33:11 | INFO: Primitives created: 1
+09:33:11 | INFO: Extracting primitive: Inez_Tearline_L_Geometry
+09:33:11 | INFO: Primitives created: 1
+09:33:11 | INFO: Extracting primitive: Inez_Tearline_R_Geometry
+09:33:11 | INFO: Primitives created: 1
+09:33:11 | INFO: Extracting primitive: Inez_TinyUnknownMotifPendant_Geometry
+09:33:11 | INFO: Primitives created: 1
+09:33:12 | INFO: Extracting primitive: Inez_UnevenFineFlyaways_Geometry
+09:33:12 | INFO: Primitives created: 1
+09:33:12 | INFO: Finished glTF 2.0 export in 3.363098382949829 s
+
+Warning: Inez_Boot_Sole_L_Geometry: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: Inez_Boot_Sole_R_Geometry: Could not calculate tangents. Please try to triangulate the mesh first.
+INEZ_DRESSED_ASSETS_READY {"blend": "/workspace/assets/characters/inez/model/inez.blend", "glb": "/workspace/assets/characters/inez/model/inez.glb", "rest_backup": "/workspace/assets/characters/inez/model/work/inez_dressed_v03.blend"}
+INEZ_DRESSED_MODEL_MANIFEST {"revision": "v03", "stage": "Actual fitted dressed rigged prototype; final identity and animation gates pending", "blend": "/workspace/assets/characters/inez/model/inez.blend", "glb": "/workspace/assets/characters/inez/model/inez.glb", "initial_geometry_gate": {"front_profile_body_initial_gate_passed": true, "gate_scope": "Initial facial/body GEOMETRY fitting only; whole image materials/production are not approved", "accepted_at": "2026-10-08T23:03:30.967433+00:00", "evidence_front": "references/approved/01_face_front_neutral.png; identity32.5/35 and technical33/35 face", "evidence_profile": "references/approved/02_face_left_profile.png; corrected true lateral orientation accepted independently; inferred depth", "evidence_body": "references/approved/05_body_front.png plus MANDATORY.scope.json; geometry-only accepted by both critics", "reports": ["qa/identity/01_face_front_neutral_v02.md", "qa/technical/01_face_front_neutral_v02.md", "qa/identity/02_face_left_profile_v02.md", "qa/technical/02_face_left_profile_v02.md", "qa/identity/05_body_front_v05.md", "qa/technical/05_body_front_v05.md"], "material_authority": "OriginalB only for costume/denim; approved13 neutral black welt guide; rejected Gen warm welts/scratch texture must not propagate", "hair_authority": "OriginalB rear controls ponytail length/volume, not elongated generated side portrait", "original_authority": "OriginalA facial identity, originalB body/costume; all newly seen profile depth is hypothesis", "explicit_root_gate_message": "FRONT/PROFILE/BODY INITIAL GEOMETRY GATE PASSED. Execute licensed fitted clay head only; detailed textures/dressed build await independent credible-head geometry gate.", "production_approved": false}, "credible_head_gate": {"credible_head_geometry_passed": true, "scope": "Provisional initial underlying geometry for further material/dressed authoring only", "source": "model/work/inez_head_v03.blend", "config": "/workspace/tools/inez/model_head_config_v03.json", "reports": ["qa/identity/head_3d_v03.md", "qa/technical/head_3d_v03.md"], "review_findings": "Actual upperlip roll/narrow restingseam and real superior/lower lid folds resolve prior construction blockers; v02 mouth/nose/chin gains preserved", "scores": {"identity_face": "26/28 eligible;7 reserved", "identity_scope": "36.5/39;61 reserved", "technical_face": "30/35 below final32 target", "technical_scope": "39/44;56 reserved"}, "remaining": ["simplified nasal wing/tip planes", "regular/restrained upperlip and lid arcs", "smooth lowercheek/chin transition", "unknown exact sagittal depth", "full material/hair/body/rig/animation/browser likeness unreviewed"], "production_approved": false, "final_head_identity_approved": false, "recorded_at": "2026-10-09T09:32:08.325262+00:00", "explicit_root_gate_message": "CREDIBLE HEAD INITIAL GEOMETRY GATE PASSED. Execute actual dressed geometry/PBR using reviewed v03 source. Final likeness/rigged browser acceptance remains pending."}, "body_source_vertices": 13380, "source_basis_preserved": true, "actual_bone_count": 163, "actual_authored_meshes": ["Inez_Cornea_L", "Inez_Cornea_R", "Inez_Brows_L", "Inez_LashesUpper_L", "Inez_LashesLower_L", "Inez_Tearline_L", "Inez_Brows_R", "Inez_LashesUpper_R", "Inez_LashesLower_R", "Inez_Tearline_R", "Inez_Sweater", "Inez_Jeans", "Inez_Sweater_CrewNeck_0", "Inez_Sweater_Cuff_1", "Inez_Sweater_RibbedHem_2", "Inez_Sweater_Cuff_3", "Inez_Jeans_RearPatchPocket_R", "Inez_Jeans_RearPatchPocket_L", "Inez_Jeans_SewnSeams", "Inez_Jeans_BeltLoop_0", "Inez_Jeans_BeltLoop_1", "Inez_Jeans_BeltLoop_2", "Inez_Jeans_BeltLoop_3", "Inez_Jeans_BeltLoop_4", "Inez_Jeans_ButtonOrRivet_0", "Inez_Jeans_ButtonOrRivet_1", "Inez_Jeans_ButtonOrRivet_2", "Inez_Jeans_ButtonOrRivet_3", "Inez_Jeans_ButtonOrRivet_4", "Inez_Boot_Sole_L", "Inez_Boot_L", "Inez_Boot_Tongue_L", "Inez_Boot_Eyelet_L_0_-1", "Inez_Boot_Eyelet_L_0_1", "Inez_Boot_Eyelet_L_1_-1", "Inez_Boot_Eyelet_L_1_1", "Inez_Boot_Eyelet_L_2_-1", "Inez_Boot_Eyelet_L_2_1", "Inez_Boot_Eyelet_L_3_-1", "Inez_Boot_Eyelet_L_3_1", "Inez_Boot_Eyelet_L_4_-1", "Inez_Boot_Eyelet_L_4_1", "Inez_Boot_Eyelet_L_5_-1", "Inez_Boot_Eyelet_L_5_1", "Inez_Boot_Eyelet_L_6_-1", "Inez_Boot_Eyelet_L_6_1", "Inez_Boot_Laces_L", "Inez_Boot_StitchedPanels_L", "Inez_Boot_SoleTread_L", "Inez_Boot_Sole_R", "Inez_Boot_R", "Inez_Boot_Tongue_R", "Inez_Boot_Eyelet_R_0_-1", "Inez_Boot_Eyelet_R_0_1", "Inez_Boot_Eyelet_R_1_-1", "Inez_Boot_Eyelet_R_1_1", "Inez_Boot_Eyelet_R_2_-1", "Inez_Boot_Eyelet_R_2_1", "Inez_Boot_Eyelet_R_3_-1", "Inez_Boot_Eyelet_R_3_1", "Inez_Boot_Eyelet_R_4_-1", "Inez_Boot_Eyelet_R_4_1", "Inez_Boot_Eyelet_R_5_-1", "Inez_Boot_Eyelet_R_5_1", "Inez_Boot_Eyelet_R_6_-1", "Inez_Boot_Eyelet_R_6_1", "Inez_Boot_Laces_R", "Inez_Boot_StitchedPanels_R", "Inez_Boot_SoleTread_R", "Inez_FineSilverNecklace", "Inez_TinyUnknownMotifPendant", "Inez_ScalpHair", "Inez_Crown_PulledCurlyLocks", "Inez_Crown_WarmAccentLocks", "Inez_Ponytail_Curls", "Inez_Ponytail_WarmAccentCurls", "Inez_FramingCurls", "Inez_UnevenFineFlyaways"], "actual_textures": ["BootBlackLeather_albedo", "BootBlackLeather_normal", "BootBlackLeather_roughness", "BootBlackRubberSole_albedo", "BootBlackRubberSole_normal", "BootBlackRubberSole_roughness", "FineBrownFlyawayHair_albedo", "FineBrownFlyawayHair_normal", "FineBrownFlyawayHair_roughness", "FineSilverChainAndTinyPendant_albedo", "FineSilverChainAndTinyPendant_normal", "FineSilverChainAndTinyPendant_roughness", "inez_iris_normal", "inez_iris_olive_hazel_albedo", "inez_iris_roughness", "inez_portraits.jpg", "inez_skin_albedo", "inez_skin_normal", "inez_skin_roughness", "inez_turnaround.jpg", "MediumBrownHair_albedo", "MediumBrownHair_normal", "MediumBrownHair_roughness", "RestrainedWarmHairHighlights_albedo", "RestrainedWarmHairHighlights_normal", "RestrainedWarmHairHighlights_roughness", "ScleraOffWhite_albedo", "ScleraOffWhite_normal", "ScleraOffWhite_roughness", "Sweater_ThreeDarkBands_albedo", "Sweater_ThreeDarkBands_normal", "Sweater_ThreeDarkBands_roughness", "WashedBlackDenim_albedo", "WashedBlackDenim_normal", "WashedBlackDenim_roughness"], "original_guided_costume": true, "texture_projection_used": false, "placeholder_mannequin_used": false, "animation_status": "Separate animation artist must add and verify actual Idle/Walk/Run and face controls", "final_artistic_identity_approved": false, "production_complete": false, "actual_renders": {}, "units": "meters; glTF Y up, +Z forward", "provisional_height_m": 1.7}
+
+Blender quit

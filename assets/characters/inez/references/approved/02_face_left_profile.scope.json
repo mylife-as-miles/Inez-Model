@@ -1,0 +1,20 @@
+{
+  "status": "provisional_profile_geometry",
+  "exact_historical_side_depth_known": false,
+  "accepted": [
+    "visually true left90 orientation",
+    "conservative face silhouette coherent with frontal/oblique originals",
+    "neutral expression",
+    "complete head framing"
+  ],
+  "excluded": [
+    "unverified sagittal/bilateral details",
+    "ponytail length beyond originalB evidence"
+  ],
+  "hair_authority": "OriginalB rear silhouette and ponytail length override generated side portrait",
+  "production_approved": false,
+  "reports": [
+    "qa/identity/02_face_left_profile_v02.md",
+    "qa/technical/02_face_left_profile_v02.md"
+  ]
+}

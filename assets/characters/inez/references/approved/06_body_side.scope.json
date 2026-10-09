@@ -1,0 +1,20 @@
+{
+  "status": "approved_geometry_only",
+  "accepted": [
+    "conservative side silhouette",
+    "complete visible anatomy/frame",
+    "side garment placement"
+  ],
+  "excluded": [
+    "exact hidden depth",
+    "warm welt/scratchdenim",
+    "overlong tail",
+    "inferred sole arch/tread microgeometry"
+  ],
+  "production_approved": false,
+  "authority": "OriginalA face,originalBbodycostume/hair. Sidebody depth is a hypothesis.",
+  "reports": [
+    "qa/identity/06_body_side_v03.md",
+    "qa/technical/06_body_side_v03.md"
+  ]
+}

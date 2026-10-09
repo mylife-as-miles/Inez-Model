@@ -1,0 +1,22 @@
+[
+  {
+    "authority": "A-face",
+    "original_attachment": "/tmp/codex-remote-attachments/01a11d2c-c186-7722-bb47-04f2a8aaf07d/36bdd41e-57c8-4d63-abd3-4993ee1099be/1-252164.jpg",
+    "canonical": "assets/characters/inez/references/original/inez_portraits.jpg",
+    "sha256": "ce76f4cc025d81b5eb54b41e864c6aa53c0039b2889d607f385cbd632f6a764b",
+    "size": [
+      1280,
+      956
+    ]
+  },
+  {
+    "authority": "B-body-costume",
+    "original_attachment": "/tmp/codex-remote-attachments/01a11d2c-c186-7722-bb47-04f2a8aaf07d/36bdd41e-57c8-4d63-abd3-4993ee1099be/2-252175.jpg",
+    "canonical": "assets/characters/inez/references/original/inez_turnaround.jpg",
+    "sha256": "9482e1a589ac7cde2da520680400e9b32c38daaddecafb7ea2badaa5b2f64d39",
+    "size": [
+      1280,
+      714
+    ]
+  }
+]

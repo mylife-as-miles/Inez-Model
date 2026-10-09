@@ -1,0 +1,15 @@
+{
+  "accepted": [
+    "three original front torso bands",
+    "gray collar/hem",
+    "loose cropped volume",
+    "qualitative knit"
+  ],
+  "excluded": "exact gauge/fiber,hidden seams and coarser regular weave",
+  "production_approved": false,
+  "authority": "OriginalA face;originalB body/costume/hair; original visible silhouette only for unresolved pendant",
+  "reports": [
+    "qa/identity/12_sweater_material_closeup_v01.md",
+    "qa/technical/12_sweater_material_closeup_v01.md"
+  ]
+}

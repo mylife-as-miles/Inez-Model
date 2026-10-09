@@ -1,0 +1,12 @@
+{
+  "source": "/workspace/assets/characters/inez/model/work/inez_dressed_v03.blend",
+  "renderer": "Blender 4.3.2 Cycles actual rest mesh; browser fidelity remains separate",
+  "views": {
+    "front": "assets/characters/inez/renders/dressed_v03/front.png",
+    "portrait_front": "assets/characters/inez/renders/dressed_v03/portrait_front.png",
+    "portrait_three_quarter": "assets/characters/inez/renders/dressed_v03/portrait_three_quarter.png",
+    "back": "assets/characters/inez/renders/dressed_v03/back.png"
+  },
+  "final_source_modified": false,
+  "identity_approved": false
+}

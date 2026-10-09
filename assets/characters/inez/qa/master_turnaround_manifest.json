@@ -1,0 +1,97 @@
+{
+  "assembled_from_existing_approved_guides": true,
+  "production_approved": false,
+  "views": {
+    "01_face_front_neutral": {
+      "source": "references/approved/01_face_front_neutral.png",
+      "status": "approved_for_reference",
+      "sha256": "be83aff72c7d7f3df2dbce0ebe734a369e3f92dcb52c331a09fdf6f76c7511e1",
+      "decision": "Provisional portrait-only reference acceptance: identity/01_face_front_neutral_v02.md (32.5/35 face,61/66 scoped); technical/01_face_front_neutral_v02.md (70/75 scoped). Not whole-character approval; retain original authority.",
+      "scope_file": null
+    },
+    "02_face_left_profile": {
+      "source": "references/approved/02_face_left_profile.png",
+      "status": "approved_for_reference",
+      "sha256": "b0e64d87123b2acea429291527ec4e758a66ae98f1b5e6b5fd148ef38051fbff",
+      "decision": "Both independent critics accept corrected visual left90 orientation and conservative initial facial geometry fitting scope. Original true profile/depth unknown; this is inferred geometry, not verified historical anatomy. OriginalB controls ponytail length; do not copy side portrait elongated tail. Reports qa/identity/02_face_left_profile_v02.md and qa/technical/02_face_left_profile_v02.md. No full-character approval.",
+      "scope_file": "references/approved/02_face_left_profile.scope.json"
+    },
+    "03_face_right_profile": {
+      "source": "references/approved/03_face_right_profile.png",
+      "status": "approved_for_reference",
+      "sha256": "b29d793e25bbb24fbd37ce341301cba7ab912b07181eeec41b69ab4d62e2a925",
+      "decision": "Both independent critics accept corrected visual right90/inferred face geometry; far lash occluded. Unknown side depth and tail length qualified: originalB governs hair length. Reports qa/identity/03_face_right_profile_v02.md and qa/technical/03_face_right_profile_v02.md; no final character approval.",
+      "scope_file": "references/approved/03_face_right_profile.scope.json"
+    },
+    "04_face_three_quarter": {
+      "source": "references/approved/04_face_three_quarter.png",
+      "status": "approved_geometry_only",
+      "sha256": "7f7bb15855a6eebac6a55c8c4b87f9a01ffdd3f25b13d56b6faceee012742045",
+      "decision": "Provisional FACE GEOMETRY-only scope accepted by both critics; identity32.5/35. Exclude enlarged symbolic-looking pendant and elongated tail, originalB controls accessory scale/motif uncertainty/hair length. Reports qa/identity/04_face_three_quarter_v01.md and qa/technical/04_face_three_quarter_v01.md.",
+      "scope_file": "references/approved/04_face_three_quarter.scope.json"
+    },
+    "05_body_front": {
+      "source": "references/approved/05_body_front.png",
+      "status": "approved_geometry_only",
+      "sha256": "f5a685e32db979d34023548c1d851a540d8b6b5a9071fe3ccb08cc15a51ed729",
+      "decision": "SCOPED GEOMETRY ONLY: both independent critics accept global proportions, visible front identity, intact anatomy and low A-pose. Exact costume/material gate remains rejected. Original A governs head identity, original B all clothing/denim/boot construction, approved13 only neutral black seam direction. Exclude warm welt and unverified wash/microtexture. See qa/identity/05_body_front_v05.md and qa/technical/05_body_front_v05.md; not a whole-image or character fidelity pass.",
+      "scope_file": "references/approved/05_body_front.scope.json"
+    },
+    "06_body_side": {
+      "source": "references/approved/06_body_side.png",
+      "status": "approved_geometry_only",
+      "sha256": "9c70d153102431b14eba952656ac33d721e6df0684ad4d45504fdc02cb63abd2",
+      "decision": "Both independent critics accept supplementary side geometry/framing; full materials/hair length/exact side depth remain held. Exclude warmwelt,scratchdenim,longtail and inferred sole details; originalB governs materials/hair. Reports qa/identity/06_body_side_v03.md and qa/technical/06_body_side_v03.md. No further paid generation planned22/24.",
+      "scope_file": "references/approved/06_body_side.scope.json"
+    },
+    "07_body_back": {
+      "source": "references/approved/07_body_back.png",
+      "status": "approved_geometry_only",
+      "sha256": "75fe3ed8265cc0d848eff1a1fa5fc8e77c841f5cdcc73356032f1ef0428e3423",
+      "decision": "Scoped rear geometry/pose/garment-placement/ponytail silhouette accepted by both previous critics. Full material gate rejected warm welts and scratchdenim. Actual sharedApose from frontv02; originalB all costume/material authority. Reports qa/identity/07_body_back_v01.md and qa/technical/07_body_back_v01.md.",
+      "scope_file": "references/approved/07_body_back.scope.json"
+    },
+    "08_eyes_closeup": {
+      "source": "references/approved/08_eyes_closeup.png",
+      "status": "approved_for_reference",
+      "sha256": "bdc98ce82712d795f9817321f519914965159fdf0ae8080def309ecaf94c8e08",
+      "decision": "Scoped qualitative eye-material guide accepted by qa/identity/08_eyes_closeup_v01.md and qa/technical/08_eyes_closeup_v01.md. Original eye aperture/lashes/color remain final; macro exaggeration/subpixel details unverified.",
+      "scope_file": "references/approved/08_eyes_closeup.scope.json"
+    },
+    "09_lips_closeup": {
+      "source": "references/approved/09_lips_closeup.png",
+      "status": "approved_for_reference",
+      "sha256": "f71b3cf2b441520f9ed605ca22fd8a9ed615fb557ed9d8727a12c3da7e0f0ad6",
+      "decision": "Scoped lip geometry/material guide accepted by both qa/identity/09_lips_closeup_v01.md and qa/technical/09_lips_closeup_v01.md. OriginalA governs lip proportions; pore/gloss/microdetail extrapolated.",
+      "scope_file": "references/approved/09_lips_closeup.scope.json"
+    },
+    "10_skin_freckles_closeup": {
+      "source": "references/approved/10_skin_freckles_closeup.png",
+      "status": "approved_for_reference",
+      "sha256": "efc1b5d981a320f697e3f325c9a1bcaf6ca051d0b8f0642221d5e9fe480d3ca9",
+      "decision": "Qualitative material guide only accepted by both critics. Exact freckle positions/density and surface roughness are NOT approved authority; originalA overrides denser/glossier generated skin. See qa/identity and qa/technical/10_skin_freckles_closeup_v01.md.",
+      "scope_file": "references/approved/10_skin_freckles_closeup.scope.json"
+    },
+    "11_necklace_closeup": {
+      "source": "references/approved/11_necklace_closeup.png",
+      "status": "approved_for_reference",
+      "sha256": "5673d9776a5f3c6b95fe23ab9cc710303efca8a0b8172dc8fb8964180414d7ee",
+      "decision": "Scoped fine silver chain/collar/material placement guide only, accepted by both critics. Exact resolved bead cluster/bail/motif is EXCLUDED and remains held; definitive major oversize not proven. Actual model uses tiny unresolved original silhouette. Reports qa/identity/11_necklace_closeup_v01.md and qa/technical/11_necklace_closeup_v01.md.",
+      "scope_file": "references/approved/11_necklace_closeup.scope.json"
+    },
+    "12_sweater_material_closeup": {
+      "source": "references/approved/12_sweater_material_closeup.png",
+      "status": "approved_for_reference",
+      "sha256": "8363c9799b2c25278d86241a8275231b7cb4079e352823bdad96b849d6d95d0e",
+      "decision": "Scoped original three-band front construction, gray ribbed trims, loose cropped shape and qualitative knit guide accepted by both critics. Knit gauge/fiber/hidden shoulder seams inferred and originalB overrides coarser regular texture. Reports qa/identity/12_sweater_material_closeup_v01.md and qa/technical/12_sweater_material_closeup_v01.md.",
+      "scope_file": "references/approved/12_sweater_material_closeup.scope.json"
+    },
+    "13_boots_closeup": {
+      "source": "references/approved/13_boots_closeup.png",
+      "status": "approved_for_reference",
+      "sha256": "c168cb9c1005675c35b0ae91c00baf4bd873d1648158e6c25933a519dcfd96fd",
+      "decision": "Scoped boot-material reference acceptance by independent identity/13_boots_closeup_v01.md and technical/13_boots_closeup_v01.md. Warm thread removed; unseen tread/microdetail inferred, no full-character approval.",
+      "scope_file": null
+    }
+  }
+}

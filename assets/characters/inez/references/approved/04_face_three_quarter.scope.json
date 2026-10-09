@@ -1,0 +1,12 @@
+{
+  "accepted": [
+    "provisional facegeometry/identity/angle"
+  ],
+  "excluded": "enlarged pendant, invented resolvedmotif,elongatedponytail",
+  "original_authority": "OriginalA face;originalB body/costume;sourceoverridesgeneratedguide",
+  "production_approved": false,
+  "reports": [
+    "qa/identity/04_face_three_quarter_v01.md",
+    "qa/technical/04_face_three_quarter_v01.md"
+  ]
+}

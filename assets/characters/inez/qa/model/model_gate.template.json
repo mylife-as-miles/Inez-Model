@@ -1,0 +1,10 @@
+{
+  "front_profile_body_initial_gate_passed": false,
+  "status": "BLOCKED; template only, not an approval record",
+  "reason": "Initial body reference remains under review; true profiles have not passed initial review.",
+  "evidence_front": "references/approved/01_face_front_neutral.png is available; original A retains final facial authority",
+  "evidence_profile": null,
+  "evidence_body": null,
+  "explicit_root_gate_message": null,
+  "original_authority": "Original A face; original B body/costume. Generated profiles are unverified anatomical reconstructions."
+}

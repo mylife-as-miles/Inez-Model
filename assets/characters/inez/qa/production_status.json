@@ -1,0 +1,13 @@
+{
+  "label": "Actual dressed 3D prototype; animation bake in progress",
+  "model_available": true,
+  "production_approved": false,
+  "blocker": "Actual fitted skinned dressed geometry and embedded PBR materials are available. Animation bake and actual browser tests are in progress. Final likeness is not approved; technical head identity remained30/35.",
+  "generation_calls": 22,
+  "global_call_cap": 24,
+  "body_refinement_passes_used": 4,
+  "keeper_body_candidate": "references/generated/05_body_front_v02.png",
+  "authorization_id": "boots_extension_01",
+  "body_reference_scope": "geometry only; exact materials rejected",
+  "rig_animations_available": false
+}

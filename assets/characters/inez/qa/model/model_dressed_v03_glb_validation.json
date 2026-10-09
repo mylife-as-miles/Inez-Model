@@ -1,0 +1,19 @@
+{
+  "file": "assets/characters/inez/model/inez.glb",
+  "bytes": 33842376,
+  "header_version": 2,
+  "meshes": 85,
+  "nodes": 249,
+  "materials": 23,
+  "skins": 1,
+  "joints_per_skin": [
+    163
+  ],
+  "animations": [],
+  "morph_meshes": 1,
+  "external_image_resources": [],
+  "structural_issues": [],
+  "structural_validation_passed": true,
+  "browser_render_validation": "requires real viewer screenshots; this validator does not assess rendering",
+  "artistic_identity_approval": false
+}

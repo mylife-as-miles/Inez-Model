@@ -1,0 +1,2287 @@
+{
+  "source": "/workspace/assets/characters/inez/model/inez.blend",
+  "stage": "Actual fitted dressed rigged prototype; final identity and animation gates pending",
+  "bone_count": 163,
+  "bone_names": [
+    "root",
+    "pelvis.L",
+    "upperleg01.L",
+    "upperleg02.L",
+    "lowerleg01.L",
+    "lowerleg02.L",
+    "foot.L",
+    "toe1-1.L",
+    "toe1-2.L",
+    "toe2-1.L",
+    "toe2-2.L",
+    "toe2-3.L",
+    "toe3-1.L",
+    "toe3-2.L",
+    "toe3-3.L",
+    "toe4-1.L",
+    "toe4-2.L",
+    "toe4-3.L",
+    "toe5-1.L",
+    "toe5-2.L",
+    "toe5-3.L",
+    "pelvis.R",
+    "upperleg01.R",
+    "upperleg02.R",
+    "lowerleg01.R",
+    "lowerleg02.R",
+    "foot.R",
+    "toe1-1.R",
+    "toe1-2.R",
+    "toe2-1.R",
+    "toe2-2.R",
+    "toe2-3.R",
+    "toe3-1.R",
+    "toe3-2.R",
+    "toe3-3.R",
+    "toe4-1.R",
+    "toe4-2.R",
+    "toe4-3.R",
+    "toe5-1.R",
+    "toe5-2.R",
+    "toe5-3.R",
+    "spine05",
+    "spine04",
+    "spine03",
+    "spine02",
+    "breast.L",
+    "breast.R",
+    "spine01",
+    "clavicle.L",
+    "shoulder01.L",
+    "upperarm01.L",
+    "upperarm02.L",
+    "lowerarm01.L",
+    "lowerarm02.L",
+    "wrist.L",
+    "finger1-1.L",
+    "finger1-2.L",
+    "finger1-3.L",
+    "metacarpal1.L",
+    "finger2-1.L",
+    "finger2-2.L",
+    "finger2-3.L",
+    "metacarpal2.L",
+    "finger3-1.L",
+    "finger3-2.L",
+    "finger3-3.L",
+    "metacarpal3.L",
+    "finger4-1.L",
+    "finger4-2.L",
+    "finger4-3.L",
+    "metacarpal4.L",
+    "finger5-1.L",
+    "finger5-2.L",
+    "finger5-3.L",
+    "clavicle.R",
+    "shoulder01.R",
+    "upperarm01.R",
+    "upperarm02.R",
+    "lowerarm01.R",
+    "lowerarm02.R",
+    "wrist.R",
+    "finger1-1.R",
+    "finger1-2.R",
+    "finger1-3.R",
+    "metacarpal1.R",
+    "finger2-1.R",
+    "finger2-2.R",
+    "finger2-3.R",
+    "metacarpal2.R",
+    "finger3-1.R",
+    "finger3-2.R",
+    "finger3-3.R",
+    "metacarpal3.R",
+    "finger4-1.R",
+    "finger4-2.R",
+    "finger4-3.R",
+    "metacarpal4.R",
+    "finger5-1.R",
+    "finger5-2.R",
+    "finger5-3.R",
+    "neck01",
+    "neck02",
+    "neck03",
+    "head",
+    "jaw",
+    "special04",
+    "oris02",
+    "oris01",
+    "oris06.L",
+    "oris07.L",
+    "oris06.R",
+    "oris07.R",
+    "tongue00",
+    "tongue01",
+    "tongue02",
+    "tongue03",
+    "tongue04",
+    "tongue07.L",
+    "tongue07.R",
+    "tongue06.L",
+    "tongue06.R",
+    "tongue05.L",
+    "tongue05.R",
+    "levator02.L",
+    "levator03.L",
+    "levator04.L",
+    "levator05.L",
+    "levator02.R",
+    "levator03.R",
+    "levator04.R",
+    "levator05.R",
+    "special01",
+    "oris04.L",
+    "oris03.L",
+    "oris04.R",
+    "oris03.R",
+    "oris06",
+    "oris05",
+    "special03",
+    "levator06.L",
+    "levator06.R",
+    "special06.L",
+    "special05.L",
+    "eye.L",
+    "orbicularis03.L",
+    "orbicularis04.L",
+    "special06.R",
+    "special05.R",
+    "eye.R",
+    "orbicularis03.R",
+    "orbicularis04.R",
+    "temporalis01.L",
+    "oculi02.L",
+    "oculi01.L",
+    "temporalis01.R",
+    "oculi02.R",
+    "oculi01.R",
+    "temporalis02.L",
+    "risorius02.L",
+    "risorius03.L",
+    "temporalis02.R",
+    "risorius02.R",
+    "risorius03.R"
+  ],
+  "armature": "InezRig_PROTOTYPE",
+  "meshes": [
+    {
+      "name": "Inez_Boot_Eyelet_L_0_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_L_0_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_L_1_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_L_1_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_L_2_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_L_2_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_L_3_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_L_3_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_L_4_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_L_4_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_L_5_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_L_5_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_L_6_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_L_6_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_0_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_0_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_1_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_1_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_2_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_2_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_3_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_3_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_4_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_4_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_5_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_5_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_6_-1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Eyelet_R_6_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_BlackenedMetalEyelets"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_L",
+      "vertices": 960,
+      "polygons": 960,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_BootBlackLeather_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Laces_L",
+      "vertices": 540,
+      "polygons": 480,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_Black_WovenLaces"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Laces_R",
+      "vertices": 540,
+      "polygons": 480,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_Black_WovenLaces"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_R",
+      "vertices": 960,
+      "polygons": 960,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_BootBlackLeather_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Sole_L",
+      "vertices": 200,
+      "polygons": 236,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_BootBlackRubberSole_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Sole_R",
+      "vertices": 200,
+      "polygons": 236,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_BootBlackRubberSole_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_SoleTread_L",
+      "vertices": 288,
+      "polygons": 252,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_BootBlackRubberSole_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_SoleTread_R",
+      "vertices": 288,
+      "polygons": 252,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_BootBlackRubberSole_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_StitchedPanels_L",
+      "vertices": 500,
+      "polygons": 484,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_Subtle_BlackStitching"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_StitchedPanels_R",
+      "vertices": 500,
+      "polygons": 484,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Boot_Subtle_BlackStitching"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Tongue_L",
+      "vertices": 36,
+      "polygons": 34,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_BootBlackLeather_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Boot_Tongue_R",
+      "vertices": 36,
+      "polygons": 34,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_BootBlackLeather_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Brows_L",
+      "vertices": 3690,
+      "polygons": 3075,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999573919922,
+        1.0000000420259312
+      ],
+      "materials": [
+        "Inez_DenseNaturalBrownBrows"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Brows_R",
+      "vertices": 3690,
+      "polygons": 3075,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999592546374,
+        1.0000000391155481
+      ],
+      "materials": [
+        "Inez_DenseNaturalBrownBrows"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_ContinuousHumanMesh_UNAPPROVED",
+      "vertices": 13380,
+      "polygons": 13378,
+      "uv_layers": [
+        "MakeHuman_CC0_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999552965164,
+        1.0000000447034836
+      ],
+      "materials": [
+        "Inez_Skin_Freckles_Pores_Lips_PBR"
+      ],
+      "shape_defaults": {
+        "Basis_FemaleYoung_Source": 0.0,
+        "Inez_HeadFit_v01": 0.0,
+        "Inez_HeadFit_v02": 0.0,
+        "Inez_HeadFit_v03": 1.0
+      }
+    },
+    {
+      "name": "Inez_Cornea_L",
+      "vertices": 360,
+      "polygons": 320,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_ClearCornea_L_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Cornea_R",
+      "vertices": 360,
+      "polygons": 320,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_ClearCornea_R_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Crown_PulledCurlyLocks",
+      "vertices": 32400,
+      "polygons": 31800,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_MediumBrownHair_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Crown_WarmAccentLocks",
+      "vertices": 4050,
+      "polygons": 3975,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_RestrainedWarmHairHighlights_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Eyeball_L",
+      "vertices": 72,
+      "polygons": 70,
+      "uv_layers": [
+        "MakeHuman_CC0_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_ScleraOffWhite_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Eyeball_R",
+      "vertices": 72,
+      "polygons": 70,
+      "uv_layers": [
+        "MakeHuman_CC0_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_ScleraOffWhite_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_FineSilverNecklace",
+      "vertices": 420,
+      "polygons": 410,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999590509105,
+        1.0000000386498868
+      ],
+      "materials": [
+        "Inez_FineSilverChainAndTinyPendant_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_FramingCurls",
+      "vertices": 16200,
+      "polygons": 15975,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_MediumBrownHair_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Iris_L",
+      "vertices": 49,
+      "polygons": 48,
+      "uv_layers": [
+        "Iris_radial_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Muted_GreenHazel_Iris_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Iris_R",
+      "vertices": 49,
+      "polygons": 48,
+      "uv_layers": [
+        "Iris_radial_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Muted_GreenHazel_Iris_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans",
+      "vertices": 10198,
+      "polygons": 10200,
+      "uv_layers": [
+        "MakeHuman_CC0_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999213032424,
+        1.0000000894069672
+      ],
+      "materials": [
+        "Inez_WashedBlackDenim_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans_BeltLoop_0",
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999918509275,
+        1.0000000353902578
+      ],
+      "materials": [
+        "Inez_WashedBlackDenim_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans_BeltLoop_1",
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999958090484,
+        1.0000000181607902
+      ],
+      "materials": [
+        "Inez_WashedBlackDenim_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans_BeltLoop_2",
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999640567694,
+        1.0000000022118911
+      ],
+      "materials": [
+        "Inez_WashedBlackDenim_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans_BeltLoop_3",
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999902793206,
+        1.000000012514647
+      ],
+      "materials": [
+        "Inez_WashedBlackDenim_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans_BeltLoop_4",
+      "vertices": 8,
+      "polygons": 6,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        1.000000011175871,
+        1.0000000237487257
+      ],
+      "materials": [
+        "Inez_WashedBlackDenim_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans_ButtonOrRivet_0",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999700230546,
+        1.0000000353902578
+      ],
+      "materials": [
+        "Inez_Jeans_RestrainedDarkHardware"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans_ButtonOrRivet_1",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.999999963445589,
+        1.0000000358559191
+      ],
+      "materials": [
+        "Inez_Jeans_RestrainedDarkHardware"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans_ButtonOrRivet_2",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999681022018,
+        1.0000000337604433
+      ],
+      "materials": [
+        "Inez_Jeans_RestrainedDarkHardware"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans_ButtonOrRivet_3",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999694991857,
+        1.0000000308500603
+      ],
+      "materials": [
+        "Inez_Jeans_RestrainedDarkHardware"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans_ButtonOrRivet_4",
+      "vertices": 96,
+      "polygons": 96,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999693827704,
+        1.0000000315485522
+      ],
+      "materials": [
+        "Inez_Jeans_RestrainedDarkHardware"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans_RearPatchPocket_L",
+      "vertices": 12,
+      "polygons": 15,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999925494194,
+        1.000000026077032
+      ],
+      "materials": [
+        "Inez_WashedBlackDenim_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans_RearPatchPocket_R",
+      "vertices": 12,
+      "polygons": 15,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999888968887,
+        1.0000000167638063
+      ],
+      "materials": [
+        "Inez_WashedBlackDenim_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans_SewnSeams",
+      "vertices": 1880,
+      "polygons": 1832,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999580904841,
+        1.0000000419095159
+      ],
+      "materials": [
+        "Inez_Jeans_SubtleSeamThread"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_LashesLower_L",
+      "vertices": 468,
+      "polygons": 390,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_NaturalBrownLashes"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_LashesLower_R",
+      "vertices": 468,
+      "polygons": 390,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_NaturalBrownLashes"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_LashesUpper_L",
+      "vertices": 918,
+      "polygons": 765,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_NaturalBrownLashes"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_LashesUpper_R",
+      "vertices": 918,
+      "polygons": 765,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_NaturalBrownLashes"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Ponytail_Curls",
+      "vertices": 38595,
+      "polygons": 38130,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_MediumBrownHair_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Ponytail_WarmAccentCurls",
+      "vertices": 4565,
+      "polygons": 4510,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_RestrainedWarmHairHighlights_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Pupil_L",
+      "vertices": 49,
+      "polygons": 48,
+      "uv_layers": [
+        "Iris_radial_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_NaturalPupil"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Pupil_R",
+      "vertices": 49,
+      "polygons": 48,
+      "uv_layers": [
+        "Iris_radial_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_NaturalPupil"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_ScalpHair",
+      "vertices": 915,
+      "polygons": 848,
+      "uv_layers": [
+        "MakeHuman_CC0_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_MediumBrownHair_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Sweater",
+      "vertices": 16680,
+      "polygons": 16684,
+      "uv_layers": [
+        "MakeHuman_CC0_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999105930328,
+        1.0000000880099833
+      ],
+      "materials": [
+        "Inez_Sweater_ThreeDarkBands_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Sweater_CrewNeck_0",
+      "vertices": 368,
+      "polygons": 368,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999630090315,
+        1.0000000383588485
+      ],
+      "materials": [
+        "Inez_CharcoalRibbedKnitTrims_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Sweater_Cuff_1",
+      "vertices": 192,
+      "polygons": 192,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999552965164,
+        1.0000000364962034
+      ],
+      "materials": [
+        "Inez_CharcoalRibbedKnitTrims_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Sweater_Cuff_3",
+      "vertices": 192,
+      "polygons": 192,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999590218067,
+        1.0000000321306288
+      ],
+      "materials": [
+        "Inez_CharcoalRibbedKnitTrims_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Sweater_RibbedHem_2",
+      "vertices": 384,
+      "polygons": 384,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999641440809,
+        1.000000044515673
+      ],
+      "materials": [
+        "Inez_CharcoalRibbedKnitTrims_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Tearline_L",
+      "vertices": 44,
+      "polygons": 40,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_SubtlePinkTearline"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Tearline_R",
+      "vertices": 44,
+      "polygons": 40,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_SubtlePinkTearline"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_TinyUnknownMotifPendant",
+      "vertices": 25,
+      "polygons": 15,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999643187039,
+        1.0000000309955794
+      ],
+      "materials": [
+        "Inez_FineSilverChainAndTinyPendant_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_UnevenFineFlyaways",
+      "vertices": 12363,
+      "polygons": 12129,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_FineBrownFlyawayHair_PBR"
+      ],
+      "shape_defaults": {}
+    }
+  ],
+  "materials": [
+    {
+      "name": "Inez_Boot_Black_WovenLaces",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_Boot_BlackenedMetalEyelets",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_Boot_Subtle_BlackStitching",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_BootBlackLeather_PBR",
+      "uv_images": [
+        "BootBlackLeather_albedo",
+        "BootBlackLeather_roughness",
+        "BootBlackLeather_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_BootBlackRubberSole_PBR",
+      "uv_images": [
+        "BootBlackRubberSole_albedo",
+        "BootBlackRubberSole_roughness",
+        "BootBlackRubberSole_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_CharcoalRibbedKnitTrims_PBR",
+      "uv_images": [
+        "CharcoalRibbedKnitTrims_albedo",
+        "CharcoalRibbedKnitTrims_roughness",
+        "CharcoalRibbedKnitTrims_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_ClearCornea_L_PBR",
+      "uv_images": [
+        "ClearCornea_L_albedo",
+        "ClearCornea_L_roughness",
+        "ClearCornea_L_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_ClearCornea_R_PBR",
+      "uv_images": [
+        "ClearCornea_R_albedo",
+        "ClearCornea_R_roughness",
+        "ClearCornea_R_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_DenseNaturalBrownBrows",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_FineBrownFlyawayHair_PBR",
+      "uv_images": [
+        "FineBrownFlyawayHair_albedo",
+        "FineBrownFlyawayHair_roughness",
+        "FineBrownFlyawayHair_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_FineSilverChainAndTinyPendant_PBR",
+      "uv_images": [
+        "FineSilverChainAndTinyPendant_albedo",
+        "FineSilverChainAndTinyPendant_roughness",
+        "FineSilverChainAndTinyPendant_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_Jeans_RestrainedDarkHardware",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_Jeans_SubtleSeamThread",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_MediumBrownHair_PBR",
+      "uv_images": [
+        "MediumBrownHair_albedo",
+        "MediumBrownHair_roughness",
+        "MediumBrownHair_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_Muted_GreenHazel_Iris_PBR",
+      "uv_images": [
+        "inez_iris_olive_hazel_albedo",
+        "inez_iris_roughness",
+        "inez_iris_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_NaturalBrownLashes",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_NaturalPupil",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_RestrainedWarmHairHighlights_PBR",
+      "uv_images": [
+        "RestrainedWarmHairHighlights_albedo",
+        "RestrainedWarmHairHighlights_roughness",
+        "RestrainedWarmHairHighlights_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_ScleraOffWhite_PBR",
+      "uv_images": [
+        "ScleraOffWhite_albedo",
+        "ScleraOffWhite_roughness",
+        "ScleraOffWhite_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_Skin_Freckles_Pores_Lips_PBR",
+      "uv_images": [
+        "inez_skin_albedo",
+        "inez_skin_roughness",
+        "inez_skin_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": "{\"upper_source_vertices\": [362, 357, 356, 355, 409, 410, 375, 363, 407, 402], \"lower_source_vertices\": [492, 486, 480, 406, 405, 404, 403, 402], \"actual_half_width_source\": 0.22184959053993225, \"upper_center_height_source\": 6.291900634765625, \"lower_center_height_source\": 6.106921195983887}"
+    },
+    {
+      "name": "Inez_SubtlePinkTearline",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_Sweater_ThreeDarkBands_PBR",
+      "uv_images": [
+        "Sweater_ThreeDarkBands_albedo",
+        "Sweater_ThreeDarkBands_roughness",
+        "Sweater_ThreeDarkBands_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_WashedBlackDenim_PBR",
+      "uv_images": [
+        "WashedBlackDenim_albedo",
+        "WashedBlackDenim_roughness",
+        "WashedBlackDenim_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    }
+  ],
+  "packed_authored_maps": [
+    {
+      "name": "BootBlackLeather_albedo",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/BootBlackLeather_albedo.png"
+    },
+    {
+      "name": "BootBlackLeather_normal",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/BootBlackLeather_normal.png"
+    },
+    {
+      "name": "BootBlackLeather_roughness",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/BootBlackLeather_roughness.png"
+    },
+    {
+      "name": "BootBlackRubberSole_albedo",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/BootBlackRubberSole_albedo.png"
+    },
+    {
+      "name": "BootBlackRubberSole_normal",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/BootBlackRubberSole_normal.png"
+    },
+    {
+      "name": "BootBlackRubberSole_roughness",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/BootBlackRubberSole_roughness.png"
+    },
+    {
+      "name": "CharcoalRibbedKnitTrims_albedo",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/CharcoalRibbedKnitTrims_albedo.png"
+    },
+    {
+      "name": "CharcoalRibbedKnitTrims_normal",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/CharcoalRibbedKnitTrims_normal.png"
+    },
+    {
+      "name": "CharcoalRibbedKnitTrims_roughness",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/CharcoalRibbedKnitTrims_roughness.png"
+    },
+    {
+      "name": "ClearCornea_L_albedo",
+      "size": [
+        256,
+        256
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/ClearCornea_L_albedo.png"
+    },
+    {
+      "name": "ClearCornea_L_normal",
+      "size": [
+        256,
+        256
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/ClearCornea_L_normal.png"
+    },
+    {
+      "name": "ClearCornea_L_roughness",
+      "size": [
+        256,
+        256
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/ClearCornea_L_roughness.png"
+    },
+    {
+      "name": "ClearCornea_R_albedo",
+      "size": [
+        256,
+        256
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/ClearCornea_R_albedo.png"
+    },
+    {
+      "name": "ClearCornea_R_normal",
+      "size": [
+        256,
+        256
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/ClearCornea_R_normal.png"
+    },
+    {
+      "name": "ClearCornea_R_roughness",
+      "size": [
+        256,
+        256
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/ClearCornea_R_roughness.png"
+    },
+    {
+      "name": "FineBrownFlyawayHair_albedo",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/FineBrownFlyawayHair_albedo.png"
+    },
+    {
+      "name": "FineBrownFlyawayHair_normal",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/FineBrownFlyawayHair_normal.png"
+    },
+    {
+      "name": "FineBrownFlyawayHair_roughness",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/FineBrownFlyawayHair_roughness.png"
+    },
+    {
+      "name": "FineSilverChainAndTinyPendant_albedo",
+      "size": [
+        256,
+        256
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/FineSilverChainAndTinyPendant_albedo.png"
+    },
+    {
+      "name": "FineSilverChainAndTinyPendant_normal",
+      "size": [
+        256,
+        256
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/FineSilverChainAndTinyPendant_normal.png"
+    },
+    {
+      "name": "FineSilverChainAndTinyPendant_roughness",
+      "size": [
+        256,
+        256
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/FineSilverChainAndTinyPendant_roughness.png"
+    },
+    {
+      "name": "inez_iris_normal",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/inez_iris_normal.png"
+    },
+    {
+      "name": "inez_iris_olive_hazel_albedo",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/inez_iris_olive_hazel_albedo.png"
+    },
+    {
+      "name": "inez_iris_roughness",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/inez_iris_roughness.png"
+    },
+    {
+      "name": "inez_skin_albedo",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/inez_skin_albedo.png"
+    },
+    {
+      "name": "inez_skin_normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/inez_skin_normal.png"
+    },
+    {
+      "name": "inez_skin_roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/inez_skin_roughness.png"
+    },
+    {
+      "name": "MediumBrownHair_albedo",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/MediumBrownHair_albedo.png"
+    },
+    {
+      "name": "MediumBrownHair_normal",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/MediumBrownHair_normal.png"
+    },
+    {
+      "name": "MediumBrownHair_roughness",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/MediumBrownHair_roughness.png"
+    },
+    {
+      "name": "RestrainedWarmHairHighlights_albedo",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/RestrainedWarmHairHighlights_albedo.png"
+    },
+    {
+      "name": "RestrainedWarmHairHighlights_normal",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/RestrainedWarmHairHighlights_normal.png"
+    },
+    {
+      "name": "RestrainedWarmHairHighlights_roughness",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/RestrainedWarmHairHighlights_roughness.png"
+    },
+    {
+      "name": "ScleraOffWhite_albedo",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/ScleraOffWhite_albedo.png"
+    },
+    {
+      "name": "ScleraOffWhite_normal",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/ScleraOffWhite_normal.png"
+    },
+    {
+      "name": "ScleraOffWhite_roughness",
+      "size": [
+        512,
+        512
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/ScleraOffWhite_roughness.png"
+    },
+    {
+      "name": "Sweater_ThreeDarkBands_albedo",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/Sweater_ThreeDarkBands_albedo.png"
+    },
+    {
+      "name": "Sweater_ThreeDarkBands_normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/Sweater_ThreeDarkBands_normal.png"
+    },
+    {
+      "name": "Sweater_ThreeDarkBands_roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/Sweater_ThreeDarkBands_roughness.png"
+    },
+    {
+      "name": "WashedBlackDenim_albedo",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/WashedBlackDenim_albedo.png"
+    },
+    {
+      "name": "WashedBlackDenim_normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/WashedBlackDenim_normal.png"
+    },
+    {
+      "name": "WashedBlackDenim_roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "path": "/workspace/assets/characters/inez/model/textures/WashedBlackDenim_roughness.png"
+    }
+  ],
+  "mesh_count": 85,
+  "source_technical_issues": [],
+  "production_approved": false
+}

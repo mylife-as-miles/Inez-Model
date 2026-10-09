@@ -1,0 +1,12 @@
+{
+  "accepted": [
+    "qualitative iris/tearline/lid material"
+  ],
+  "excluded": "exact original aperture,lashes and subpixeldetail",
+  "original_authority": "OriginalA face;originalB body/costume;sourceoverridesgeneratedguide",
+  "production_approved": false,
+  "reports": [
+    "qa/identity/08_eyes_closeup_v01.md",
+    "qa/technical/08_eyes_closeup_v01.md"
+  ]
+}

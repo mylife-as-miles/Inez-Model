@@ -1,0 +1,437 @@
+{
+  "cap": 24,
+  "calls": [
+    {
+      "call": 1,
+      "view": "01_face_front_neutral",
+      "version": 1,
+      "prompt": "assets/characters/inez/qa/prompts/01_face_front_neutral_v01.txt",
+      "sent_at": "2026-10-08T20:25:43.207764+00:00",
+      "status": "failed",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "note": "Built-in tool rejected invocation: missing prompt; no image produced. Counted conservatively against call cap."
+    },
+    {
+      "call": 2,
+      "view": "01_face_front_neutral",
+      "version": 2,
+      "prompt": "assets/characters/inez/qa/prompts/01_face_front_neutral_v02.txt",
+      "sent_at": "2026-10-08T22:07:28.501829+00:00",
+      "status": "approved_for_reference",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/01_face_front_neutral_v02.png",
+      "size": [
+        1071,
+        1468
+      ],
+      "sha256": "be83aff72c7d7f3df2dbce0ebe734a369e3f92dcb52c331a09fdf6f76c7511e1",
+      "decision": "Provisional portrait-only reference acceptance: identity/01_face_front_neutral_v02.md (32.5/35 face,61/66 scoped); technical/01_face_front_neutral_v02.md (70/75 scoped). Not whole-character approval; retain original authority.",
+      "approved_output": "references/approved/01_face_front_neutral.png"
+    },
+    {
+      "call": 3,
+      "view": "05_body_front",
+      "version": 1,
+      "prompt": "assets/characters/inez/qa/prompts/05_body_front_v01.txt",
+      "sent_at": "2026-10-08T22:09:41.261437+00:00",
+      "status": "hold",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/05_body_front_v01.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "2567d86a2c3b35aa927edc810fa34a3f672b19492caecbdb17a84d393d6fa3ed",
+      "decision": "Independent identity and technical review require subdued black boots and clearer A-pose. Superseded by v02."
+    },
+    {
+      "call": 4,
+      "view": "05_body_front",
+      "version": 2,
+      "prompt": "assets/characters/inez/qa/prompts/05_body_front_v02.txt",
+      "sent_at": "2026-10-08T22:13:08.294473+00:00",
+      "status": "approved_geometry_only",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/05_body_front_v02.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "f5a685e32db979d34023548c1d851a540d8b6b5a9071fe3ccb08cc15a51ed729",
+      "decision": "SCOPED GEOMETRY ONLY: both independent critics accept global proportions, visible front identity, intact anatomy and low A-pose. Exact costume/material gate remains rejected. Original A governs head identity, original B all clothing/denim/boot construction, approved13 only neutral black seam direction. Exclude warm welt and unverified wash/microtexture. See qa/identity/05_body_front_v05.md and qa/technical/05_body_front_v05.md; not a whole-image or character fidelity pass.",
+      "approved_output": "references/approved/05_body_front.png"
+    },
+    {
+      "call": 5,
+      "view": "05_body_front",
+      "version": 3,
+      "prompt": "assets/characters/inez/qa/prompts/05_body_front_v03.txt",
+      "sent_at": "2026-10-08T22:18:43.102886+00:00",
+      "status": "reject",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/05_body_front_v03.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "607d02bca48399157ca6b88301b54d3988d1a0a7f32f9a7e61a8f6b43a272bc0",
+      "decision": "Warm boot stitch dashes remain; unsupported scratch-like denim texture regresses. Retain v02 as better overall body candidate."
+    },
+    {
+      "call": 6,
+      "view": "05_body_front",
+      "version": 4,
+      "prompt": "assets/characters/inez/qa/prompts/05_body_front_v04.txt",
+      "sent_at": "2026-10-08T22:23:10.571670+00:00",
+      "status": "reject",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/05_body_front_v04.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "4ed2a34b41dd98d832849e47b13d50e28a43053f0759cc79e7db8a3709f5a029",
+      "decision": "Final initial refinement fails both review correction gates: warm boot stitch dashes persist; unsupported scratch-like denim pattern. Face/pose retained; v02 remains best keeper. Initial per-view budget exhausted."
+    },
+    {
+      "call": 7,
+      "view": "13_boots_closeup",
+      "version": 1,
+      "prompt": "assets/characters/inez/qa/prompts/13_boots_closeup_v01.txt",
+      "sent_at": "2026-10-08T22:44:18.722211+00:00",
+      "status": "approved_for_reference",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "authorization_id": "boots_extension_01",
+      "output": "references/generated/13_boots_closeup_v01.png",
+      "size": [
+        1438,
+        1093
+      ],
+      "sha256": "c168cb9c1005675c35b0ae91c00baf4bd873d1648158e6c25933a519dcfd96fd",
+      "decision": "Scoped boot-material reference acceptance by independent identity/13_boots_closeup_v01.md and technical/13_boots_closeup_v01.md. Warm thread removed; unseen tread/microdetail inferred, no full-character approval.",
+      "approved_output": "references/approved/13_boots_closeup.png"
+    },
+    {
+      "call": 8,
+      "view": "05_body_front",
+      "version": 5,
+      "prompt": "assets/characters/inez/qa/prompts/05_body_front_v05.txt",
+      "sent_at": "2026-10-08T22:48:14.237084+00:00",
+      "status": "reject",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "authorization_id": "boots_extension_01",
+      "output": "references/generated/05_body_front_v05.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "c160ebea832d7da01314c243fbad30de3f7d5ee42c70a97364eec05105c26f56",
+      "decision": "Both independent critics find persistent warm welt and strengthened unsupported scratch-like denim; v02 remains better. Two approved extra calls exhausted; no further body generation. Reports qa/identity/05_body_front_v05.md and qa/technical/05_body_front_v05.md."
+    },
+    {
+      "call": 9,
+      "view": "02_face_left_profile",
+      "version": 1,
+      "prompt": "assets/characters/inez/qa/prompts/02_face_left_profile_v01.txt",
+      "sent_at": "2026-10-08T22:55:56.614762+00:00",
+      "status": "hold",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/02_face_left_profile_v01.png",
+      "size": [
+        1071,
+        1469
+      ],
+      "sha256": "3586c2ca7de47b77399bb9b2911be79fbffdba8d4c7d613eef0cd04f0605e0d6",
+      "decision": "Both independent critics find plausible coherent profile identity but possible far-eye/lash sliver; exact90 technical gate on hold. One targeted orientation refinement authorized within initial per-view cap."
+    },
+    {
+      "call": 10,
+      "view": "07_body_back",
+      "version": 1,
+      "prompt": "assets/characters/inez/qa/prompts/07_body_back_v01.txt",
+      "sent_at": "2026-10-08T22:57:21.165195+00:00",
+      "status": "approved_geometry_only",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/07_body_back_v01.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "75fe3ed8265cc0d848eff1a1fa5fc8e77c841f5cdcc73356032f1ef0428e3423",
+      "decision": "Scoped rear geometry/pose/garment-placement/ponytail silhouette accepted by both previous critics. Full material gate rejected warm welts and scratchdenim. Actual sharedApose from frontv02; originalB all costume/material authority. Reports qa/identity/07_body_back_v01.md and qa/technical/07_body_back_v01.md.",
+      "approved_output": "references/approved/07_body_back.png"
+    },
+    {
+      "call": 11,
+      "view": "02_face_left_profile",
+      "version": 2,
+      "prompt": "assets/characters/inez/qa/prompts/02_face_left_profile_v02.txt",
+      "sent_at": "2026-10-08T22:59:44.899273+00:00",
+      "status": "approved_for_reference",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/02_face_left_profile_v02.png",
+      "size": [
+        1070,
+        1470
+      ],
+      "sha256": "b0e64d87123b2acea429291527ec4e758a66ae98f1b5e6b5fd148ef38051fbff",
+      "decision": "Both independent critics accept corrected visual left90 orientation and conservative initial facial geometry fitting scope. Original true profile/depth unknown; this is inferred geometry, not verified historical anatomy. OriginalB controls ponytail length; do not copy side portrait elongated tail. Reports qa/identity/02_face_left_profile_v02.md and qa/technical/02_face_left_profile_v02.md. No full-character approval.",
+      "approved_output": "references/approved/02_face_left_profile.png"
+    },
+    {
+      "call": 12,
+      "view": "08_eyes_closeup",
+      "version": 1,
+      "prompt": "assets/characters/inez/qa/prompts/08_eyes_closeup_v01.txt",
+      "sent_at": "2026-10-08T23:02:23.651686+00:00",
+      "status": "approved_for_reference",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/08_eyes_closeup_v01.png",
+      "size": [
+        2172,
+        724
+      ],
+      "sha256": "bdc98ce82712d795f9817321f519914965159fdf0ae8080def309ecaf94c8e08",
+      "decision": "Scoped qualitative eye-material guide accepted by qa/identity/08_eyes_closeup_v01.md and qa/technical/08_eyes_closeup_v01.md. Original eye aperture/lashes/color remain final; macro exaggeration/subpixel details unverified.",
+      "approved_output": "references/approved/08_eyes_closeup.png"
+    },
+    {
+      "call": 13,
+      "view": "09_lips_closeup",
+      "version": 1,
+      "prompt": "assets/characters/inez/qa/prompts/09_lips_closeup_v01.txt",
+      "sent_at": "2026-10-08T23:02:24.152939+00:00",
+      "status": "approved_for_reference",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/09_lips_closeup_v01.png",
+      "size": [
+        1071,
+        1469
+      ],
+      "sha256": "f71b3cf2b441520f9ed605ca22fd8a9ed615fb557ed9d8727a12c3da7e0f0ad6",
+      "decision": "Scoped lip geometry/material guide accepted by both qa/identity/09_lips_closeup_v01.md and qa/technical/09_lips_closeup_v01.md. OriginalA governs lip proportions; pore/gloss/microdetail extrapolated.",
+      "approved_output": "references/approved/09_lips_closeup.png"
+    },
+    {
+      "call": 14,
+      "view": "10_skin_freckles_closeup",
+      "version": 1,
+      "prompt": "assets/characters/inez/qa/prompts/10_skin_freckles_closeup_v01.txt",
+      "sent_at": "2026-10-08T23:02:24.658762+00:00",
+      "status": "approved_for_reference",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/10_skin_freckles_closeup_v01.png",
+      "size": [
+        1374,
+        1145
+      ],
+      "sha256": "efc1b5d981a320f697e3f325c9a1bcaf6ca051d0b8f0642221d5e9fe480d3ca9",
+      "decision": "Qualitative material guide only accepted by both critics. Exact freckle positions/density and surface roughness are NOT approved authority; originalA overrides denser/glossier generated skin. See qa/identity and qa/technical/10_skin_freckles_closeup_v01.md.",
+      "approved_output": "references/approved/10_skin_freckles_closeup.png"
+    },
+    {
+      "call": 15,
+      "view": "03_face_right_profile",
+      "version": 1,
+      "prompt": "assets/characters/inez/qa/prompts/03_face_right_profile_v01.txt",
+      "sent_at": "2026-10-08T23:04:02.062276+00:00",
+      "status": "hold",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/03_face_right_profile_v01.png",
+      "size": [
+        1071,
+        1469
+      ],
+      "sha256": "d724eeb5ad394dcca4a3a42c99a78e50ade21253e1d49df1a6425c30485789f0",
+      "decision": "Both independent critics confirm far-side lash crescent; true-right90 gate held. Face geometry conservative and usable nearprofile only; originalB owns tail length. One localorientationrefinement withininitialbudget."
+    },
+    {
+      "call": 16,
+      "view": "04_face_three_quarter",
+      "version": 1,
+      "prompt": "assets/characters/inez/qa/prompts/04_face_three_quarter_v01.txt",
+      "sent_at": "2026-10-08T23:04:02.582445+00:00",
+      "status": "approved_geometry_only",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/04_face_three_quarter_v01.png",
+      "size": [
+        1071,
+        1469
+      ],
+      "sha256": "7f7bb15855a6eebac6a55c8c4b87f9a01ffdd3f25b13d56b6faceee012742045",
+      "decision": "Provisional FACE GEOMETRY-only scope accepted by both critics; identity32.5/35. Exclude enlarged symbolic-looking pendant and elongated tail, originalB controls accessory scale/motif uncertainty/hair length. Reports qa/identity/04_face_three_quarter_v01.md and qa/technical/04_face_three_quarter_v01.md.",
+      "approved_output": "references/approved/04_face_three_quarter.png"
+    },
+    {
+      "call": 17,
+      "view": "06_body_side",
+      "version": 1,
+      "prompt": "assets/characters/inez/qa/prompts/06_body_side_v01.txt",
+      "sent_at": "2026-10-08T23:04:03.092779+00:00",
+      "status": "failed",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "note": "Execution cell disappeared across user continuation; no image file for this request exists after filesystem inspection. Counted conservatively against cap; do not fabricate output."
+    },
+    {
+      "call": 18,
+      "view": "11_necklace_closeup",
+      "version": 1,
+      "prompt": "assets/characters/inez/qa/prompts/11_necklace_closeup_v01.txt",
+      "sent_at": "2026-10-08T23:04:46.135001+00:00",
+      "status": "approved_for_reference",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/11_necklace_closeup_v01.png",
+      "size": [
+        1071,
+        1469
+      ],
+      "sha256": "5673d9776a5f3c6b95fe23ab9cc710303efca8a0b8172dc8fb8964180414d7ee",
+      "decision": "Scoped fine silver chain/collar/material placement guide only, accepted by both critics. Exact resolved bead cluster/bail/motif is EXCLUDED and remains held; definitive major oversize not proven. Actual model uses tiny unresolved original silhouette. Reports qa/identity/11_necklace_closeup_v01.md and qa/technical/11_necklace_closeup_v01.md.",
+      "approved_output": "references/approved/11_necklace_closeup.png"
+    },
+    {
+      "call": 19,
+      "view": "12_sweater_material_closeup",
+      "version": 1,
+      "prompt": "assets/characters/inez/qa/prompts/12_sweater_material_closeup_v01.txt",
+      "sent_at": "2026-10-08T23:04:46.672587+00:00",
+      "status": "approved_for_reference",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/12_sweater_material_closeup_v01.png",
+      "size": [
+        1448,
+        1086
+      ],
+      "sha256": "8363c9799b2c25278d86241a8275231b7cb4079e352823bdad96b849d6d95d0e",
+      "decision": "Scoped original three-band front construction, gray ribbed trims, loose cropped shape and qualitative knit guide accepted by both critics. Knit gauge/fiber/hidden shoulder seams inferred and originalB overrides coarser regular texture. Reports qa/identity/12_sweater_material_closeup_v01.md and qa/technical/12_sweater_material_closeup_v01.md.",
+      "approved_output": "references/approved/12_sweater_material_closeup.png"
+    },
+    {
+      "call": 20,
+      "view": "06_body_side",
+      "version": 2,
+      "prompt": "assets/characters/inez/qa/prompts/06_body_side_v02.txt",
+      "sent_at": "2026-10-09T09:11:18.877375+00:00",
+      "status": "failed",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "note": "Built-in tool rejected six anchors: referenced_image_paths allows at most5. No image produced; counted against cap. Retry uses originalA/B+approvedleftprofile+scopedfrontbody+bootsguide (five), no substitute generator."
+    },
+    {
+      "call": 21,
+      "view": "03_face_right_profile",
+      "version": 2,
+      "prompt": "assets/characters/inez/qa/prompts/03_face_right_profile_v02.txt",
+      "sent_at": "2026-10-09T09:20:39.879330+00:00",
+      "status": "approved_for_reference",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/03_face_right_profile_v02.png",
+      "size": [
+        1070,
+        1470
+      ],
+      "sha256": "b29d793e25bbb24fbd37ce341301cba7ab912b07181eeec41b69ab4d62e2a925",
+      "decision": "Both independent critics accept corrected visual right90/inferred face geometry; far lash occluded. Unknown side depth and tail length qualified: originalB governs hair length. Reports qa/identity/03_face_right_profile_v02.md and qa/technical/03_face_right_profile_v02.md; no final character approval.",
+      "approved_output": "references/approved/03_face_right_profile.png"
+    },
+    {
+      "call": 22,
+      "view": "06_body_side",
+      "version": 3,
+      "prompt": "assets/characters/inez/qa/prompts/06_body_side_v03.txt",
+      "sent_at": "2026-10-09T09:22:37.836349+00:00",
+      "status": "approved_geometry_only",
+      "anchors": [
+        "references/original/inez_portraits.jpg",
+        "references/original/inez_turnaround.jpg"
+      ],
+      "output": "references/generated/06_body_side_v03.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "9c70d153102431b14eba952656ac33d721e6df0684ad4d45504fdc02cb63abd2",
+      "decision": "Both independent critics accept supplementary side geometry/framing; full materials/hair length/exact side depth remain held. Exclude warmwelt,scratchdenim,longtail and inferred sole details; originalB governs materials/hair. Reports qa/identity/06_body_side_v03.md and qa/technical/06_body_side_v03.md. No further paid generation planned22/24.",
+      "approved_output": "references/approved/06_body_side.png"
+    }
+  ],
+  "authorizations": [
+    {
+      "id": "boots_extension_01",
+      "user_reply": "Approve",
+      "recorded_at": "2026-10-08T22:44:16.297082+00:00",
+      "max_additional_calls": 2,
+      "within_global_cap": 24,
+      "strategy": "One tightly cropped boots correction, then application to body v02 using both originals.",
+      "planned_call_numbers": [
+        7,
+        8
+      ]
+    }
+  ],
+  "per_view_call_limits": {
+    "05_body_front": 5
+  }
+}

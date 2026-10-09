@@ -1,0 +1,88 @@
+{
+  "status": "prepared contract; not executed; awaits root enablement and dressed source handoff",
+  "production_approved": false,
+  "source_blend_expected": "assets/characters/inez/model/inez.blend",
+  "source_owner": "model_artist3",
+  "source_may_be_overwritten": false,
+  "armature": "InezRig_PROTOTYPE",
+  "body": "Inez_ContinuousHumanMesh_UNAPPROVED",
+  "basis": "Basis_FemaleYoung_Source",
+  "identity_morph_prefix": "Inez_HeadFit_",
+  "rest_arm_angle_degrees": 18,
+  "licensed_bone_count": 163,
+  "added_ponytail_bones": [
+    "hair.01",
+    "hair.02",
+    "hair.03"
+  ],
+  "ponytail_meshes": [
+    "Inez_Ponytail_Curls",
+    "Inez_Ponytail_WarmAccentCurls"
+  ],
+  "foot_support_meshes": {
+    "L": [
+      "Inez_Boot_L",
+      "Inez_Boot_Sole_L"
+    ],
+    "R": [
+      "Inez_Boot_R",
+      "Inez_Boot_Sole_R"
+    ]
+  },
+  "facial_control_bones": [
+    "head",
+    "neck01",
+    "neck02",
+    "neck03",
+    "eye.L",
+    "eye.R",
+    "jaw",
+    "orbicularis03.L",
+    "orbicularis03.R",
+    "orbicularis04.L",
+    "orbicularis04.R"
+  ],
+  "locomotion_clips": [
+    "Idle",
+    "Walk",
+    "Run"
+  ],
+  "optional_clip": "Blink",
+  "morph_controls": [
+    "Neutral",
+    "Confused",
+    "Suspicious",
+    "SubtleFear",
+    "IntenseFear",
+    "Anger",
+    "Exhaustion",
+    "Blink_L",
+    "Blink_R",
+    "Viseme_AA",
+    "Viseme_EE",
+    "Viseme_OH",
+    "Viseme_MM",
+    "Viseme_FV"
+  ],
+  "blender_axes": {
+    "up": "+Z",
+    "forward": "-Y",
+    "units": "meters"
+  },
+  "gltf_axes": {
+    "up": "+Y",
+    "forward": "+Z",
+    "units": "meters"
+  },
+  "runtime_skin_influences": 4,
+  "runtime_skin_adaptation": "deterministic largest four normalized; original source retained; per-mesh mass loss reported",
+  "runtime_speed_authority": "animation_manifest.json.clip_info.<clip>.matching_viewer_speed_m_s",
+  "source_license": "CC0-1.0 MakeHuman; model/base-source/LICENSE.ASSETS.md and provenance.json",
+  "acceptance": "actual exported deformation, browser playback and independent visual critique; script presence is not approval",
+  "identity_default_rule": "Capture each Inez_HeadFit_* source value before mutation and preserve the exact name-to-value map in editable output, GLB and browser; inactive old revisions stay zero.",
+  "identity_source_default_manifest_field": "identity_morph_source_defaults",
+  "example_v02_source_defaults": {
+    "Inez_HeadFit_v01": 0.0,
+    "Inez_HeadFit_v02": 1.0
+  }
+}

@@ -1,0 +1,5248 @@
+{
+  "status": "editable rig/animation prototype",
+  "production_approved": false,
+  "source_blend": "/workspace/assets/characters/inez/model/work/inez_dressed_v03.blend",
+  "animated_blend": "/workspace/assets/characters/inez/model/work/inez_animated_v01.blend",
+  "animated_glb": "/workspace/assets/characters/inez/model/work/inez_animated_v01.glb",
+  "armature": "InezRig_PROTOTYPE",
+  "body": "Inez_ContinuousHumanMesh_UNAPPROVED",
+  "bone_count": 166,
+  "provisional_height_m": 1.7,
+  "fps": 24,
+  "clip_info": {
+    "Idle": {
+      "duration_s": 4.0,
+      "sample_count": 97,
+      "frame_range": [
+        1,
+        97
+      ],
+      "stance_fraction": 1.0,
+      "stride_m": 0.0,
+      "matching_viewer_speed_m_s": 0.0,
+      "maximum_ik_reach_error_m": 0.0,
+      "root_drop_m": -0.012142857142857143,
+      "root_motion": false,
+      "driven_bones": [
+        "root",
+        "spine03",
+        "spine01",
+        "neck01",
+        "head",
+        "eye.L",
+        "eye.R",
+        "upperleg01.L",
+        "lowerleg01.L",
+        "foot.L",
+        "upperarm01.L",
+        "lowerarm01.L",
+        "wrist.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "upperleg01.R",
+        "lowerleg01.R",
+        "foot.R",
+        "upperarm01.R",
+        "lowerarm01.R",
+        "wrist.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "hair.01",
+        "hair.02",
+        "hair.03"
+      ]
+    },
+    "Walk": {
+      "duration_s": 1.125,
+      "sample_count": 28,
+      "frame_range": [
+        1,
+        28
+      ],
+      "stance_fraction": 0.62,
+      "stride_m": 0.6794535714285713,
+      "matching_viewer_speed_m_s": 0.974126984126984,
+      "maximum_ik_reach_error_m": 0.0,
+      "root_drop_m": -0.10646614129885897,
+      "root_motion": false,
+      "driven_bones": [
+        "root",
+        "spine03",
+        "spine01",
+        "neck01",
+        "head",
+        "eye.L",
+        "eye.R",
+        "upperleg01.L",
+        "lowerleg01.L",
+        "foot.L",
+        "upperarm01.L",
+        "lowerarm01.L",
+        "wrist.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "upperleg01.R",
+        "lowerleg01.R",
+        "foot.R",
+        "upperarm01.R",
+        "lowerarm01.R",
+        "wrist.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "hair.01",
+        "hair.02",
+        "hair.03"
+      ]
+    },
+    "Run": {
+      "duration_s": 0.75,
+      "sample_count": 19,
+      "frame_range": [
+        1,
+        19
+      ],
+      "stance_fraction": 0.42,
+      "stride_m": 0.8559499999999999,
+      "matching_viewer_speed_m_s": 2.717301587301587,
+      "maximum_ik_reach_error_m": 0.0,
+      "root_drop_m": -0.1962427232684229,
+      "root_motion": false,
+      "driven_bones": [
+        "root",
+        "spine03",
+        "spine01",
+        "neck01",
+        "head",
+        "eye.L",
+        "eye.R",
+        "upperleg01.L",
+        "lowerleg01.L",
+        "foot.L",
+        "upperarm01.L",
+        "lowerarm01.L",
+        "wrist.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "upperleg01.R",
+        "lowerleg01.R",
+        "foot.R",
+        "upperarm01.R",
+        "lowerarm01.R",
+        "wrist.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "hair.01",
+        "hair.02",
+        "hair.03"
+      ]
+    },
+    "Blink": {
+      "duration_s": 0.20833333333333334,
+      "frame_range": [
+        1,
+        6
+      ],
+      "driven_bones": [
+        "orbicularis03.L",
+        "orbicularis03.R",
+        "orbicularis04.L",
+        "orbicularis04.R"
+      ],
+      "use": "optional additive/one-shot; do not combine with Blink morph at the same time"
+    }
+  },
+  "skin_weight_integrity": {
+    "Inez_ContinuousHumanMesh_UNAPPROVED": {
+      "skinned": true,
+      "vertex_count": 13380,
+      "weight_sum_range": [
+        0.9999999552965164,
+        1.0000000447034836
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Eyeball_L": {
+      "skinned": true,
+      "vertex_count": 72,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Eyeball_R": {
+      "skinned": true,
+      "vertex_count": 72,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Iris_L": {
+      "skinned": true,
+      "vertex_count": 49,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Pupil_L": {
+      "skinned": true,
+      "vertex_count": 49,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Iris_R": {
+      "skinned": true,
+      "vertex_count": 49,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Pupil_R": {
+      "skinned": true,
+      "vertex_count": 49,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Cornea_L": {
+      "skinned": true,
+      "vertex_count": 360,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Cornea_R": {
+      "skinned": true,
+      "vertex_count": 360,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Brows_L": {
+      "skinned": true,
+      "vertex_count": 3690,
+      "weight_sum_range": [
+        0.9999999606516212,
+        1.0000000395812094
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_LashesUpper_L": {
+      "skinned": true,
+      "vertex_count": 918,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_LashesLower_L": {
+      "skinned": true,
+      "vertex_count": 468,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Tearline_L": {
+      "skinned": true,
+      "vertex_count": 44,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Brows_R": {
+      "skinned": true,
+      "vertex_count": 3690,
+      "weight_sum_range": [
+        0.999999962747097,
+        1.0000000388827175
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_LashesUpper_R": {
+      "skinned": true,
+      "vertex_count": 918,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_LashesLower_R": {
+      "skinned": true,
+      "vertex_count": 468,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Tearline_R": {
+      "skinned": true,
+      "vertex_count": 44,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Sweater": {
+      "skinned": true,
+      "vertex_count": 16680,
+      "weight_sum_range": [
+        0.9999999534338713,
+        1.0000000447034836
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans": {
+      "skinned": true,
+      "vertex_count": 10198,
+      "weight_sum_range": [
+        0.9999999571591616,
+        1.0000000447034836
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Sweater_CrewNeck_0": {
+      "skinned": true,
+      "vertex_count": 368,
+      "weight_sum_range": [
+        0.9999999646097422,
+        1.000000037252903
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Sweater_Cuff_1": {
+      "skinned": true,
+      "vertex_count": 192,
+      "weight_sum_range": [
+        0.9999999552965164,
+        1.0000000344589353
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Sweater_RibbedHem_2": {
+      "skinned": true,
+      "vertex_count": 384,
+      "weight_sum_range": [
+        0.9999999590218067,
+        1.000000037252903
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Sweater_Cuff_3": {
+      "skinned": true,
+      "vertex_count": 192,
+      "weight_sum_range": [
+        0.999999962747097,
+        1.0000000321306288
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans_RearPatchPocket_R": {
+      "skinned": true,
+      "vertex_count": 12,
+      "weight_sum_range": [
+        0.9999999925494194,
+        1.0000000074505806
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans_RearPatchPocket_L": {
+      "skinned": true,
+      "vertex_count": 12,
+      "weight_sum_range": [
+        0.9999999850988388,
+        1.0000000149011612
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans_SewnSeams": {
+      "skinned": true,
+      "vertex_count": 1880,
+      "weight_sum_range": [
+        0.9999999552965164,
+        1.0000000391155481
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans_BeltLoop_0": {
+      "skinned": true,
+      "vertex_count": 8,
+      "weight_sum_range": [
+        0.9999999701976776,
+        1.000000011175871
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans_BeltLoop_1": {
+      "skinned": true,
+      "vertex_count": 8,
+      "weight_sum_range": [
+        0.9999999701976776,
+        1.0000000298023224
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans_BeltLoop_2": {
+      "skinned": true,
+      "vertex_count": 8,
+      "weight_sum_range": [
+        0.9999999850988388,
+        1.0000000223517418
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans_BeltLoop_3": {
+      "skinned": true,
+      "vertex_count": 8,
+      "weight_sum_range": [
+        0.9999999701976776,
+        1.0000000074505806
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans_BeltLoop_4": {
+      "skinned": true,
+      "vertex_count": 8,
+      "weight_sum_range": [
+        0.9999999860301614,
+        1.0000000037252903
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans_ButtonOrRivet_0": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        0.9999999701976776,
+        1.0000000298023224
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans_ButtonOrRivet_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        0.999999962747097,
+        1.0000000335276127
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans_ButtonOrRivet_2": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        0.9999999664723873,
+        1.0000000335276127
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans_ButtonOrRivet_3": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        0.9999999701976776,
+        1.0000000298023224
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans_ButtonOrRivet_4": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        0.9999999701976776,
+        1.0000000298023224
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Sole_L": {
+      "skinned": true,
+      "vertex_count": 200,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_L": {
+      "skinned": true,
+      "vertex_count": 960,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Tongue_L": {
+      "skinned": true,
+      "vertex_count": 36,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_0_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_0_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_1_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_1_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_2_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_2_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_3_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_3_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_4_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_4_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_5_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_5_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_6_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_L_6_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Laces_L": {
+      "skinned": true,
+      "vertex_count": 540,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_StitchedPanels_L": {
+      "skinned": true,
+      "vertex_count": 500,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_SoleTread_L": {
+      "skinned": true,
+      "vertex_count": 288,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Sole_R": {
+      "skinned": true,
+      "vertex_count": 200,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_R": {
+      "skinned": true,
+      "vertex_count": 960,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Tongue_R": {
+      "skinned": true,
+      "vertex_count": 36,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_0_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_0_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_1_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_1_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_2_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_2_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_3_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_3_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_4_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_4_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_5_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_5_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_6_-1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Eyelet_R_6_1": {
+      "skinned": true,
+      "vertex_count": 96,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_Laces_R": {
+      "skinned": true,
+      "vertex_count": 540,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_StitchedPanels_R": {
+      "skinned": true,
+      "vertex_count": 500,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boot_SoleTread_R": {
+      "skinned": true,
+      "vertex_count": 288,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_FineSilverNecklace": {
+      "skinned": true,
+      "vertex_count": 420,
+      "weight_sum_range": [
+        0.9999999590218067,
+        1.0000000409781933
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_TinyUnknownMotifPendant": {
+      "skinned": true,
+      "vertex_count": 25,
+      "weight_sum_range": [
+        0.9999999664723873,
+        1.000000026077032
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_ScalpHair": {
+      "skinned": true,
+      "vertex_count": 915,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Crown_PulledCurlyLocks": {
+      "skinned": true,
+      "vertex_count": 32400,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Crown_WarmAccentLocks": {
+      "skinned": true,
+      "vertex_count": 4050,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Ponytail_Curls": {
+      "skinned": true,
+      "vertex_count": 38595,
+      "weight_sum_range": [
+        0.9999999701976776,
+        1.0000000298023224
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Ponytail_WarmAccentCurls": {
+      "skinned": true,
+      "vertex_count": 4565,
+      "weight_sum_range": [
+        0.9999999701976776,
+        1.0000000298023224
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_FramingCurls": {
+      "skinned": true,
+      "vertex_count": 16200,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_UnevenFineFlyaways": {
+      "skinned": true,
+      "vertex_count": 12363,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    }
+  },
+  "runtime_weight_adaptation": {
+    "Inez_ContinuousHumanMesh_UNAPPROVED": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 2460,
+      "maximum_discarded_normalized_weight": 0.29999999701976776,
+      "mean_discarded_normalized_weight": 0.008323367654674467,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Eyeball_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Eyeball_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Iris_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Pupil_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Iris_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Pupil_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Cornea_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Cornea_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Brows_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_LashesUpper_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_LashesLower_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Tearline_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Brows_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_LashesUpper_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_LashesLower_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Tearline_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Sweater": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 7014,
+      "maximum_discarded_normalized_weight": 0.27149999141693115,
+      "mean_discarded_normalized_weight": 0.016283676574540305,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 2840,
+      "maximum_discarded_normalized_weight": 0.13495537498142593,
+      "mean_discarded_normalized_weight": 0.009444186672306353,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Sweater_CrewNeck_0": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 368,
+      "maximum_discarded_normalized_weight": 0.2358949427045714,
+      "mean_discarded_normalized_weight": 0.12924287075806348,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Sweater_Cuff_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 102,
+      "maximum_discarded_normalized_weight": 0.02902940613543606,
+      "mean_discarded_normalized_weight": 0.004745773733282237,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Sweater_RibbedHem_2": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 368,
+      "maximum_discarded_normalized_weight": 0.017951191226220384,
+      "mean_discarded_normalized_weight": 0.006684922255648067,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Sweater_Cuff_3": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 100,
+      "maximum_discarded_normalized_weight": 0.038152638641917806,
+      "mean_discarded_normalized_weight": 0.004184846835570692,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans_RearPatchPocket_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 12,
+      "maximum_discarded_normalized_weight": 0.04280387292469612,
+      "mean_discarded_normalized_weight": 0.016872172092243617,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans_RearPatchPocket_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 12,
+      "maximum_discarded_normalized_weight": 0.042277936598920735,
+      "mean_discarded_normalized_weight": 0.016784957295083173,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans_SewnSeams": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 1008,
+      "maximum_discarded_normalized_weight": 0.1340408732645508,
+      "mean_discarded_normalized_weight": 0.017315635166494956,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans_BeltLoop_0": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 8,
+      "maximum_discarded_normalized_weight": 0.07351324103269045,
+      "mean_discarded_normalized_weight": 0.052099167974492204,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans_BeltLoop_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 8,
+      "maximum_discarded_normalized_weight": 0.07349401904909557,
+      "mean_discarded_normalized_weight": 0.05203771061315885,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans_BeltLoop_2": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 8,
+      "maximum_discarded_normalized_weight": 0.0611993631051508,
+      "mean_discarded_normalized_weight": 0.04976166811675174,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans_BeltLoop_3": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 8,
+      "maximum_discarded_normalized_weight": 0.06451504358144393,
+      "mean_discarded_normalized_weight": 0.050548974104481295,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans_BeltLoop_4": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 8,
+      "maximum_discarded_normalized_weight": 0.027521826019266702,
+      "mean_discarded_normalized_weight": 0.024260741488191687,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans_ButtonOrRivet_0": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 96,
+      "maximum_discarded_normalized_weight": 0.00394734760507418,
+      "mean_discarded_normalized_weight": 0.003694234689290941,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans_ButtonOrRivet_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 96,
+      "maximum_discarded_normalized_weight": 0.034370121417290435,
+      "mean_discarded_normalized_weight": 0.03309518672033352,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans_ButtonOrRivet_2": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 96,
+      "maximum_discarded_normalized_weight": 0.03438544578720923,
+      "mean_discarded_normalized_weight": 0.033126341318639146,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans_ButtonOrRivet_3": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 96,
+      "maximum_discarded_normalized_weight": 0.0462932127422217,
+      "mean_discarded_normalized_weight": 0.0444933436024205,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans_ButtonOrRivet_4": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 96,
+      "maximum_discarded_normalized_weight": 0.04619749825329926,
+      "mean_discarded_normalized_weight": 0.04415963613028834,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Sole_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Tongue_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_0_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_0_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_1_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_1_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_2_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_2_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_3_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_3_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_4_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_4_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_5_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_5_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_6_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_L_6_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Laces_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_StitchedPanels_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_SoleTread_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Sole_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Tongue_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_0_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_0_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_1_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_1_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_2_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_2_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_3_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_3_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_4_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_4_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_5_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_5_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_6_-1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Eyelet_R_6_1": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_Laces_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_StitchedPanels_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boot_SoleTread_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_FineSilverNecklace": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 420,
+      "maximum_discarded_normalized_weight": 0.201850888528849,
+      "mean_discarded_normalized_weight": 0.07560229450079828,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_TinyUnknownMotifPendant": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 25,
+      "maximum_discarded_normalized_weight": 0.059598256218694426,
+      "mean_discarded_normalized_weight": 0.058110557237357925,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_ScalpHair": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Crown_PulledCurlyLocks": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Crown_WarmAccentLocks": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Ponytail_Curls": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Ponytail_WarmAccentCurls": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_FramingCurls": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_UnevenFineFlyaways": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    }
+  },
+  "source_license": "CC0-1.0 MakeHuman asset rig/skin; model/base-source/LICENSE.ASSETS.md",
+  "weight_failures": [],
+  "face_shape_deformation": {
+    "Inez_ContinuousHumanMesh_UNAPPROVED": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 1690,
+        "maximum_displacement_m": 0.00298728075497046
+      },
+      "Suspicious": {
+        "affected_vertices": 1893,
+        "maximum_displacement_m": 0.0015540409221296296
+      },
+      "SubtleFear": {
+        "affected_vertices": 2189,
+        "maximum_displacement_m": 0.002341467568929811
+      },
+      "IntenseFear": {
+        "affected_vertices": 2281,
+        "maximum_displacement_m": 0.0109128571157661
+      },
+      "Anger": {
+        "affected_vertices": 2499,
+        "maximum_displacement_m": 0.0031080818442592592
+      },
+      "Exhaustion": {
+        "affected_vertices": 1919,
+        "maximum_displacement_m": 0.0012904514175733491
+      },
+      "Viseme_AA": {
+        "affected_vertices": 1305,
+        "maximum_displacement_m": 0.023335002999876404
+      },
+      "Viseme_EE": {
+        "affected_vertices": 1305,
+        "maximum_displacement_m": 0.011106027610347884
+      },
+      "Viseme_OH": {
+        "affected_vertices": 1305,
+        "maximum_displacement_m": 0.018541216126371825
+      },
+      "Viseme_MM": {
+        "affected_vertices": 927,
+        "maximum_displacement_m": 0.0009206058446446909
+      },
+      "Viseme_FV": {
+        "affected_vertices": 1013,
+        "maximum_displacement_m": 0.004408019281216316
+      },
+      "Blink_L": {
+        "affected_vertices": 329,
+        "maximum_displacement_m": 0.00551474684883813
+      },
+      "Blink_R": {
+        "affected_vertices": 329,
+        "maximum_displacement_m": 0.0055147494875651916
+      }
+    },
+    "Inez_Brows_L": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 3690,
+        "maximum_displacement_m": 0.002677267145977333
+      },
+      "Suspicious": {
+        "affected_vertices": 3690,
+        "maximum_displacement_m": 0.0013629703936110823
+      },
+      "SubtleFear": {
+        "affected_vertices": 3065,
+        "maximum_displacement_m": 0.0014948803848237966
+      },
+      "IntenseFear": {
+        "affected_vertices": 3690,
+        "maximum_displacement_m": 0.0034232678071570537
+      },
+      "Anger": {
+        "affected_vertices": 3690,
+        "maximum_displacement_m": 0.0027259407872221647
+      },
+      "Exhaustion": {
+        "affected_vertices": 3690,
+        "maximum_displacement_m": 0.0007269175476802758
+      },
+      "Viseme_AA": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_EE": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_OH": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_L": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_R": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "mapping_vertices_beyond_24mm": 0
+    },
+    "Inez_LashesUpper_L": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 197,
+        "maximum_displacement_m": 0.0010411943735023242
+      },
+      "Suspicious": {
+        "affected_vertices": 918,
+        "maximum_displacement_m": 0.0010839590697145688
+      },
+      "SubtleFear": {
+        "affected_vertices": 918,
+        "maximum_displacement_m": 0.0008119744734646077
+      },
+      "IntenseFear": {
+        "affected_vertices": 918,
+        "maximum_displacement_m": 0.002221221887283774
+      },
+      "Anger": {
+        "affected_vertices": 918,
+        "maximum_displacement_m": 0.0016378768141157895
+      },
+      "Exhaustion": {
+        "affected_vertices": 918,
+        "maximum_displacement_m": 0.0011953751639864917
+      },
+      "Viseme_AA": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_EE": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_OH": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_L": {
+        "affected_vertices": 918,
+        "maximum_displacement_m": 0.005108441116728886
+      },
+      "Blink_R": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "mapping_vertices_beyond_24mm": 0
+    },
+    "Inez_LashesLower_L": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Suspicious": {
+        "affected_vertices": 468,
+        "maximum_displacement_m": 0.0007435342560324927
+      },
+      "SubtleFear": {
+        "affected_vertices": 468,
+        "maximum_displacement_m": 0.0003157143087078847
+      },
+      "IntenseFear": {
+        "affected_vertices": 468,
+        "maximum_displacement_m": 0.0007103571436419342
+      },
+      "Anger": {
+        "affected_vertices": 468,
+        "maximum_displacement_m": 0.0003767240255190932
+      },
+      "Exhaustion": {
+        "affected_vertices": 468,
+        "maximum_displacement_m": 0.001288792698363941
+      },
+      "Viseme_AA": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_EE": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_OH": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_L": {
+        "affected_vertices": 468,
+        "maximum_displacement_m": 0.005507660920244361
+      },
+      "Blink_R": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "mapping_vertices_beyond_24mm": 0
+    },
+    "Inez_Tearline_L": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Suspicious": {
+        "affected_vertices": 44,
+        "maximum_displacement_m": 0.0007342620655519074
+      },
+      "SubtleFear": {
+        "affected_vertices": 44,
+        "maximum_displacement_m": 0.000315066656720403
+      },
+      "IntenseFear": {
+        "affected_vertices": 44,
+        "maximum_displacement_m": 0.0007088999888969767
+      },
+      "Anger": {
+        "affected_vertices": 44,
+        "maximum_displacement_m": 0.000372026117427804
+      },
+      "Exhaustion": {
+        "affected_vertices": 44,
+        "maximum_displacement_m": 0.0012727208378204215
+      },
+      "Viseme_AA": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_EE": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_OH": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_L": {
+        "affected_vertices": 44,
+        "maximum_displacement_m": 0.005438977981977191
+      },
+      "Blink_R": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "mapping_vertices_beyond_24mm": 0
+    },
+    "Inez_Brows_R": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 3690,
+        "maximum_displacement_m": 0.0006663410908059235
+      },
+      "Suspicious": {
+        "affected_vertices": 3690,
+        "maximum_displacement_m": 0.000969223420809319
+      },
+      "SubtleFear": {
+        "affected_vertices": 3063,
+        "maximum_displacement_m": 0.0014948803848237966
+      },
+      "IntenseFear": {
+        "affected_vertices": 3690,
+        "maximum_displacement_m": 0.0034232678071570537
+      },
+      "Anger": {
+        "affected_vertices": 3690,
+        "maximum_displacement_m": 0.0027259407872221647
+      },
+      "Exhaustion": {
+        "affected_vertices": 3690,
+        "maximum_displacement_m": 0.0007269175476802758
+      },
+      "Viseme_AA": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_EE": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_OH": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_L": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_R": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "mapping_vertices_beyond_24mm": 0
+    },
+    "Inez_LashesUpper_R": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 918,
+        "maximum_displacement_m": 0.0004886797041723932
+      },
+      "Suspicious": {
+        "affected_vertices": 918,
+        "maximum_displacement_m": 0.0008026458672091453
+      },
+      "SubtleFear": {
+        "affected_vertices": 918,
+        "maximum_displacement_m": 0.0008119744734646077
+      },
+      "IntenseFear": {
+        "affected_vertices": 918,
+        "maximum_displacement_m": 0.002221221887283774
+      },
+      "Anger": {
+        "affected_vertices": 918,
+        "maximum_displacement_m": 0.0016378769529379915
+      },
+      "Exhaustion": {
+        "affected_vertices": 918,
+        "maximum_displacement_m": 0.0011953756941256311
+      },
+      "Viseme_AA": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_EE": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_OH": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_L": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_R": {
+        "affected_vertices": 918,
+        "maximum_displacement_m": 0.005108443258743557
+      },
+      "mapping_vertices_beyond_24mm": 0
+    },
+    "Inez_LashesLower_R": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 468,
+        "maximum_displacement_m": 0.0002775862076076858
+      },
+      "Suspicious": {
+        "affected_vertices": 468,
+        "maximum_displacement_m": 0.0005948276456443985
+      },
+      "SubtleFear": {
+        "affected_vertices": 468,
+        "maximum_displacement_m": 0.0003157143087078847
+      },
+      "IntenseFear": {
+        "affected_vertices": 468,
+        "maximum_displacement_m": 0.0007103571436419342
+      },
+      "Anger": {
+        "affected_vertices": 468,
+        "maximum_displacement_m": 0.00037672415754672994
+      },
+      "Exhaustion": {
+        "affected_vertices": 468,
+        "maximum_displacement_m": 0.0012887931394233079
+      },
+      "Viseme_AA": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_EE": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_OH": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_L": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_R": {
+        "affected_vertices": 468,
+        "maximum_displacement_m": 0.0055076627367033285
+      },
+      "mapping_vertices_beyond_24mm": 0
+    },
+    "Inez_Tearline_R": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 44,
+        "maximum_displacement_m": 0.00027412460549634246
+      },
+      "Suspicious": {
+        "affected_vertices": 44,
+        "maximum_displacement_m": 0.0005874098518776658
+      },
+      "SubtleFear": {
+        "affected_vertices": 44,
+        "maximum_displacement_m": 0.000315066656720403
+      },
+      "IntenseFear": {
+        "affected_vertices": 44,
+        "maximum_displacement_m": 0.0007088999888969767
+      },
+      "Anger": {
+        "affected_vertices": 44,
+        "maximum_displacement_m": 0.0003720262320234079
+      },
+      "Exhaustion": {
+        "affected_vertices": 44,
+        "maximum_displacement_m": 0.0012727212844494639
+      },
+      "Viseme_AA": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_EE": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_OH": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_L": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_R": {
+        "affected_vertices": 44,
+        "maximum_displacement_m": 0.005438979821374236
+      },
+      "mapping_vertices_beyond_24mm": 0
+    },
+    "Inez_Sweater": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Suspicious": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "SubtleFear": {
+        "affected_vertices": 316,
+        "maximum_displacement_m": 4.368372546051781e-05
+      },
+      "IntenseFear": {
+        "affected_vertices": 316,
+        "maximum_displacement_m": 0.00020373590368187027
+      },
+      "Anger": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Exhaustion": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_AA": {
+        "affected_vertices": 316,
+        "maximum_displacement_m": 0.000435601837486458
+      },
+      "Viseme_EE": {
+        "affected_vertices": 316,
+        "maximum_displacement_m": 0.00020373590368187027
+      },
+      "Viseme_OH": {
+        "affected_vertices": 316,
+        "maximum_displacement_m": 0.0003488402905728061
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 316,
+        "maximum_displacement_m": 8.735961710281414e-05
+      },
+      "Blink_L": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_R": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      }
+    },
+    "Inez_Sweater_CrewNeck_0": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Suspicious": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "SubtleFear": {
+        "affected_vertices": 218,
+        "maximum_displacement_m": 4.6744915871384306e-05
+      },
+      "IntenseFear": {
+        "affected_vertices": 218,
+        "maximum_displacement_m": 0.00021801282438383869
+      },
+      "Anger": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Exhaustion": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_AA": {
+        "affected_vertices": 218,
+        "maximum_displacement_m": 0.0004661270232497097
+      },
+      "Viseme_EE": {
+        "affected_vertices": 218,
+        "maximum_displacement_m": 0.00021801282438383869
+      },
+      "Viseme_OH": {
+        "affected_vertices": 218,
+        "maximum_displacement_m": 0.00037328562497395275
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 218,
+        "maximum_displacement_m": 9.348139957812498e-05
+      },
+      "Blink_L": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_R": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      }
+    },
+    "Inez_FineSilverNecklace": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Suspicious": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "SubtleFear": {
+        "affected_vertices": 50,
+        "maximum_displacement_m": 2.6982607608433216e-05
+      },
+      "IntenseFear": {
+        "affected_vertices": 50,
+        "maximum_displacement_m": 0.00012584369589008334
+      },
+      "Anger": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Exhaustion": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_AA": {
+        "affected_vertices": 50,
+        "maximum_displacement_m": 0.00026906283429805423
+      },
+      "Viseme_EE": {
+        "affected_vertices": 50,
+        "maximum_displacement_m": 0.00012584369589008334
+      },
+      "Viseme_OH": {
+        "affected_vertices": 50,
+        "maximum_displacement_m": 0.00021547194151190594
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 50,
+        "maximum_displacement_m": 5.396034381550321e-05
+      },
+      "Blink_L": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_R": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      }
+    }
+  },
+  "expression_morph_names": [
+    "Neutral",
+    "Confused",
+    "Suspicious",
+    "SubtleFear",
+    "IntenseFear",
+    "Anger",
+    "Exhaustion"
+  ],
+  "viseme_morph_names": [
+    "Viseme_AA",
+    "Viseme_EE",
+    "Viseme_OH",
+    "Viseme_MM",
+    "Viseme_FV"
+  ],
+  "blink_morph_names": [
+    "Blink_L",
+    "Blink_R"
+  ],
+  "identity_morph_source_defaults": {
+    "Inez_HeadFit_v01": 0.0,
+    "Inez_HeadFit_v02": 0.0,
+    "Inez_HeadFit_v03": 1.0
+  },
+  "preserve_identity_morphs": "Each pre-existing Inez_HeadFit_* key retains its exact individual source default; inactive revisions remain zero",
+  "ponytail": {
+    "status": "three deforming bones with normalized longitudinal weights",
+    "bones": [
+      "hair.01",
+      "hair.02",
+      "hair.03"
+    ],
+    "meshes": [
+      "Inez_Ponytail_Curls",
+      "Inez_Ponytail_WarmAccentCurls"
+    ],
+    "span_m": 0.3128269863128663
+  },
+  "bone_axes": {
+    "head": {
+      "gltf_bind_head": [
+        1.3517057651402532e-17,
+        1.5568475723266602,
+        0.043173473328351974
+      ],
+      "gltf_bind_axis_x": [
+        7.19952311101224e-08,
+        0.04340314865112305,
+        0.9990574717521667
+      ],
+      "gltf_bind_axis_y": [
+        1.4210854715202004e-14,
+        0.9990578889846802,
+        -0.04340282082557678
+      ],
+      "gltf_bind_axis_z": [
+        -1.0,
+        3.046945806772783e-09,
+        7.562269388472487e-08
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    },
+    "neck01": {
+      "gltf_bind_head": [
+        -2.525222267957803e-16,
+        1.4384167194366455,
+        -0.001238929107785225
+      ],
+      "gltf_bind_axis_x": [
+        5.014246440282477e-08,
+        -0.44554945826530457,
+        0.8952571153640747
+      ],
+      "gltf_bind_axis_y": [
+        0.0,
+        0.8952576518058777,
+        0.4455495774745941
+      ],
+      "gltf_bind_axis_z": [
+        -1.0,
+        -2.241883656495247e-08,
+        4.858572921762061e-08
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    },
+    "neck02": {
+      "gltf_bind_head": [
+        -2.525222267957803e-16,
+        1.4808706045150757,
+        0.019889414310455322
+      ],
+      "gltf_bind_axis_x": [
+        7.939233626075293e-08,
+        -0.26484039425849915,
+        0.964292049407959
+      ],
+      "gltf_bind_axis_y": [
+        2.6645352591003757e-15,
+        0.9642925262451172,
+        0.26484060287475586
+      ],
+      "gltf_bind_axis_z": [
+        -1.0,
+        -2.1104185066178616e-08,
+        8.025273245948483e-08
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    },
+    "neck03": {
+      "gltf_bind_head": [
+        -1.4913035446415603e-16,
+        1.518288016319275,
+        0.030166015028953552
+      ],
+      "gltf_bind_axis_x": [
+        -1.6870507124622236e-07,
+        -0.3196375370025635,
+        0.9475396871566772
+      ],
+      "gltf_bind_axis_y": [
+        3.9968028886505635e-15,
+        0.9475401043891907,
+        0.3196377158164978
+      ],
+      "gltf_bind_axis_z": [
+        -1.0,
+        5.384659829132943e-08,
+        -1.5615944448654773e-07
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    },
+    "eye.L": {
+      "gltf_bind_head": [
+        0.030321020632982254,
+        1.587136149406433,
+        0.11829865723848343
+      ],
+      "gltf_bind_axis_x": [
+        -0.0017103161662817001,
+        0.9999523162841797,
+        0.009635865688323975
+      ],
+      "gltf_bind_axis_y": [
+        0.027763336896896362,
+        -0.009584221988916397,
+        0.999568521976471
+      ],
+      "gltf_bind_axis_z": [
+        0.9996130466461182,
+        0.0019770897924900055,
+        -0.027745604515075684
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    },
+    "eye.R": {
+      "gltf_bind_head": [
+        -0.030321018770337105,
+        1.587136149406433,
+        0.11829864978790283
+      ],
+      "gltf_bind_axis_x": [
+        0.001710500568151474,
+        0.9999526739120483,
+        0.009635921567678452
+      ],
+      "gltf_bind_axis_y": [
+        -0.027763307094573975,
+        -0.009584199637174606,
+        0.9995687007904053
+      ],
+      "gltf_bind_axis_z": [
+        0.9996129870414734,
+        -0.0019772369414567947,
+        0.027745544910430908
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    },
+    "jaw": {
+      "gltf_bind_head": [
+        2.1094237467877974e-15,
+        1.5543408393859863,
+        0.05976436287164688
+      ],
+      "gltf_bind_axis_x": [
+        6.963659870962147e-08,
+        -0.6370320916175842,
+        -0.770837664604187
+      ],
+      "gltf_bind_axis_y": [
+        3.552713678800501e-15,
+        -0.7708376049995422,
+        0.637031614780426
+      ],
+      "gltf_bind_axis_z": [
+        -1.0,
+        -4.443863943492943e-08,
+        -4.998318559046311e-08
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    }
+  },
+  "deformation_samples": {
+    "Idle": {
+      "sampled_frame_count": 17,
+      "loop_ankle_error_m": 0.0,
+      "maximum_stance_boot_ground_error_m": 1.94646418094635e-07,
+      "sample_frames": [
+        {
+          "frame": 1,
+          "phase": 0.0,
+          "body_bounds": [
+            [
+              -0.2424958497285843,
+              0.24249586462974548
+            ],
+            [
+              -0.21405889093875885,
+              0.09614849835634232
+            ],
+            [
+              -0.005114901810884476,
+              1.686518907546997
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -3.4924596548080444e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066397488117218,
+                -0.03146560490131378,
+                0.06684644520282745
+              ],
+              "knee": [
+                0.10107063502073288,
+                -0.08086656033992767,
+                0.4674949049949646
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -3.119930624961853e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066400468349457,
+                -0.031465671956539154,
+                0.06684635579586029
+              ],
+              "knee": [
+                -0.1010705754160881,
+                -0.08086619526147842,
+                0.4674948751926422
+              ]
+            }
+          }
+        },
+        {
+          "frame": 7,
+          "phase": 0.0625,
+          "body_bounds": [
+            [
+              -0.23980025947093964,
+              0.24519027769565582
+            ],
+            [
+              -0.21405884623527527,
+              0.0963643416762352
+            ],
+            [
+              -0.005114906467497349,
+              1.6870092153549194
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -3.864988684654236e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1006639376282692,
+                -0.03146559000015259,
+                0.06684643030166626
+              ],
+              "knee": [
+                0.10177940130233765,
+                -0.07951997220516205,
+                0.46765729784965515
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 2.468004822731018e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066409409046173,
+                -0.03146562725305557,
+                0.06684641540050507
+              ],
+              "knee": [
+                -0.10025546699762344,
+                -0.07800839096307755,
+                0.4678369462490082
+              ]
+            }
+          }
+        },
+        {
+          "frame": 13,
+          "phase": 0.125,
+          "body_bounds": [
+            [
+              -0.2375148981809616,
+              0.2474728375673294
+            ],
+            [
+              -0.21405893564224243,
+              0.0965467095375061
+            ],
+            [
+              -0.005114863160997629,
+              1.687416911125183
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.0,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066394507884979,
+                -0.031465716660022736,
+                0.06684647500514984
+              ],
+              "knee": [
+                0.10237885266542435,
+                -0.0783502385020256,
+                0.467793732881546
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -2.1886080503463745e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066404193639755,
+                -0.031465642154216766,
+                0.06684638559818268
+              ],
+              "knee": [
+                -0.09955933690071106,
+                -0.0754270851612091,
+                0.4681267738342285
+              ]
+            }
+          }
+        },
+        {
+          "frame": 19,
+          "phase": 0.1875,
+          "body_bounds": [
+            [
+              -0.23598778247833252,
+              0.2489970475435257
+            ],
+            [
+              -0.21405886113643646,
+              0.09666824340820312
+            ],
+            [
+              -0.005114890169352293,
+              1.687685489654541
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -2.3283064365386963e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066397488117218,
+                -0.03146566078066826,
+                0.06684644520282745
+              ],
+              "knee": [
+                0.10277856141328812,
+                -0.07755281776189804,
+                0.46788424253463745
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.7648562788963318e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066396743059158,
+                -0.031465619802474976,
+                0.06684654951095581
+              ],
+              "knee": [
+                -0.09909138083457947,
+                -0.0736083835363388,
+                0.46832045912742615
+              ]
+            }
+          }
+        },
+        {
+          "frame": 25,
+          "phase": 0.25,
+          "body_bounds": [
+            [
+              -0.2354515790939331,
+              0.2495320439338684
+            ],
+            [
+              -0.21405881643295288,
+              0.09671086817979813
+            ],
+            [
+              -0.00511484919115901,
+              1.6877789497375488
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 1.94646418094635e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066398233175278,
+                -0.03146558254957199,
+                0.06684665381908417
+              ],
+              "knee": [
+                0.10291874408721924,
+                -0.07727017253637314,
+                0.46791598200798035
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.30385160446167e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066404193639755,
+                -0.03146563470363617,
+                0.06684638559818268
+              ],
+              "knee": [
+                -0.09892641007900238,
+                -0.07294969260692596,
+                0.4683881998062134
+              ]
+            }
+          }
+        },
+        {
+          "frame": 31,
+          "phase": 0.3125,
+          "body_bounds": [
+            [
+              -0.23598778247833252,
+              0.2489970475435257
+            ],
+            [
+              -0.21405886113643646,
+              0.09666824340820312
+            ],
+            [
+              -0.005114890169352293,
+              1.687685489654541
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -2.3283064365386963e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066397488117218,
+                -0.03146566078066826,
+                0.06684644520282745
+              ],
+              "knee": [
+                0.10277856141328812,
+                -0.07755281776189804,
+                0.46788424253463745
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.7648562788963318e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066396743059158,
+                -0.031465619802474976,
+                0.06684654951095581
+              ],
+              "knee": [
+                -0.09909138083457947,
+                -0.0736083835363388,
+                0.46832045912742615
+              ]
+            }
+          }
+        },
+        {
+          "frame": 37,
+          "phase": 0.375,
+          "body_bounds": [
+            [
+              -0.2375148981809616,
+              0.2474728375673294
+            ],
+            [
+              -0.21405893564224243,
+              0.0965467095375061
+            ],
+            [
+              -0.005114863160997629,
+              1.687416911125183
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.0,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066394507884979,
+                -0.031465716660022736,
+                0.06684647500514984
+              ],
+              "knee": [
+                0.10237885266542435,
+                -0.0783502385020256,
+                0.467793732881546
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -2.1886080503463745e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066404193639755,
+                -0.031465642154216766,
+                0.06684638559818268
+              ],
+              "knee": [
+                -0.09955933690071106,
+                -0.0754270851612091,
+                0.4681267738342285
+              ]
+            }
+          }
+        },
+        {
+          "frame": 43,
+          "phase": 0.4375,
+          "body_bounds": [
+            [
+              -0.23980025947093964,
+              0.24519027769565582
+            ],
+            [
+              -0.21405884623527527,
+              0.0963643416762352
+            ],
+            [
+              -0.005114906467497349,
+              1.6870092153549194
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -3.864988684654236e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1006639376282692,
+                -0.03146559000015259,
+                0.06684643030166626
+              ],
+              "knee": [
+                0.10177940130233765,
+                -0.07951997220516205,
+                0.46765729784965515
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 2.468004822731018e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066409409046173,
+                -0.03146562725305557,
+                0.06684641540050507
+              ],
+              "knee": [
+                -0.10025546699762344,
+                -0.07800839096307755,
+                0.4678369462490082
+              ]
+            }
+          }
+        },
+        {
+          "frame": 49,
+          "phase": 0.5,
+          "body_bounds": [
+            [
+              -0.2424958497285843,
+              0.24249586462974548
+            ],
+            [
+              -0.21405889093875885,
+              0.09614849835634232
+            ],
+            [
+              -0.005114901810884476,
+              1.686518907546997
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -3.4924596548080444e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066397488117218,
+                -0.03146560490131378,
+                0.06684644520282745
+              ],
+              "knee": [
+                0.10107063502073288,
+                -0.08086656033992767,
+                0.4674949049949646
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -3.119930624961853e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066400468349457,
+                -0.031465671956539154,
+                0.06684635579586029
+              ],
+              "knee": [
+                -0.1010705754160881,
+                -0.08086619526147842,
+                0.4674948751926422
+              ]
+            }
+          }
+        },
+        {
+          "frame": 55,
+          "phase": 0.5625,
+          "body_bounds": [
+            [
+              -0.24519139528274536,
+              0.23979908227920532
+            ],
+            [
+              -0.21405890583992004,
+              0.09637070447206497
+            ],
+            [
+              -0.005114974919706583,
+              1.686063289642334
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -1.1082738637924194e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.100663922727108,
+                -0.03146565705537796,
+                0.06684637069702148
+              ],
+              "knee": [
+                0.1003599762916565,
+                -0.08217846602201462,
+                0.4673309922218323
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.4808028936386108e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066405683755875,
+                -0.03146564960479736,
+                0.06684651970863342
+              ],
+              "knee": [
+                -0.10188031196594238,
+                -0.08355264365673065,
+                0.4671529531478882
+              ]
+            }
+          }
+        },
+        {
+          "frame": 61,
+          "phase": 0.625,
+          "body_bounds": [
+            [
+              -0.24747620522975922,
+              0.2375112622976303
+            ],
+            [
+              -0.21405884623527527,
+              0.09655729681253433
+            ],
+            [
+              -0.005114860832691193,
+              1.6856801509857178
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 2.7939677238464355e-09,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066395252943039,
+                -0.03146562725305557,
+                0.06684647500514984
+              ],
+              "knee": [
+                0.0997561365365982,
+                -0.0832652896642685,
+                0.46719101071357727
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.862645149230957e-09,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066400468349457,
+                -0.03146553784608841,
+                0.06684638559818268
+              ],
+              "knee": [
+                -0.10256265848875046,
+                -0.08571246266365051,
+                0.466863214969635
+              ]
+            }
+          }
+        },
+        {
+          "frame": 67,
+          "phase": 0.6875,
+          "body_bounds": [
+            [
+              -0.24900300800800323,
+              0.2359815239906311
+            ],
+            [
+              -0.21405893564224243,
+              0.0966811254620552
+            ],
+            [
+              -0.0051147788763046265,
+              1.685420274734497
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 8.568167686462402e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1006639301776886,
+                -0.03146566450595856,
+                0.06684654951095581
+              ],
+              "knee": [
+                0.09935209900140762,
+                -0.0839788019657135,
+                0.4670970141887665
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.2060627341270447e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066400468349457,
+                -0.03146568685770035,
+                0.06684648990631104
+              ],
+              "knee": [
+                -0.1030169203877449,
+                -0.0871024802327156,
+                0.4666699469089508
+              ]
+            }
+          }
+        },
+        {
+          "frame": 73,
+          "phase": 0.75,
+          "body_bounds": [
+            [
+              -0.24953900277614594,
+              0.23544426262378693
+            ],
+            [
+              -0.21405884623527527,
+              0.09672447293996811
+            ],
+            [
+              -0.005114840809255838,
+              1.6853280067443848
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 1.7229467630386353e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066395252943039,
+                -0.031465619802474976,
+                0.06684648990631104
+              ],
+              "knee": [
+                0.0992099940776825,
+                -0.08422712981700897,
+                0.4670638144016266
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.2852251529693604e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066406428813934,
+                -0.03146557882428169,
+                0.06684650480747223
+              ],
+              "knee": [
+                -0.10317597538232803,
+                -0.08758112788200378,
+                0.466602087020874
+              ]
+            }
+          }
+        },
+        {
+          "frame": 79,
+          "phase": 0.8125,
+          "body_bounds": [
+            [
+              -0.24900300800800323,
+              0.2359815239906311
+            ],
+            [
+              -0.21405893564224243,
+              0.0966811254620552
+            ],
+            [
+              -0.0051147788763046265,
+              1.685420274734497
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 8.568167686462402e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1006639301776886,
+                -0.03146566450595856,
+                0.06684654951095581
+              ],
+              "knee": [
+                0.09935209900140762,
+                -0.0839788019657135,
+                0.4670970141887665
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.2060627341270447e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066400468349457,
+                -0.03146568685770035,
+                0.06684648990631104
+              ],
+              "knee": [
+                -0.1030169203877449,
+                -0.0871024802327156,
+                0.4666699469089508
+              ]
+            }
+          }
+        },
+        {
+          "frame": 85,
+          "phase": 0.875,
+          "body_bounds": [
+            [
+              -0.24747620522975922,
+              0.2375112622976303
+            ],
+            [
+              -0.21405884623527527,
+              0.09655729681253433
+            ],
+            [
+              -0.005114860832691193,
+              1.6856801509857178
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 2.7939677238464355e-09,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066395252943039,
+                -0.03146562725305557,
+                0.06684647500514984
+              ],
+              "knee": [
+                0.0997561365365982,
+                -0.0832652896642685,
+                0.46719101071357727
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.862645149230957e-09,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066400468349457,
+                -0.03146553784608841,
+                0.06684638559818268
+              ],
+              "knee": [
+                -0.10256265848875046,
+                -0.08571246266365051,
+                0.466863214969635
+              ]
+            }
+          }
+        },
+        {
+          "frame": 91,
+          "phase": 0.9375,
+          "body_bounds": [
+            [
+              -0.24519139528274536,
+              0.23979908227920532
+            ],
+            [
+              -0.21405890583992004,
+              0.09637070447206497
+            ],
+            [
+              -0.005114974919706583,
+              1.686063289642334
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -1.1082738637924194e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.100663922727108,
+                -0.03146565705537796,
+                0.06684637069702148
+              ],
+              "knee": [
+                0.1003599762916565,
+                -0.08217846602201462,
+                0.4673309922218323
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.4808028936386108e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066405683755875,
+                -0.03146564960479736,
+                0.06684651970863342
+              ],
+              "knee": [
+                -0.10188031196594238,
+                -0.08355264365673065,
+                0.4671529531478882
+              ]
+            }
+          }
+        },
+        {
+          "frame": 97,
+          "phase": 1.0,
+          "body_bounds": [
+            [
+              -0.2424958497285843,
+              0.24249586462974548
+            ],
+            [
+              -0.21405889093875885,
+              0.09614849835634232
+            ],
+            [
+              -0.005114901810884476,
+              1.686518907546997
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -3.4924596548080444e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066397488117218,
+                -0.03146560490131378,
+                0.06684644520282745
+              ],
+              "knee": [
+                0.10107063502073288,
+                -0.08086656033992767,
+                0.4674949049949646
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -3.119930624961853e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066400468349457,
+                -0.031465671956539154,
+                0.06684635579586029
+              ],
+              "knee": [
+                -0.1010705754160881,
+                -0.08086619526147842,
+                0.4674948751926422
+              ]
+            }
+          }
+        }
+      ],
+      "clipping_review": "Numerical support/loop check only; rendered body/clothes review still required"
+    },
+    "Walk": {
+      "sampled_frame_count": 17,
+      "loop_ankle_error_m": 0.0,
+      "maximum_stance_boot_ground_error_m": 1.7136335372924805e-07,
+      "sample_frames": [
+        {
+          "frame": 1,
+          "phase": 0.0,
+          "body_bounds": [
+            [
+              -0.2424958050251007,
+              0.24249587953090668
+            ],
+            [
+              -0.5579158067703247,
+              0.2200663983821869
+            ],
+            [
+              -0.004747340455651283,
+              1.5883152484893799
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -9.313225746154785e-09,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1006639301776886,
+                -0.3711923658847809,
+                0.0711933821439743
+              ],
+              "knee": [
+                0.10224548727273941,
+                -0.27968600392341614,
+                0.4643649756908417
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.0849907994270325e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066406428813934,
+                0.17675404250621796,
+                0.06910081207752228
+              ],
+              "knee": [
+                -0.1044156476855278,
+                -0.09014363586902618,
+                0.37193959951400757
+              ]
+            }
+          }
+        },
+        {
+          "frame": 3,
+          "phase": 0.07407407407407407,
+          "body_bounds": [
+            [
+              -0.23236286640167236,
+              0.2526160478591919
+            ],
+            [
+              -0.47383081912994385,
+              0.3083758056163788
+            ],
+            [
+              -0.004332577809691429,
+              1.5901801586151123
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -8.288770914077759e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066401958465576,
+                -0.2900151014328003,
+                0.06791605055332184
+              ],
+              "knee": [
+                0.10677213966846466,
+                -0.2843499183654785,
+                0.4715128540992737
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.7136335372924805e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066408663988113,
+                0.2579312324523926,
+                0.09357066452503204
+              ],
+              "knee": [
+                -0.10206286609172821,
+                -0.03753725811839104,
+                0.3686273694038391
+              ]
+            }
+          }
+        },
+        {
+          "frame": 4,
+          "phase": 0.1111111111111111,
+          "body_bounds": [
+            [
+              -0.2279815971851349,
+              0.256984144449234
+            ],
+            [
+              -0.43202003836631775,
+              0.3513639271259308
+            ],
+            [
+              -0.005114636849611998,
+              1.592227816581726
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 6.28642737865448e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1006639152765274,
+                -0.24942655861377716,
+                0.06684675812721252
+              ],
+              "knee": [
+                0.10851651430130005,
+                -0.2791866958141327,
+                0.4693544805049896
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.5273690223693848e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066408663988113,
+                0.2985198199748993,
+                0.10180139541625977
+              ],
+              "knee": [
+                -0.10080765187740326,
+                -0.0021196193993091583,
+                0.3712000846862793
+              ]
+            }
+          }
+        },
+        {
+          "frame": 6,
+          "phase": 0.18518518518518517,
+          "body_bounds": [
+            [
+              -0.22176048159599304,
+              0.2631787657737732
+            ],
+            [
+              -0.35084253549575806,
+              0.34102675318717957
+            ],
+            [
+              -0.005114803556352854,
+              1.5964231491088867
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 6.28642737865448e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066387057304382,
+                -0.16824932396411896,
+                0.06684653460979462
+              ],
+              "knee": [
+                0.11080031841993332,
+                -0.2617763876914978,
+                0.45941466093063354
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.017323091626167297,
+              "expected_sole_lift_m": 0.017323103613087993,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066400468349457,
+                0.29401761293411255,
+                0.09906692802906036
+              ],
+              "knee": [
+                -0.09900056570768356,
+                0.0006230436265468597,
+                0.3763333261013031
+              ]
+            }
+          }
+        },
+        {
+          "frame": 8,
+          "phase": 0.25925925925925924,
+          "body_bounds": [
+            [
+              -0.21995136141777039,
+              0.2649783790111542
+            ],
+            [
+              -0.2870510220527649,
+              0.1655445098876953
+            ],
+            [
+              -0.005114861764013767,
+              1.5979264974594116
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 5.122274160385132e-09,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.100663922727108,
+                -0.087071992456913,
+                0.06684647500514984
+              ],
+              "knee": [
+                0.11130635440349579,
+                -0.23592509329319,
+                0.44193217158317566
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.05486268177628517,
+              "expected_sole_lift_m": 0.05486258918771686,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066405683755875,
+                0.12720875442028046,
+                0.12829850614070892
+              ],
+              "knee": [
+                -0.10001514852046967,
+                -0.16677534580230713,
+                0.40494391322135925
+              ]
+            }
+          }
+        },
+        {
+          "frame": 9,
+          "phase": 0.2962962962962963,
+          "body_bounds": [
+            [
+              -0.2208620011806488,
+              0.26407256722450256
+            ],
+            [
+              -0.29657983779907227,
+              0.09679010510444641
+            ],
+            [
+              -0.005114802159368992,
+              1.5971537828445435
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 6.426125764846802e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066389292478561,
+                -0.04648340493440628,
+                0.06684653460979462
+              ],
+              "knee": [
+                0.1109408438205719,
+                -0.22034379839897156,
+                0.4310261011123657
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.06493315100669861,
+              "expected_sole_lift_m": 0.06493318401960502,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066411644220352,
+                0.012694686651229858,
+                0.14030945301055908
+              ],
+              "knee": [
+                -0.09971341490745544,
+                -0.2485622614622116,
+                0.4480491876602173
+              ]
+            }
+          }
+        },
+        {
+          "frame": 11,
+          "phase": 0.37037037037037035,
+          "body_bounds": [
+            [
+              -0.2260710895061493,
+              0.25888749957084656
+            ],
+            [
+              -0.40612050890922546,
+              0.0971418097615242
+            ],
+            [
+              -0.005114823114126921,
+              1.5933552980422974
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.4924596548080444e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066398233175278,
+                0.034693777561187744,
+                0.06684650480747223
+              ],
+              "knee": [
+                0.1092180460691452,
+                -0.1828782856464386,
+                0.4067714810371399
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.050705574452877045,
+              "expected_sole_lift_m": 0.050705396720005,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066412389278412,
+                -0.21767336130142212,
+                0.12477459013462067
+              ],
+              "knee": [
+                -0.0992351546883583,
+                -0.32441622018814087,
+                0.5140864849090576
+              ]
+            }
+          }
+        },
+        {
+          "frame": 13,
+          "phase": 0.4444444444444444,
+          "body_bounds": [
+            [
+              -0.23477405309677124,
+              0.250210165977478
+            ],
+            [
+              -0.555849552154541,
+              0.15861085057258606
+            ],
+            [
+              -0.005114860367029905,
+              1.5893727540969849
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -4.656612873077393e-10,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1006639376282692,
+                0.11587102711200714,
+                0.06684647500514984
+              ],
+              "knee": [
+                0.10661239922046661,
+                -0.13414296507835388,
+                0.3837335407733917
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.012926746159791946,
+              "expected_sole_lift_m": 0.012926595827589052,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066397488117218,
+                -0.368653267621994,
+                0.08487650752067566
+              ],
+              "knee": [
+                -0.10014268010854721,
+                -0.2983686923980713,
+                0.4823933243751526
+              ]
+            }
+          }
+        },
+        {
+          "frame": 15,
+          "phase": 0.5185185185185185,
+          "body_bounds": [
+            [
+              -0.24511590600013733,
+              0.2398749142885208
+            ],
+            [
+              -0.5373659729957581,
+              0.2416175901889801
+            ],
+            [
+              -0.004656887147575617,
+              1.588485836982727
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -5.541369318962097e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066395998001099,
+                0.1970483660697937,
+                0.07354505360126495
+              ],
+              "knee": [
+                0.10376077890396118,
+                -0.07692394405603409,
+                0.3700064420700073
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.1082738637924194e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066401213407516,
+                -0.3508980870246887,
+                0.07079087197780609
+              ],
+              "knee": [
+                -0.10352104902267456,
+                -0.28437334299087524,
+                0.4689442217350006
+              ]
+            }
+          }
+        },
+        {
+          "frame": 16,
+          "phase": 0.5555555555555556,
+          "body_bounds": [
+            [
+              -0.2502135932445526,
+              0.2347705215215683
+            ],
+            [
+              -0.49515649676322937,
+              0.28616440296173096
+            ],
+            [
+              -0.0036166037898510695,
+              1.5895869731903076
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 2.60770320892334e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066396743059158,
+                0.23763684928417206,
+                0.08692659437656403
+              ],
+              "knee": [
+                0.10261264443397522,
+                -0.051647454500198364,
+                0.36847689747810364
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 6.05359673500061e-09,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066404193639755,
+                -0.3103095293045044,
+                0.06886084377765656
+              ],
+              "knee": [
+                -0.10577261447906494,
+                -0.28578776121139526,
+                0.47176581621170044
+              ]
+            }
+          }
+        },
+        {
+          "frame": 18,
+          "phase": 0.6296296296296297,
+          "body_bounds": [
+            [
+              -0.25890257954597473,
+              0.22605472803115845
+            ],
+            [
+              -0.4117254316806793,
+              0.36953121423721313
+            ],
+            [
+              -0.0051147788763046265,
+              1.5938096046447754
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.0004160962998867035,
+              "expected_sole_lift_m": 0.0004159939397012897,
+              "stance_contact": false,
+              "ankle": [
+                0.10066398233175278,
+                0.3167385458946228,
+                0.1020485907793045
+              ],
+              "knee": [
+                0.10002830624580383,
+                0.01847922056913376,
+                0.37407931685447693
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 8.521601557731628e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066396743059158,
+                -0.22913217544555664,
+                0.06684646010398865
+              ],
+              "knee": [
+                -0.10925295948982239,
+                -0.27584296464920044,
+                0.4677256941795349
+              ]
+            }
+          }
+        },
+        {
+          "frame": 20,
+          "phase": 0.7037037037037037,
+          "body_bounds": [
+            [
+              -0.264098584651947,
+              0.2208334356546402
+            ],
+            [
+              -0.3305482268333435,
+              0.3079574704170227
+            ],
+            [
+              -0.005114850588142872,
+              1.597749948501587
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.02677970752120018,
+              "expected_sole_lift_m": 0.02677991498504836,
+              "stance_contact": false,
+              "ankle": [
+                0.10066397488117218,
+                0.2638978958129883,
+                0.09871020913124084
+              ],
+              "knee": [
+                0.09907742589712143,
+                -0.02889002114534378,
+                0.3766176700592041
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.210719347000122e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066406428813934,
+                -0.14795497059822083,
+                0.06684640049934387
+              ],
+              "knee": [
+                -0.11109133809804916,
+                -0.2559918463230133,
+                0.4556640386581421
+              ]
+            }
+          }
+        },
+        {
+          "frame": 21,
+          "phase": 0.7407407407407407,
+          "body_bounds": [
+            [
+              -0.2650064527988434,
+              0.21992027759552002
+            ],
+            [
+              -0.293811172246933,
+              0.21874745190143585
+            ],
+            [
+              -0.00511486642062664,
+              1.5985478162765503
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.04646533727645874,
+              "expected_sole_lift_m": 0.04646529399402551,
+              "stance_contact": false,
+              "ankle": [
+                0.10066397488117218,
+                0.17897151410579681,
+                0.11724673211574554
+              ],
+              "knee": [
+                0.09983948618173599,
+                -0.11902475357055664,
+                0.3895651400089264
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -2.7939677238464355e-09,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066400468349457,
+                -0.10736627131700516,
+                0.06684638559818268
+              ],
+              "knee": [
+                -0.1113412007689476,
+                -0.24304890632629395,
+                0.4468938112258911
+              ]
+            }
+          }
+        },
+        {
+          "frame": 23,
+          "phase": 0.8148148148148148,
+          "body_bounds": [
+            [
+              -0.2632025182247162,
+              0.22173433005809784
+            ],
+            [
+              -0.32533690333366394,
+              0.09693064540624619
+            ],
+            [
+              -0.0051147001795470715,
+              1.5969953536987305
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.06566964089870453,
+              "expected_sole_lift_m": 0.06566964607925574,
+              "stance_contact": false,
+              "ankle": [
+                0.1006639376282692,
+                -0.04701314866542816,
+                0.14090903103351593
+              ],
+              "knee": [
+                0.09944291412830353,
+                -0.27922436594963074,
+                0.4711154103279114
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.6763806343078613e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066404193639755,
+                -0.026189066469669342,
+                0.06684653460979462
+              ],
+              "knee": [
+                -0.11062249541282654,
+                -0.21183279156684875,
+                0.425171822309494
+              ]
+            }
+          }
+        },
+        {
+          "frame": 25,
+          "phase": 0.8888888888888888,
+          "body_bounds": [
+            [
+              -0.2569958567619324,
+              0.2279689460992813
+            ],
+            [
+              -0.4548127055168152,
+              0.09772803634405136
+            ],
+            [
+              -0.00511470902711153,
+              1.5926296710968018
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.041544415056705475,
+              "expected_sole_lift_m": 0.0415444735228834,
+              "stance_contact": false,
+              "ankle": [
+                0.10066397488117218,
+                -0.26666587591171265,
+                0.1150759607553482
+              ],
+              "knee": [
+                0.09941013157367706,
+                -0.32549798488616943,
+                0.5144467353820801
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.51805579662323e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066397488117218,
+                0.05498809367418289,
+                0.06684653460979462
+              ],
+              "knee": [
+                -0.10862857848405838,
+                -0.17189818620681763,
+                0.4006413221359253
+              ]
+            }
+          }
+        },
+        {
+          "frame": 26,
+          "phase": 0.9259259259259259,
+          "body_bounds": [
+            [
+              -0.25262191891670227,
+              0.23235683143138885
+            ],
+            [
+              -0.5311765670776367,
+              0.13831666111946106
+            ],
+            [
+              -0.005114723462611437,
+              1.590461254119873
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.021733464673161507,
+              "expected_sole_lift_m": 0.021733599647336257,
+              "stance_contact": false,
+              "ankle": [
+                0.10066386312246323,
+                -0.3436778783798218,
+                0.09416940808296204
+              ],
+              "knee": [
+                0.09988559782505035,
+                -0.311362624168396,
+                0.49655604362487793
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.4062970876693726e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066403448581696,
+                0.09557679295539856,
+                0.06684650480747223
+              ],
+              "knee": [
+                -0.1073184385895729,
+                -0.14758747816085815,
+                0.38900578022003174
+              ]
+            }
+          }
+        },
+        {
+          "frame": 28,
+          "phase": 1.0,
+          "body_bounds": [
+            [
+              -0.2424958050251007,
+              0.24249587953090668
+            ],
+            [
+              -0.5579158067703247,
+              0.2200663983821869
+            ],
+            [
+              -0.004747340455651283,
+              1.5883152484893799
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -9.313225746154785e-09,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1006639301776886,
+                -0.3711923658847809,
+                0.0711933821439743
+              ],
+              "knee": [
+                0.10224548727273941,
+                -0.27968600392341614,
+                0.4643649756908417
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.0849907994270325e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066406428813934,
+                0.17675404250621796,
+                0.06910081207752228
+              ],
+              "knee": [
+                -0.1044156476855278,
+                -0.09014363586902618,
+                0.37193959951400757
+              ]
+            }
+          }
+        }
+      ],
+      "clipping_review": "Numerical support/loop check only; rendered body/clothes review still required"
+    },
+    "Run": {
+      "sampled_frame_count": 17,
+      "loop_ankle_error_m": 0.0,
+      "maximum_stance_boot_ground_error_m": 1.4202669262886047e-07,
+      "sample_frames": [
+        {
+          "frame": 1,
+          "phase": 0.0,
+          "body_bounds": [
+            [
+              -0.2424958050251007,
+              0.2424958497285843
+            ],
+            [
+              -0.6446800231933594,
+              0.5048374533653259
+            ],
+            [
+              -0.003347831778228283,
+              1.5066412687301636
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 8.149072527885437e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1006639301776886,
+                -0.45944052934646606,
+                0.0692330151796341
+              ],
+              "knee": [
+                0.1031254306435585,
+                -0.334567129611969,
+                0.4531084895133972
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.018732711672782898,
+              "expected_sole_lift_m": 0.018732603620965408,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066406428813934,
+                0.4539260268211365,
+                0.11393962055444717
+              ],
+              "knee": [
+                -0.10503115504980087,
+                0.10041444003582001,
+                0.30879923701286316
+              ]
+            }
+          }
+        },
+        {
+          "frame": 2,
+          "phase": 0.05555555555555555,
+          "body_bounds": [
+            [
+              -0.2358449101448059,
+              0.24913939833641052
+            ],
+            [
+              -0.5942836999893188,
+              0.4353099763393402
+            ],
+            [
+              -0.0048054722137749195,
+              1.4996534585952759
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -5.122274160385132e-09,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066395998001099,
+                -0.34621962904930115,
+                0.06727415323257446
+              ],
+              "knee": [
+                0.10685933381319046,
+                -0.35009998083114624,
+                0.4708908200263977
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.04769924283027649,
+              "expected_sole_lift_m": 0.04769913126498049,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066405683755875,
+                0.3908400535583496,
+                0.12092912197113037
+              ],
+              "knee": [
+                -0.10557916760444641,
+                0.023120161145925522,
+                0.2874155044555664
+              ]
+            }
+          }
+        },
+        {
+          "frame": 3,
+          "phase": 0.1111111111111111,
+          "body_bounds": [
+            [
+              -0.22999383509159088,
+              0.25497177243232727
+            ],
+            [
+              -0.5704903602600098,
+              0.30761006474494934
+            ],
+            [
+              -0.005114976782351732,
+              1.4904354810714722
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -1.126900315284729e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066396743059158,
+                -0.23299874365329742,
+                0.06684638559818268
+              ],
+              "knee": [
+                0.10933272540569305,
+                -0.3445886969566345,
+                0.45470261573791504
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.07857245951890945,
+              "expected_sole_lift_m": 0.0785723461477089,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066408663988113,
+                0.2680060565471649,
+                0.1495019793510437
+              ],
+              "knee": [
+                -0.10650300979614258,
+                -0.11109016835689545,
+                0.2881084978580475
+              ]
+            }
+          }
+        },
+        {
+          "frame": 4,
+          "phase": 0.16666666666666666,
+          "body_bounds": [
+            [
+              -0.22565026581287384,
+              0.2592945396900177
+            ],
+            [
+              -0.5224368572235107,
+              0.1442013382911682
+            ],
+            [
+              -0.005114930681884289,
+              1.4832634925842285
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -6.658956408500671e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066389292478561,
+                -0.1197778731584549,
+                0.06684641540050507
+              ],
+              "knee": [
+                0.11059284210205078,
+                -0.32142990827560425,
+                0.4164143204689026
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.10050337761640549,
+              "expected_sole_lift_m": 0.10050319022706716,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066406428813934,
+                0.10691626369953156,
+                0.17567706108093262
+              ],
+              "knee": [
+                -0.10542894154787064,
+                -0.25710830092430115,
+                0.3500995934009552
+              ]
+            }
+          }
+        },
+        {
+          "frame": 5,
+          "phase": 0.2222222222222222,
+          "body_bounds": [
+            [
+              -0.22333908081054688,
+              0.26159214973449707
+            ],
+            [
+              -0.45565634965896606,
+              0.09502825140953064
+            ],
+            [
+              -0.005114964675158262,
+              1.4814316034317017
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -1.2712553143501282e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066381096839905,
+                -0.006556913256645203,
+                0.06684638559818268
+              ],
+              "knee": [
+                0.11074044555425644,
+                -0.2763424217700958,
+                0.36696988344192505
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.10578512400388718,
+              "expected_sole_lift_m": 0.10578501548364402,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066407173871994,
+                -0.07093767821788788,
+                0.18089276552200317
+              ],
+              "knee": [
+                -0.10240983963012695,
+                -0.35988524556159973,
+                0.4627901017665863
+              ]
+            }
+          }
+        },
+        {
+          "frame": 7,
+          "phase": 0.3333333333333333,
+          "body_bounds": [
+            [
+              -0.22565029561519623,
+              0.2592945396900177
+            ],
+            [
+              -0.5785002112388611,
+              0.2629376947879791
+            ],
+            [
+              -0.00476765725761652,
+              1.4942402839660645
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -2.421438694000244e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1006639301776886,
+                0.21988478302955627,
+                0.06808362901210785
+              ],
+              "knee": [
+                0.10909382253885269,
+                -0.11596126109361649,
+                0.29190534353256226
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.06548018753528595,
+              "expected_sole_lift_m": 0.06548014607738532,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066406428813934,
+                -0.39096835255622864,
+                0.1379702389240265
+              ],
+              "knee": [
+                -0.1001448854804039,
+                -0.39087602496147156,
+                0.5416527986526489
+              ]
+            }
+          }
+        },
+        {
+          "frame": 8,
+          "phase": 0.3888888888888889,
+          "body_bounds": [
+            [
+              -0.22999390959739685,
+              0.2549717426300049
+            ],
+            [
+              -0.6766597628593445,
+              0.38547825813293457
+            ],
+            [
+              -0.0014992360956966877,
+              1.5029175281524658
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -6.705522537231445e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.10066397488117218,
+                0.33310577273368835,
+                0.1002565249800682
+              ],
+              "knee": [
+                0.10816095024347305,
+                -0.0246740709990263,
+                0.28706440329551697
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.0340568907558918,
+              "expected_sole_lift_m": 0.034056857111949806,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066406428813934,
+                -0.4901610016822815,
+                0.10489602386951447
+              ],
+              "knee": [
+                -0.0999443307518959,
+                -0.36091911792755127,
+                0.4873300790786743
+              ]
+            }
+          }
+        },
+        {
+          "frame": 9,
+          "phase": 0.4444444444444444,
+          "body_bounds": [
+            [
+              -0.23584489524364471,
+              0.24913933873176575
+            ],
+            [
+              -0.7057671546936035,
+              0.4908093512058258
+            ],
+            [
+              0.0012534121051430702,
+              1.5078004598617554
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.0018517561256885529,
+              "expected_sole_lift_m": 0.0018517983722304491,
+              "stance_contact": false,
+              "ankle": [
+                0.10066399723291397,
+                0.43577176332473755,
+                0.11092007160186768
+              ],
+              "knee": [
+                0.10630117356777191,
+                0.08117195963859558,
+                0.30375927686691284
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.00933434534817934,
+              "expected_sole_lift_m": 0.009334243464358452,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066400468349457,
+                -0.5201491117477417,
+                0.07893349230289459
+              ],
+              "knee": [
+                -0.09961029142141342,
+                -0.31074026226997375,
+                0.4240517020225525
+              ]
+            }
+          }
+        },
+        {
+          "frame": 10,
+          "phase": 0.5,
+          "body_bounds": [
+            [
+              -0.24249586462974548,
+              0.2424958199262619
+            ],
+            [
+              -0.6446800231933594,
+              0.5048373937606812
+            ],
+            [
+              -0.0033478059340268373,
+              1.5066412687301636
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.018732618540525436,
+              "expected_sole_lift_m": 0.018732603620965408,
+              "stance_contact": false,
+              "ankle": [
+                0.10066396743059158,
+                0.4539259374141693,
+                0.11393957585096359
+              ],
+              "knee": [
+                0.1050311028957367,
+                0.10041442513465881,
+                0.30879926681518555
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 9.96515154838562e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066390782594681,
+                -0.45944052934646606,
+                0.06923295557498932
+              ],
+              "knee": [
+                -0.10312548279762268,
+                -0.334567129611969,
+                0.45310842990875244
+              ]
+            }
+          }
+        },
+        {
+          "frame": 11,
+          "phase": 0.5555555555555556,
+          "body_bounds": [
+            [
+              -0.24914267659187317,
+              0.23584146797657013
+            ],
+            [
+              -0.5940272212028503,
+              0.4353099465370178
+            ],
+            [
+              -0.0048055145889520645,
+              1.5000509023666382
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.04769904166460037,
+              "expected_sole_lift_m": 0.04769913126498049,
+              "stance_contact": false,
+              "ankle": [
+                0.10066407173871994,
+                0.39083999395370483,
+                0.12092903256416321
+              ],
+              "knee": [
+                0.10557913780212402,
+                0.023120127618312836,
+                0.2874155342578888
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -4.7497451305389404e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066394507884979,
+                -0.346219539642334,
+                0.06727401912212372
+              ],
+              "knee": [
+                -0.10685936361551285,
+                -0.35009998083114624,
+                0.47089073061943054
+              ]
+            }
+          }
+        },
+        {
+          "frame": 12,
+          "phase": 0.6111111111111112,
+          "body_bounds": [
+            [
+              -0.2549833059310913,
+              0.22998152673244476
+            ],
+            [
+              -0.5700006484985352,
+              0.30761006474494934
+            ],
+            [
+              -0.0051150089129805565,
+              1.491180658340454
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.0785723403096199,
+              "expected_sole_lift_m": 0.0785723461477089,
+              "stance_contact": false,
+              "ankle": [
+                0.10066395252943039,
+                0.2680060863494873,
+                0.1495019793510437
+              ],
+              "knee": [
+                0.10650300979614258,
+                -0.11109017580747604,
+                0.2881085276603699
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -1.4202669262886047e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066402703523636,
+                -0.23299890756607056,
+                0.06684625148773193
+              ],
+              "knee": [
+                -0.10933266580104828,
+                -0.34458863735198975,
+                0.4547024965286255
+              ]
+            }
+          }
+        },
+        {
+          "frame": 13,
+          "phase": 0.6666666666666666,
+          "body_bounds": [
+            [
+              -0.2593153119087219,
+              0.22562755644321442
+            ],
+            [
+              -0.5217697024345398,
+              0.1442013531923294
+            ],
+            [
+              -0.005114858504384756,
+              1.4842424392700195
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.10050327330827713,
+              "expected_sole_lift_m": 0.10050319022706716,
+              "stance_contact": false,
+              "ankle": [
+                0.10066394507884979,
+                0.10691629350185394,
+                0.17567703127861023
+              ],
+              "knee": [
+                0.10542898625135422,
+                -0.25710833072662354,
+                0.3500995934009552
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 2.3283064365386963e-09,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066395252943039,
+                -0.1197778657078743,
+                0.06684638559818268
+              ],
+              "knee": [
+                -0.1105928122997284,
+                -0.3214297890663147,
+                0.4164143204689026
+              ]
+            }
+          }
+        },
+        {
+          "frame": 15,
+          "phase": 0.7777777777777778,
+          "body_bounds": [
+            [
+              -0.26161882281303406,
+              0.22330957651138306
+            ],
+            [
+              -0.4682874083518982,
+              0.14940272271633148
+            ],
+            [
+              -0.005114804487675428,
+              1.4868628978729248
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.09256161004304886,
+              "expected_sole_lift_m": 0.09256175253838679,
+              "stance_contact": false,
+              "ankle": [
+                0.10066397488117218,
+                -0.2440633624792099,
+                0.16660065948963165
+              ],
+              "knee": [
+                0.10043994337320328,
+                -0.3941051661968231,
+                0.5413636565208435
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 4.7031790018081665e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066397488117218,
+                0.10666394233703613,
+                0.06684646010398865
+              ],
+              "knee": [
+                -0.11013130098581314,
+                -0.2067946493625641,
+                0.3210391104221344
+              ]
+            }
+          }
+        },
+        {
+          "frame": 16,
+          "phase": 0.8333333333333334,
+          "body_bounds": [
+            [
+              -0.2593153417110443,
+              0.225627601146698
+            ],
+            [
+              -0.5785002112388611,
+              0.2629377245903015
+            ],
+            [
+              -0.00476763304322958,
+              1.4952192306518555
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.06548014283180237,
+              "expected_sole_lift_m": 0.06548014607738523,
+              "stance_contact": false,
+              "ankle": [
+                0.10066401213407516,
+                -0.39096832275390625,
+                0.13797028362751007
+              ],
+              "knee": [
+                0.10014480352401733,
+                -0.39087599515914917,
+                0.5416527986526489
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -3.259629011154175e-09,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066398978233337,
+                0.21988485753536224,
+                0.06808356195688248
+              ],
+              "knee": [
+                -0.10909385234117508,
+                -0.1159612238407135,
+                0.2919052541255951
+              ]
+            }
+          }
+        },
+        {
+          "frame": 17,
+          "phase": 0.8888888888888888,
+          "body_bounds": [
+            [
+              -0.2549833357334137,
+              0.22998160123825073
+            ],
+            [
+              -0.6766599416732788,
+              0.38547825813293457
+            ],
+            [
+              -0.0014992140932008624,
+              1.5036629438400269
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.03405674174427986,
+              "expected_sole_lift_m": 0.034056857111949806,
+              "stance_contact": false,
+              "ankle": [
+                0.10066389292478561,
+                -0.49016112089157104,
+                0.10489597916603088
+              ],
+              "knee": [
+                0.09994426369667053,
+                -0.36091917753219604,
+                0.4873300790786743
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -5.21540641784668e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10066395252943039,
+                0.33310574293136597,
+                0.10025647282600403
+              ],
+              "knee": [
+                -0.10816091299057007,
+                -0.02467404305934906,
+                0.28706440329551697
+              ]
+            }
+          }
+        },
+        {
+          "frame": 18,
+          "phase": 0.9444444444444444,
+          "body_bounds": [
+            [
+              -0.2491426169872284,
+              0.23584143817424774
+            ],
+            [
+              -0.7057673335075378,
+              0.4908093512058258
+            ],
+            [
+              0.001253546099178493,
+              1.5081980228424072
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.009334213100373745,
+              "expected_sole_lift_m": 0.009334243464358452,
+              "stance_contact": false,
+              "ankle": [
+                0.10066397488117218,
+                -0.5201491117477417,
+                0.0789334774017334
+              ],
+              "knee": [
+                0.09961027652025223,
+                -0.31074047088623047,
+                0.4240519106388092
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.0018519014120101929,
+              "expected_sole_lift_m": 0.0018517983722304491,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066404938697815,
+                0.43577176332473755,
+                0.11092010140419006
+              ],
+              "knee": [
+                -0.10630124062299728,
+                0.08117194473743439,
+                0.30375924706459045
+              ]
+            }
+          }
+        },
+        {
+          "frame": 19,
+          "phase": 1.0,
+          "body_bounds": [
+            [
+              -0.2424958050251007,
+              0.2424958497285843
+            ],
+            [
+              -0.6446800231933594,
+              0.5048374533653259
+            ],
+            [
+              -0.003347831778228283,
+              1.5066412687301636
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 8.149072527885437e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1006639301776886,
+                -0.45944052934646606,
+                0.0692330151796341
+              ],
+              "knee": [
+                0.1031254306435585,
+                -0.334567129611969,
+                0.4531084895133972
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.018732711672782898,
+              "expected_sole_lift_m": 0.018732603620965408,
+              "stance_contact": false,
+              "ankle": [
+                -0.10066406428813934,
+                0.4539260268211365,
+                0.11393962055444717
+              ],
+              "knee": [
+                -0.10503115504980087,
+                0.10041444003582001,
+                0.30879923701286316
+              ]
+            }
+          }
+        }
+      ],
+      "clipping_review": "Numerical support/loop check only; rendered body/clothes review still required"
+    }
+  },
+  "limitations": [
+    "A procedural bake needs rendered and browser critique before any quality claim.",
+    "Morph expressions are restrained extrapolations; original references provide neutral/tension cues only.",
+    "Teeth/tongue interiors, profile anatomy and ponytail interior remain reference unknowns.",
+    "Crossfades and movement need browser validation; clips are genuinely in place."
+  ],
+  "export_size_bytes": 38734360
+}

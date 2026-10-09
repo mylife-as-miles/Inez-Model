@@ -1,0 +1,43 @@
+{
+  "revision": "v02",
+  "stage": "Actual original-based fitted clay head v02; targeted reviewed geometry corrections; unapproved independent review pending",
+  "blend": "/workspace/assets/characters/inez/model/work/inez_head_v02.blend",
+  "gate_evidence": {
+    "front_profile_body_initial_gate_passed": true,
+    "gate_scope": "Initial facial/body GEOMETRY fitting only; whole image materials/production are not approved",
+    "accepted_at": "2026-10-08T23:03:30.967433+00:00",
+    "evidence_front": "references/approved/01_face_front_neutral.png; identity32.5/35 and technical33/35 face",
+    "evidence_profile": "references/approved/02_face_left_profile.png; corrected true lateral orientation accepted independently; inferred depth",
+    "evidence_body": "references/approved/05_body_front.png plus MANDATORY.scope.json; geometry-only accepted by both critics",
+    "reports": [
+      "qa/identity/01_face_front_neutral_v02.md",
+      "qa/technical/01_face_front_neutral_v02.md",
+      "qa/identity/02_face_left_profile_v02.md",
+      "qa/technical/02_face_left_profile_v02.md",
+      "qa/identity/05_body_front_v05.md",
+      "qa/technical/05_body_front_v05.md"
+    ],
+    "material_authority": "OriginalB only for costume/denim; approved13 neutral black welt guide; rejected Gen warm welts/scratch texture must not propagate",
+    "hair_authority": "OriginalB rear controls ponytail length/volume, not elongated generated side portrait",
+    "original_authority": "OriginalA facial identity, originalB body/costume; all newly seen profile depth is hypothesis",
+    "explicit_root_gate_message": "FRONT/PROFILE/BODY INITIAL GEOMETRY GATE PASSED. Execute licensed fitted clay head only; detailed textures/dressed build await independent credible-head geometry gate.",
+    "production_approved": false
+  },
+  "basis_body_vertices": 13380,
+  "basis_body_quads": 13378,
+  "uv_layer": "MakeHuman_CC0_UV",
+  "rig_bones": 163,
+  "provisional_height_m": 1.7,
+  "has_body_shape_key": true,
+  "has_licensed_weights": true,
+  "textures_authored": false,
+  "dressed_body_authored": false,
+  "identity_approved": false,
+  "render_names": [
+    "front",
+    "left_profile",
+    "right_profile",
+    "three_quarter"
+  ],
+  "manual_sculpting_expected": "Clay renders must be critiqued; continuous mesh is only a fitting prototype"
+}

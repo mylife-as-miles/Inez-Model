@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>Inez — playable character prototype</title></head>
+<body>
+<header><strong>INEZ</strong><span>THREE BEDROOM · Playable character prototype</span><span id="asset-status">Checking asset status…</span></header>
+<main>
+  <section id="viewport" aria-label="Interactive Inez character viewport"><canvas id="render" tabindex="0" aria-label="Character controls: WASD or arrow keys to move, Shift to run"></canvas><div id="notice" role="status">Loading production status…</div><div id="play-hint">WASD / arrows · move &nbsp; Shift · run &nbsp; Drag · orbit &nbsp; Wheel · zoom</div><div id="stats" aria-live="off"></div></section>
+  <aside>
+    <details open><summary>Play and animation</summary>
+      <p class="hint">Click the scene to play. Movement follows the camera. The available animations come from the loaded GLB.</p>
+      <label>Animation<select id="animation" disabled><option value="rest">No character loaded</option></select></label>
+      <label class="range">Transition <output id="transition-value">0.35 s</output><input id="transition" type="range" min="0" max="2" step="0.05" value="0.35"></label>
+      <label class="range">Playback speed <output id="playback-speed-value">1.00×</output><input id="playback-speed" type="range" min="0.1" max="2" step="0.05" value="1" disabled></label>
+      <label class="range">Locomotion preview <output id="movement-speed-value">0.00 m/s</output><input id="movement-speed" type="range" min="0" max="2.65" step="0.01" value="0" disabled></label>
+      <p id="blend-info" class="hint">No animation clips loaded.</p>
+      <div class="buttons"><button id="pause" disabled>Pause</button><button id="reset-position" disabled>Reset position</button></div>
+      <label class="range">Clip time <output id="timeline-value">0.00 s</output><input id="timeline" type="range" min="0" max="1" step="0.001" value="0" disabled></label>
+      <label class="check"><input id="follow" type="checkbox" checked> Follow the character</label>
+    </details>
+    <details open><summary>Face and gaze</summary>
+      <label>Expression<select id="expression" disabled><option value="Neutral">Neutral · unavailable</option></select></label>
+      <label class="range">Expression strength <output id="expression-strength-value">1.00</output><input id="expression-strength" type="range" min="0" max="1" step="0.01" value="1" disabled></label>
+      <label>Mouth shape<select id="viseme" disabled><option value="none">Resting mouth</option></select></label>
+      <label class="range">Mouth strength <output id="viseme-strength-value">1.00</output><input id="viseme-strength" type="range" min="0" max="1" step="0.01" value="1" disabled></label>
+      <div class="paired">
+        <label class="range">Blink L <output id="blink-left-value">0.00</output><input id="blink-left" type="range" min="0" max="1" step="0.01" value="0" disabled></label>
+        <label class="range">Blink R <output id="blink-right-value">0.00</output><input id="blink-right" type="range" min="0" max="1" step="0.01" value="0" disabled></label>
+      </div>
+      <label class="check"><input id="auto-blink" type="checkbox" disabled> Automatic blink</label>
+      <label class="range">Jaw opening <output id="jaw-value">0.00</output><input id="jaw" type="range" min="0" max="1" step="0.01" value="0" disabled></label>
+      <div class="paired">
+        <label class="range">Eyes yaw <output id="eye-yaw-value">0°</output><input id="eye-yaw" type="range" min="-25" max="25" step="1" value="0" disabled></label>
+        <label class="range">Eyes pitch <output id="eye-pitch-value">0°</output><input id="eye-pitch" type="range" min="-20" max="20" step="1" value="0" disabled></label>
+        <label class="range">Head yaw <output id="head-yaw-value">0°</output><input id="head-yaw" type="range" min="-45" max="45" step="1" value="0" disabled></label>
+        <label class="range">Head pitch <output id="head-pitch-value">0°</output><input id="head-pitch" type="range" min="-30" max="30" step="1" value="0" disabled></label>
+      </div>
+      <label class="range">Head roll <output id="head-roll-value">0°</output><input id="head-roll" type="range" min="-25" max="25" step="1" value="0" disabled></label>
+      <button id="reset-face" disabled>Reset face controls</button>
+      <p id="face-info" class="hint">Face controls require actual named morphs and bones.</p>
+    </details>
+    <details open><summary>Camera and lighting</summary>
+      <label>Camera<select id="view"><option value="body_front">Full body · front</option><option value="body_left">Full body · left</option><option value="body_right">Full body · right</option><option value="body_three_quarter">Full body · three quarter</option><option value="body_back">Full body · back</option><option value="face_front">Face · front</option><option value="face_left">Face · left profile</option><option value="face_right">Face · right profile</option><option value="face_three_quarter">Face · three quarter</option><option value="face_back">Head · back</option></select></label>
+      <label>Lighting<select id="lighting"><option value="studio">Neutral studio</option><option value="apartment">Apartment · low light</option></select></label>
+      <label class="range">Exposure <output id="exposure-value">1.00</output><input id="exposure" type="range" min="0.25" max="2.5" step="0.05" value="1"></label>
+      <label class="range">Key light <output id="key-light-value">1.00×</output><input id="key-light" type="range" min="0" max="3" step="0.05" value="1"></label>
+      <label class="range">Fill light <output id="fill-light-value">1.00×</output><input id="fill-light" type="range" min="0" max="3" step="0.05" value="1"></label>
+      <label class="range">Ambient light <output id="ambient-light-value">1.00×</output><input id="ambient-light" type="range" min="0" max="3" step="0.05" value="1"></label>
+      <label class="check"><input id="rotate" type="checkbox"> Auto rotate camera</label>
+    </details>
+    <details><summary>Material inspection</summary>
+      <label>View<select id="inspection"><option value="pbr">PBR materials</option><option value="albedo">Albedo</option><option value="roughness">Roughness · ORM green × factor</option><option value="normal_map">Normal texture</option><option value="normals">Geometry normals</option></select></label>
+      <label>Material<select id="material" disabled><option value="all">All materials</option></select></label>
+      <label class="check"><input id="wireframe" type="checkbox"> Wireframe</label>
+      <pre id="material-info">No character materials loaded.</pre>
+    </details>
+    <details><summary>Reference comparison</summary>
+      <label>Image<select id="reference"><option value="none">Hidden</option><option value="original/inez_portraits.jpg">Original A · facial authority</option><option value="original/inez_turnaround.jpg">Original B · body and costume</option><option value="approved/01_face_front_neutral.png">Reviewed front portrait</option><option value="approved/13_boots_closeup.png">Reviewed boots closeup</option><option value="generated/05_body_front_v02.png">Body proposal · unapproved v02</option></select></label>
+      <p class="hint">The original images remain final authority. Generated proposals include inferred geometry. Loading a model does not imply production approval.</p>
+    </details>
+    <details><summary>Asset and renderer</summary><pre id="asset-info">No model loaded.</pre></details>
+  </aside>
+  <section id="comparison" hidden><img id="reference-image" alt="Selected Inez reference"><p id="reference-caption"></p></section>
+</main>
+<script type="module" src="/src/main.js"></script>
+</body></html>

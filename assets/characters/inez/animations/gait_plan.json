@@ -1,0 +1,78 @@
+{
+  "status": "prepared gait curves only; model deformation not yet tested",
+  "axes": {
+    "up": "+Z",
+    "forward": "-Y"
+  },
+  "clips": {
+    "Idle": {
+      "name": "Idle",
+      "duration": 4.0,
+      "stance_fraction": 1.0,
+      "speed": 0.0,
+      "clearance": 0.0,
+      "arm_swing_deg": 0.0,
+      "elbow_bend_deg": 13.0,
+      "forward_lean_deg": 0.0,
+      "lateral_sway": 0.003,
+      "vertical_bob": 0.0015,
+      "height": 1.68,
+      "stride_m": 0.0,
+      "ankle_y_range_m": [
+        0.0,
+        0.0
+      ],
+      "maximum_sole_lift_m": 0.0,
+      "cycle_endpoint_position_error_m": 0.0,
+      "cycle_endpoint_pitch_error_rad": 0.0,
+      "stance_speed_m_s": 0.0,
+      "is_in_place": true
+    },
+    "Walk": {
+      "name": "Walk",
+      "duration": 1.14,
+      "stance_fraction": 0.62,
+      "speed": 0.95,
+      "clearance": 0.065,
+      "arm_swing_deg": 21.0,
+      "elbow_bend_deg": 19.0,
+      "forward_lean_deg": 2.0,
+      "lateral_sway": 0.01,
+      "vertical_bob": 0.01,
+      "height": 1.68,
+      "stride_m": 0.67146,
+      "ankle_y_range_m": [
+        -0.3493717894736841,
+        0.3493717894736842
+      ],
+      "maximum_sole_lift_m": 0.065,
+      "cycle_endpoint_position_error_m": 0.0,
+      "cycle_endpoint_pitch_error_rad": 0.0,
+      "stance_speed_m_s": 0.95,
+      "is_in_place": true
+    },
+    "Run": {
+      "name": "Run",
+      "duration": 0.76,
+      "stance_fraction": 0.42,
+      "speed": 2.65,
+      "clearance": 0.105,
+      "arm_swing_deg": 34.0,
+      "elbow_bend_deg": 63.0,
+      "forward_lean_deg": 8.0,
+      "lateral_sway": 0.006,
+      "vertical_bob": 0.026,
+      "height": 1.68,
+      "stride_m": 0.8458799999999999,
+      "ankle_y_range_m": [
+        -0.4836978481077531,
+        0.4836978481077534
+      ],
+      "maximum_sole_lift_m": 0.105,
+      "cycle_endpoint_position_error_m": 0.0,
+      "cycle_endpoint_pitch_error_rad": 0.0,
+      "stance_speed_m_s": 2.65,
+      "is_in_place": true
+    }
+  }
+}
