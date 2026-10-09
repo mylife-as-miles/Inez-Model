@@ -1,9 +1,11 @@
 // Structural validation of the actual binary asset using the Khronos validator.
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import validator from '../../viewer/node_modules/gltf-validator/index.js';
-const source = process.argv[2] || '/workspace/assets/characters/inez/model/inez.glb';
-const target = process.argv[3] || '/workspace/assets/characters/inez/qa/glb_validation.json';
+const repository = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+const source = process.argv[2] || path.join(repository, 'assets/characters/inez/model/inez.glb');
+const target = process.argv[3] || path.join(repository, 'assets/characters/inez/qa/glb_validation.json');
 const bytes = await fs.readFile(source);
 const report = await validator.validateBytes(new Uint8Array(bytes), {
   uri: path.basename(source),

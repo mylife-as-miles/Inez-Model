@@ -7,7 +7,7 @@ from pathlib import Path
 import json
 import math
 
-ROOT = Path('/workspace')
+ROOT = Path(__file__).resolve().parents[2]
 CHARACTER = ROOT / 'assets/characters/inez'
 SOURCE = CHARACTER / 'model/base-source'
 

@@ -14,10 +14,27 @@
       <label class="range">Locomotion preview <output id="movement-speed-value">0.00 m/s</output><input id="movement-speed" type="range" min="0" max="2.65" step="0.01" value="0" disabled></label>
       <p id="blend-info" class="hint">No animation clips loaded.</p>
       <div class="buttons"><button id="pause" disabled>Pause</button><button id="reset-position" disabled>Reset position</button></div>
+      <div class="buttons"><button id="turn-left" disabled>Turn left</button><button id="turn-right" disabled>Turn right</button><button id="crouch" disabled>Crouch</button></div>
       <label class="range">Clip time <output id="timeline-value">0.00 s</output><input id="timeline" type="range" min="0" max="1" step="0.001" value="0" disabled></label>
       <label class="check"><input id="follow" type="checkbox" checked> Follow the character</label>
     </details>
+    <details open><summary>Animation lab</summary>
+      <p id="clip-source" class="hint">Clip source: none.</p>
+      <div class="paired">
+        <label class="check"><input id="lab-skeleton" type="checkbox"> Skeleton</label>
+        <label class="check"><input id="lab-contacts" type="checkbox"> Foot contacts</label>
+        <label class="check"><input id="lab-trail" type="checkbox"> Root trajectory</label>
+        <label class="check"><input id="lab-comparison" type="checkbox"> Source motion</label>
+      </div>
+      <label class="check"><input id="lab-travel" type="checkbox" checked> Travel at the clip's matching speed</label>
+      <label>Test floor<select id="lab-terrain"></select></label>
+      <p class="hint">Clips are not terrain-adaptive yet (no runtime foot IK): on stairs, slopes and uneven floors the markers show the resulting floating or penetration.</p>
+      <label>Bone<select id="lab-bone" disabled><option value="">No character loaded</option></select></label>
+      <pre id="lab-info">No measurements yet.</pre>
+    </details>
     <details open><summary>Face and gaze</summary>
+      <label>Performance clip<select id="performance" disabled><option value="">No facial clips</option></select></label>
+      <button id="play-performance" disabled>Play facial clip</button>
       <label>Expression<select id="expression" disabled><option value="Neutral">Neutral · unavailable</option></select></label>
       <label class="range">Expression strength <output id="expression-strength-value">1.00</output><input id="expression-strength" type="range" min="0" max="1" step="0.01" value="1" disabled></label>
       <label>Mouth shape<select id="viseme" disabled><option value="none">Resting mouth</option></select></label>
@@ -54,7 +71,7 @@
       <pre id="material-info">No character materials loaded.</pre>
     </details>
     <details><summary>Reference comparison</summary>
-      <label>Image<select id="reference"><option value="none">Hidden</option><option value="original/inez_portraits.jpg">Original A · facial authority</option><option value="original/inez_turnaround.jpg">Original B · body and costume</option><option value="approved/01_face_front_neutral.png">Reviewed front portrait</option><option value="approved/13_boots_closeup.png">Reviewed boots closeup</option><option value="generated/05_body_front_v02.png">Body proposal · unapproved v02</option></select></label>
+      <label>Image<select id="reference"><option value="none">Hidden</option><option value="original/inez_portraits.jpg">Original A · facial authority</option><option value="original/inez_turnaround.jpg">Original B · body and costume</option></select></label>
       <p class="hint">The original images remain final authority. Generated proposals include inferred geometry. Loading a model does not imply production approval.</p>
     </details>
     <details><summary>Asset and renderer</summary><pre id="asset-info">No model loaded.</pre></details>

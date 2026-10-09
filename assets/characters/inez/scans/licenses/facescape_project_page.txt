@@ -1,0 +1,26 @@
+Source: https://nju-3dv.github.io/projects/FaceScape/
+Retrieved: 2026-10-09 (UTC)
+SHA-256 of retrieved HTML: 9902b84a258330a04f20bc4af5626c31d1b354834e50ce57ce139ade1232e219
+
+License/usage-relevant lines (verbatim page text):
+
+More our research
+Baidu Research
+License Agreement
+non-commercial use request.
+The data have been released to public for non-commercial research purpose.
+The data available for downloading contains
+Please read the 4th term in the license for more about this policy. The publishable list may be updated in the future.
+for detailed description and usage of the multi-view data.
+for the usage and the demo code.
+For downloading the dataset, please complete the
+License Agreement
+, and download from
+download link (Google Drive)
+download link (Baidu Netdisk)
+When you submit request, which means you have read, understand, and commit to the entirety of the License Agreement.
+NO COMMERCIAL USE:
+The license granted is for internal, non-commercial research, evaluation or testing purposes only.
+RESTRICTED USE IN RESEARCH:
+Undergraduates or graduate students can ask their supervisor to apply for the downloading.
+Other data are forbidden to be published in any form, including publication of papers, presentations, etc. This has been declared in the 4th clause of the license.

@@ -1,0 +1,41 @@
+{
+  "stage": "scan_source_untouched",
+  "level": 4,
+  "crop_z_m": 1.48,
+  "objects": {
+    "SCAN_Ten24_L1_SOURCE_NOT_INEZ": {
+      "vertices": 3273,
+      "faces": 3228
+    },
+    "SCAN_Ten24_L4_SOURCE_NOT_INEZ": {
+      "vertices": 209397,
+      "faces": 209024
+    }
+  },
+  "head_bounds_m": {
+    "x": [
+      -0.12668241560459137,
+      0.058626070618629456
+    ],
+    "y": [
+      -0.11673368513584137,
+      0.1396685391664505
+    ],
+    "z": [
+      1.6000018119812012,
+      1.8535908460617065
+    ]
+  },
+  "render_center_m": [
+    -0.03402817249298096,
+    0.011467427015304565,
+    1.715
+  ],
+  "renders": [
+    "scan_source_front.png",
+    "scan_source_three_quarter.png",
+    "scan_source_left.png"
+  ],
+  "material": "neutral clay + publisher tangent-space normal map; donor colour texture not applied",
+  "label": "source scan, not Inez"
+}

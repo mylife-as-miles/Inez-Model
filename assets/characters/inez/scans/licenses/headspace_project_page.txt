@@ -1,0 +1,22 @@
+Source: https://www-users.york.ac.uk/~np7/research/Headspace/
+Retrieved: 2026-10-09 (UTC)
+SHA-256 of retrieved HTML: 23723f6a235bff35f21455907ead0d28322eab9bbbe922c5eaea50935f17a89b
+
+License/usage-relevant lines (verbatim page text):
+
+The dataset is free for University-based non-commercial research. It can only be requested by academics that are verifiable university employees using
+user agreement form
+The download file is a compressed tarball (.tar.gz), with file size 38GB.
+The data is in OBJ format with BMP textures and is available online for download.
+The dataset is supplied with subject-based and capture-based metadata in the file 'subject.txt'. The subject information includes: gender, declared ethnic group, age, eye color, hair color, beard descriptor (none, low, medium, high), moustache descriptor (none, low, medium, high), and a spectacles flag. The capture information contains a quality descriptor (free text, such as `data spike right upper lip'), a hair bulge flag (hair bulge under latex cap distorting the apparent cranial shape), a cap artefact flag (cap has a ridge at its apex due to poor fitting), a cranial hole flag (a missing part in the data scan at the cranium) and an under chin hole flag (missing part under chin).
+The image below shows two radically different subjects in terms of head size/shape in the Headspace dataset.
+download selection table
+on the agreement form.
+The same restrictions apply as for the raw data, in that these meshes are for non-commercial, University-based research use only. If they are employed in your research, then you should cite the following MICA project publication,
+user agreement form
+. The same restrictions apply as for the raw data, in that these meshes are for non-commercial, University-based research use only. If they are employed in your research, then you should cite the following REALY project publication:
+After unzipping the REALY download file, you will find three folders, as follows:
+, Sunnybrook Research Institute and University of Toronto. If you want these images and the spreadsheet summarising the subject/image meta data, please indicate this in the download selection table on the user agreement form.
+We thank the funding bodies that have supported this research which include
+Google, via their Faculty Research Awards Programme :
+to Nick Pears' Research Projects page.

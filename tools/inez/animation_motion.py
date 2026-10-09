@@ -54,10 +54,13 @@ def gait_specs(height=1.68):
     return {
         'Idle': Gait('Idle', 4.0, 1.0, 0.0, 0.0, 0.0, 13.0,
                      0.0, 0.003*scale, 0.0015*scale, height),
-        'Walk': Gait('Walk', 1.14, 0.62, 0.95*scale, 0.065*scale,
-                     21.0, 19.0, 2.0, 0.010*scale, 0.010*scale, height),
-        'Run': Gait('Run', 0.76, 0.42, 2.65*scale, 0.105*scale,
-                    34.0, 63.0, 8.0, 0.006*scale, 0.026*scale, height),
+        # Stance travel (speed x duration x stance) sets how far the pelvis
+        # must dip in double support: 0.59 m walking (~5.5 cm dip) and
+        # 0.67 m jogging, where the flexed stance knee is natural.
+        'Walk': Gait('Walk', 1.10, 0.60, 0.90*scale, 0.060*scale,
+                     22.0, 15.0, 2.0, 0.010*scale, 0.010*scale, height),
+        'Run': Gait('Run', 0.74, 0.38, 2.40*scale, 0.100*scale,
+                    28.0, 75.0, 7.0, 0.006*scale, 0.026*scale, height),
     }
 
 
