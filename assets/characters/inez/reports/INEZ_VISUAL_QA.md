@@ -1,3 +1,9 @@
+# V06 pause checkpoint — 2026-10-10
+
+Current development progress and limitations are recorded in `docs/INEZ_V06_PRODUCTION_REPORT.md`; continuation instructions are in `docs/INEZ_NEXT_AGENT_PROMPT.md` (paths relative to repository root). Recovery color and contacts are saved; R02 likeness remains unapproved; selected Fab hair source is missing; target GPU profiling and native CORDEL integration remain pending. Prior content below is historical and must be checked against actual final V06 artifacts.
+
+---
+
 # Inez visual QA (final build of this run)
 
 **Verdict.** The likeness is **not accepted**. The model is the user's own two GLBs transferred onto a rigged production body. It is recognisably built from them and matches the originals' face outline closely at matched angles. It still fails several of the identity spec's measured gates and reads as a younger, smoother face than the originals.

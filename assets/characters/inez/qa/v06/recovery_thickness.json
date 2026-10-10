@@ -1,0 +1,58 @@
+{
+  "source": "/workspace/scratch/inez-v06/recovery_clips.glb",
+  "output": "assets/characters/inez/model/v06/inez_recovery_v06.glb",
+  "meshes": [
+    {
+      "mesh": "Inez_ContinuousHumanMesh_UNAPPROVED_Geometry",
+      "vertices": 4075,
+      "bounds": [
+        [
+          -0.3416104316711426,
+          0.7439815402030945,
+          -0.08121521398425102
+        ],
+        [
+          0.3432141840457916,
+          1.5710623264312744,
+          0.114674411714077
+        ]
+      ],
+      "valid_ray_count": 3677,
+      "thin_region_vertices": 0,
+      "valid_thickness_mm_percentiles": [
+        2.528238343074918,
+        12.896020896732807,
+        14.831521548330784,
+        19.021347165107727,
+        118.14471334218979
+      ]
+    },
+    {
+      "mesh": "Inez_ContinuousHumanMesh_UNAPPROVED_Geometry",
+      "vertices": 4265,
+      "bounds": [
+        [
+          -0.10610854625701904,
+          1.5201537609100342,
+          -0.0791444480419159
+        ],
+        [
+          0.09544449299573898,
+          1.768831491470337,
+          0.13683544844388962
+        ]
+      ],
+      "valid_ray_count": 2657,
+      "thin_region_vertices": 133,
+      "valid_thickness_mm_percentiles": [
+        0.30860083643347025,
+        6.347893737256527,
+        14.201967045664787,
+        32.73080661892891,
+        119.99999731779099
+      ]
+    }
+  ],
+  "method": "inward ray from fitted rest surface to opposing geometry; custom vertex attributes",
+  "limitations": "open boundaries and rays without an opposing face are unknown (40 mm sentinel); not measured dermis thickness"
+}

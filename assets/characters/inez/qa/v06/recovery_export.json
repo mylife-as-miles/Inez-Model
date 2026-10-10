@@ -1,0 +1,44 @@
+{
+  "source": "/workspace/Inez-Model/assets/characters/inez/model/v06/inez_recovery_v06.blend",
+  "output": "/workspace/scratch/inez-v06/recovery_raw.glb",
+  "source_sha256": "cb5c511a358abf792247b3fbd0ca98db0b06bc880fd750b0768f28719ce67a0c",
+  "source_unchanged": true,
+  "source_fps": 60.0,
+  "authored_duration_s": {
+    "Blink": 0.20833333333333334,
+    "Crouch": 3.0,
+    "CrouchDown": 0.7916666666666666,
+    "CrouchUp": 0.7916666666666666,
+    "Idle": 4.0,
+    "LookAround": 6.0,
+    "Run": 0.75,
+    "TurnLeft": 1.2083333333333333,
+    "TurnRight": 1.2083333333333333,
+    "Walk": 1.0833333333333333
+  },
+  "export_timing": "integer common lattice of 24 Hz authored endpoints and 60 Hz contact samples (120 Hz)",
+  "emitted_duration_s": {
+    "Blink": 0.2083333283662796,
+    "Crouch": 3.0,
+    "CrouchDown": 0.7916666865348816,
+    "CrouchUp": 0.7916666865348816,
+    "Idle": 3.999999761581421,
+    "LookAround": 6.0,
+    "Run": 0.75,
+    "TurnLeft": 1.2083333730697632,
+    "TurnRight": 1.2083333730697632,
+    "Walk": 1.0833333730697632
+  },
+  "start_padding_removed_s": {
+    "Blink": 0.008333333767950535,
+    "Crouch": 0.008333333767950535,
+    "CrouchDown": 0.008333333767950535,
+    "CrouchUp": 0.008333333767950535,
+    "Idle": 0.008333333767950535,
+    "LookAround": 0.008333333767950535,
+    "Run": 0.008333333767950535,
+    "TurnLeft": 0.008333333767950535,
+    "TurnRight": 0.008333333767950535,
+    "Walk": 0.008333333767950535
+  }
+}

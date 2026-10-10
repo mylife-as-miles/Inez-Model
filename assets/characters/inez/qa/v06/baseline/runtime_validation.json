@@ -1,0 +1,764 @@
+{
+  "uri": "inez_runtime.glb",
+  "mimeType": "model/gltf-binary",
+  "validatorVersion": "2.0.0-dev.3.10",
+  "validatedAt": "2026-10-10T02:01:44.381Z",
+  "issues": {
+    "numErrors": 0,
+    "numWarnings": 66,
+    "numInfos": 37,
+    "numHints": 0,
+    "messages": [
+      {
+        "code": "UNSUPPORTED_EXTENSION",
+        "message": "Cannot validate an extension as it is not supported by the validator: 'EXT_meshopt_compression'.",
+        "severity": 2,
+        "pointer": "/extensionsUsed/0"
+      },
+      {
+        "code": "UNSUPPORTED_EXTENSION",
+        "message": "Cannot validate an extension as it is not supported by the validator: 'KHR_texture_basisu'.",
+        "severity": 2,
+        "pointer": "/extensionsUsed/3"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/0/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/1/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/2/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/3/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/4/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/5/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/6/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/7/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/8/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/9/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/10/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/11/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/12/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/13/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/14/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/15/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/16/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/17/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/18/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/19/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/20/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/21/mimeType"
+      },
+      {
+        "code": "VALUE_NOT_IN_LIST",
+        "message": "Invalid value 'image/ktx2'. Valid values are ('image/jpeg', 'image/png').",
+        "severity": 1,
+        "pointer": "/images/22/mimeType"
+      },
+      {
+        "code": "UNUSED_MESH_TANGENT",
+        "message": "Tangents are not used because the material has no normal texture.",
+        "severity": 2,
+        "pointer": "/meshes/2/primitives/0/attributes/TANGENT"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/2/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_MESH_TANGENT",
+        "message": "Tangents are not used because the material has no normal texture.",
+        "severity": 2,
+        "pointer": "/meshes/3/primitives/0/attributes/TANGENT"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/3/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_MESH_TANGENT",
+        "message": "Tangents are not used because the material has no normal texture.",
+        "severity": 2,
+        "pointer": "/meshes/11/primitives/0/attributes/TANGENT"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/11/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_MESH_TANGENT",
+        "message": "Tangents are not used because the material has no normal texture.",
+        "severity": 2,
+        "pointer": "/meshes/12/primitives/0/attributes/TANGENT"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/12/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_MESH_TANGENT",
+        "message": "Tangents are not used because the material has no normal texture.",
+        "severity": 2,
+        "pointer": "/meshes/13/primitives/0/attributes/TANGENT"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/13/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "UNUSED_MESH_TANGENT",
+        "message": "Tangents are not used because the material has no normal texture.",
+        "severity": 2,
+        "pointer": "/meshes/14/primitives/0/attributes/TANGENT"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/meshes/14/primitives/0/attributes/TEXCOORD_0"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/167"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/168"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/169"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/170"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/171"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/172"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/173"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/174"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/175"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/176"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/177"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/178"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/179"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/180"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/181"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/182"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/183"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/184"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/185"
+      },
+      {
+        "code": "NODE_SKINNED_MESH_NON_ROOT",
+        "message": "Node with a skinned mesh is not root. Parent transforms will not affect a skinned mesh.",
+        "severity": 1,
+        "pointer": "/nodes/186"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/0"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/1"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/2"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/3"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/4"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/5"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/6"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/7"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/8"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/9"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/10"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/11"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/12"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/13"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/14"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/15"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/16"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/17"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/18"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/19"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/20"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/21"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/images/22"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/0"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/1"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/2"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/3"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/4"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/5"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/6"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/7"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/8"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/9"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/10"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/11"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/12"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/13"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/14"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/15"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/16"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/17"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/18"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/19"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/20"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/21"
+      },
+      {
+        "code": "IMAGE_UNRECOGNIZED_FORMAT",
+        "message": "Image format not recognized.",
+        "severity": 1,
+        "pointer": "/images/22"
+      }
+    ],
+    "truncated": false
+  },
+  "info": {
+    "version": "2.0",
+    "generator": "glTF-Transform v4.5.1",
+    "extensionsUsed": [
+      "EXT_meshopt_compression",
+      "KHR_materials_specular",
+      "KHR_mesh_quantization",
+      "KHR_texture_basisu"
+    ],
+    "extensionsRequired": [
+      "EXT_meshopt_compression",
+      "KHR_mesh_quantization",
+      "KHR_texture_basisu"
+    ],
+    "resources": [
+      {
+        "pointer": "/buffers/0",
+        "mimeType": "application/gltf-buffer",
+        "storage": "glb",
+        "byteLength": 29299768
+      },
+      {
+        "pointer": "/buffers/1",
+        "mimeType": "application/gltf-buffer"
+      },
+      {
+        "pointer": "/images/0",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/1",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/2",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/3",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/4",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/5",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/6",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/7",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/8",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/9",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/10",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/11",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/12",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/13",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/14",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/15",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/16",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/17",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/18",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/19",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/20",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/21",
+        "storage": "buffer-view"
+      },
+      {
+        "pointer": "/images/22",
+        "storage": "buffer-view"
+      }
+    ],
+    "animationCount": 17,
+    "materialCount": 18,
+    "hasMorphTargets": true,
+    "hasSkins": true,
+    "hasTextures": true,
+    "hasDefaultScene": true,
+    "drawCallCount": 21,
+    "totalVertexCount": 99065,
+    "totalTriangleCount": 144450,
+    "maxUVs": 1,
+    "maxInfluences": 4,
+    "maxAttributes": 6
+  }
+}

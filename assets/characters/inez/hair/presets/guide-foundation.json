@@ -1,0 +1,12 @@
+{
+  "status": "Solver fixture presets only; not tuned or bound to the missing Fab asset",
+  "units": "metres, seconds, kilograms; compliance m/N",
+  "fixed_hz": 60,
+  "wind_default": [0, 0, 0],
+  "Natural": { "iterations": 24, "mass": 0.001, "lengthCompliance": 0, "bendCompliance": 0.05, "shapeCompliance": 20, "drag": 3, "friction": 0.2 },
+  "Cinematic": { "iterations": 32, "mass": 0.001, "lengthCompliance": 0, "bendCompliance": 0.05, "shapeCompliance": 20, "drag": 3, "friction": 0.2 },
+  "Gameplay": { "iterations": 24, "mass": 0.001, "lengthCompliance": 0, "bendCompliance": 0.05, "shapeCompliance": 20, "drag": 3, "friction": 0.2 },
+  "Performance": { "iterations": 12, "mass": 0.001, "lengthCompliance": 0, "bendCompliance": 0.05, "shapeCompliance": 20, "drag": 3, "friction": 0.2 },
+  "guide_count": "Choose after FBX topology and Alembic strand grouping inspection",
+  "bone_binding": "Not implemented; existing four ponytail bones remain unchanged"
+}

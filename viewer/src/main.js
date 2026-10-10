@@ -6,6 +6,8 @@ import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
 import { FacialControls, AnimationController, findBone } from './character-controls.js';
 import { MaterialInspector, describeMaterial } from './materials.js';
 import { AnimationLab, TERRAINS } from './animation-lab.js';
+import { DigitalHumanRegistry } from './digital-human/material-registry.js';
+import { DIGITAL_HUMAN_LIGHTS } from './digital-human/lighting/digital-human-presets.js';
 import './style.css';
 
 const $ = id => document.getElementById(id);
@@ -61,7 +63,7 @@ key.shadow.camera.near = .1; key.shadow.camera.far = 15; key.shadow.bias = -.000
 scene.add(hemisphere, key, key.target, fill, fill.target, rim, rim.target);
 const ground = new THREE.Mesh(new THREE.PlaneGeometry(24, 24), new THREE.MeshStandardMaterial({ color: '#b6bcc1', roughness: .95 }));
 ground.rotation.x = -Math.PI / 2; ground.position.y = -.002; ground.receiveShadow = true; scene.add(ground);
-let avatar, motion, face, inspector, lab;
+let avatar, motion, face, inspector, lab, digitalHuman;
 const timing = { animation_ms: 0, render_ms: 0, lab_ms: 0 };
 let height = 1.7, span = 1.95;
 const allInitialMorphs = new Map();
@@ -98,17 +100,16 @@ function setView(name = 'body_front') {
   return true;
 }
 
-const lightingPresets = {
-  studio: { background: '#c8ccd0', ground: '#b6bcc1', ambient: 1.05, key: 2.1, fill: .8, rim: .65, keyColor: '#ffffff', fillColor: '#e5ecf2' },
-  apartment: { background: '#282c32', ground: '#434447', ambient: .18, key: .8, fill: .13, rim: .12, keyColor: '#ffcc98', fillColor: '#9bbad5' }
-};
+const lightingPresets = DIGITAL_HUMAN_LIGHTS;
 function applyLighting() {
   const preset = lightingPresets[state.lighting]; const multipliers = state.lightControls;
   scene.background.set(preset.background); ground.material.color.set(preset.ground);
   hemisphere.intensity = preset.ambient * multipliers.ambient;
+  hemisphere.groundColor.set(preset.groundColor ?? '#777e83');
   key.intensity = preset.key * multipliers.key; key.color.set(preset.keyColor);
   fill.intensity = preset.fill * multipliers.fill; fill.color.set(preset.fillColor); rim.intensity = preset.rim;
   renderer.toneMappingExposure = multipliers.exposure;
+  syncCharacterLights();
   for (const [name, value] of Object.entries(multipliers)) {
     const id = { exposure: 'exposure', key: 'key-light', fill: 'fill-light', ambient: 'ambient-light' }[name];
     $(id).value = value; $(`${id}-value`).textContent = value.toFixed(2) + (name === 'exposure' ? '' : '×');
@@ -219,7 +220,7 @@ function resetPosition() {
   refreshPose(); return true;
 }
 function syncCharacterLights() {
-  key.position.copy(characterRoot.position).add(new THREE.Vector3(-2.5, 3.5, 4));
+  key.position.copy(characterRoot.position).add(new THREE.Vector3(...(lightingPresets[state.lighting].keyOffset ?? [-2.5, 3.5, 4])));
   fill.position.copy(characterRoot.position).add(new THREE.Vector3(3, 2, 2));
   rim.position.copy(characterRoot.position).add(new THREE.Vector3(1, 3, -3));
   for (const light of [key, fill, rim]) light.target.position.copy(characterRoot.position).add(new THREE.Vector3(0, height * .5, 0));
@@ -291,7 +292,31 @@ function advance(seconds = 0, { render = true } = {}) {
   }
   characterRoot.updateMatrixWorld(true); if (render) renderFrame(); updateState(); syncAnimationUI(); syncLabUI(); return state.clipTime;
 }
-function renderFrame() { renderer.render(scene, camera); }
+function renderFrame() {
+  digitalHuman?.updateLight(camera, key);
+  if (!digitalHuman?.render(scene, camera, state.inspection)) renderer.render(scene, camera);
+}
+function syncSkinUI() {
+  if (!digitalHuman) return;
+  const s = digitalHuman.settings;
+  $('skin-mode').value = s.mode; $('skin-sss').checked = s.sss; $('skin-thin').checked = s.thinTransmission;
+  $('skin-debug').value = s.debug; $('skin-quality').value = s.quality;
+  for (const [key, id] of Object.entries({ strength: 'skin-strength', radius: 'skin-radius', roughnessVariation: 'skin-roughness', microNormal: 'skin-micro' })) {
+    $(id).value = s[key]; $(`${id}-value`).textContent = s[key].toFixed(2) + (key === 'radius' ? '× mm profile' : '');
+  }
+  $('skin-info').textContent = JSON.stringify(digitalHuman.diagnostics, null, 1);
+  state.digitalHuman = digitalHuman.diagnostics;
+}
+function setSkin(values = {}) {
+  if (!digitalHuman) return false;
+  digitalHuman.configure(values); digitalHuman.apply(state.inspection); syncSkinUI(); renderFrame();
+  state.digitalHuman = digitalHuman.diagnostics; return { ...digitalHuman.settings };
+}
+function screenshot() {
+  refreshPose(); const a = document.createElement('a');
+  a.download = `inez-${state.view}-${state.lighting}-${digitalHuman?.settings.mode ?? 'pbr'}.png`;
+  a.href = renderer.domElement.toDataURL('image/png'); a.click(); return a.href;
+}
 function followCamera(step) {
   if (!$('follow').checked) return;
   controls.target.add(step); camera.position.add(step);
@@ -319,6 +344,7 @@ function inspectMaterials(mode = state.inspection, selected = state.material) {
   try {
     if (!inspector.set(mode, selected, state.wireframe)) return false;
     state.inspection = mode; state.material = selected; $('inspection').value = mode; $('material').value = selected;
+    digitalHuman?.apply(mode);
     $('material-info').textContent = JSON.stringify(inspector.information, null, 2);
     renderFrame(); return true;
   } catch (error) { recordError(error); $('material-info').textContent = `Inspection failed: ${error.message}`; return false; }
@@ -420,10 +446,21 @@ $('play-performance').onclick = () => playPerformance($('performance').value);
 $('turn-left').onclick = () => turn('Left');
 $('turn-right').onclick = () => turn('Right');
 $('crouch').onclick = () => crouch(!state.crouching);
+$('skin-mode').onchange = e => setSkin({ mode: e.target.value });
+$('skin-sss').onchange = e => setSkin({ sss: e.target.checked });
+$('skin-thin').onchange = e => setSkin({ thinTransmission: e.target.checked });
+$('skin-debug').onchange = e => setSkin({ debug: e.target.value });
+$('skin-quality').onchange = e => setSkin({ quality: e.target.value });
+for (const [id, key] of Object.entries({ 'skin-strength': 'strength', 'skin-radius': 'radius', 'skin-roughness': 'roughnessVariation', 'skin-micro': 'microNormal' })) $(id).oninput = e => setSkin({ [key]: Number(e.target.value) });
+$('screenshot').onclick = screenshot;
+$('model-version').onchange = e => {
+  const url = new URL(location.href); url.searchParams.set('model', e.target.value); location.href = url.href;
+};
 
 window.inezViewer = { state, errors, warnings, setView, setLighting, setLightControls, setExpression, setViseme, setFaceControls, resetFace,
   setAnimation, setPlaybackSpeed, setLocomotionSpeed, pause, seek, advance, resetPosition, captureMode, inspectMaterials, setWireframe, setReference,
-  turn, crouch, playPerformance, stopPerformance, setLab, setTerrain,
+  turn, crouch, playPerformance, stopPerformance, setLab, setTerrain, setSkin, screenshot,
+  get digitalHuman() { return digitalHuman; }, get renderer() { return renderer; },
   get lab() { return lab; }, boneInfo: name => lab?.boneInfo(name) ?? null,
   sampleDeformedVertices, boneWorldPositions, getBoneWorldPositions: boneWorldPositions, getMorphInfluences, renderFrame: refreshPose,
   getBone: name => findBone(avatar, name), getAvatar: () => avatar, get avatar() { return avatar; }, get assetInfo() { return state.assetInfo; },
@@ -540,6 +577,7 @@ try {
   const response = await fetch(assetRoot + 'qa/production_status.json', { cache: 'no-store' });
   if (!response.ok) throw new Error('Production status unavailable: HTTP ' + response.status);
   const status = await response.json(); state.productionStatus = status;
+  setLighting(status.default_lighting ?? 'studio');
   $('asset-status').textContent = status.label || (status.model_available ? 'Prototype · approval pending' : 'Character model unavailable');
   if (!status.model_available) {
     $('notice').textContent = status.blocker || 'The authored character is unavailable. No character model is loaded.';
@@ -552,6 +590,7 @@ try {
     const requestedModel = new URLSearchParams(location.search).get('model') || status.default_model || 'inez_runtime.glb';
     if (!/^[\w-]+(\/[\w.-]+)*\.glb$/.test(requestedModel) || requestedModel.includes('..')) throw new Error(`Refused model path: ${requestedModel}`);
     state.modelPath = 'model/' + requestedModel;
+    $('model-version').value = requestedModel;
     const modelResponse = await fetch(assetRoot + state.modelPath, { cache: 'no-store' });
     if (!modelResponse.ok) throw new Error('GLB missing: HTTP ' + modelResponse.status);
     const buffer = await modelResponse.arrayBuffer(); state.resourceBytes = buffer.byteLength;
@@ -576,6 +615,11 @@ try {
     lab = new AnimationLab({ scene, characterRoot, avatar, motion, assetRoot, warnings, findBone });
     state.externalClips = await lab.loadClips();
     inspector = new MaterialInspector(avatar); state.assetInfo = collectAssetInfo(gltf);
+    digitalHuman = new DigitalHumanRegistry(avatar, renderer, state.backend); syncSkinUI();
+    if (!digitalHuman.supported) {
+      for (const element of document.querySelectorAll('#skin-lab input, #skin-lab select')) element.disabled = true;
+      $('skin-support').textContent = digitalHuman.diagnostics.fallback;
+    }
     $('asset-info').textContent = JSON.stringify(state.assetInfo, null, 2);
     state.ready = true; enableAssetControls(gltf); inspectMaterials(state.inspection, state.material);
     $('notice').textContent = status.production_approved ? '' : status.blocker || 'Authored prototype. Geometry, likeness and deformation approval are pending.';

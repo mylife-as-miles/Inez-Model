@@ -1,0 +1,1012 @@
+{
+  "source": "/workspace/Inez-Model/assets/characters/inez/model/inez_master.blend",
+  "stage": "master assembled from the user's Asset A (body/costume) and Asset B (face/hair) on the rigged production topology",
+  "bone_count": 167,
+  "bone_names": [
+    "root",
+    "pelvis.L",
+    "upperleg01.L",
+    "upperleg02.L",
+    "lowerleg01.L",
+    "lowerleg02.L",
+    "foot.L",
+    "toe1-1.L",
+    "toe1-2.L",
+    "toe2-1.L",
+    "toe2-2.L",
+    "toe2-3.L",
+    "toe3-1.L",
+    "toe3-2.L",
+    "toe3-3.L",
+    "toe4-1.L",
+    "toe4-2.L",
+    "toe4-3.L",
+    "toe5-1.L",
+    "toe5-2.L",
+    "toe5-3.L",
+    "pelvis.R",
+    "upperleg01.R",
+    "upperleg02.R",
+    "lowerleg01.R",
+    "lowerleg02.R",
+    "foot.R",
+    "toe1-1.R",
+    "toe1-2.R",
+    "toe2-1.R",
+    "toe2-2.R",
+    "toe2-3.R",
+    "toe3-1.R",
+    "toe3-2.R",
+    "toe3-3.R",
+    "toe4-1.R",
+    "toe4-2.R",
+    "toe4-3.R",
+    "toe5-1.R",
+    "toe5-2.R",
+    "toe5-3.R",
+    "spine05",
+    "spine04",
+    "spine03",
+    "spine02",
+    "breast.L",
+    "breast.R",
+    "spine01",
+    "clavicle.L",
+    "shoulder01.L",
+    "upperarm01.L",
+    "upperarm02.L",
+    "lowerarm01.L",
+    "lowerarm02.L",
+    "wrist.L",
+    "finger1-1.L",
+    "finger1-2.L",
+    "finger1-3.L",
+    "metacarpal1.L",
+    "finger2-1.L",
+    "finger2-2.L",
+    "finger2-3.L",
+    "metacarpal2.L",
+    "finger3-1.L",
+    "finger3-2.L",
+    "finger3-3.L",
+    "metacarpal3.L",
+    "finger4-1.L",
+    "finger4-2.L",
+    "finger4-3.L",
+    "metacarpal4.L",
+    "finger5-1.L",
+    "finger5-2.L",
+    "finger5-3.L",
+    "clavicle.R",
+    "shoulder01.R",
+    "upperarm01.R",
+    "upperarm02.R",
+    "lowerarm01.R",
+    "lowerarm02.R",
+    "wrist.R",
+    "finger1-1.R",
+    "finger1-2.R",
+    "finger1-3.R",
+    "metacarpal1.R",
+    "finger2-1.R",
+    "finger2-2.R",
+    "finger2-3.R",
+    "metacarpal2.R",
+    "finger3-1.R",
+    "finger3-2.R",
+    "finger3-3.R",
+    "metacarpal3.R",
+    "finger4-1.R",
+    "finger4-2.R",
+    "finger4-3.R",
+    "metacarpal4.R",
+    "finger5-1.R",
+    "finger5-2.R",
+    "finger5-3.R",
+    "neck01",
+    "neck02",
+    "neck03",
+    "head",
+    "jaw",
+    "special04",
+    "oris02",
+    "oris01",
+    "oris06.L",
+    "oris07.L",
+    "oris06.R",
+    "oris07.R",
+    "tongue00",
+    "tongue01",
+    "tongue02",
+    "tongue03",
+    "tongue04",
+    "tongue07.L",
+    "tongue07.R",
+    "tongue06.L",
+    "tongue06.R",
+    "tongue05.L",
+    "tongue05.R",
+    "levator02.L",
+    "levator03.L",
+    "levator04.L",
+    "levator05.L",
+    "levator02.R",
+    "levator03.R",
+    "levator04.R",
+    "levator05.R",
+    "special01",
+    "oris04.L",
+    "oris03.L",
+    "oris04.R",
+    "oris03.R",
+    "oris06",
+    "oris05",
+    "special03",
+    "levator06.L",
+    "levator06.R",
+    "special06.L",
+    "special05.L",
+    "eye.L",
+    "orbicularis03.L",
+    "orbicularis04.L",
+    "special06.R",
+    "special05.R",
+    "eye.R",
+    "orbicularis03.R",
+    "orbicularis04.R",
+    "temporalis01.L",
+    "oculi02.L",
+    "oculi01.L",
+    "temporalis01.R",
+    "oculi02.R",
+    "oculi01.R",
+    "temporalis02.L",
+    "risorius02.L",
+    "risorius03.L",
+    "temporalis02.R",
+    "risorius02.R",
+    "risorius03.R",
+    "hair.01",
+    "hair.02",
+    "hair.03",
+    "hair.04"
+  ],
+  "armature": "InezRig_PROTOTYPE",
+  "meshes": [
+    {
+      "name": "Inez_Boots",
+      "vertices": 20378,
+      "polygons": 39998,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999590218067,
+        1.0000000409781933
+      ],
+      "materials": [
+        "tripo_mat_21c117bb-9a4b-42bb-92cc-7af6aa20f4a8"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_ContinuousHumanMesh_UNAPPROVED",
+      "vertices": 7733,
+      "polygons": 7634,
+      "uv_layers": [
+        "MakeHuman_CC0_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.999999959487468,
+        1.0000000447034836
+      ],
+      "materials": [
+        "Inez_Skin_Freckles_Pores_Lips_PBR",
+        "Inez_Head_Skin_PBR"
+      ],
+      "shape_defaults": {
+        "Basis_FemaleYoung_Source": 0.0,
+        "Inez_HeadFit_v01": 0.0,
+        "Inez_HeadFit_v02": 0.0,
+        "Inez_HeadFit_v03": 1.0,
+        "Inez_HeadRefine_v05": 1.0,
+        "Inez_SourceBodyFit_v05": 1.0,
+        "Inez_SourceHeadWrap_v05": 1.0,
+        "Inez_FaceCorrect_v05": 1.0,
+        "Neutral": 0.0,
+        "Confused": 0.0,
+        "Suspicious": 0.0,
+        "SubtleFear": 0.0,
+        "IntenseFear": 0.0,
+        "Anger": 0.0,
+        "Exhaustion": 0.0,
+        "Viseme_AA": 0.0,
+        "Viseme_EE": 0.0,
+        "Viseme_OH": 0.0,
+        "Viseme_MM": 0.0,
+        "Viseme_FV": 0.0,
+        "Blink_L": 0.0,
+        "Blink_R": 0.0
+      }
+    },
+    {
+      "name": "Inez_Cornea_L",
+      "vertices": 360,
+      "polygons": 320,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_ClearCornea_L"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Cornea_R",
+      "vertices": 360,
+      "polygons": 320,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_ClearCornea_R"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Eyeball_L",
+      "vertices": 840,
+      "polygons": 800,
+      "uv_layers": [
+        "Eye_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_ScleraOffWhite_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Eyeball_R",
+      "vertices": 840,
+      "polygons": 800,
+      "uv_layers": [
+        "Eye_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_ScleraOffWhite_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_FineSilverNecklace",
+      "vertices": 1319,
+      "polygons": 1318,
+      "uv_layers": [],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999571591616,
+        1.0000000447034836
+      ],
+      "materials": [
+        "Inez_FineSilverChain_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Hair",
+      "vertices": 54093,
+      "polygons": 104268,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 5,
+      "weight_range": [
+        0.9999999552965164,
+        1.000000037252903
+      ],
+      "materials": [
+        "Inez_Hair_FromAssetB"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Iris_L",
+      "vertices": 280,
+      "polygons": 240,
+      "uv_layers": [
+        "Eye_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Muted_GreenHazel_Iris_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Iris_R",
+      "vertices": 280,
+      "polygons": 240,
+      "uv_layers": [
+        "Eye_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Muted_GreenHazel_Iris_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Jeans",
+      "vertices": 25930,
+      "polygons": 49994,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999515712261,
+        1.0000000447034836
+      ],
+      "materials": [
+        "Inez_Jeans_FromAssetA"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_LashesLower_L",
+      "vertices": 540,
+      "polygons": 450,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_NaturalBrownLashes_Lower"
+      ],
+      "shape_defaults": {
+        "Basis": 0.0,
+        "Neutral": 0.0,
+        "Confused": 0.0,
+        "Suspicious": 0.0,
+        "SubtleFear": 0.0,
+        "IntenseFear": 0.0,
+        "Anger": 0.0,
+        "Exhaustion": 0.0,
+        "Viseme_AA": 0.0,
+        "Viseme_EE": 0.0,
+        "Viseme_OH": 0.0,
+        "Viseme_MM": 0.0,
+        "Viseme_FV": 0.0,
+        "Blink_L": 0.0,
+        "Blink_R": 0.0
+      }
+    },
+    {
+      "name": "Inez_LashesLower_R",
+      "vertices": 540,
+      "polygons": 450,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_NaturalBrownLashes_Lower.001"
+      ],
+      "shape_defaults": {
+        "Basis": 0.0,
+        "Neutral": 0.0,
+        "Confused": 0.0,
+        "Suspicious": 0.0,
+        "SubtleFear": 0.0,
+        "IntenseFear": 0.0,
+        "Anger": 0.0,
+        "Exhaustion": 0.0,
+        "Viseme_AA": 0.0,
+        "Viseme_EE": 0.0,
+        "Viseme_OH": 0.0,
+        "Viseme_MM": 0.0,
+        "Viseme_FV": 0.0,
+        "Blink_L": 0.0,
+        "Blink_R": 0.0
+      }
+    },
+    {
+      "name": "Inez_LashesUpper_L",
+      "vertices": 1080,
+      "polygons": 900,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_NaturalBrownLashes"
+      ],
+      "shape_defaults": {
+        "Basis": 0.0,
+        "Neutral": 0.0,
+        "Confused": 0.0,
+        "Suspicious": 0.0,
+        "SubtleFear": 0.0,
+        "IntenseFear": 0.0,
+        "Anger": 0.0,
+        "Exhaustion": 0.0,
+        "Viseme_AA": 0.0,
+        "Viseme_EE": 0.0,
+        "Viseme_OH": 0.0,
+        "Viseme_MM": 0.0,
+        "Viseme_FV": 0.0,
+        "Blink_L": 0.0,
+        "Blink_R": 0.0
+      }
+    },
+    {
+      "name": "Inez_LashesUpper_R",
+      "vertices": 1080,
+      "polygons": 900,
+      "uv_layers": [
+        "Inez_Authored_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_NaturalBrownLashes"
+      ],
+      "shape_defaults": {
+        "Basis": 0.0,
+        "Neutral": 0.0,
+        "Confused": 0.0,
+        "Suspicious": 0.0,
+        "SubtleFear": 0.0,
+        "IntenseFear": 0.0,
+        "Anger": 0.0,
+        "Exhaustion": 0.0,
+        "Viseme_AA": 0.0,
+        "Viseme_EE": 0.0,
+        "Viseme_OH": 0.0,
+        "Viseme_MM": 0.0,
+        "Viseme_FV": 0.0,
+        "Blink_L": 0.0,
+        "Blink_R": 0.0
+      }
+    },
+    {
+      "name": "Inez_Sweater",
+      "vertices": 30108,
+      "polygons": 58184,
+      "uv_layers": [
+        "UVMap"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 139,
+      "weight_range": [
+        0.9999999515712261,
+        1.0000000447034836
+      ],
+      "materials": [
+        "Inez_Sweater_FromAssetA"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Sweater_HoleFill",
+      "vertices": 2450,
+      "polygons": 1930,
+      "uv_layers": [
+        "MakeHuman_CC0_UV"
+      ],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 103,
+      "weight_range": [
+        0.9999999552965164,
+        1.0000000447034836
+      ],
+      "materials": [
+        "Inez_Sweater_ThreeDarkBands_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_TeethLower",
+      "vertices": 845,
+      "polygons": 768,
+      "uv_layers": [],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_TeethLower_PBR"
+      ],
+      "shape_defaults": {
+        "Basis": 0.0,
+        "Neutral": 0.0,
+        "Confused": 0.0,
+        "Suspicious": 0.0,
+        "SubtleFear": 0.0,
+        "IntenseFear": 0.0,
+        "Anger": 0.0,
+        "Exhaustion": 0.0,
+        "Viseme_AA": 0.0,
+        "Viseme_EE": 0.0,
+        "Viseme_OH": 0.0,
+        "Viseme_MM": 0.0,
+        "Viseme_FV": 0.0,
+        "Blink_L": 0.0,
+        "Blink_R": 0.0
+      }
+    },
+    {
+      "name": "Inez_TeethUpper",
+      "vertices": 845,
+      "polygons": 768,
+      "uv_layers": [],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_TeethUpper_PBR"
+      ],
+      "shape_defaults": {}
+    },
+    {
+      "name": "Inez_Tongue",
+      "vertices": 898,
+      "polygons": 896,
+      "uv_layers": [],
+      "skin_armature": "InezRig_PROTOTYPE",
+      "vertex_groups": 1,
+      "weight_range": [
+        1.0,
+        1.0
+      ],
+      "materials": [
+        "Inez_Tongue_PBR"
+      ],
+      "shape_defaults": {
+        "Basis": 0.0,
+        "Neutral": 0.0,
+        "Confused": 0.0,
+        "Suspicious": 0.0,
+        "SubtleFear": 0.0,
+        "IntenseFear": 0.0,
+        "Anger": 0.0,
+        "Exhaustion": 0.0,
+        "Viseme_AA": 0.0,
+        "Viseme_EE": 0.0,
+        "Viseme_OH": 0.0,
+        "Viseme_MM": 0.0,
+        "Viseme_FV": 0.0,
+        "Blink_L": 0.0,
+        "Blink_R": 0.0
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "Inez_ClearCornea_L",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_ClearCornea_R",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_FineSilverChain_PBR",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_Hair_FromAssetB",
+      "uv_images": [
+        "Inez+Facial+Model_rm.jpg",
+        "Inez+Facial+Model_normal.png",
+        "Inez_Hair_FromAssetB_basecolor"
+      ],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_Head_Skin_PBR",
+      "uv_images": [
+        "inez_head_albedo_assetB",
+        "inez_head_skin_roughness",
+        "inez_head_skin_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": "{\"upper_source_vertices\": [362, 357, 356, 355, 409, 410, 375, 363, 407, 402], \"lower_source_vertices\": [492, 486, 480, 406, 405, 404, 403, 402], \"actual_half_width_source\": 0.22261163592338562, \"upper_center_height_source\": 6.251404762268066, \"lower_center_height_source\": 6.019343852996826}"
+    },
+    {
+      "name": "Inez_Jeans_FromAssetA",
+      "uv_images": [
+        "Inez_rm",
+        "Inez_normal",
+        "Inez_Jeans_FromAssetA_basecolor"
+      ],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_Muted_GreenHazel_Iris_PBR",
+      "uv_images": [
+        "inez_iris_hazel_albedo_v05",
+        "inez_iris_roughness",
+        "inez_iris_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_NaturalBrownLashes",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_NaturalBrownLashes_Lower",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_NaturalBrownLashes_Lower.001",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_ScleraOffWhite_PBR",
+      "uv_images": [
+        "ScleraOffWhite_albedo",
+        "ScleraOffWhite_roughness",
+        "ScleraOffWhite_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_Skin_Freckles_Pores_Lips_PBR",
+      "uv_images": [
+        "inez_body_albedo_tone_matched",
+        "inez_skin_roughness",
+        "inez_skin_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": "{\"upper_source_vertices\": [362, 357, 356, 355, 409, 410, 375, 363, 407, 402], \"lower_source_vertices\": [492, 486, 480, 406, 405, 404, 403, 402], \"actual_half_width_source\": 0.22261163592338562, \"upper_center_height_source\": 6.251404762268066, \"lower_center_height_source\": 6.019343852996826}"
+    },
+    {
+      "name": "Inez_Sweater_FromAssetA",
+      "uv_images": [
+        "Inez_rm",
+        "Inez_normal",
+        "Inez_Sweater_FromAssetA_basecolor"
+      ],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_Sweater_ThreeDarkBands_PBR",
+      "uv_images": [
+        "Sweater_ThreeDarkBands_albedo",
+        "Sweater_ThreeDarkBands_roughness",
+        "Sweater_ThreeDarkBands_normal"
+      ],
+      "pbr_status": "Separate authored UV albedo, roughness, normal maps embedded in GLB",
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_TeethLower_PBR",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_TeethUpper_PBR",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "Inez_Tongue_PBR",
+      "uv_images": [],
+      "pbr_status": null,
+      "vermilion_topology": null
+    },
+    {
+      "name": "tripo_mat_21c117bb-9a4b-42bb-92cc-7af6aa20f4a8",
+      "uv_images": [
+        "Inez_basecolor",
+        "Inez_rm",
+        "Inez_normal"
+      ],
+      "pbr_status": null,
+      "vermilion_topology": null
+    }
+  ],
+  "packed_authored_maps": [
+    {
+      "name": "Inez+Facial+Model_normal.png",
+      "size": [
+        4096,
+        4096
+      ],
+      "packed": false,
+      "path": "//../textures/master/Inez_Facial_Model_normal.png"
+    },
+    {
+      "name": "Inez+Facial+Model_rm.jpg",
+      "size": [
+        4096,
+        4096
+      ],
+      "packed": false,
+      "path": "//../textures/master/Inez_Facial_Model_rm.jpg"
+    },
+    {
+      "name": "Inez_basecolor",
+      "size": [
+        4096,
+        4096
+      ],
+      "packed": false,
+      "path": "//../textures/master/Inez_basecolor.jpg"
+    },
+    {
+      "name": "inez_body_albedo_tone_matched",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": false,
+      "path": "//../textures/master/inez_body_albedo_tone_matched.png"
+    },
+    {
+      "name": "Inez_Hair_FromAssetB_basecolor",
+      "size": [
+        4096,
+        4096
+      ],
+      "packed": false,
+      "path": "//../textures/master/Inez_Hair_FromAssetB_basecolor.jpg"
+    },
+    {
+      "name": "inez_head_albedo_assetB",
+      "size": [
+        4096,
+        2048
+      ],
+      "packed": false,
+      "path": "//../textures/master/inez_head_albedo_assetB.jpg"
+    },
+    {
+      "name": "inez_head_skin_normal",
+      "size": [
+        2048,
+        1024
+      ],
+      "packed": false,
+      "path": "//../textures/master/inez_head_skin_normal.png"
+    },
+    {
+      "name": "inez_head_skin_roughness",
+      "size": [
+        2048,
+        1024
+      ],
+      "packed": false,
+      "path": "//../textures/master/inez_head_skin_roughness.png"
+    },
+    {
+      "name": "inez_iris_hazel_albedo_v05",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": false,
+      "path": "//../textures/master/inez_iris_hazel_albedo_v05.png"
+    },
+    {
+      "name": "inez_iris_normal",
+      "size": [
+        512,
+        512
+      ],
+      "packed": false,
+      "path": "//../textures/master/inez_iris_normal.png"
+    },
+    {
+      "name": "inez_iris_roughness",
+      "size": [
+        512,
+        512
+      ],
+      "packed": false,
+      "path": "//../textures/master/inez_iris_roughness.png"
+    },
+    {
+      "name": "Inez_Jeans_FromAssetA_basecolor",
+      "size": [
+        4096,
+        4096
+      ],
+      "packed": false,
+      "path": "//../textures/master/Inez_Jeans_FromAssetA_basecolor.jpg"
+    },
+    {
+      "name": "Inez_normal",
+      "size": [
+        4096,
+        4096
+      ],
+      "packed": false,
+      "path": "//../textures/master/Inez_normal.png"
+    },
+    {
+      "name": "Inez_rm",
+      "size": [
+        4096,
+        4096
+      ],
+      "packed": false,
+      "path": "//../textures/master/Inez_rm.jpg"
+    },
+    {
+      "name": "inez_skin_normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": false,
+      "path": "//../textures/master/inez_skin_normal.png"
+    },
+    {
+      "name": "inez_skin_roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": false,
+      "path": "//../textures/master/inez_skin_roughness.png"
+    },
+    {
+      "name": "Inez_Sweater_FromAssetA_basecolor",
+      "size": [
+        4096,
+        4096
+      ],
+      "packed": false,
+      "path": "//../textures/master/Inez_Sweater_FromAssetA_basecolor.jpg"
+    },
+    {
+      "name": "ScleraOffWhite_albedo",
+      "size": [
+        256,
+        256
+      ],
+      "packed": false,
+      "path": "//../textures/master/ScleraOffWhite_albedo.png"
+    },
+    {
+      "name": "ScleraOffWhite_normal",
+      "size": [
+        256,
+        256
+      ],
+      "packed": false,
+      "path": "//../textures/master/ScleraOffWhite_normal.png"
+    },
+    {
+      "name": "ScleraOffWhite_roughness",
+      "size": [
+        256,
+        256
+      ],
+      "packed": false,
+      "path": "//../textures/master/ScleraOffWhite_roughness.png"
+    },
+    {
+      "name": "Sweater_ThreeDarkBands_albedo",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": false,
+      "path": "//../textures/master/Sweater_ThreeDarkBands_albedo.png"
+    },
+    {
+      "name": "Sweater_ThreeDarkBands_normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": false,
+      "path": "//../textures/master/Sweater_ThreeDarkBands_normal.png"
+    },
+    {
+      "name": "Sweater_ThreeDarkBands_roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": false,
+      "path": "//../textures/master/Sweater_ThreeDarkBands_roughness.png"
+    }
+  ],
+  "mesh_count": 20,
+  "source_technical_issues": [
+    "Inez_FineSilverNecklace missing UV",
+    "Inez_TeethLower missing UV",
+    "Inez_TeethUpper missing UV",
+    "Inez_Tongue missing UV"
+  ],
+  "production_approved": false
+}

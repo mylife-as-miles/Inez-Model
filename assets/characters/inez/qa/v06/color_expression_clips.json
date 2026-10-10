@@ -1,0 +1,470 @@
+{
+  "input": "/workspace/scratch/inez-v06/color_raw.glb",
+  "output": "assets/characters/inez/model/v06/inez_color_restored.glb",
+  "clips": {
+    "Expr_SubtleFear": {
+      "duration_s": 3.0,
+      "keyframes": 91,
+      "nodes": [
+        {
+          "node": "Inez_ContinuousHumanMesh_UNAPPROVED",
+          "targets": [
+            "SubtleFear",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {
+            "Inez_HeadFit_v03": 1.0,
+            "Inez_HeadRefine_v05": 1.0,
+            "Inez_SourceBodyFit_v05": 1.0,
+            "Inez_SourceHeadWrap_v05": 1.0,
+            "Inez_FaceCorrect_v05": 1.0
+          }
+        },
+        {
+          "node": "Inez_LashesLower_L",
+          "targets": [
+            "SubtleFear",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesLower_R",
+          "targets": [
+            "SubtleFear",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_L",
+          "targets": [
+            "SubtleFear",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_R",
+          "targets": [
+            "SubtleFear",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_TeethLower",
+          "targets": [
+            "SubtleFear",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_Tongue",
+          "targets": [
+            "SubtleFear",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        }
+      ]
+    },
+    "Expr_Confusion": {
+      "duration_s": 3.0,
+      "keyframes": 91,
+      "nodes": [
+        {
+          "node": "Inez_ContinuousHumanMesh_UNAPPROVED",
+          "targets": [
+            "Confused"
+          ],
+          "identity_defaults_kept": {
+            "Inez_HeadFit_v03": 1.0,
+            "Inez_HeadRefine_v05": 1.0,
+            "Inez_SourceBodyFit_v05": 1.0,
+            "Inez_SourceHeadWrap_v05": 1.0,
+            "Inez_FaceCorrect_v05": 1.0
+          }
+        },
+        {
+          "node": "Inez_LashesLower_L",
+          "targets": [
+            "Confused"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesLower_R",
+          "targets": [
+            "Confused"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_L",
+          "targets": [
+            "Confused"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_R",
+          "targets": [
+            "Confused"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_TeethLower",
+          "targets": [
+            "Confused"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_Tongue",
+          "targets": [
+            "Confused"
+          ],
+          "identity_defaults_kept": {}
+        }
+      ]
+    },
+    "Expr_Anger": {
+      "duration_s": 2.8,
+      "keyframes": 85,
+      "nodes": [
+        {
+          "node": "Inez_ContinuousHumanMesh_UNAPPROVED",
+          "targets": [
+            "Anger"
+          ],
+          "identity_defaults_kept": {
+            "Inez_HeadFit_v03": 1.0,
+            "Inez_HeadRefine_v05": 1.0,
+            "Inez_SourceBodyFit_v05": 1.0,
+            "Inez_SourceHeadWrap_v05": 1.0,
+            "Inez_FaceCorrect_v05": 1.0
+          }
+        },
+        {
+          "node": "Inez_LashesLower_L",
+          "targets": [
+            "Anger"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesLower_R",
+          "targets": [
+            "Anger"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_L",
+          "targets": [
+            "Anger"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_R",
+          "targets": [
+            "Anger"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_TeethLower",
+          "targets": [
+            "Anger"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_Tongue",
+          "targets": [
+            "Anger"
+          ],
+          "identity_defaults_kept": {}
+        }
+      ]
+    },
+    "Expr_Exhaustion": {
+      "duration_s": 4.0,
+      "keyframes": 121,
+      "nodes": [
+        {
+          "node": "Inez_ContinuousHumanMesh_UNAPPROVED",
+          "targets": [
+            "Exhaustion",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {
+            "Inez_HeadFit_v03": 1.0,
+            "Inez_HeadRefine_v05": 1.0,
+            "Inez_SourceBodyFit_v05": 1.0,
+            "Inez_SourceHeadWrap_v05": 1.0,
+            "Inez_FaceCorrect_v05": 1.0
+          }
+        },
+        {
+          "node": "Inez_LashesLower_L",
+          "targets": [
+            "Exhaustion",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesLower_R",
+          "targets": [
+            "Exhaustion",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_L",
+          "targets": [
+            "Exhaustion",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_R",
+          "targets": [
+            "Exhaustion",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_TeethLower",
+          "targets": [
+            "Exhaustion",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_Tongue",
+          "targets": [
+            "Exhaustion",
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        }
+      ]
+    },
+    "Expr_IntenseFear": {
+      "duration_s": 2.6,
+      "keyframes": 79,
+      "nodes": [
+        {
+          "node": "Inez_ContinuousHumanMesh_UNAPPROVED",
+          "targets": [
+            "IntenseFear"
+          ],
+          "identity_defaults_kept": {
+            "Inez_HeadFit_v03": 1.0,
+            "Inez_HeadRefine_v05": 1.0,
+            "Inez_SourceBodyFit_v05": 1.0,
+            "Inez_SourceHeadWrap_v05": 1.0,
+            "Inez_FaceCorrect_v05": 1.0
+          }
+        },
+        {
+          "node": "Inez_LashesLower_L",
+          "targets": [
+            "IntenseFear"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesLower_R",
+          "targets": [
+            "IntenseFear"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_L",
+          "targets": [
+            "IntenseFear"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_R",
+          "targets": [
+            "IntenseFear"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_TeethLower",
+          "targets": [
+            "IntenseFear"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_Tongue",
+          "targets": [
+            "IntenseFear"
+          ],
+          "identity_defaults_kept": {}
+        }
+      ]
+    },
+    "Expr_Suspicious": {
+      "duration_s": 3.0,
+      "keyframes": 91,
+      "nodes": [
+        {
+          "node": "Inez_ContinuousHumanMesh_UNAPPROVED",
+          "targets": [
+            "Suspicious"
+          ],
+          "identity_defaults_kept": {
+            "Inez_HeadFit_v03": 1.0,
+            "Inez_HeadRefine_v05": 1.0,
+            "Inez_SourceBodyFit_v05": 1.0,
+            "Inez_SourceHeadWrap_v05": 1.0,
+            "Inez_FaceCorrect_v05": 1.0
+          }
+        },
+        {
+          "node": "Inez_LashesLower_L",
+          "targets": [
+            "Suspicious"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesLower_R",
+          "targets": [
+            "Suspicious"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_L",
+          "targets": [
+            "Suspicious"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_R",
+          "targets": [
+            "Suspicious"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_TeethLower",
+          "targets": [
+            "Suspicious"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_Tongue",
+          "targets": [
+            "Suspicious"
+          ],
+          "identity_defaults_kept": {}
+        }
+      ]
+    },
+    "Expr_Blink": {
+      "duration_s": 0.24,
+      "keyframes": 9,
+      "nodes": [
+        {
+          "node": "Inez_ContinuousHumanMesh_UNAPPROVED",
+          "targets": [
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {
+            "Inez_HeadFit_v03": 1.0,
+            "Inez_HeadRefine_v05": 1.0,
+            "Inez_SourceBodyFit_v05": 1.0,
+            "Inez_SourceHeadWrap_v05": 1.0,
+            "Inez_FaceCorrect_v05": 1.0
+          }
+        },
+        {
+          "node": "Inez_LashesLower_L",
+          "targets": [
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesLower_R",
+          "targets": [
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_L",
+          "targets": [
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_LashesUpper_R",
+          "targets": [
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_TeethLower",
+          "targets": [
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        },
+        {
+          "node": "Inez_Tongue",
+          "targets": [
+            "Blink_L",
+            "Blink_R"
+          ],
+          "identity_defaults_kept": {}
+        }
+      ]
+    }
+  },
+  "zero_tangents_repaired": 3,
+  "animation_count": 17
+}

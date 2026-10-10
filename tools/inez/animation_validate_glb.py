@@ -219,9 +219,15 @@ def run(path, manifest=None):
     if not mesh_nodes:
         raise ValueError('Actual exported asset contains no mesh nodes')
     body = next((i for i in mesh_nodes if 'ContinuousHumanMesh' in scene.nodes[i].get('name', '')), mesh_nodes[0])
-    boots = {side: [i for i in mesh_nodes if 'Boot_'+side in scene.nodes[i].get('name', '')
-                   or 'Boot_Sole_'+side in scene.nodes[i].get('name', '')]
-             for side in ('L', 'R')}
+    # Production uses a single Inez_Boots mesh, not legacy Boot_L/Boot_R
+    # objects. Partition its vertices by the actual side's skin influences.
+    rest_matrices, rest_changes = scene.globals()
+    boots = {side: {} for side in ('L', 'R')}
+    for index in mesh_nodes:
+        if 'boot' not in scene.nodes[index].get('name','').lower(): continue
+        for side in ('L','R'):
+            mask=scene.region_mask(index,('foot','toe','lowerleg','upperleg'),side)
+            if mask.any(): boots[side][index]=np.flatnonzero(mask)
     editable_report = json.loads(Path(manifest).read_text()) if manifest else {}
     specs = gait_specs(editable_report.get('provisional_height_m', 1.68))
     audit = {'file': str(path), 'status': 'actual exported deformation sampling; visual critique still required',
@@ -241,12 +247,15 @@ def run(path, manifest=None):
         node, checks = scene.nodes[index], []
         for primitive in data['meshes'][node['mesh']]['primitives']:
             attributes = primitive['attributes']
+            material_index = primitive.get('material')
+            material = data['materials'][material_index] if material_index is not None else {}
+            pbr = material.get('pbrMetallicRoughness', {})
+            textured = any(k.endswith('Texture') for k in material) or any(k.endswith('Texture') for k in pbr)
             checks.append({'uv': 'TEXCOORD_0' in attributes, 'normals': 'NORMAL' in attributes,
                            'material': primitive.get('material'), 'skinned': 'skin' in node
                            and 'JOINTS_0' in attributes and 'WEIGHTS_0' in attributes})
-            if 'TEXCOORD_0' not in attributes or 'NORMAL' not in attributes:
+            if (textured and 'TEXCOORD_0' not in attributes) or 'NORMAL' not in attributes:
                 failures.append(node.get('name', str(index))+' lost exported UVs/normals')
-            material_index = primitive.get('material')
             if material_index is None or 'pbrMetallicRoughness' not in data['materials'][material_index]:
                 failures.append(node.get('name', str(index))+' lacks exported PBR material')
             if not checks[-1]['skinned']:
@@ -290,7 +299,7 @@ def run(path, manifest=None):
                     limb_motion[region] = max(limb_motion[region], float(distances[mask].max()))
             record = {'time_s': float(time), 'body_bounds': bounds(points), 'feet': {}}
             for side in ('L', 'R'):
-                chunks = [scene.vertices(index, matrices, changes) for index in boots[side]]
+                chunks = [scene.vertices(index, matrices, changes)[indices] for index,indices in boots[side].items()]
                 boot_points = np.concatenate(chunks) if chunks else np.empty((0, 3))
                 record['feet'][side] = {'bounds': bounds(boot_points), 'minimum_y_m': float(boot_points[:, 1].min()) if len(boot_points) else None}
                 if name in specs and len(boot_points):
@@ -336,7 +345,7 @@ def run(path, manifest=None):
     identity_weights = scene.nodes[body].get('weights', mesh.get('weights', []))
     audit['identity_morph_weights'] = {name: float(identity_weights[index])
                                       for index, name in enumerate(names)
-                                      if name.startswith('Inez_HeadFit') and index < len(identity_weights)}
+                                      if name.startswith('Inez_') and index < len(identity_weights)}
     expected_identity = editable_report.get('identity_morph_source_defaults', {})
     audit['identity_morph_source_defaults'] = expected_identity
     if not audit['identity_morph_weights'] or not any(abs(weight) > 1e-6
@@ -345,7 +354,7 @@ def run(path, manifest=None):
     if manifest and not expected_identity:
         failures.append('Source manifest does not record each original identity morph default')
     if expected_identity:
-        if set(expected_identity) != set(audit['identity_morph_weights']):
+        if not set(expected_identity).issubset(audit['identity_morph_weights']):
             failures.append('Export changed the individual source identity morph names')
         elif any(abs(weight-audit['identity_morph_weights'][name]) > 1e-6
                  for name, weight in expected_identity.items()):

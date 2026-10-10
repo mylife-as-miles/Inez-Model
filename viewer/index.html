@@ -6,6 +6,23 @@
 <main>
   <section id="viewport" aria-label="Interactive Inez character viewport"><canvas id="render" tabindex="0" aria-label="Character controls: WASD or arrow keys to move, Shift to run"></canvas><div id="notice" role="status">Loading production status…</div><div id="play-hint">WASD / arrows · move &nbsp; Shift · run &nbsp; Drag · orbit &nbsp; Wheel · zoom</div><div id="stats" aria-live="off"></div></section>
   <aside>
+    <details open><summary>Visual quality lab · V06</summary>
+      <label>Source version<select id="model-version"><option value="inez_runtime.glb">Production V05 · preserved</option><option value="v06/inez_color_restored.glb">V05 · restored skin and hair</option><option value="v06/inez_recovery_v06.glb">Recovery · restored colors and contacts</option><option value="v06/inez_v06_candidate_r02.glb">V06 likeness candidate · review pending</option></select></label>
+      <div id="skin-lab">
+        <label>Skin material<select id="skin-mode"><option value="existing">Existing PBR</option><option value="enhanced">Enhanced skin prototype</option></select></label>
+        <label class="check"><input id="skin-sss" type="checkbox" checked> Skin diffusion (SSS)</label>
+        <label class="range">Diffusion strength <output id="skin-strength-value">0.55</output><input id="skin-strength" type="range" min="0" max="1" step="0.01" value="0.55"></label>
+        <label class="range">Diffusion radius <output id="skin-radius-value">1.00× mm profile</output><input id="skin-radius" type="range" min="0.25" max="3" step="0.05" value="1"></label>
+        <label class="range">Roughness variation <output id="skin-roughness-value">1.00</output><input id="skin-roughness" type="range" min="0" max="1" step="0.01" value="1"></label>
+        <label class="range">Micro-normal intensity <output id="skin-micro-value">0.15</output><input id="skin-micro" type="range" min="0" max="1" step="0.01" value="0.15"></label>
+        <label class="check"><input id="skin-thin" type="checkbox"> Thin-region transmission</label>
+        <label>Skin debug<select id="skin-debug"><option value="off">Off</option><option value="diffuse">Skin diffuse</option><option value="scattered">Diffused skin</option><option value="normals">Skin normals</option><option value="thickness">Geometric thickness</option></select></label>
+        <label>Quality<select id="skin-quality"><option value="cinematic">Cinematic</option><option value="gameplay" selected>Gameplay</option><option value="low-spec">Low-spec</option><option value="vr">VR · PBR only</option></select></label>
+      </div>
+      <p id="skin-support" class="hint">Skin prototype under review. Original PBR remains available. Camera blur is disabled.</p>
+      <button id="screenshot">Save viewport screenshot</button>
+      <details><summary>Skin performance and backend</summary><pre id="skin-info">Loading…</pre></details>
+    </details>
     <details open><summary>Play and animation</summary>
       <p class="hint">Click the scene to play. Movement follows the camera. The available animations come from the loaded GLB.</p>
       <label>Animation<select id="animation" disabled><option value="rest">No character loaded</option></select></label>
@@ -57,7 +74,7 @@
     </details>
     <details open><summary>Camera and lighting</summary>
       <label>Camera<select id="view"><option value="body_front">Full body · front</option><option value="body_left">Full body · left</option><option value="body_right">Full body · right</option><option value="body_three_quarter">Full body · three quarter</option><option value="body_back">Full body · back</option><option value="face_front">Face · front</option><option value="face_left">Face · left profile</option><option value="face_right">Face · right profile</option><option value="face_three_quarter">Face · three quarter</option><option value="face_back">Head · back</option></select></label>
-      <label>Lighting<select id="lighting"><option value="studio">Neutral studio</option><option value="apartment">Apartment · low light</option></select></label>
+      <label>Lighting<select id="lighting"><option value="studio">Production studio</option><option value="neutral">Neutral reference studio</option><option value="daylight">Daylight</option><option value="apartment">Apartment · low light</option><option value="backlight">Backlight</option><option value="flashlight">Phone flashlight</option></select></label>
       <label class="range">Exposure <output id="exposure-value">1.00</output><input id="exposure" type="range" min="0.25" max="2.5" step="0.05" value="1"></label>
       <label class="range">Key light <output id="key-light-value">1.00×</output><input id="key-light" type="range" min="0" max="3" step="0.05" value="1"></label>
       <label class="range">Fill light <output id="fill-light-value">1.00×</output><input id="fill-light" type="range" min="0" max="3" step="0.05" value="1"></label>

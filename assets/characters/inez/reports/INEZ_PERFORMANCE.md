@@ -1,3 +1,9 @@
+# V06 pause checkpoint — 2026-10-10
+
+Current development progress and limitations are recorded in `docs/INEZ_V06_PRODUCTION_REPORT.md`; continuation instructions are in `docs/INEZ_NEXT_AGENT_PROMPT.md` (paths relative to repository root). Recovery color and contacts are saved; R02 likeness remains unapproved; selected Fab hair source is missing; target GPU profiling and native CORDEL integration remain pending. Prior content below is historical and must be checked against actual final V06 artifacts.
+
+---
+
 # Inez performance
 
 **No GPU has been measured.** Every frame rate below comes from this build machine: a 4-core Xeon VM with 15 GB of RAM and no GPU. Chromium there renders WebGL2 through SwiftShader, Google's CPU rasteriser. The numbers show relative cost between LODs and the CPU cost of animation. They say nothing about frame rate on real hardware.

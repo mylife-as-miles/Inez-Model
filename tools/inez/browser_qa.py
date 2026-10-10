@@ -179,7 +179,10 @@ async def run(args):
                 not t['controlled'] and abs(t['value']-t['initial']) < 1e-6 for t in identity_targets)
             # Keyboard locomotion.
             await page.evaluate('''()=>{const v=window.inezViewer;v.resetPosition();v.setAnimation('automatic',{transition:0});v.pause(false);}''')
-            await page.click('#render')
+            # Keyboard operation requires canvas focus, not a pointer click.
+            # Focus directly: software-rendered canvas resizing can prevent
+            # Playwright's pointer stability check from completing.
+            await page.locator('#render').focus()
             start_position = await page.evaluate('window.inezViewer.state.characterPosition')
             await page.keyboard.down('w')
             await page.evaluate('window.inezViewer.advance(0.6)')

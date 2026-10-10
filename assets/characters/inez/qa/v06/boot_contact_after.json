@@ -1,0 +1,295 @@
+{
+  "blend": "/workspace/Inez-Model/assets/characters/inez/model/v06/inez_recovery_v06.blend",
+  "boots_mesh": "Inez_Boots",
+  "band_m": 0.002,
+  "sole_vertices": {
+    "L": 2493,
+    "R": 2458
+  },
+  "boot_vertices": {
+    "L": 10192,
+    "R": 10186
+  },
+  "clips": {
+    "Walk": {
+      "frames": [
+        1,
+        66
+      ],
+      "travel_speed_m_s": 0.9247252747252749,
+      "L": {
+        "lowest_sole_mm": -0.0,
+        "highest_sole_mm": 58.56,
+        "planted_phases": [
+          {
+            "frames": [
+              1,
+              39
+            ],
+            "slip_mm": 0.01
+          }
+        ],
+        "max_phase_slip_mm": 0.01
+      },
+      "R": {
+        "lowest_sole_mm": -0.0,
+        "highest_sole_mm": 60.5,
+        "planted_phases": [
+          {
+            "frames": [
+              1,
+              7
+            ],
+            "slip_mm": 0.0
+          },
+          {
+            "frames": [
+              34,
+              66
+            ],
+            "slip_mm": 0.01
+          }
+        ],
+        "max_phase_slip_mm": 0.01
+      }
+    },
+    "Run": {
+      "frames": [
+        1,
+        46
+      ],
+      "travel_speed_m_s": 2.3961904761904758,
+      "L": {
+        "lowest_sole_mm": 0.0,
+        "highest_sole_mm": 100.37,
+        "planted_phases": [
+          {
+            "frames": [
+              1,
+              18
+            ],
+            "slip_mm": 0.0
+          }
+        ],
+        "max_phase_slip_mm": 0.0
+      },
+      "R": {
+        "lowest_sole_mm": -0.0,
+        "highest_sole_mm": 99.29,
+        "planted_phases": [
+          {
+            "frames": [
+              24,
+              40
+            ],
+            "slip_mm": 0.0
+          }
+        ],
+        "max_phase_slip_mm": 0.0
+      }
+    },
+    "CrouchDown": {
+      "frames": [
+        1,
+        48
+      ],
+      "travel_speed_m_s": 0.0,
+      "L": {
+        "lowest_sole_mm": -0.0,
+        "highest_sole_mm": 0.0,
+        "planted_phases": [
+          {
+            "frames": [
+              1,
+              48
+            ],
+            "slip_mm": 0.01
+          }
+        ],
+        "max_phase_slip_mm": 0.01
+      },
+      "R": {
+        "lowest_sole_mm": -0.0,
+        "highest_sole_mm": 0.0,
+        "planted_phases": [
+          {
+            "frames": [
+              1,
+              48
+            ],
+            "slip_mm": 0.01
+          }
+        ],
+        "max_phase_slip_mm": 0.01
+      }
+    },
+    "CrouchUp": {
+      "frames": [
+        1,
+        48
+      ],
+      "travel_speed_m_s": 0.0,
+      "L": {
+        "lowest_sole_mm": -0.0,
+        "highest_sole_mm": 0.0,
+        "planted_phases": [
+          {
+            "frames": [
+              1,
+              48
+            ],
+            "slip_mm": 0.01
+          }
+        ],
+        "max_phase_slip_mm": 0.01
+      },
+      "R": {
+        "lowest_sole_mm": -0.0,
+        "highest_sole_mm": 0.0,
+        "planted_phases": [
+          {
+            "frames": [
+              1,
+              48
+            ],
+            "slip_mm": 0.01
+          }
+        ],
+        "max_phase_slip_mm": 0.01
+      }
+    },
+    "Crouch": {
+      "frames": [
+        1,
+        181
+      ],
+      "travel_speed_m_s": 0.0,
+      "L": {
+        "lowest_sole_mm": -0.0,
+        "highest_sole_mm": -0.0,
+        "planted_phases": [
+          {
+            "frames": [
+              1,
+              181
+            ],
+            "slip_mm": 0.0
+          }
+        ],
+        "max_phase_slip_mm": 0.0
+      },
+      "R": {
+        "lowest_sole_mm": 0.0,
+        "highest_sole_mm": 0.0,
+        "planted_phases": [
+          {
+            "frames": [
+              1,
+              181
+            ],
+            "slip_mm": 0.0
+          }
+        ],
+        "max_phase_slip_mm": 0.0
+      }
+    },
+    "TurnLeft": {
+      "frames": [
+        1,
+        74
+      ],
+      "travel_speed_m_s": 0.0,
+      "L": {
+        "lowest_sole_mm": -0.03,
+        "highest_sole_mm": 54.72,
+        "planted_phases": [
+          {
+            "frames": [
+              1,
+              6
+            ],
+            "slip_mm": 0.01
+          },
+          {
+            "frames": [
+              38,
+              74
+            ],
+            "slip_mm": 4.73
+          }
+        ],
+        "max_phase_slip_mm": 4.73
+      },
+      "R": {
+        "lowest_sole_mm": -0.04,
+        "highest_sole_mm": 54.63,
+        "planted_phases": [
+          {
+            "frames": [
+              1,
+              31
+            ],
+            "slip_mm": 0.76
+          },
+          {
+            "frames": [
+              66,
+              74
+            ],
+            "slip_mm": 0.03
+          }
+        ],
+        "max_phase_slip_mm": 0.76
+      }
+    },
+    "TurnRight": {
+      "frames": [
+        1,
+        74
+      ],
+      "travel_speed_m_s": 0.0,
+      "L": {
+        "lowest_sole_mm": -0.0,
+        "highest_sole_mm": 54.65,
+        "planted_phases": [
+          {
+            "frames": [
+              1,
+              31
+            ],
+            "slip_mm": 0.77
+          },
+          {
+            "frames": [
+              66,
+              74
+            ],
+            "slip_mm": 0.03
+          }
+        ],
+        "max_phase_slip_mm": 0.77
+      },
+      "R": {
+        "lowest_sole_mm": -0.07,
+        "highest_sole_mm": 54.7,
+        "planted_phases": [
+          {
+            "frames": [
+              1,
+              6
+            ],
+            "slip_mm": 0.01
+          },
+          {
+            "frames": [
+              38,
+              74
+            ],
+            "slip_mm": 1.57
+          }
+        ],
+        "max_phase_slip_mm": 1.57
+      }
+    }
+  }
+}

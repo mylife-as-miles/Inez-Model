@@ -27,4 +27,6 @@ const basisTranscoder = {
 // runtime files a standalone viewer needs.
 export default defineConfig({ publicDir: '../assets', plugins: [basisTranscoder],
   build: { copyPublicDir: false },
-  server: { host: '0.0.0.0', port: 4173 }, preview: { port: 4174 } });
+  // Generated captures/reports live in public assets. Their writes must not
+  // reload a browser in the middle of a deformation or screenshot audit.
+  server: { host: '0.0.0.0', port: 4173, watch: { ignored: ['**/assets/characters/inez/**'] } }, preview: { port: 4174 } });

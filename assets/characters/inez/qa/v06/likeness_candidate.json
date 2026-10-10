@@ -1,0 +1,1245 @@
+{
+  "source": "/workspace/Inez-Model/assets/characters/inez/model/v06/inez_recovery_v06.blend",
+  "output": "/workspace/Inez-Model/assets/characters/inez/model/v06/inez_v06_candidate.blend",
+  "stage": "likeness",
+  "production_approved": false,
+  "bone_count": 167,
+  "before": {
+    "Inez_Sweater": {
+      "shape_keys": {},
+      "uv": {
+        "UVMap": "adf79d572832032f0638b97e7dda78d5f4a8e4a1b835d22d97141cdef8d459d6"
+      },
+      "vertices": 30108
+    },
+    "Inez_Jeans": {
+      "shape_keys": {},
+      "uv": {
+        "UVMap": "b70967c551338ad7f20660d23881135e4ed7b4e33093a2ac66e7b30674f0154c"
+      },
+      "vertices": 25930
+    },
+    "Inez_Boots": {
+      "shape_keys": {},
+      "uv": {
+        "UVMap": "27a5eea7b4f374581ad3ce79e9041d5f29186c78fbcbf0e8b20e414983097eec"
+      },
+      "vertices": 20378
+    },
+    "Inez_Hair": {
+      "shape_keys": {},
+      "uv": {
+        "UVMap": "d62688f373c13e7f04de07d05f30580b13a9a6e59f4ed5713522a2ab125e2596"
+      },
+      "vertices": 54093
+    },
+    "Inez_FineSilverNecklace": {
+      "shape_keys": {},
+      "uv": {},
+      "vertices": 1319
+    },
+    "Inez_TeethUpper": {
+      "shape_keys": {},
+      "uv": {},
+      "vertices": 845
+    },
+    "Inez_TeethLower": {
+      "shape_keys": {
+        "Basis": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "9986695dc09eb1acee660bce0647b8fb7bad8b0a8f52de16ae2fa76d3c4170fe"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "2ca8e769092ed55e5c01edaa247d9530b346c34bfe23e33d9d52400014fe4fd2"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "64ffc0c0682dfe382cdad72972db32df46621d0458db3501407365fd4e6db5f2"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "2ca8e769092ed55e5c01edaa247d9530b346c34bfe23e33d9d52400014fe4fd2"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "40a42ab82c631c60a383da5c0f8d3c1a13897455613ff3a6dd5c4087d9089727"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "38752651c8c35f02925b05a95fd5b221544d2749b71f9f2145e4c16ba898bcb1"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        }
+      },
+      "uv": {},
+      "vertices": 845
+    },
+    "Inez_Tongue": {
+      "shape_keys": {
+        "Basis": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "7ce5dce07f8664627b4a5ca0b23310dc1b9cd75da8e9dc885625acefbedd5c70"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "f40e8dfe6e5e91c7cb0c46ef391f65a13490cb634e65bc264aa70a05a327af6d"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "e1cc96419a6278d02577e3617b83841594b565846ffaeda43c5e6ef5a7e65634"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "f40e8dfe6e5e91c7cb0c46ef391f65a13490cb634e65bc264aa70a05a327af6d"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "208419f2bff0901e5618fbafd53350fdfebf7d09286516ed34c2d387547d1ffd"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "64d160e4156fd8efd43b97bdd4dcd5e533f93ea656a0b5cb7bf7c7154964fc47"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        }
+      },
+      "uv": {},
+      "vertices": 898
+    },
+    "Inez_ContinuousHumanMesh_UNAPPROVED": {
+      "shape_keys": {
+        "Basis_FemaleYoung_Source": {
+          "value": 0.0,
+          "sha256": "9981c17f7e22ccba787b340c6b8f1cd92650dd6780e1ff01f6d5242a181a2eab"
+        },
+        "Inez_HeadFit_v01": {
+          "value": 0.0,
+          "sha256": "436381d49d760fa2070529d50eb2dcb021c3533fd4063c138fc388da66ed3fd2"
+        },
+        "Inez_HeadFit_v02": {
+          "value": 0.0,
+          "sha256": "85421c8e628509b24fd3a5160cf48d74b75acb17ec65cb44f2a72cd4ad551503"
+        },
+        "Inez_HeadFit_v03": {
+          "value": 1.0,
+          "sha256": "9203441e2008e84b809d3b78e56570a7a84ea5fc23ee75128c0802f4624d8279"
+        },
+        "Inez_HeadRefine_v05": {
+          "value": 1.0,
+          "sha256": "b16d5a42880b92347a0b0e1eb7f7bb37651458ede6b4a7820e849b33774906eb"
+        },
+        "Inez_SourceBodyFit_v05": {
+          "value": 1.0,
+          "sha256": "108a67d2257e9cfad1d168b21936115bafcdf079c47d7fc25b74ff2cafbdcc38"
+        },
+        "Inez_SourceHeadWrap_v05": {
+          "value": 1.0,
+          "sha256": "7e55269fe89f8118e21df732a381c201dc5398266956acac3eafcbe3da75fbe8"
+        },
+        "Inez_FaceCorrect_v05": {
+          "value": 1.0,
+          "sha256": "3d76f2bdb86e014c39b46cf584611dc584755d22be45447a02cb789cd1d49896"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "9981c17f7e22ccba787b340c6b8f1cd92650dd6780e1ff01f6d5242a181a2eab"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "1e766f2cfb2306f322a7e16180052cb19bcd49b0664e9cd3b7378b82ac4f9cd8"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "5b917ac065422daf2f38017fac15b99f798ea3776c6dba4605ce60bd9fa2bc88"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "c0f0beb9810589aaf0789c89bd3dd3f637e8ab12aa3628780483e919c175c875"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "f8a406d947c1f33490cf6fa443d4d827f2a010ce1ef3a6f002dd7710dc7195ea"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "99395c8c27189d7a67fc7a8184767508e3261744dac4c2bc8e576520442b5951"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "42860928904c5144ebed1d65161dd4055e2ba838725ea119508f3ecdeb2833e4"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "47e909a7636f7276f78e0abeeb11f29c9f17ab3ab797349e4365c7caa006e550"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "5e977a823249cf2fcd225f2aaaf9b5362620ddaedc7b9d5cd86987c18227e543"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "c32724a48a9fb97d008306efb91a0fae7e5fa9ea9cc5d82b6ea4cec45ed94dc1"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "c5566d20041ba18a06d0e01fb6673cbeff4c4167fd9c631e7070a65dc67c66c7"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "1e49cd473bb89ea439d16fa946fe3917c61c031d061c842adda9f5fa5d668bf5"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "f403b8a56886fb7a64800a8c06fb806890d81b56af1a9e44bda0eb8f5b47d527"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "9cd0a55c9f7e4ea2a0ccdf1e7b38883a0fa0007cef844bd816ad6e8330f864c3"
+        }
+      },
+      "uv": {
+        "MakeHuman_CC0_UV": "6eb3c3e27c90e4328dc118c6166982b3cdd6b0fd59e8060fa05ccea1e864e55d"
+      },
+      "vertices": 7733
+    },
+    "Inez_Eyeball_L": {
+      "shape_keys": {},
+      "uv": {
+        "Eye_UV": "2c8aa68ea53aca28bd58447253867a008edac6e62c64fec5f7b788554ef95693"
+      },
+      "vertices": 840
+    },
+    "Inez_Eyeball_R": {
+      "shape_keys": {},
+      "uv": {
+        "Eye_UV": "2c8aa68ea53aca28bd58447253867a008edac6e62c64fec5f7b788554ef95693"
+      },
+      "vertices": 840
+    },
+    "Inez_Iris_L": {
+      "shape_keys": {},
+      "uv": {
+        "Eye_UV": "f55199efc3d1ded775511740dc995b8f16201b5cbfcda4473102905fb6181bf0"
+      },
+      "vertices": 280
+    },
+    "Inez_Iris_R": {
+      "shape_keys": {},
+      "uv": {
+        "Eye_UV": "f55199efc3d1ded775511740dc995b8f16201b5cbfcda4473102905fb6181bf0"
+      },
+      "vertices": 280
+    },
+    "Inez_Cornea_L": {
+      "shape_keys": {},
+      "uv": {
+        "Inez_Authored_UV": "eed77067489d32e359ac21cafd0f3775acc2da49497d924d7be69a84e3fcf8b0"
+      },
+      "vertices": 360
+    },
+    "Inez_Cornea_R": {
+      "shape_keys": {},
+      "uv": {
+        "Inez_Authored_UV": "e83dcaf8577867a6aef51f783488a57504af8052ab0c74843f852e515952eb1f"
+      },
+      "vertices": 360
+    },
+    "Inez_LashesUpper_L": {
+      "shape_keys": {
+        "Basis": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "4ba79dba8d9b12595b1dc77d5f6f747db1b90bf5f0743aebfcbccc895a5e4a56"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "df92bed3a22a9bfb81bcd90f9dc6c95291d2d1e1c1135d9335327a77076ca437"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "1665e648ca55d3415f77a7d5597cecbd41e7e9e1fb39f51bdb5ff951d015fbf0"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "9161ff6cd71cb69ffee4d20dea2dd183dd3323754154304f866c648aaeea9865"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "2405edaabfc3fffb3db38741f0c6246c048c22597b0196f4fbc3f3123da47459"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "aa02a84935c35a843966b9609c69cad87f8e6a68142b615249c260ab84e8ffa4"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "c150ecf176fe14f4cd4b2eab9612d7fad77b5c5d9b700fbaee004e188b615d46"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        }
+      },
+      "uv": {
+        "Inez_Authored_UV": "a171c7e71534d6d98a48fa0619ff6c56d1c68a9f32bfa6ed80ae57082f25fe28"
+      },
+      "vertices": 1080
+    },
+    "Inez_LashesLower_L": {
+      "shape_keys": {
+        "Basis": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "42bc065cdf37dbad88e5a4f28239185a0da621d665459bacad30147d0373613e"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "1fa5d28a00f6f4d62657335a3cf26ab20e23a23543337380e9d05ab9a4cccf0b"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "3005115baf9096084b4cd6c078f323b77f6b65ec0faab8088917c6f7e4c6debf"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "04b900b6e824f919da2d1e4168d3bb55046822571a35b9467708d47d99dd5c9e"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "572d1289894ed13993e5ddfee90ac565ca5baf91dc3cd2d68250fc7265703576"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "aaad40336ea09482e7cd5c21a935060f7f8f1fb7a441d35bbfb98bfa3d936b84"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        }
+      },
+      "uv": {
+        "Inez_Authored_UV": "257bfaaad1c2fd4fdbfb1a6789511edd53193b32d5b2bfdec42a7c7b1f7fa639"
+      },
+      "vertices": 540
+    },
+    "Inez_LashesUpper_R": {
+      "shape_keys": {
+        "Basis": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "d19061bc36959aafe2967ce59d47ddd979fa6d1b9e106f2acd813980ab738942"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "2eb84a3b3356e84e0b54a25e60894aba73103d4595f53762145c06e485b571ae"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "bd45bc1d84e8406c5c0762cbecaf721bd0336227f3d3574e9bb71c3c22aeadf1"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "e5637ed75dcf560e41836371fc31d3ed8ae658853b9371e470feecd4c8b2be7e"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "0b2f318b8dc8e6ba84c40b12ac3a14d581d98819e4062379717c34ed79a3358b"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "7c22e45fe88c8954b238b5c5374efdab30519662786a2c15c71f8548d176b1a3"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "89e3daf78c261819a4397695b92cd7dd01d6355124c5fd84f2da722a94093a0d"
+        }
+      },
+      "uv": {
+        "Inez_Authored_UV": "a171c7e71534d6d98a48fa0619ff6c56d1c68a9f32bfa6ed80ae57082f25fe28"
+      },
+      "vertices": 1080
+    },
+    "Inez_LashesLower_R": {
+      "shape_keys": {
+        "Basis": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "b3cd59b55e08b232b734a432ca29673628b6f453b36490bc4c5b29fa93de22e4"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "c5dd31dd80f5cb2b41a9574bc6805ecb2d36efe34ca653a85fa9b33254d178f0"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "867994c3abc61ba80522b112862c1cebf8d2b0aeba1be80cba9052927af748b3"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "296d2345b8ab0d9cc778c82cb900a102d332e3a2ab400ebee18788747ea61c8b"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "bfcfe87de3fcb31e3ccd751780e44f76a3a68f487d0498ce6a6ff2085a9017d8"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "a05b675bde0ad4624bc0b82fe874e307f3d4be633871664c5fb082d0cc1179cb"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "4bec5b7b893238535e07322b9f313ff94e0e2e80810f72baf54511f32a481501"
+        }
+      },
+      "uv": {
+        "Inez_Authored_UV": "257bfaaad1c2fd4fdbfb1a6789511edd53193b32d5b2bfdec42a7c7b1f7fa639"
+      },
+      "vertices": 540
+    },
+    "Inez_Sweater_HoleFill": {
+      "shape_keys": {},
+      "uv": {
+        "MakeHuman_CC0_UV": "470f54690d580dcbab600fc07dd1972449b36bcdb982b061705b4b243de283ac"
+      },
+      "vertices": 2450
+    }
+  },
+  "likeness": {
+    "key": "Inez_LikenessCorrect_v06",
+    "candidate_only": true,
+    "sigma_m": 0.014,
+    "landmark_moves_mm": {
+      "61": [
+        1.1765822989838999,
+        -0.0
+      ],
+      "291": [
+        -1.1765822989838999,
+        -0.0
+      ],
+      "172": [
+        1.4702950200390528,
+        -0.0
+      ],
+      "397": [
+        -1.4702950200390528,
+        -0.0
+      ],
+      "136": [
+        2.0918901744912985,
+        -0.0
+      ],
+      "365": [
+        -0.08364593821150293,
+        -0.0
+      ],
+      "150": [
+        2.0166164914851863,
+        -0.0
+      ],
+      "379": [
+        -0.13818902593541,
+        -0.0
+      ]
+    },
+    "max_displacement_mm": 2.2077190187458484,
+    "affected_vertices": 1200,
+    "eyelid_aperture_changed": false,
+    "depth_changed": false
+  },
+  "existing_morphs_and_uv_unchanged": true,
+  "after": {
+    "Inez_Sweater": {
+      "shape_keys": {},
+      "uv": {
+        "UVMap": "adf79d572832032f0638b97e7dda78d5f4a8e4a1b835d22d97141cdef8d459d6"
+      },
+      "vertices": 30108
+    },
+    "Inez_Jeans": {
+      "shape_keys": {},
+      "uv": {
+        "UVMap": "b70967c551338ad7f20660d23881135e4ed7b4e33093a2ac66e7b30674f0154c"
+      },
+      "vertices": 25930
+    },
+    "Inez_Boots": {
+      "shape_keys": {},
+      "uv": {
+        "UVMap": "27a5eea7b4f374581ad3ce79e9041d5f29186c78fbcbf0e8b20e414983097eec"
+      },
+      "vertices": 20378
+    },
+    "Inez_Hair": {
+      "shape_keys": {},
+      "uv": {
+        "UVMap": "d62688f373c13e7f04de07d05f30580b13a9a6e59f4ed5713522a2ab125e2596"
+      },
+      "vertices": 54093
+    },
+    "Inez_FineSilverNecklace": {
+      "shape_keys": {},
+      "uv": {},
+      "vertices": 1319
+    },
+    "Inez_TeethUpper": {
+      "shape_keys": {},
+      "uv": {},
+      "vertices": 845
+    },
+    "Inez_TeethLower": {
+      "shape_keys": {
+        "Basis": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "9986695dc09eb1acee660bce0647b8fb7bad8b0a8f52de16ae2fa76d3c4170fe"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "2ca8e769092ed55e5c01edaa247d9530b346c34bfe23e33d9d52400014fe4fd2"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "64ffc0c0682dfe382cdad72972db32df46621d0458db3501407365fd4e6db5f2"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "2ca8e769092ed55e5c01edaa247d9530b346c34bfe23e33d9d52400014fe4fd2"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "40a42ab82c631c60a383da5c0f8d3c1a13897455613ff3a6dd5c4087d9089727"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "38752651c8c35f02925b05a95fd5b221544d2749b71f9f2145e4c16ba898bcb1"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "47466cdbcd6a92148fcc0589d08a548c34d040fbbf0c1e1f97033235cb97f111"
+        }
+      },
+      "uv": {},
+      "vertices": 845
+    },
+    "Inez_Tongue": {
+      "shape_keys": {
+        "Basis": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "7ce5dce07f8664627b4a5ca0b23310dc1b9cd75da8e9dc885625acefbedd5c70"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "f40e8dfe6e5e91c7cb0c46ef391f65a13490cb634e65bc264aa70a05a327af6d"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "e1cc96419a6278d02577e3617b83841594b565846ffaeda43c5e6ef5a7e65634"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "f40e8dfe6e5e91c7cb0c46ef391f65a13490cb634e65bc264aa70a05a327af6d"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "208419f2bff0901e5618fbafd53350fdfebf7d09286516ed34c2d387547d1ffd"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "64d160e4156fd8efd43b97bdd4dcd5e533f93ea656a0b5cb7bf7c7154964fc47"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "fa594f0247708e69602144326bd061aa13d3ddab17e9fdc34425c6d06169dd29"
+        }
+      },
+      "uv": {},
+      "vertices": 898
+    },
+    "Inez_ContinuousHumanMesh_UNAPPROVED": {
+      "shape_keys": {
+        "Basis_FemaleYoung_Source": {
+          "value": 0.0,
+          "sha256": "9981c17f7e22ccba787b340c6b8f1cd92650dd6780e1ff01f6d5242a181a2eab"
+        },
+        "Inez_HeadFit_v01": {
+          "value": 0.0,
+          "sha256": "436381d49d760fa2070529d50eb2dcb021c3533fd4063c138fc388da66ed3fd2"
+        },
+        "Inez_HeadFit_v02": {
+          "value": 0.0,
+          "sha256": "85421c8e628509b24fd3a5160cf48d74b75acb17ec65cb44f2a72cd4ad551503"
+        },
+        "Inez_HeadFit_v03": {
+          "value": 1.0,
+          "sha256": "9203441e2008e84b809d3b78e56570a7a84ea5fc23ee75128c0802f4624d8279"
+        },
+        "Inez_HeadRefine_v05": {
+          "value": 1.0,
+          "sha256": "b16d5a42880b92347a0b0e1eb7f7bb37651458ede6b4a7820e849b33774906eb"
+        },
+        "Inez_SourceBodyFit_v05": {
+          "value": 1.0,
+          "sha256": "108a67d2257e9cfad1d168b21936115bafcdf079c47d7fc25b74ff2cafbdcc38"
+        },
+        "Inez_SourceHeadWrap_v05": {
+          "value": 1.0,
+          "sha256": "7e55269fe89f8118e21df732a381c201dc5398266956acac3eafcbe3da75fbe8"
+        },
+        "Inez_FaceCorrect_v05": {
+          "value": 1.0,
+          "sha256": "3d76f2bdb86e014c39b46cf584611dc584755d22be45447a02cb789cd1d49896"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "9981c17f7e22ccba787b340c6b8f1cd92650dd6780e1ff01f6d5242a181a2eab"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "1e766f2cfb2306f322a7e16180052cb19bcd49b0664e9cd3b7378b82ac4f9cd8"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "5b917ac065422daf2f38017fac15b99f798ea3776c6dba4605ce60bd9fa2bc88"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "c0f0beb9810589aaf0789c89bd3dd3f637e8ab12aa3628780483e919c175c875"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "f8a406d947c1f33490cf6fa443d4d827f2a010ce1ef3a6f002dd7710dc7195ea"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "99395c8c27189d7a67fc7a8184767508e3261744dac4c2bc8e576520442b5951"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "42860928904c5144ebed1d65161dd4055e2ba838725ea119508f3ecdeb2833e4"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "47e909a7636f7276f78e0abeeb11f29c9f17ab3ab797349e4365c7caa006e550"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "5e977a823249cf2fcd225f2aaaf9b5362620ddaedc7b9d5cd86987c18227e543"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "c32724a48a9fb97d008306efb91a0fae7e5fa9ea9cc5d82b6ea4cec45ed94dc1"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "c5566d20041ba18a06d0e01fb6673cbeff4c4167fd9c631e7070a65dc67c66c7"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "1e49cd473bb89ea439d16fa946fe3917c61c031d061c842adda9f5fa5d668bf5"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "f403b8a56886fb7a64800a8c06fb806890d81b56af1a9e44bda0eb8f5b47d527"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "9cd0a55c9f7e4ea2a0ccdf1e7b38883a0fa0007cef844bd816ad6e8330f864c3"
+        },
+        "Inez_LikenessCorrect_v06": {
+          "value": 1.0,
+          "sha256": "c93a1c88cecbea3a901377fe8eb85e38cc66d9bc002b74b4cf5b74dd7febbc40"
+        }
+      },
+      "uv": {
+        "MakeHuman_CC0_UV": "6eb3c3e27c90e4328dc118c6166982b3cdd6b0fd59e8060fa05ccea1e864e55d"
+      },
+      "vertices": 7733
+    },
+    "Inez_Eyeball_L": {
+      "shape_keys": {},
+      "uv": {
+        "Eye_UV": "2c8aa68ea53aca28bd58447253867a008edac6e62c64fec5f7b788554ef95693"
+      },
+      "vertices": 840
+    },
+    "Inez_Eyeball_R": {
+      "shape_keys": {},
+      "uv": {
+        "Eye_UV": "2c8aa68ea53aca28bd58447253867a008edac6e62c64fec5f7b788554ef95693"
+      },
+      "vertices": 840
+    },
+    "Inez_Iris_L": {
+      "shape_keys": {},
+      "uv": {
+        "Eye_UV": "f55199efc3d1ded775511740dc995b8f16201b5cbfcda4473102905fb6181bf0"
+      },
+      "vertices": 280
+    },
+    "Inez_Iris_R": {
+      "shape_keys": {},
+      "uv": {
+        "Eye_UV": "f55199efc3d1ded775511740dc995b8f16201b5cbfcda4473102905fb6181bf0"
+      },
+      "vertices": 280
+    },
+    "Inez_Cornea_L": {
+      "shape_keys": {},
+      "uv": {
+        "Inez_Authored_UV": "eed77067489d32e359ac21cafd0f3775acc2da49497d924d7be69a84e3fcf8b0"
+      },
+      "vertices": 360
+    },
+    "Inez_Cornea_R": {
+      "shape_keys": {},
+      "uv": {
+        "Inez_Authored_UV": "e83dcaf8577867a6aef51f783488a57504af8052ab0c74843f852e515952eb1f"
+      },
+      "vertices": 360
+    },
+    "Inez_LashesUpper_L": {
+      "shape_keys": {
+        "Basis": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "4ba79dba8d9b12595b1dc77d5f6f747db1b90bf5f0743aebfcbccc895a5e4a56"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "df92bed3a22a9bfb81bcd90f9dc6c95291d2d1e1c1135d9335327a77076ca437"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "1665e648ca55d3415f77a7d5597cecbd41e7e9e1fb39f51bdb5ff951d015fbf0"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "9161ff6cd71cb69ffee4d20dea2dd183dd3323754154304f866c648aaeea9865"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "2405edaabfc3fffb3db38741f0c6246c048c22597b0196f4fbc3f3123da47459"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "aa02a84935c35a843966b9609c69cad87f8e6a68142b615249c260ab84e8ffa4"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "c150ecf176fe14f4cd4b2eab9612d7fad77b5c5d9b700fbaee004e188b615d46"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "217c68d751164c152dfaeaa1a64d879a742bf48678e93d99cbb898915fdfe5b5"
+        }
+      },
+      "uv": {
+        "Inez_Authored_UV": "a171c7e71534d6d98a48fa0619ff6c56d1c68a9f32bfa6ed80ae57082f25fe28"
+      },
+      "vertices": 1080
+    },
+    "Inez_LashesLower_L": {
+      "shape_keys": {
+        "Basis": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "42bc065cdf37dbad88e5a4f28239185a0da621d665459bacad30147d0373613e"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "1fa5d28a00f6f4d62657335a3cf26ab20e23a23543337380e9d05ab9a4cccf0b"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "3005115baf9096084b4cd6c078f323b77f6b65ec0faab8088917c6f7e4c6debf"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "04b900b6e824f919da2d1e4168d3bb55046822571a35b9467708d47d99dd5c9e"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "572d1289894ed13993e5ddfee90ac565ca5baf91dc3cd2d68250fc7265703576"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "aaad40336ea09482e7cd5c21a935060f7f8f1fb7a441d35bbfb98bfa3d936b84"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "7f204130d9c55a7bfc2db06663c90908c2e28ed806c17221bd7b2ba0a88a18f3"
+        }
+      },
+      "uv": {
+        "Inez_Authored_UV": "257bfaaad1c2fd4fdbfb1a6789511edd53193b32d5b2bfdec42a7c7b1f7fa639"
+      },
+      "vertices": 540
+    },
+    "Inez_LashesUpper_R": {
+      "shape_keys": {
+        "Basis": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "d19061bc36959aafe2967ce59d47ddd979fa6d1b9e106f2acd813980ab738942"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "2eb84a3b3356e84e0b54a25e60894aba73103d4595f53762145c06e485b571ae"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "bd45bc1d84e8406c5c0762cbecaf721bd0336227f3d3574e9bb71c3c22aeadf1"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "e5637ed75dcf560e41836371fc31d3ed8ae658853b9371e470feecd4c8b2be7e"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "0b2f318b8dc8e6ba84c40b12ac3a14d581d98819e4062379717c34ed79a3358b"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "7c22e45fe88c8954b238b5c5374efdab30519662786a2c15c71f8548d176b1a3"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "816679721d9746b0e66b5f35dc839a7ddafc6a9b913b74f5e397bd4d7ac9e286"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "89e3daf78c261819a4397695b92cd7dd01d6355124c5fd84f2da722a94093a0d"
+        }
+      },
+      "uv": {
+        "Inez_Authored_UV": "a171c7e71534d6d98a48fa0619ff6c56d1c68a9f32bfa6ed80ae57082f25fe28"
+      },
+      "vertices": 1080
+    },
+    "Inez_LashesLower_R": {
+      "shape_keys": {
+        "Basis": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Neutral": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Confused": {
+          "value": 0.0,
+          "sha256": "b3cd59b55e08b232b734a432ca29673628b6f453b36490bc4c5b29fa93de22e4"
+        },
+        "Suspicious": {
+          "value": 0.0,
+          "sha256": "c5dd31dd80f5cb2b41a9574bc6805ecb2d36efe34ca653a85fa9b33254d178f0"
+        },
+        "SubtleFear": {
+          "value": 0.0,
+          "sha256": "867994c3abc61ba80522b112862c1cebf8d2b0aeba1be80cba9052927af748b3"
+        },
+        "IntenseFear": {
+          "value": 0.0,
+          "sha256": "296d2345b8ab0d9cc778c82cb900a102d332e3a2ab400ebee18788747ea61c8b"
+        },
+        "Anger": {
+          "value": 0.0,
+          "sha256": "bfcfe87de3fcb31e3ccd751780e44f76a3a68f487d0498ce6a6ff2085a9017d8"
+        },
+        "Exhaustion": {
+          "value": 0.0,
+          "sha256": "a05b675bde0ad4624bc0b82fe874e307f3d4be633871664c5fb082d0cc1179cb"
+        },
+        "Viseme_AA": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Viseme_EE": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Viseme_OH": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Viseme_MM": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Viseme_FV": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Blink_L": {
+          "value": 0.0,
+          "sha256": "4e6dc6e79f89e2bcc339c9dc285b9dd1d79f7205e2a4458ca719582cbbbc35bf"
+        },
+        "Blink_R": {
+          "value": 0.0,
+          "sha256": "4bec5b7b893238535e07322b9f313ff94e0e2e80810f72baf54511f32a481501"
+        }
+      },
+      "uv": {
+        "Inez_Authored_UV": "257bfaaad1c2fd4fdbfb1a6789511edd53193b32d5b2bfdec42a7c7b1f7fa639"
+      },
+      "vertices": 540
+    },
+    "Inez_Sweater_HoleFill": {
+      "shape_keys": {},
+      "uv": {
+        "MakeHuman_CC0_UV": "470f54690d580dcbab600fc07dd1972449b36bcdb982b061705b4b243de283ac"
+      },
+      "vertices": 2450
+    }
+  },
+  "actions": [
+    "Blink",
+    "Crouch",
+    "CrouchDown",
+    "CrouchUp",
+    "Idle",
+    "LookAround",
+    "Run",
+    "TurnLeft",
+    "TurnRight",
+    "Walk"
+  ]
+}

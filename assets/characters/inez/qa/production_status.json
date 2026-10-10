@@ -1,32 +1,39 @@
 {
- "label": "Inez master from the user's GLBs: rigged, animated, packaged, browser-tested; likeness not accepted",
- "model_available": true,
- "production_approved": false,
- "blocker": "Likeness below target: 3 of 7 full-weight frontal ratios within \u00b13% of the original face panel (mouth, nose and jaw wide; lower face long), skin chroma off under AgX, sweater stripes charcoal rather than navy, stiff hair shell. The three corrective passes per component allowed in this run are used up. See reports/INEZ_VISUAL_QA.md.",
- "generation_calls": 22,
- "global_call_cap": 24,
- "rig_animations_available": true,
- "default_model": "inez_runtime.glb",
- "source_models": [
-  "source/asset_a/Inez.glb",
-  "source/asset_b/Inez Facial Model.glb",
-  "source/asset_c/Inez+segments.glb"
- ],
- "likeness_accepted": false,
- "browser_technical_qa_passed": true,
- "models": [
-  "model/inez_master.glb",
-  "model/inez_runtime.glb",
-  "model/inez_runtime_lod1.glb",
-  "model/inez_runtime_lod2.glb"
- ],
- "editable_master": "model/inez_master.blend",
- "source_models_used_in_build": [
-  "source/asset_a/Inez.glb",
-  "source/asset_b/Inez Facial Model.glb"
- ],
- "external_clips": "animation/runtime/clips.json",
- "terra_generated_clips": 0,
- "terra_status": "Blocked on licensed inputs (SMPL-H, AMASS) and a commercial licensing decision; see docs/INEZ_TERRA_INTEGRATION.md",
- "performance_measured_on_gpu": false
+  "label": "Inez V06 recovery: reference color restored, contact repair; likeness candidate remains unapproved",
+  "model_available": true,
+  "production_approved": false,
+  "blocker": "Production likeness pending: facial texture bands, eye shading, scalp/hair intersections and sweater details remain. V06 mouth/jaw geometry is an unpromoted candidate. Selected Fab hair package missing; CORDEL skinning/animation prerequisites not implemented.",
+  "generation_calls": 22,
+  "global_call_cap": 24,
+  "rig_animations_available": true,
+  "default_model": "v06/inez_recovery_v06.glb",
+  "source_models": [
+    "source/asset_a/Inez.glb",
+    "source/asset_b/Inez Facial Model.glb",
+    "source/asset_c/Inez+segments.glb"
+  ],
+  "likeness_accepted": false,
+  "browser_technical_qa_passed": true,
+  "models": [
+    "model/inez_master.glb",
+    "model/inez_runtime.glb",
+    "model/inez_runtime_lod1.glb",
+    "model/inez_runtime_lod2.glb",
+    "model/v06/inez_recovery_v06.glb",
+    "model/v06/inez_v06_candidate_r02.glb"
+  ],
+  "editable_master": "model/inez_master.blend",
+  "source_models_used_in_build": [
+    "source/asset_a/Inez.glb",
+    "source/asset_b/Inez Facial Model.glb"
+  ],
+  "external_clips": "animation/runtime/clips.json",
+  "terra_generated_clips": 0,
+  "terra_status": "Blocked on licensed inputs (SMPL-H, AMASS) and a commercial licensing decision; see docs/INEZ_TERRA_INTEGRATION.md",
+  "performance_measured_on_gpu": false,
+  "default_lighting": "neutral",
+  "recovery_source": "model/v06/inez_recovery_v06.blend",
+  "likeness_candidate": "model/v06/inez_v06_candidate_r02.blend",
+  "hair_source_audit": "hair/qa/asset_audit.json",
+  "skin_prototype": "WebGL2 RGB diffusion; optional, PBR default; WebGPU unavailable"
 }

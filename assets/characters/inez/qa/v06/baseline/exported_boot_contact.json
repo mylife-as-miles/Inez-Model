@@ -1,0 +1,146 @@
+{
+  "file": "assets/characters/inez/model/inez_master.glb",
+  "sampling_hz": 120,
+  "contact_band_m": 0.002,
+  "clips": {
+    "Walk": {
+      "duration_s": 1.08333333209157,
+      "matching_speed_m_s": 0.9247252747252749,
+      "samples": 131,
+      "L": {
+        "max_stance_slip_mm": 50.171301450399504,
+        "lowest_sole_mm": -7.904233449817298,
+        "highest_sole_mm": 73.26705424602119,
+        "local_loop_seam_mm": 1.665695898455916e-13,
+        "planted_phases": [
+          {
+            "start_s": 0.0416666679084301,
+            "end_s": 0.7083333338109347,
+            "slip_mm": 50.171301450399504
+          },
+          {
+            "start_s": 1.075000000057312,
+            "end_s": 1.125,
+            "slip_mm": 40.20090698697455
+          }
+        ]
+      },
+      "R": {
+        "max_stance_slip_mm": 70.77622358173352,
+        "lowest_sole_mm": -8.682656700712007,
+        "highest_sole_mm": 73.36484130904562,
+        "local_loop_seam_mm": 2.0502053808399643e-13,
+        "planted_phases": [
+          {
+            "start_s": 0.0416666679084301,
+            "end_s": 0.1666666677651497,
+            "slip_mm": 23.58666658817359
+          },
+          {
+            "start_s": 0.5333333340115272,
+            "end_s": 1.125,
+            "slip_mm": 70.77622358173352
+          }
+        ]
+      }
+    },
+    "Run": {
+      "duration_s": 0.7500000186264515,
+      "matching_speed_m_s": 2.3961904761904758,
+      "samples": 91,
+      "L": {
+        "max_stance_slip_mm": 57.90406385881867,
+        "lowest_sole_mm": -7.785446240694685,
+        "highest_sole_mm": 113.42169377118525,
+        "local_loop_seam_mm": 0.0,
+        "planted_phases": [
+          {
+            "start_s": 0.0416666679084301,
+            "end_s": 0.3416666753590107,
+            "slip_mm": 57.90406385881867
+          },
+          {
+            "start_s": 0.7416666852931182,
+            "end_s": 0.7916666865348816,
+            "slip_mm": 53.88471452483786
+          }
+        ]
+      },
+      "R": {
+        "max_stance_slip_mm": 101.58351186861154,
+        "lowest_sole_mm": -8.280211771297042,
+        "highest_sole_mm": 112.9173389174958,
+        "local_loop_seam_mm": 2.330476870336199e-13,
+        "planted_phases": [
+          {
+            "start_s": 0.3666666759798924,
+            "end_s": 0.7083333511319425,
+            "slip_mm": 101.58351186861154
+          }
+        ]
+      }
+    },
+    "CrouchDown": {
+      "duration_s": 0.7916666455566883,
+      "matching_speed_m_s": 0,
+      "samples": 96,
+      "L": {
+        "max_stance_slip_mm": 44.587650940050764,
+        "lowest_sole_mm": -0.36378824735273513,
+        "highest_sole_mm": 0.03175297164154646,
+        "local_loop_seam_mm": 99.06226591989756,
+        "planted_phases": [
+          {
+            "start_s": 0.0416666679084301,
+            "end_s": 0.8333333134651184,
+            "slip_mm": 44.587650940050764
+          }
+        ]
+      },
+      "R": {
+        "max_stance_slip_mm": 42.22953783862904,
+        "lowest_sole_mm": -0.39613625075691633,
+        "highest_sole_mm": 0.0025217097382683362,
+        "local_loop_seam_mm": 107.90056387325455,
+        "planted_phases": [
+          {
+            "start_s": 0.0416666679084301,
+            "end_s": 0.8333333134651184,
+            "slip_mm": 42.22953783862904
+          }
+        ]
+      }
+    },
+    "CrouchUp": {
+      "duration_s": 0.7916666455566883,
+      "matching_speed_m_s": 0,
+      "samples": 96,
+      "L": {
+        "max_stance_slip_mm": 44.58764078615698,
+        "lowest_sole_mm": -0.3636179951248154,
+        "highest_sole_mm": 0.03190066567820785,
+        "local_loop_seam_mm": 99.06223936765839,
+        "planted_phases": [
+          {
+            "start_s": 0.0416666679084301,
+            "end_s": 0.8333333134651184,
+            "slip_mm": 44.58764078615698
+          }
+        ]
+      },
+      "R": {
+        "max_stance_slip_mm": 42.229497172721985,
+        "lowest_sole_mm": -0.3962881098781152,
+        "highest_sole_mm": 0.0024441172369179887,
+        "local_loop_seam_mm": 107.90066936008903,
+        "planted_phases": [
+          {
+            "start_s": 0.0416666679084301,
+            "end_s": 0.8333333134651184,
+            "slip_mm": 42.229497172721985
+          }
+        ]
+      }
+    }
+  }
+}

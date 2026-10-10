@@ -1,0 +1,65 @@
+{
+  "selected_listing": "https://www.fab.com/listings/a3425afb-5801-455e-a6a1-e27632d493db",
+  "publisher": "WhiteCap",
+  "listing_name": "Ponytail MessyWavy Hair - MetaHuman Groom & HairCard",
+  "listing_checked_utc": "2026-10-10",
+  "listing_http_status": 200,
+  "source_package_present": false,
+  "authenticated_download_performed": false,
+  "advertised_formats": {
+    "metahuman": [
+      "mhpkg"
+    ],
+    "additional_files": [
+      "fbx hair cards",
+      "fbx head/scalp",
+      "png/tga textures",
+      "abc groom"
+    ]
+  },
+  "actual_source_files": [],
+  "search_roots": [
+    "/workspace",
+    "/tmp/codex-remote-attachments"
+  ],
+  "license_evidence": {
+    "public_listing_tiers": [
+      "Personal",
+      "Professional"
+    ],
+    "public_listing_group": "standard",
+    "user_entitlement_verified": false,
+    "NoAI_constraints": "Honor user restriction: local modeling only, no generative service submission or training."
+  },
+  "canonical_style": {
+    "authority": [
+      "references/inez_portraits.jpg",
+      "references/inez_turnaround.jpg",
+      "user supplied 254336.jpg/254275.jpg/253907.jpg color renders"
+    ],
+    "color": "medium brown with subtle warm lighter strands",
+    "shape": "loosely gathered high wavy ponytail, face-framing curls",
+    "face_body_outfit_rig_locked": true
+  },
+  "cordel": {
+    "repository": "https://github.com/mylife-as-miles/cordel-engine",
+    "commit": "057d304c5958e00913dae3d4d1383dff6dbf81fa",
+    "character_skinning_supported": false,
+    "native_hair_runtime_implemented": false,
+    "engine_files_modified": false
+  },
+  "blocked_gates": [
+    "inspect licensed FBX/ABC/texture package",
+    "fit and rig actual cards",
+    "asset-specific region guides and proxies",
+    "actual card shader and animated renders",
+    "native CORDEL skinning and animation prerequisites"
+  ],
+  "prepared_only": [
+    "local intake inventory script",
+    "portable world-space fixed-step XPBD guide solver",
+    "executed solver fixtures",
+    "integration contract and reference style lock"
+  ],
+  "hair_production_accepted": false
+}
