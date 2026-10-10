@@ -1,0 +1,18 @@
+{
+  "file": "skin_micro_normal.png",
+  "size": 1024,
+  "tile_mm": 24.0,
+  "texel_um": 23.4375,
+  "pores": 346,
+  "pores_per_cm2": 60.0,
+  "seed": 20261010,
+  "slope_deg_p50_p99": [
+    14.060549729047501,
+    33.93270889788089
+  ],
+  "height_um_p1_p99": [
+    -23.199491667583402,
+    44.14670344928215
+  ],
+  "licence": "Project-owned: synthesised procedurally by tools/inez/dh_skin_detail.py"
+}

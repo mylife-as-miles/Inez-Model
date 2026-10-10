@@ -1,0 +1,159 @@
+{
+  "method": "tools/inez/dh_skin_calibration.py (see docstring)",
+  "panels": [
+    {
+      "panel": "turnaround_B_face",
+      "pose_deg": {
+        "yaw": -2.858593463897705,
+        "pitch": 4.580905437469482
+      },
+      "skin_patches": [
+        "forehead",
+        "cheek_image_left",
+        "cheek_image_right",
+        "nose_bridge",
+        "chin"
+      ],
+      "skin_linear_rgb": [
+        0.26141,
+        0.1304,
+        0.092
+      ],
+      "skin_luminance": 0.15548011129633219,
+      "skin_r_over_g": 2.0047206285286037,
+      "skin_g_over_b": 1.417314991490593,
+      "knit_light_grey_linear_rgb": [
+        0.05613,
+        0.05448,
+        0.06301
+      ],
+      "knit_luminance": 0.05544653397073846,
+      "knit_pixels": 26938,
+      "skin_over_knit": 2.804144824965719
+    },
+    {
+      "panel": "portrait_A_left",
+      "pose_deg": {
+        "yaw": -25.526201248168945,
+        "pitch": 1.1503397226333618
+      },
+      "skin_patches": [
+        "forehead",
+        "cheek_image_left",
+        "cheek_image_right",
+        "nose_bridge",
+        "chin"
+      ],
+      "skin_linear_rgb": [
+        0.30422,
+        0.1629,
+        0.10606
+      ],
+      "skin_luminance": 0.18883947121939562,
+      "skin_r_over_g": 1.8675170438556818,
+      "skin_g_over_b": 1.5359610648714754,
+      "knit_light_grey_linear_rgb": [
+        0.05286,
+        0.05286,
+        0.05613
+      ],
+      "knit_luminance": 0.053096585289687755,
+      "knit_pixels": 48203,
+      "skin_over_knit": 3.5565276032180435
+    },
+    {
+      "panel": "portrait_A_right",
+      "pose_deg": {
+        "yaw": -12.699380874633789,
+        "pitch": 0.38796186447143555
+      },
+      "skin_patches": [
+        "forehead",
+        "cheek_image_left",
+        "cheek_image_right",
+        "nose_bridge",
+        "chin"
+      ],
+      "skin_linear_rgb": [
+        0.2813,
+        0.14071,
+        0.09468
+      ],
+      "skin_luminance": 0.16727639618112972,
+      "skin_r_over_g": 1.9991783004463481,
+      "skin_g_over_b": 1.486191784907339,
+      "knit_light_grey_linear_rgb": [
+        0.04971,
+        0.04971,
+        0.05286
+      ],
+      "knit_luminance": 0.04993429063514686,
+      "knit_pixels": 49312,
+      "skin_over_knit": 3.3499303595471566
+    }
+  ],
+  "skin_over_knit_used": 2.804144824965719,
+  "luminance_panels": [
+    "turnaround_B_face"
+  ],
+  "skin_over_knit_range": [
+    2.804144824965719,
+    3.5565276032180435
+  ],
+  "skin_chroma_target": {
+    "r_over_g": 1.9560952006587606,
+    "g_over_b": 1.4790192096753485
+  },
+  "knit_texture": "Inez_Sweater_FromAssetA_basecolor.jpg",
+  "knit_albedo_linear_rgb": [
+    0.08866,
+    0.08866,
+    0.09306
+  ],
+  "knit_albedo_luminance": 0.08897351007347097,
+  "target_skin_albedo_linear_rgb": [
+    0.41363,
+    0.21146,
+    0.14297
+  ],
+  "target_skin_albedo_luminance": 0.24949460783155888,
+  "materials": {
+    "Inez_Head_Skin_PBR": {
+      "texture": "inez_head_albedo_assetB.jpg",
+      "median_skin_texel_linear_rgb": [
+        0.20156,
+        0.09531,
+        0.05951
+      ],
+      "median_luminance": 0.11531147108652201,
+      "r_over_g": 2.114800245135389,
+      "g_over_b": 1.6015036751537532,
+      "albedo_gain_linear_rgb": [
+        2.0522,
+        2.2187,
+        2.4024
+      ]
+    },
+    "Inez_Skin_Freckles_Pores_Lips_PBR": {
+      "texture": "inez_body_albedo_tone_matched.png",
+      "median_skin_texel_linear_rgb": [
+        0.21223,
+        0.09759,
+        0.06125
+      ],
+      "median_luminance": 0.11933669481761094,
+      "r_over_g": 2.1747774033198786,
+      "g_over_b": 1.5933654562106314,
+      "albedo_gain_linear_rgb": [
+        1.949,
+        2.1669,
+        2.3344
+      ]
+    }
+  },
+  "limits": [
+    "Assumes cheek and chest receive similar light in the originals.",
+    "Subsurface scattering shifts rendered chroma slightly redder than albedo chroma.",
+    "A calibrated starting point, verified on renders; not a measurement of real skin."
+  ]
+}

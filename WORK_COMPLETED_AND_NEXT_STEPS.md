@@ -1,5 +1,7 @@
 # Inez — work completed and what's left (2026-10-10)
 
+> **Later experiment:** an AAA digital-human skin attempt is documented in [`docs/INEZ_DIGITAL_HUMAN_HANDOFF.md`](docs/INEZ_DIGITAL_HUMAN_HANDOFF.md). It is unfinished and looked worse than the existing viewer; read it before touching rendering.
+
 ## Where things stand
 
 | Area | State |

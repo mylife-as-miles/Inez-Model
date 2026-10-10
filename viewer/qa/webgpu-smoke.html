@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>WebGPU smoke test</title></head>
+<body style="margin:0;background:#222">
+<canvas id="c" width="256" height="256"></canvas>
+<script type="module">
+// Minimal WebGPURenderer scene: a lit sphere with a node material.
+// ?webgl forces the WebGL2 backend. window.smoke reports the outcome.
+import * as THREE from 'three/webgpu';
+const forceWebGL = new URLSearchParams(location.search).has('webgl');
+window.smoke = { stage: 'start', errors: [] };
+try {
+  const renderer = new THREE.WebGPURenderer({ canvas: document.getElementById('c'), forceWebGL });
+  await renderer.init();
+  window.smoke.backend = renderer.backend.isWebGPUBackend ? 'WebGPU' : 'WebGL2';
+  const scene = new THREE.Scene(); scene.background = new THREE.Color('#404040');
+  const camera = new THREE.PerspectiveCamera(40, 1, .1, 10); camera.position.set(0, 0, 3);
+  scene.add(new THREE.Mesh(new THREE.SphereGeometry(.8, 48, 24), new THREE.MeshPhysicalNodeMaterial({ color: '#c08060', roughness: .5 })));
+  const light = new THREE.DirectionalLight('#ffffff', 3); light.position.set(1, 1, 2); scene.add(light);
+  await renderer.renderAsync(scene, camera);
+  const pixels = await renderer.readRenderTargetPixelsAsync?.call ? null : null;
+  window.smoke.stage = 'rendered';
+} catch (error) { window.smoke.errors.push(String(error)); window.smoke.stage = 'failed'; }
+</script></body></html>
