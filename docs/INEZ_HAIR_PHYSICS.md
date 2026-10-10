@@ -1,123 +1,161 @@
-# Inez hair production — intake and simulation foundation
+# Inez hair: Ponytail MessyWavy cards, fit and per-card simulation
 
-**Status: selected Fab hair is not integrated.** The local workspace contains no
-Ponytail MessyWavy FBX, ABC, MHPKG or Additional Files ZIP. The public listing
-was inspected on 2026-10-10; no authenticated Fab download was performed.
-The complete asset-specific fitting, rigging, shading and motion acceptance
-gate remains open. No selected-asset preview or production physics pass is claimed.
+**Status (2026-10-10): integrated in a local build; not in this public repository.**
+The WhiteCap *Ponytail MessyWavy* package (Fab) replaces Inez's Asset B hair in
+`model/v06/inez_recovery_v06_hair_r04.glb` (33,234,004 bytes, SHA-256
+`c50d6a64…68a06ba`). Every one of the 665 LOD0 hair cards is skinned to her
+existing rig and simulated individually in the viewer. Production/likeness
+approval remains **false**.
 
-## Reference and source lock
+## Source and licence handling
 
-[WhiteCap's selected listing](https://www.fab.com/listings/a3425afb-5801-455e-a6a1-e27632d493db)
-advertises a MetaHuman MHPKG and a separate Additional Files ZIP containing
-custom FBX hair cards, FBX scalp/reference head, PNG/TGA maps and ABC strands.
-That is publisher metadata, not an inventory of downloaded files.
-Its public Personal/Professional tiers are Fab Standard; the user's entitlement
-and delivered package license have not been verified. Honor the user's NoAI
-restriction: use local Blender transformations, never submit meshes/textures
-to generative services or training. The Unreal physics setup is not portable.
+The repository owner supplied the package on 2026-10-10 through their own
+Google Drive: `hair_f_ponytail_messy_wavy_01.zip` (Additional Files: 8 card
+LODs as FBX, scalp/head FBX, `fiber_Attribue.png`, `fiber_Tangent.tga`,
+`Highlights_001.jpg`, 136 MB Alembic groom) and
+`hair_f_ponytail_messywavy_01.mhpkg` (Unreal assets, used only for its
+manifest: 68,005 strands, 3,115,191 points). Hashes are in
+`assets/characters/inez/hair/qa/intake_v01.json`. Entitlement was not
+independently verified. NoAI: only local tools (Blender, Python, three.js)
+touched the files.
 
-Use `references/inez_portraits.jpg` and `references/inez_turnaround.jpg` as
-identity authority. The user's supplied 254336/254275/253907 renders guide the
-requested lighter skin and medium-brown hair appearance. Preserve the loose
-high wavy ponytail, face-framing curls and natural volume. The new asset must
-fit Inez's scalp; her face, body, outfit, UVs, facial layers and existing rig
-must not be changed to accommodate it.
+**This repository is public**, so the package, the fitted hair and any GLB
+containing it are git-ignored (`.gitignore`): tools, presets, QA reports and
+renders are committed; licensed geometry and textures are not. The viewer's
+default is the hair build; when it is absent it falls back to
+`v06/inez_recovery_v06.glb` with a warning (`production_status.json`
+`default_model` / `fallback_model`).
 
-Existing editable source: `model/inez_master.blend`. Color/contact recovery:
-`model/v06/inez_recovery_v06.blend` and its GLB. Both retain the 167-joint rig,
-including `hair.01`–`hair.04`. Existing primary clips contain baked ponytail
-motion; this is **not** a runtime physics integration.
+## Build it locally
 
-## Local package intake
-
-Place the legitimately downloaded Additional Files package in
-`assets/characters/inez/hair/source/` or supply its local path. Keep source
-bytes untouched. Run:
+From the repository root, with the extracted ZIP in `PKG` and a scratch dir `W`:
 
 ```sh
-python3 tools/inez/hair/asset_intake.py --source /path/to/extracted-package \
-  --report assets/characters/inez/hair/qa/intake_v01.json \
-  --license-note /path/to/receipt-or-license-note
+blender -b --factory-startup -P tools/inez/hair/export_package_meshes.py -- $PKG $W/pkg
+python3 -I tools/inez/hair/fit_hair_cards.py --glb assets/characters/inez/model/v06/inez_recovery_v06.glb \
+  --package-npz $W/pkg --lod 0 --rotation pitch --out $W/fit_lod0.npz --report $W/fit_lod0.json
+python3 -I tools/inez/hair/make_card_textures.py --package $PKG \
+  --reference-hair assets/characters/inez/model/v06/textures/Inez_Hair_FromAssetB_basecolor_restored_v06.png \
+  --out $W/cards_basecolor.png --report $W/texture.json
+python3 -I tools/inez/hair/inject_hair_glb.py --input assets/characters/inez/model/v06/inez_recovery_v06.glb \
+  --fit $W/fit_lod0.npz --texture $W/cards_basecolor.png --scalp-cap --scalp-color .0267 .0169 .0106 \
+  --output assets/characters/inez/model/v06/inez_recovery_v06_hair_r04.glb --report $W/inject.json
+python3 -I tools/inez/hair/measure_hair_colliders.py --glb assets/characters/inez/model/v06/inez_recovery_v06.glb \
+  --out assets/characters/inez/hair/presets/inez_messywavy_cards_r01.json   # already committed
 ```
 
-The tool records hashes, file formats, archive contents and actual image
-dimensions; it does not extract archives, assert entitlement, guess texture
-roles or fit a mesh. Then import the verified FBX in Blender into an untouched
-source collection and create a working duplicate. Inspect units, axes, card
-islands, alpha borders, UVs and map roles before fitting. Measure Inez's scalp
-and the package reference scalp, align the gathering point and hairline,
-fit temples and curls locally, preserve card spacing and strand direction,
-and review front/profile/back/above renders against the originals. Save a new
-working Blend and GLB; retain the current hairstyle for rollback.
+Restart Vite after adding the GLB (its public-file list is built at start-up).
 
-## Executed solver foundation
+## Fit (`fit_hair_cards.py`, report `hair/qa/fit_lod0_r04.json`)
 
-`viewer/src/hair/guide-solver.js` implements world-space XPBD guide particles
-with anchored roots, gravity, inertia, rigid length constraints, compliant
-second-neighbor bend constraints, compliant rest-shape targets, drag, sphere/
-capsule collision, contact friction and bounded velocity/acceleration.
-Fixed 60 Hz stepping interpolates supplied attachment poses between presentation
-frames. Roots follow the supplied position/quaternion; free particles retain
-world inertia when the attachment translates or rotates. Wind is an optional
-explicit acceleration vector, zero by default; there is no random idle motion.
+The target is the surface the viewer actually renders at rest: base positions
+plus every morph target at its default weight (the identity layers). Her face
+is never moved.
 
-Large deltas, excessive translation and explicit resets reinitialize the state.
-Nonfinite particle state recovers; invalid inputs fail explicitly. Pause holds
-the deformed shape in attachment space; single stepping is available. Particle
-positions can be interpolated for rendering. Collision proxies must be supplied
-in world metres at each fixed tick, with kinematic velocities when available.
+- **Similarity ICP** from the package scalp to Inez's cranium, pitch-only
+  rotation: scale 1.104, rotation 0.76°, mean trimmed distance 2.19 mm. A free
+  rotation fitted marginally closer (2.08 mm) but rolled the style 3.2°
+  sideways toward ear asymmetry, so it was rejected.
+- **Local wrap**: scalp residuals (max 11 mm) smoothed over the scalp and
+  carried onto the cards with a 2.5 cm Gaussian, so cards keep their height
+  above the scalp.
+- **Collisions** with her skin (ears included), sweater and necklace: every
+  vertex beyond the first 6 % of a card is pushed at least 1.5 mm out of the
+  skin and 3 mm out of the cloth, spread along the card to avoid kinks. 92
+  cards (512 vertices) moved > 5 mm, mostly face-framing strands passing
+  through her right ear/jaw (max 39 mm). One vertex remains 0.4 mm inside an
+  ear fold.
+- **Skin weights** on existing joints only (`head`, `hair.01`–`hair.04`;
+  167 joints, 17 clips, all identity defaults unchanged). The ponytail
+  (15,365 vertices) blends from the head into the old ponytail chain.
+- Per-vertex data for the runtime: `_HAIR_CARD`, `_HAIR_S` (root 0 → tip 1,
+  from the card UVs; root = end nearest the package scalp) and `_HAIR_FREE`
+  (0 on the scalp → 1 hanging, non-decreasing toward the tip; 9,009 pinned,
+  17,160 free vertices, 509 cards with a free part).
 
-The tests execute 30/60/120 FPS and irregular presentation timing, deterministic
-replay, root attachment, settled idle, length error, sphere/capsule separation,
-pause/resume/single step, teleport and nonfinite recovery. These are **solver
-fixtures**, not demonstrations of the selected hair on Inez. Run:
+## Crown "scalp ridge"
 
-```sh
-cd viewer
-node --test qa/hair-guide-solver.test.mjs
-```
+Diagnosis with the hair or the head hidden at the same camera
+(`renders/hair_iterations/`): the pale, glossy crown streak was Inez's own
+skull, which carries painted hair, poking out through the old hair shell
+and shaded as glossy skin. Fix in r04: the new cards sit outside the skull,
+and a scalp cap (the package scalp, shrink-wrapped 0.8 mm above her head)
+covers only the top of the head in the hair's root colour, matte, with alpha
+fading to zero over 2.5 cm toward the hairline, the nape and the ears. A
+hard-edged cap (r03) made a visible forehead line and flat dark patches and
+was rejected. Matched evidence: `renders/hair_r04_matched/compare_crown_*.png`.
 
-`hair/presets/guide-foundation.json` stores provisional tuning in physical units.
-Guide count, regions, bone binding, actual anatomy proxies and quality-mode
-transitions require the source topology. Do not describe these preset names
-as measured production quality modes. Initial fixture tuning that held shape
-too rigidly was corrected by softening compliant shape/bend forces; tests now
-exercise actual inertial displacement and collision separation.
+## Material
 
-## Three.js and CORDEL integration boundary
+`make_card_textures.py` builds one 4096² RGBA texture: alpha is the package's
+fine strand coverage (×2.2), RGB is the medium brown measured from Inez's
+restored, user-approved hair albedo (linear median → 95th percentile), varied
+per strand by the package's random channels and lightened toward the tips.
+COLOR_0 darkens the first 6 % of each card (roots) with a small per-card
+tint. Alpha mask 0.3, double-sided, roughness 0.42, the old hair's warm
+specular; the viewer turns on alpha-to-coverage for it.
 
-The solver is **not enabled or bound to viewer meshes yet**. It takes plain
-arrays for head attachment transforms, measured guide rest points and collision
-proxies; it returns particle points. No Jolt or Unreal type enters this API.
-The later Three.js adapter must sample the primary AnimationMixer and facial
-pose first, then transform kinematic proxies, step guides, and apply secondary
-bone rotations. Remove/override only overlapping baked hair tracks, retain the
-bind pose, leave scalp attachment immediate, and preserve face morphs. Separate
-curl guides must be derived from actual card topology; the current four-bone
-chain alone cannot prove independent face-framing curl simulation.
+## Per-card simulation (viewer)
 
-CORDEL was freshly inspected at `057d304c5958e00913dae3d4d1383dff6dbf81fa`,
-the current remote HEAD. `native/phase1_host/src/scene/scene.cpp` rejects skin,
-hierarchy, rotation, scale and matrices in its static fixture loader. Character
-motor and skeletal locomotion are still roadmap Phases 2.2 and 2.4. Physics
-queries use engine-neutral `Vec3`, `Quaternion`, capsule casts and overlaps
-under `native/physics/include/cordel/physics/`; simulation belongs on the
-authoritative 60 Hz world update after animation. No CORDEL source was changed.
-Native hair rendering/simulation integration requires its skinning and animation
-prerequisites; no native execution is claimed.
+- `viewer/src/hair/card-solver.js`: fixed 60 Hz XPBD for many short chains
+  in typed arrays. Pinned particles follow the animation exactly; free
+  particles are pulled toward their animated position by a compliant shape
+  constraint (stiff near the root, soft at the tip), with inertia, gravity,
+  drag, bending, sphere/capsule collision and friction. A follow-the-leader
+  pass keeps segments inextensible. Teleports, animation snaps (scalp moving
+  faster than 6 m/s) and hitches restart from the animated pose; pause holds
+  the shape relative to it; nonfinite state recovers.
+- `viewer/src/hair/card-hair-runtime.js`: one 8-particle guide per card
+  (5,320 particles, 2,121 pinned) from the custom attributes; particle targets
+  are skinned on the CPU with the hair's own weights every frame, so the baked
+  ponytail motion still drives the hair; every one of the 35,618 vertices is
+  rebuilt from its simulated segment frame. Gravity is head-relative (the
+  authored shape already hangs under gravity). The skinned mesh is hidden
+  while a world-space copy is simulated; the "Hair physics" checkbox (or
+  `inezViewer.setHairPhysics(false)`) returns to pure animation.
+- `hair/presets/inez_messywavy_cards_r01.json`: 11 collision proxies measured
+  from her skin and sweater (5 cranium spheres, 2 temple spheres, 2 jaw
+  spheres, neck and upper-spine capsules, each inscribed with 2 mm margin) and
+  provisional tuning (tip compliance 5 m/N ≈ 2.2 Hz sway, drag 4/s).
 
-GLB carries geometry, UVs, skin weights, bones and optional baked clips. It does
-not automatically execute XPBD. Keep runtime solver, guide configuration and
-proxy attachment data separate unless CORDEL adds an explicit supported format.
+The 68,005-strand Alembic groom is not used: millions of points are not a
+real-time browser asset. Each card stands for a clump of strands; "every
+strand" is realised as every card moving on its own.
 
-## Remaining acceptance work
+## Evidence (SwiftShader WebGL2 in a container: CPU evidence, not GPU)
 
-Inspect the real licensed package; fit and rig scalp/main ponytail/curls/flyaways;
-assign supplied color/alpha/normal and inspected auxiliary maps; implement and
-measure bone/guide deformation and anatomy colliders; run actual Idle/Walk/Run/
-Stop/Turn/LookDown/Crouch/Fear/Wind/Teleport sequences; capture real renders and
-a demonstration. Verify reference brown color and silhouette under neutral,
-warm/dim interior, backlight and flashlight, alpha stability, settling and
-collision quality. Measure actual simulation/shading costs and quality transitions
-on the target GPU. Until then, selected-hair production approval is **false**.
+| Clip | Max offset from animation | Max segment stretch | Proxy penetrations |
+|---|---:|---:|---:|
+| Idle | 0.4 cm | 0.00 % | 0 |
+| Walk | 3.8 cm | 0.07 % | 0 |
+| Run | 8.0 cm | 0.24 % | 0 |
+| TurnLeft | 1.2 cm | 0.00 % | 0 |
+| CrouchDown | 3.8 cm | 0.27 % | 0 |
+| LookAround | 1.0 cm | 0.00 % | 0 |
+
+`hair/qa/hair_r04_motion.json` (7/7 checks): teleport after 3.37 m of travel
+resets with no recovery; side/back renders with physics on and off at the
+same pose in `renders/hair_r04_motion/`. Browser QA 14/14
+(`qa/browser_v06_hair_r04_browser.json`), skin QA 17/17
+(`qa/v06/v06_hair_r04_skin.json`), Khronos validation 0 errors / 21 warnings
+(20 existing + one more of the same kind for the scalp node), the original
+binary chunk preserved byte-exact as a prefix. Viewer build passes; 20 unit
+tests pass (12 existing, 8 for the card solver). Live loop on this CPU-only
+renderer: whole scene 1.85 FPS; hair skinning 0.7 ms, rebuild 4.1 ms, solve
+33 ms per frame for up to 3 fixed ticks at that frame rate. No target-GPU
+measurement.
+
+## Known limits and next steps
+
+- The package is a short, high crown ponytail; the original references show
+  a lower ponytail reaching the shoulders. The style is the user's choice and
+  was fitted as designed, not restyled.
+- Inez's painted hair shows as a dark patch behind the ears and at the nape,
+  where the old shell covered it; strands are thin at close range.
+- TurnLeft/TurnRight end with a whole-body snap in the viewer (the head jumps
+  19 cm then 16 cm across two frames when the clip's turn is baked into the
+  root): an existing animation issue, not hair. The hair restarts with it.
+- Only LOD0 is integrated; LOD1–LOD4 could feed a quality setting. No runtime
+  LOD switching yet.
+- Profile on the target hardware before any frame-rate claims.
+- CORDEL: no integration is claimed; the solver API takes plain arrays only.

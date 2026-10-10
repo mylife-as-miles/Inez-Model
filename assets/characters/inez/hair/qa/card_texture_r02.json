@@ -1,0 +1,31 @@
+{
+ "tool": "tools/inez/hair/make_card_textures.py",
+ "output": "(local scratch) tex_r02.png",
+ "size": 4096,
+ "reference_hair": "assets/characters/inez/model/v06/textures/Inez_Hair_FromAssetB_basecolor_restored_v06.png",
+ "measured_linear": {
+  "dark": [
+   0.038204364478588104,
+   0.024157630279660225,
+   0.015208514407277107
+  ],
+  "median": [
+   0.038204364478588104,
+   0.024157630279660225,
+   0.015208514407277107
+  ],
+  "light": [
+   0.2015562355518341,
+   0.11953843384981155,
+   0.08650046586990356
+  ]
+ },
+ "quantiles": [
+  0.5,
+  0.95
+ ],
+ "coverage_gain": 2.2,
+ "bytes": 3154012,
+ "coverage_mean": 0.07014603167772293,
+ "artistic_approval": false
+}

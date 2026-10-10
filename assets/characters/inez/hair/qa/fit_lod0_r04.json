@@ -1,0 +1,174 @@
+{
+ "tool": "tools/inez/hair/fit_hair_cards.py",
+ "lod": 0,
+ "artistic_approval": false,
+ "input_glb_sha256": "3bbb563b8183d8857037b0495bb3fb11c92545b7603cdca2e719b1d9787261eb",
+ "inez_surface": "rendered rest surface: base + default-weight morph targets (identity layers), welded",
+ "similarity": {
+  "mode": "pitch",
+  "scale": 1.104118231345777,
+  "rotation_deg": 0.7566933443606622,
+  "translation_m": [
+   -0.007486139328352774,
+   -0.14859320870749082,
+   -0.03265469281578191
+  ],
+  "icp_iterations": 78,
+  "cap_mean_trimmed_distance_m": 0.0021933442200983,
+  "cap_signed_distance_after_m": {
+   "median": -0.0006818271674187675,
+   "p05": -0.010662694710614137,
+   "p95": 0.004784714507180888
+  }
+ },
+ "local_wrap": {
+  "residual_max_m": 0.011122976399355125,
+  "residual_mean_m": 0.0021961444651787112,
+  "kernel_sigma_m": 0.025
+ },
+ "cards": {
+  "count": 665,
+  "vertices": 35618,
+  "triangles": 37306,
+  "uv_axis_votes_u_v": [
+   0,
+   665
+  ],
+  "length_m": {
+   "min": 0.02131849715599481,
+   "median": 0.30643364881141427,
+   "max": 1.0985221884146013
+  },
+  "root_distance_to_package_scalp_m_median": 0.0011028105589091105
+ },
+ "collision": {
+  "clearance_m": 0.0015,
+  "cloth_clearance_m": 0.003,
+  "root_fraction_exempt": 0.06,
+  "rounds": {
+   "round_0": {
+    "body_violations": 1409,
+    "cloth_violations": 96
+   },
+   "round_1": {
+    "body_violations": 472,
+    "cloth_violations": 68
+   },
+   "round_2": {
+    "body_violations": 232,
+    "cloth_violations": 36
+   },
+   "round_3": {
+    "body_violations": 137,
+    "cloth_violations": 19
+   },
+   "round_4": {
+    "body_violations": 14,
+    "cloth_violations": 6
+   },
+   "round_5": {
+    "body_violations": 3,
+    "cloth_violations": 0
+   },
+   "round_6": {
+    "body_violations": 2,
+    "cloth_violations": 0
+   },
+   "round_7": {
+    "body_violations": 1,
+    "cloth_violations": 0
+   },
+   "round_8": {
+    "body_violations": 1,
+    "cloth_violations": 0
+   },
+   "round_9": {
+    "body_violations": 1,
+    "cloth_violations": 0
+   },
+   "round_10": {
+    "body_violations": 1,
+    "cloth_violations": 0
+   },
+   "round_11": {
+    "body_violations": 1,
+    "cloth_violations": 0
+   }
+  },
+  "body_min_clearance_m_beyond_root": -0.0004076365714697156,
+  "cloth_min_clearance_m_beyond_root": 0.0029071270997857853,
+  "max_correction_m": 0.03901934151024181,
+  "vertices_moved_over_5mm": 512,
+  "cards_moved_over_5mm": 92,
+  "large_correction_centroid_m": [
+   0.03658762294741589,
+   1.5820547327087842,
+   -0.031169579103887502
+  ],
+  "mean_correction_m": 0.0002271218868834416
+ },
+ "free_factor": {
+  "pinned_vertices": 9009,
+  "free_vertices": 17160,
+  "cards_with_free_part": 509
+ },
+ "skin": {
+  "joints_used": [
+   "head",
+   "hair.01",
+   "hair.02",
+   "hair.03",
+   "hair.04"
+  ],
+  "joints_added": 0,
+  "ponytail_vertices": 15365,
+  "chain_world_m": [
+   [
+    -0.00555982481959768,
+    1.7208884402047973,
+    -0.10120194186081047
+   ],
+   [
+    -0.0007549874379171751,
+    1.6407577639575077,
+    -0.12515170275746437
+   ],
+   [
+    0.0011843032076630931,
+    1.5495976331259342,
+    -0.126891841221205
+   ],
+   [
+    0.0008101156799895956,
+    1.4592635114830692,
+    -0.15423046806642593
+   ],
+   [
+    0.000435928152316098,
+    1.3689293898402042,
+    -0.18156909491164686
+   ]
+  ]
+ },
+ "scalp_cap": {
+  "vertices": 3150,
+  "offset_m": 0.0008,
+  "inset_m": 0.012,
+  "fade_m": 0.025,
+  "min_height_m": 1.68,
+  "triangles_kept": 2755,
+  "triangles_total": 5960
+ },
+ "bounds_m": {
+  "min": [
+   -0.11985437452689864,
+   1.514066474844473,
+   -0.19257428615656438
+  ],
+  "max": [
+   0.11445148343627184,
+   1.8180202802643244,
+   0.11969851597432198
+  ]
+ }
+}

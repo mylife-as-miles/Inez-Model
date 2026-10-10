@@ -8,6 +8,7 @@ import { MaterialInspector, describeMaterial } from './materials.js';
 import { AnimationLab, TERRAINS } from './animation-lab.js';
 import { DigitalHumanRegistry } from './digital-human/material-registry.js';
 import { DIGITAL_HUMAN_LIGHTS } from './digital-human/lighting/digital-human-presets.js';
+import { CardHairRuntime } from './hair/card-hair-runtime.js';
 import './style.css';
 
 const $ = id => document.getElementById(id);
@@ -67,7 +68,7 @@ key.shadow.normalBias = .005;
 scene.add(hemisphere, key, key.target, fill, fill.target, rim, rim.target);
 const ground = new THREE.Mesh(new THREE.PlaneGeometry(24, 24), new THREE.MeshStandardMaterial({ color: '#b6bcc1', roughness: .95 }));
 ground.rotation.x = -Math.PI / 2; ground.position.y = -.002; ground.receiveShadow = true; scene.add(ground);
-let avatar, motion, face, inspector, lab, digitalHuman;
+let avatar, motion, face, inspector, lab, digitalHuman, hair;
 const timing = { animation_ms: 0, render_ms: 0, lab_ms: 0 };
 let height = 1.7, span = 1.95;
 const allInitialMorphs = new Map();
@@ -213,6 +214,7 @@ function seek(seconds = 0) {
   if (!motion) return false;
   face?.restore(); motion.seek(seconds);
   face?.apply(0, characterRoot.getWorldQuaternion(new THREE.Quaternion()));
+  characterRoot.updateMatrixWorld(true); hair?.update(0);
   updateState(); syncAnimationUI(); renderFrame(); return state.clipTime;
 }
 function resetPosition() {
@@ -279,7 +281,7 @@ function syncAnimationUI() {
 function refreshPose() {
   face?.restore(); updateMovement(0); motion?.update(0, state.locomotionSpeed, true);
   face?.apply(0, characterRoot.getWorldQuaternion(new THREE.Quaternion()));
-  characterRoot.updateMatrixWorld(true); renderFrame(); updateState(); syncAnimationUI();
+  characterRoot.updateMatrixWorld(true); hair?.update(0); renderFrame(); updateState(); syncAnimationUI();
 }
 // Explicit fixed steps also work while paused, for repeatable QA of real
 // mixer fades, skeleton deformation and translation. No pose is synthesized.
@@ -292,9 +294,30 @@ function advance(seconds = 0, { render = true } = {}) {
     const delta = Math.min(remaining, 1 / 60);
     face?.restore(); updateMovement(delta); motion?.update(delta, state.locomotionSpeed);
     face?.apply(delta, characterRoot.getWorldQuaternion(new THREE.Quaternion()));
-    lab?.update(delta, followCamera); remaining -= delta;
+    lab?.update(delta, followCamera); characterRoot.updateMatrixWorld(true); hair?.update(delta); remaining -= delta;
   }
   characterRoot.updateMatrixWorld(true); if (render) renderFrame(); updateState(); syncAnimationUI(); syncLabUI(); return state.clipTime;
+}
+// Hair cards that carry _HAIR_CARD/_HAIR_S/_HAIR_FREE get the per-card
+// simulation; any other model keeps its skinned (animation-only) hair.
+async function setupHair() {
+  let cards = null;
+  avatar.traverse(mesh => { if (mesh.isSkinnedMesh && mesh.geometry.attributes._hair_card) cards = mesh; });
+  if (!cards) return;
+  for (const material of [cards.material].flat()) { material.alphaToCoverage = true; material.needsUpdate = true; }
+  try {
+    const response = await fetch(assetRoot + 'hair/presets/inez_messywavy_cards_r01.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('hair preset HTTP ' + response.status);
+    hair = new CardHairRuntime(cards, await response.json(), { findBone: name => findBone(avatar, name) });
+    scene.add(hair.renderMesh); hair.setEnabled(true);
+    $('hair-physics').disabled = false; $('hair-physics').checked = true;
+    const d = hair.diagnostics;
+    $('hair-info').textContent = `${d.cards} cards · ${d.particles} guide particles (${d.pinned} pinned to the scalp) · ${d.colliders} collision proxies · ${d.simulationHz} Hz`;
+  } catch (error) { warnings.push('Hair simulation unavailable: ' + error.message); hair = null; }
+}
+function setHairPhysics(on = true) {
+  if (!hair) return false;
+  hair.setEnabled(on); $('hair-physics').checked = hair.enabled; refreshPose(); return hair.enabled;
 }
 function renderFrame() {
   digitalHuman?.updateLight(camera, key);
@@ -422,6 +445,7 @@ document.addEventListener('visibilitychange', () => { if (document.hidden) keys.
 $('render').addEventListener('pointerdown', () => $('render').focus({ preventScroll: true }));
 $('view').onchange = event => setView(event.target.value);
 $('lighting').onchange = event => setLighting(event.target.value);
+$('hair-physics').onchange = event => setHairPhysics(event.target.checked);
 $('animation').onchange = event => setAnimation(event.target.value);
 $('lab-terrain').replaceChildren(...Object.entries(TERRAINS).map(([value, label]) => new Option(label, value)));
 $('lab-terrain').onchange = event => setTerrain(event.target.value);
@@ -465,6 +489,7 @@ window.inezViewer = { state, errors, warnings, setView, setLighting, setLightCon
   setAnimation, setPlaybackSpeed, setLocomotionSpeed, pause, seek, advance, resetPosition, captureMode, inspectMaterials, setWireframe, setReference,
   turn, crouch, playPerformance, stopPerformance, setLab, setTerrain, setSkin, screenshot,
   get digitalHuman() { return digitalHuman; }, get renderer() { return renderer; },
+  setHairPhysics, get hair() { return hair; }, get hairDiagnostics() { return hair?.diagnostics ?? null; },
   get lab() { return lab; }, boneInfo: name => lab?.boneInfo(name) ?? null,
   sampleDeformedVertices, boneWorldPositions, getBoneWorldPositions: boneWorldPositions, getMorphInfluences, renderFrame: refreshPose,
   getBone: name => findBone(avatar, name), getAvatar: () => avatar, get avatar() { return avatar; }, get assetInfo() { return state.assetInfo; },
@@ -562,7 +587,7 @@ renderer.setAnimationLoop(() => {
   face?.restore(); updateMovement(delta);
   const t0 = performance.now(); motion?.update(delta, state.locomotionSpeed); const t1 = performance.now();
   face?.apply(delta, characterRoot.getWorldQuaternion(new THREE.Quaternion()));
-  lab?.update(delta, followCamera); const t2 = performance.now();
+  lab?.update(delta, followCamera); characterRoot.updateMatrixWorld(true); hair?.update(delta); const t2 = performance.now();
   controls.update(); renderFrame(); const t3 = performance.now(); updateState(); frames++;
   // Rolling averages of CPU time per frame (render time is the submission
   // cost on the CPU; GPU time is not measurable here without timer queries).
@@ -591,12 +616,23 @@ try {
     $('notice').textContent = 'Loading authored character GLB…';
     // ?model= selects another export below model/ (for example a staged work/
     // revision under review). Anything outside that folder is refused.
-    const requestedModel = new URLSearchParams(location.search).get('model') || status.default_model || 'inez_runtime.glb';
-    if (!/^[\w-]+(\/[\w.-]+)*\.glb$/.test(requestedModel) || requestedModel.includes('..')) throw new Error(`Refused model path: ${requestedModel}`);
+    const explicitModel = new URLSearchParams(location.search).get('model');
+    let requestedModel = explicitModel || status.default_model || 'inez_runtime.glb';
+    const allowed = path => /^[\w-]+(\/[\w.-]+)*\.glb$/.test(path) && !path.includes('..');
+    if (!allowed(requestedModel)) throw new Error(`Refused model path: ${requestedModel}`);
+    let modelResponse = await fetch(assetRoot + 'model/' + requestedModel, { cache: 'no-store' });
+    // The default may be a locally built model with licensed content that is
+    // not in the public repository; fall back to the public model if absent.
+    // (The dev server answers a missing file with its HTML page, not a 404.)
+    const absent = response => !response.ok || (response.headers.get('content-type') ?? '').includes('text/html');
+    if (absent(modelResponse) && !explicitModel && status.fallback_model && allowed(status.fallback_model)) {
+      warnings.push(`Default model ${requestedModel} is not present locally (HTTP ${modelResponse.status}); showing ${status.fallback_model}. See docs/INEZ_HAIR_PHYSICS.md to build it.`);
+      requestedModel = status.fallback_model;
+      modelResponse = await fetch(assetRoot + 'model/' + requestedModel, { cache: 'no-store' });
+    }
     state.modelPath = 'model/' + requestedModel;
     $('model-version').value = requestedModel;
-    const modelResponse = await fetch(assetRoot + state.modelPath, { cache: 'no-store' });
-    if (!modelResponse.ok) throw new Error('GLB missing: HTTP ' + modelResponse.status);
+    if (absent(modelResponse)) throw new Error('GLB missing: HTTP ' + modelResponse.status);
     const buffer = await modelResponse.arrayBuffer(); state.resourceBytes = buffer.byteLength;
     // Runtime exports use KTX2 (Basis) textures and meshopt geometry; the
     // master export uses JPEG/PNG. Both loaders are harmless when unused.
@@ -620,6 +656,7 @@ try {
     state.externalClips = await lab.loadClips();
     inspector = new MaterialInspector(avatar); state.assetInfo = collectAssetInfo(gltf);
     digitalHuman = new DigitalHumanRegistry(avatar, renderer, state.backend); syncSkinUI();
+    await setupHair();
     if (!digitalHuman.supported) {
       for (const element of document.querySelectorAll('#skin-lab input, #skin-lab select')) element.disabled = true;
       $('skin-support').textContent = digitalHuman.diagnostics.fallback;

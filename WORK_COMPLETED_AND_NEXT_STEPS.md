@@ -1,3 +1,10 @@
+# Hair checkpoint — 2026-10-10
+
+Ponytail MessyWavy cards fitted, rigged and simulated per card; crown ridge fixed.
+The licensed hair GLB is local only (public repo); the viewer falls back to the public model.
+See [hair report](docs/INEZ_HAIR_PHYSICS.md). Next: user review of the style (short high ponytail vs the
+references' longer one), painted hair behind the ears, card LODs, TurnLeft/Right end snap, GPU profiling.
+
 # V06 shading checkpoint — 2026-10-10
 
 Facial diagonal bands traced to viewer shadow acne and fixed with a 5 mm key-light

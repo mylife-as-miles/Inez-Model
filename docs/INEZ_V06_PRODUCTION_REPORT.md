@@ -1,5 +1,20 @@
 # Inez V06 production recovery — current continuation checkpoint
 
+## Hair replacement and crown ridge — 2026-10-10
+
+The user supplied the WhiteCap *Ponytail MessyWavy* package and asked to
+replace Inez's hair and simulate every strand. The 665 LOD0 hair cards are
+fitted to her rendered head (similarity ICP 1.104 scale, 0.76° pitch, local
+wrap, collision clean-up), skinned to the existing head and hair.01–04 joints
+(no joints added) and simulated per card in the viewer (fixed 60 Hz XPBD, one
+8-particle guide per card, 11 measured collision proxies). The crown ridge was
+Inez's glossy painted skull showing through the old hair; the new cards sit
+outside it and a soft-edged matte scalp patch hides it. QA: hair motion 7/7,
+browser 14/14, skin 17/17, Khronos 0 errors, 20 unit tests. **Licensed content:
+the hair GLB is built locally and git-ignored (this repository is public)**;
+the viewer falls back to the public model when it is absent. Details and build
+steps: [INEZ_HAIR_PHYSICS.md](INEZ_HAIR_PHYSICS.md).
+
 ## Facial band diagnosis — 2026-10-10 (from `434b690`)
 
 Reproduced: build, 12/12 unit tests, browser 14/14, skin 17/17. The diagonal

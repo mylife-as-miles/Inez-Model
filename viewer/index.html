@@ -7,7 +7,7 @@
   <section id="viewport" aria-label="Interactive Inez character viewport"><canvas id="render" tabindex="0" aria-label="Character controls: WASD or arrow keys to move, Shift to run"></canvas><div id="notice" role="status">Loading production status…</div><div id="play-hint">WASD / arrows · move &nbsp; Shift · run &nbsp; Drag · orbit &nbsp; Wheel · zoom</div><div id="stats" aria-live="off"></div></section>
   <aside>
     <details open><summary>Visual quality lab · V06</summary>
-      <label>Source version<select id="model-version"><option value="inez_runtime.glb">Production V05 · preserved</option><option value="v06/inez_color_restored.glb">V05 · restored skin and hair</option><option value="v06/inez_recovery_v06.glb">Recovery · restored colors and contacts</option><option value="v06/inez_v06_candidate_r02.glb">V06 likeness candidate · review pending</option></select></label>
+      <label>Source version<select id="model-version"><option value="inez_runtime.glb">Production V05 · preserved</option><option value="v06/inez_color_restored.glb">V05 · restored skin and hair</option><option value="v06/inez_recovery_v06.glb">Recovery · restored colors and contacts</option><option value="v06/inez_recovery_v06_hair_r04.glb">Recovery · MessyWavy hair (licensed, local build)</option><option value="v06/inez_v06_candidate_r02.glb">V06 likeness candidate · review pending</option></select></label>
       <div id="skin-lab">
         <label>Skin material<select id="skin-mode"><option value="existing">Existing PBR</option><option value="enhanced">Enhanced skin prototype</option></select></label>
         <label class="check"><input id="skin-sss" type="checkbox" checked> Skin diffusion (SSS)</label>
@@ -34,6 +34,8 @@
       <div class="buttons"><button id="turn-left" disabled>Turn left</button><button id="turn-right" disabled>Turn right</button><button id="crouch" disabled>Crouch</button></div>
       <label class="range">Clip time <output id="timeline-value">0.00 s</output><input id="timeline" type="range" min="0" max="1" step="0.001" value="0" disabled></label>
       <label class="check"><input id="follow" type="checkbox" checked> Follow the character</label>
+      <label class="check"><input id="hair-physics" type="checkbox" checked disabled> Hair physics (per-card simulation)</label>
+      <p id="hair-info" class="hint">This model has no simulated hair cards.</p>
     </details>
     <details open><summary>Animation lab</summary>
       <p id="clip-source" class="hint">Clip source: none.</p>

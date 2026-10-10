@@ -1,12 +1,12 @@
 {
-  "label": "Inez V06 recovery: reference color retained, runtime contact interpolation refined; likeness unapproved",
+  "label": "Inez V06 recovery with fitted Ponytail MessyWavy hair (per-card simulation); likeness unapproved",
   "model_available": true,
   "production_approved": false,
-  "blocker": "Production likeness pending: eye shading, scalp/crown intersections, curl silhouette and sweater details remain (facial diagonal bands were viewer shadow acne, fixed). V06 mouth/jaw geometry is an unpromoted candidate. Selected Fab hair package missing; CORDEL skinning/animation prerequisites not implemented.",
+  "blocker": "Production likeness pending: eye shading, short high-ponytail style differs from the reference low ponytail (user-selected package), painted hair visible behind the ears and sweater details remain (facial diagonal bands were viewer shadow acne, fixed). V06 mouth/jaw geometry is an unpromoted candidate. Selected Fab hair fitted locally (not in public repo); CORDEL skinning/animation prerequisites not implemented.",
   "generation_calls": 22,
   "global_call_cap": 24,
   "rig_animations_available": true,
-  "default_model": "v06/inez_recovery_v06.glb",
+  "default_model": "v06/inez_recovery_v06_hair_r04.glb",
   "source_models": [
     "source/asset_a/Inez.glb",
     "source/asset_b/Inez Facial Model.glb",
@@ -72,6 +72,28 @@
       "model/v06/inez_recovery_v06_normals_r01.glb (not committed; regenerate with tools/inez/v06_identity_normals_glb.py; did not remove bands)"
     ],
     "accepted_for_development": true,
+    "artistic_approval": false
+  },
+  "fallback_model": "v06/inez_recovery_v06.glb",
+  "hair": {
+    "revision": "messywavy_r04",
+    "source": "WhiteCap Ponytail MessyWavy (Fab), supplied by the repository owner 2026-10-10; entitlement not independently verified",
+    "model": "model/v06/inez_recovery_v06_hair_r04.glb",
+    "in_repository": false,
+    "why_not_in_repository": "licensed third-party asset; this repository is public. Build locally with the tools listed in docs/INEZ_HAIR_PHYSICS.md",
+    "cards": 665,
+    "card_vertices": 35618,
+    "simulated_chains": 665,
+    "guide_particles": 5320,
+    "joints_added": 0,
+    "qa": {
+      "motion": "hair/qa/hair_r04_motion.json",
+      "browser": "qa/browser_v06_hair_r04_browser.json",
+      "skin": "qa/v06/v06_hair_r04_skin.json",
+      "fit": "hair/qa/fit_lod0_r04.json",
+      "validation": "hair/qa/hair_r04_glb_validation.json"
+    },
+    "crown_ridge": "fixed: cards sit outside the skull; soft-edged inset scalp hides the glossy painted crown (renders/hair_r04_matched)",
     "artistic_approval": false
   }
 }

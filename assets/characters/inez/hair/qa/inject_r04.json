@@ -1,0 +1,26 @@
+{
+ "tool": "tools/inez/hair/inject_hair_glb.py",
+ "input": "assets/characters/inez/model/v06/inez_recovery_v06.glb",
+ "input_sha256": "3bbb563b8183d8857037b0495bb3fb11c92545b7603cdca2e719b1d9787261eb",
+ "output": "assets/characters/inez/model/v06/inez_recovery_v06_hair_r04.glb",
+ "output_sha256": "c50d6a64a5c08ece72b7023f4a4244b6d1a39a543db6290bd00b0150368a06ba",
+ "output_bytes": 33234004,
+ "binary_prefix_preserved_bytes": 25078600,
+ "original_accessors_unchanged": 5521,
+ "original_nodes": 188,
+ "old_hair_node_detached": "Inez_Hair_lod",
+ "hair_vertices": 35618,
+ "hair_triangles": 37306,
+ "cards": 665,
+ "scalp_cap": true,
+ "joints_added": 0,
+ "material": {
+  "alphaMode": "MASK",
+  "alphaCutoff": 0.3,
+  "roughness": 0.42,
+  "root_shade": 0.7,
+  "root_length": 0.06
+ },
+ "texture_bytes": 3154012,
+ "artistic_approval": false
+}

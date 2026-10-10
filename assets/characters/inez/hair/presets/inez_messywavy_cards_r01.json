@@ -1,0 +1,153 @@
+{
+ "status": "Measured proxies and provisional tuning for the fitted Ponytail MessyWavy cards; not artistically approved",
+ "units": "metres, seconds, kilograms; compliance in m/N",
+ "source_glb": "assets/characters/inez/model/v06/inez_recovery_v06.glb",
+ "margin_m": 0.002,
+ "colliders": [
+  {
+   "type": "sphere",
+   "bone": "head",
+   "center": [
+    -0.03805,
+    0.06345,
+    0.00136
+   ],
+   "radius": 0.04999
+  },
+  {
+   "type": "sphere",
+   "bone": "head",
+   "center": [
+    -0.01332,
+    0.06958,
+    0.00236
+   ],
+   "radius": 0.07361
+  },
+  {
+   "type": "sphere",
+   "bone": "head",
+   "center": [
+    -0.00356,
+    0.07503,
+    0.00267
+   ],
+   "radius": 0.07464
+  },
+  {
+   "type": "sphere",
+   "bone": "head",
+   "center": [
+    0.00641,
+    0.07549,
+    0.00313
+   ],
+   "radius": 0.07296
+  },
+  {
+   "type": "sphere",
+   "bone": "head",
+   "center": [
+    -0.00401,
+    0.08502,
+    0.00236
+   ],
+   "radius": 0.06468
+  },
+  {
+   "type": "sphere",
+   "bone": "head",
+   "center": [
+    0.00157,
+    0.04603,
+    0.02879
+   ],
+   "radius": 0.05043
+  },
+  {
+   "type": "sphere",
+   "bone": "jaw",
+   "center": [
+    0.02255,
+    0.01096,
+    0.04527
+   ],
+   "radius": 0.01441
+  },
+  {
+   "type": "sphere",
+   "bone": "head",
+   "center": [
+    0.00442,
+    0.0443,
+    -0.03112
+   ],
+   "radius": 0.04988
+  },
+  {
+   "type": "sphere",
+   "bone": "jaw",
+   "center": [
+    0.02334,
+    0.02218,
+    -0.04458
+   ],
+   "radius": 0.01357
+  },
+  {
+   "type": "capsule",
+   "bone": "neck01",
+   "a": [
+    0.0,
+    0.0,
+    -0.0
+   ],
+   "b": [
+    0.00524,
+    0.05779,
+    0.00158
+   ],
+   "radius": 0.02521
+  },
+  {
+   "type": "capsule",
+   "bone": "spine01",
+   "a": [
+    -0.01509,
+    0.05166,
+    -0.00177
+   ],
+   "b": [
+    -0.01187,
+    0.16089,
+    5e-05
+   ],
+   "radius": 0.0243
+  }
+ ],
+ "solver": {
+  "hz": 60,
+  "iterations": 6,
+  "particlesPerCard": 8,
+  "particleRadius": 0.003,
+  "mass": 0.001,
+  "stretchCompliance": 0,
+  "bendCompliance": 0.2,
+  "shapeComplianceRoot": 0.05,
+  "shapeComplianceTip": 5,
+  "drag": 4,
+  "friction": 0.3,
+  "maxSpeed": 12,
+  "maxDelta": 0.25,
+  "maxSubsteps": 6,
+  "teleportDistance": 0.5,
+  "gravity": [
+   0,
+   -9.81,
+   0
+  ],
+  "gravityMode": "head-relative",
+  "teleportSpeed": 6
+ },
+ "tuning_notes": "Shape pull k = 1/compliance with 1 g particles: tip 5 m/N gives about 2.2 Hz sway and about 2.5 cm tip offset under a 30-degree head tilt (head-relative gravity); drag 4/s damps it. Provisional."
+}

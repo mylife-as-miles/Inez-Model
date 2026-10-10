@@ -1,0 +1,117 @@
+{
+  "source": "/tmp/claude-0/-home-user-Inez-Model/807a0473-44bb-56db-a70f-e43c06a1c109/scratchpad/hair_src/zip",
+  "listing": "https://www.fab.com/listings/a3425afb-5801-455e-a6a1-e27632d493db",
+  "files": [
+    {
+      "file": "Female_Herad_Mesh.fbx",
+      "bytes": 1222480,
+      "sha256": "2ae6259c0cde7b2f31672b09471dd9248d41a85413b5920f649072dc5fd08be2",
+      "extension": ".fbx"
+    },
+    {
+      "file": "Female_Scalp_Mesh.fbx",
+      "bytes": 2646560,
+      "sha256": "fa85a87b71cb83923cdc446ec4b0fc8a084b05a9c201edd429fb26b51f3548ca",
+      "extension": ".fbx"
+    },
+    {
+      "file": "Hair_F_Ponytail_Messy_Wavy_01.abc",
+      "bytes": 136628052,
+      "sha256": "73edc3e7c7b6886a46e0624e0cb88f46a6bc80748ed9850c4d1389bca93761d6",
+      "extension": ".abc"
+    },
+    {
+      "file": "Highlights_001.jpg",
+      "bytes": 2080335,
+      "sha256": "c21abb48024f8a75d12055c67c4526c0268f04d6c4affafe4a6f1472736114f5",
+      "extension": ".jpg",
+      "image": {
+        "size": [
+          2048,
+          2048
+        ],
+        "mode": "RGB"
+      }
+    },
+    {
+      "file": "LODs/Female_Adult_001_HairCard_LOD0.fbx",
+      "bytes": 1325216,
+      "sha256": "1aa7f71b27345829db561dde7397f2f9c458653006ec37cb0a1e17f04dd5bfce",
+      "extension": ".fbx"
+    },
+    {
+      "file": "LODs/Female_Adult_001_HairCard_LOD1.fbx",
+      "bytes": 708576,
+      "sha256": "45795b0f9a11e47d22b38c070bf67ea3d6ffb8aaa602b38ff6b7ee290df47e5c",
+      "extension": ".fbx"
+    },
+    {
+      "file": "LODs/Female_Adult_001_HairCard_LOD2.fbx",
+      "bytes": 479680,
+      "sha256": "4e527693b5d7cb9025def4f30180f5cccbc6561c2c4b8ba80f999e983d637bc5",
+      "extension": ".fbx"
+    },
+    {
+      "file": "LODs/Female_Adult_001_HairCard_LOD3.fbx",
+      "bytes": 314784,
+      "sha256": "c1b72fcad2b1e490b383a2168b395947f6fd083c3d47557916db03429d16799e",
+      "extension": ".fbx"
+    },
+    {
+      "file": "LODs/Female_Adult_001_HairCard_LOD4.fbx",
+      "bytes": 191024,
+      "sha256": "d18344f005f379770f4aab0487bbe3686a31c3a2ca876d72e6fc0f99a5c4cd92",
+      "extension": ".fbx"
+    },
+    {
+      "file": "LODs/Female_Adult_001_HairCard_LOD5.fbx",
+      "bytes": 58704,
+      "sha256": "f87deb6f36f40591301551ce574686cb17a90bc0104137fd0729db114a04a5d1",
+      "extension": ".fbx"
+    },
+    {
+      "file": "LODs/Female_Adult_001_HairCard_LOD6.fbx",
+      "bytes": 50032,
+      "sha256": "014761a2dcdb42a8bde9fe9a3b897b5117d08d0028f721af7bed2c55e4247f7f",
+      "extension": ".fbx"
+    },
+    {
+      "file": "LODs/Female_Adult_001_HairCard_LOD7.fbx",
+      "bytes": 45648,
+      "sha256": "4306560dc963ab9dc25f96a4e6f17335909696c2273b99ddc2552aa4c1a8801a",
+      "extension": ".fbx"
+    },
+    {
+      "file": "fiber_Attribue.png",
+      "bytes": 5664986,
+      "sha256": "4736e7dec7223d9ef6083626ea7f5aa4358e3eb2520581ed2f49c88f73cdc5f8",
+      "extension": ".png",
+      "image": {
+        "size": [
+          4096,
+          4096
+        ],
+        "mode": "RGBA"
+      }
+    },
+    {
+      "file": "fiber_Tangent.tga",
+      "bytes": 67108882,
+      "sha256": "116ce2a2678e58cc9652459c4b7ebf4cd3561c55fede024163248aaa08cf2171",
+      "extension": ".tga",
+      "image": {
+        "size": [
+          4096,
+          4096
+        ],
+        "mode": "RGBA"
+      }
+    }
+  ],
+  "license_note": "/tmp/claude-0/-home-user-Inez-Model/807a0473-44bb-56db-a70f-e43c06a1c109/scratchpad/hair_src/LICENSE_NOTE.txt",
+  "entitlement_verified": false,
+  "source_unchanged": true,
+  "fitting_performed": false,
+  "hair_accepted": false,
+  "ready_for_local_inspection": true
+}
