@@ -226,7 +226,12 @@ python3 -I tools/inez/hair/build_strand_hair.py --glb assets/characters/inez/mod
    segment length after each collision push (stretch was 6.2 % on Run).
 
 Evidence: `renders/hair_strands_r09_matched/` (before/after, same camera and
-light; reference comparison), `hair/qa/hair_strands_r09_motion.json`.
+light; reference comparison), `hair/qa/hair_strands_r09_motion.json` (7/7:
+max offset from the animation Idle 0.1 cm, Walk 3.7, Run 7.5, TurnLeft 1.6,
+CrouchDown 4.4, LookAround 1.4 cm; segment stretch 0; no proxy penetration;
+teleport after 3.37 m resets without recovery), physics on/off renders in
+`renders/hair_strands_r09_motion/`. Browser (14) and skin (17) QA were not
+re-run on this candidate.
 
 Known limits: the references' ponytail is curlier and they show more loose
 tendrils at the temples; side ringlets sit below the ears. Hair neither casts
