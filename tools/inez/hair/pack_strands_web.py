@@ -10,7 +10,8 @@ occlusion, radius) and the scalp patch. Quantised: offsets int16 at 10 um,
 tangents and normals int8, parameters uint16/uint8; strand topology is a
 point-offset table instead of an index buffer. The binary is base64-encoded
 text because the page host serves no raw binary files. The JSON header lists
-every section's byte offset, type and scale.
+every section's byte offset, type and scale, and optionally the strand
+appearance overrides (--appearance) the groom was approved with.
 """
 import argparse
 import base64
@@ -33,6 +34,7 @@ def main():
     ap.add_argument('--out-json', required=True)
     ap.add_argument('--out-data', required=True)
     ap.add_argument('--label', default='')
+    ap.add_argument('--appearance', help='JSON file of strandAppearance overrides (look) to carry in the header')
     args = ap.parse_args()
     g = GLB(args.glb); j = g.json
     mesh = {m['name']: m for m in j['meshes']}
@@ -83,6 +85,8 @@ def main():
               'guides': int(len(gpos) // K), 'strands': int(len(offsets) - 1), 'points': int(len(sguide)), 'bytes': len(blob), 'sections': table,
               'scalp_material': j['materials'][ca['material']]['pbrMetallicRoughness']['baseColorFactor'],
               'note': 'Licensed hair (WhiteCap Ponytail MessyWavy, Fab) restyled and regroomed; private preview only.'}
+    if args.appearance:
+        header['appearance'] = json.loads(Path(args.appearance).read_text())
     Path(args.out_json).write_text(json.dumps(header, indent=1) + '\n')
     Path(args.out_data).write_text(base64.b64encode(bytes(blob)).decode())
     # quantisation check
