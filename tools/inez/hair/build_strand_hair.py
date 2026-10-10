@@ -99,6 +99,7 @@ def main():
     ap.add_argument('--report', required=True)
     ap.add_argument('--particles', type=int, default=12)
     ap.add_argument('--old-hair-node', default='Inez_Hair_lod')
+    ap.add_argument('--scalp-keep', type=int, default=3, help='keep every Nth conformed scalp point')
     args = ap.parse_args()
     if Path(args.output).exists():
         raise SystemExit('refusing to overwrite ' + args.output)
@@ -122,9 +123,13 @@ def main():
 
     # ---- guide particle skin weights from the nearest restyled card vertex of the same card
     CP = cards['position'].astype(float); Ccard = cards['card'].astype(int)
+    guide_card = gd['card'].astype(int) if 'card' in gd else np.arange(n_g)
+    head_joint_idx = [j['nodes'][i]['name'] for i in j['skins'][0]['joints']].index('head')
     gj = np.zeros((n_g, K, 4), np.uint16); gw = np.zeros((n_g, K, 4), np.float32)
     for c in range(n_g):
-        ids = np.where(Ccard == c)[0]
+        ids = np.where(Ccard == guide_card[c])[0] if guide_card[c] >= 0 else []
+        if len(ids) == 0:   # added guides (tendrils): head only
+            gj[c, :, 0] = head_joint_idx; gw[c, :, 0] = 1; continue
         tree = cKDTree(CP[ids]); _, nn = tree.query(G[c])
         gj[c] = cards['joints'][ids[nn]]; gw[c] = cards['weights'][ids[nn]]
 
@@ -164,6 +169,20 @@ def main():
         if not (bb.any() or bc.any()):
             break
         SP[bb] += nb[bb] * (.001 - sd_b[bb])[:, None]; SP[bc] += nc[bc] * (.002 - sd_c[bc])[:, None]
+
+    # ---- decimate the scalp section: conformed points lie flat on the scalp, so
+    # every --scalp-keep'th point (plus each strand's ends) is enough there; the
+    # saved points pay for the curls in the free part.
+    keep = np.ones(len(SP), bool)
+    if args.scalp_keep > 1:
+        for k in range(n_str):
+            a, b = off[k], off[k + 1]
+            pin = pinned_pts[a:b]; idx = np.arange(b - a)
+            keep[a:b] = ~pin | (idx % args.scalp_keep == 0) | (idx == 0) | (idx == b - a - 1)
+    counts = np.add.reduceat(keep.astype(int), off[:-1])
+    SP, u, gs, g_of_pt, radius = SP[keep], u[keep], gs[keep], g_of_pt[keep], radius[keep]
+    off = np.r_[0, np.cumsum(counts)]
+    kk = gs * (K - 1); k0 = np.clip(np.floor(kk).astype(int), 0, K - 2); t = (kk - k0)[:, None]
 
     # ---- 3. binding in guide frames
     frames = np.stack([guide_frames(G[g], root_ref[g]) for g in range(n_g)])   # (n_g, K, 4)
@@ -253,7 +272,7 @@ def main():
     assert GLB(args.output).bin[:prefix] == glb.bin[:prefix]
     report = {'tool': 'tools/inez/hair/build_strand_hair.py', 'input_sha256': hashlib.sha256(src_bytes).hexdigest(),
               'output_bytes': Path(args.output).stat().st_size, 'guides': n_g, 'particles_per_guide': K, 'strands': n_str, 'points': int(len(SP)),
-              'pinned_points_conformed': int(pinned_pts.sum()), 'collision_rounds_skin_cloth': rounds,
+              'pinned_points_conformed': int(pinned_pts.sum()), 'points_before_decimation': int(len(keep)), 'scalp_keep': args.scalp_keep, 'collision_rounds_skin_cloth': rounds,
               'rest_reconstruction_error_m': recon_err, 'occlusion_mean': float(ao.mean()), 'joints_added': 0, 'artistic_approval': False}
     Path(args.report).write_text(json.dumps(report, indent=1) + '\n')
     print(json.dumps(report, indent=1))

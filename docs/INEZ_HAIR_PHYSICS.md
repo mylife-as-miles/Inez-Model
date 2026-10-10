@@ -239,3 +239,14 @@ nor receives shadow-map shadows yet. About 1.06 M ribbon vertices: the whole
 scene ran at 0.1 FPS on this container's software renderer (CPU evidence
 only); profile on the target GPU before any frame-rate claim, and add a
 strand LOD if needed. The GLB (63 MB) uses float32 attributes throughout.
+
+### Preview candidates r10 / r11 (curlier ponytail, temple tendrils)
+
+At the user's request: `add_tendrils.py` adds 18 face-framing guides (9 per
+side, roots on her temple hairline, mirrored for symmetry, 10-16 cm, kept 4-16
+mm off the skin, hanging in front of the ears to the jaw; head-skinned). The
+MainHair copy runs with 18 strands per guide (12,294 strands) and 64 curl
+points; r10 uses 16 turns / 5 mm radius (tighter), r11 12 turns / 8 mm
+(looser, larger). `build_strand_hair.py --scalp-keep 3` keeps every third
+conformed scalp point (786,816 -> about 500,000 points; 61 MB GLB). Shown to
+the user as a preview before anything becomes the default.
