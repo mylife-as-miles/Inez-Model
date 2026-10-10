@@ -1,4 +1,24 @@
-# Inez V06 production recovery — paused handoff
+# Inez V06 production recovery — current continuation checkpoint
+
+2026-10-10 continuation from fetched commit `7c430b5a`: the four isolated
+Walk/Run/CrouchDown/CrouchUp clips now have refined runtime contact. The default
+`inez_recovery_v06.glb` equals the tested contact-r01 export, retaining the
+original face, restored color and original PBR. See
+[contact refinement and current QA](INEZ_V06_CONTACT_REFINEMENT.md) for source
+subframe diagnosis, actual 120/241/480-Hz results and matched rendered evidence.
+Maximum measured stance slip is 0.056 mm in actual Three.js at 120 Hz and
+0.259 mm in the exported 241-Hz audit, with no sampled runtime penetration.
+Original sources/references remain untouched; R02 and production approval stay
+held. The user explicitly requested committing and pushing this continuation,
+its QA evidence, remaining work and next-agent prompt to the same development
+branch. No main merge or production/artistic approval is authorized.
+
+The material below describes the **paused `7c430b5a` snapshot**, including its
+historical residuals and final-named reports. Current continuation reports and
+the next steps above supersede that contact gate. The paused GLB is retained as
+`model/v06/inez_recovery_v06_paused.glb`.
+
+## Paused handoff
 
 Date: 2026-10-10. Development branch: `feat/inez-v06-digital-human`.
 Starting production commit: `14b8452f861c303ccdee99b0b17c850bfd9dfb7a` on `claude/inez-character-production-5wc4cq`. This is an existing-character recovery, not a replacement. User requested pause and push of the development snapshot. No merge into main; no production or artistic approval.

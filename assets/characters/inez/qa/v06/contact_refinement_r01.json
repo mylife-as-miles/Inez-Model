@@ -1,0 +1,123 @@
+{
+  "source": "/workspace/Inez-Model/assets/characters/inez/model/v06/inez_recovery_v06.blend",
+  "source_sha256": "cb5c511a358abf792247b3fbd0ca98db0b06bc880fd750b0768f28719ce67a0c",
+  "input_glb": "/workspace/Inez-Model/assets/characters/inez/model/v06/inez_recovery_v06_paused.glb",
+  "input_glb_sha256": "be43733f4ae63f059e4a49f5cea78d65d44f211852007ecd195543793fc81258",
+  "output_blend": "/workspace/Inez-Model/assets/characters/inez/model/v06/inez_recovery_v06_contact_r01.blend",
+  "output_glb": "/workspace/Inez-Model/assets/characters/inez/model/v06/inez_recovery_v06_contact_r01.glb",
+  "sampling_hz": 480,
+  "sole_clearance_m": 0.00025,
+  "production_approved": false,
+  "clips": {
+    "Walk": {
+      "duration_s": 1.0833333730697632,
+      "matching_speed_m_s": 0.9247252747252749,
+      "samples": 521,
+      "max_reach_error_mm": 0
+    },
+    "Run": {
+      "duration_s": 0.75,
+      "matching_speed_m_s": 2.3961904761904758,
+      "samples": 361,
+      "max_reach_error_mm": 0
+    },
+    "CrouchDown": {
+      "duration_s": 0.7916666865348816,
+      "matching_speed_m_s": 0,
+      "samples": 381,
+      "max_reach_error_mm": 0
+    },
+    "CrouchUp": {
+      "duration_s": 0.7916666865348816,
+      "matching_speed_m_s": 0,
+      "samples": 381,
+      "max_reach_error_mm": 0
+    }
+  },
+  "changed_bones": [
+    "upperleg01.L",
+    "lowerleg01.L",
+    "foot.L",
+    "upperleg01.R",
+    "lowerleg01.R",
+    "foot.R"
+  ],
+  "inputs_unchanged": true,
+  "source_unrelated_curves_sha256": "1bed340d08ff6603b8efa5cd26410cc5dc029546c49e35e061a073f8d732f6e9",
+  "original_binary_prefix_sha256": "7839c625e53619d1d1da6569644d210d9da2d3d8e5d54221c02ddac1ce8593ed",
+  "original_binary_prefix_unchanged": true,
+  "identity_defaults": {
+    "Inez_HeadFit_v01": 0,
+    "Inez_HeadFit_v02": 0,
+    "Inez_HeadFit_v03": 1,
+    "Inez_HeadRefine_v05": 1,
+    "Inez_SourceBodyFit_v05": 1,
+    "Inez_SourceHeadWrap_v05": 1,
+    "Inez_FaceCorrect_v05": 1
+  },
+  "joint_count": 167,
+  "clip_names": [
+    "Blink",
+    "Crouch",
+    "CrouchDown",
+    "CrouchUp",
+    "Idle",
+    "LookAround",
+    "Run",
+    "TurnLeft",
+    "TurnRight",
+    "Walk",
+    "Expr_SubtleFear",
+    "Expr_Confusion",
+    "Expr_Anger",
+    "Expr_Exhaustion",
+    "Expr_IntenseFear",
+    "Expr_Suspicious",
+    "Expr_Blink"
+  ],
+  "output_glb_sha256": "3bbb563b8183d8857037b0495bb3fb11c92545b7603cdca2e719b1d9787261eb",
+  "export_method": "append six local leg rotations in four clips; retain original runtime parent channels",
+  "source_frame_ranges_unchanged": {
+    "Blink": [
+      1.0,
+      13.5
+    ],
+    "Crouch": [
+      1.0,
+      181.0
+    ],
+    "CrouchDown": [
+      1.0,
+      48.5
+    ],
+    "CrouchUp": [
+      1.0,
+      48.5
+    ],
+    "Idle": [
+      1.0,
+      241.0
+    ],
+    "LookAround": [
+      1.0,
+      361.0
+    ],
+    "Run": [
+      1.0,
+      46.0
+    ],
+    "TurnLeft": [
+      1.0,
+      73.5
+    ],
+    "TurnRight": [
+      1.0,
+      73.5
+    ],
+    "Walk": [
+      1.0,
+      66.0
+    ]
+  },
+  "output_blend_sha256": "8732400be89c48b446e4617840a45b7c754c52e868e1dcf1d821989aa5c6117b"
+}

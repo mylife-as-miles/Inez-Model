@@ -1,0 +1,66 @@
+{
+  "tool": "tools/inez/v06_refine_contacts.py",
+  "source": "model/v06/inez_recovery_v06.blend",
+  "input_glb": "model/v06/inez_recovery_v06_paused.glb",
+  "verified_output": "model/v06/inez_recovery_v06_contact_r01.glb",
+  "temporary_output_glb": "/tmp/inez_contact_verify_oct10.glb",
+  "temporary_output_blend": "/tmp/inez_contact_verify_oct10.blend",
+  "output_sha256": "3bbb563b8183d8857037b0495bb3fb11c92545b7603cdca2e719b1d9787261eb",
+  "sampling_hz": 480,
+  "source_frame_ranges": {
+    "Blink": [
+      1.0,
+      13.5
+    ],
+    "Crouch": [
+      1.0,
+      181.0
+    ],
+    "CrouchDown": [
+      1.0,
+      48.5
+    ],
+    "CrouchUp": [
+      1.0,
+      48.5
+    ],
+    "Idle": [
+      1.0,
+      241.0
+    ],
+    "LookAround": [
+      1.0,
+      361.0
+    ],
+    "Run": [
+      1.0,
+      46.0
+    ],
+    "TurnLeft": [
+      1.0,
+      73.5
+    ],
+    "TurnRight": [
+      1.0,
+      73.5
+    ],
+    "Walk": [
+      1.0,
+      66.0
+    ]
+  },
+  "checks": {
+    "runtime_output_byte_identical": true,
+    "default_matches_candidate": true,
+    "inputs_unchanged": true,
+    "original_binary_prefix_unchanged": true,
+    "source_frame_ranges_match_saved_report": true,
+    "identity_defaults_match": true,
+    "joint_count_167": true,
+    "embedded_clip_names_match": true,
+    "unrelated_source_curves_hash_matches": true
+  },
+  "technical_passed": true,
+  "production_approved": false,
+  "note": "Runtime bytes reproduced exactly from untouched inputs with the final tool. Blend saves are not assumed byte-identical; the authored frame ranges and unaffected curve hashes match."
+}

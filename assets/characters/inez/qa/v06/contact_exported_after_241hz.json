@@ -1,0 +1,136 @@
+{
+  "file": "assets/characters/inez/model/v06/inez_recovery_v06_contact_r01.glb",
+  "sampling_hz": 241,
+  "contact_band_m": 0.002,
+  "clips": {
+    "Walk": {
+      "duration_s": 1.0833333730697632,
+      "matching_speed_m_s": 0.9247252747252749,
+      "samples": 262,
+      "L": {
+        "max_stance_slip_mm": 0.04815330691644941,
+        "lowest_sole_mm": 0.24607284710929977,
+        "highest_sole_mm": 57.27924583249879,
+        "local_loop_seam_mm": 0.00016822691169914112,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.6475096022945711,
+            "slip_mm": 0.04815330691644941
+          }
+        ]
+      },
+      "R": {
+        "max_stance_slip_mm": 0.03223099817521615,
+        "lowest_sole_mm": 0.24728090102941494,
+        "highest_sole_mm": 59.18463599774896,
+        "local_loop_seam_mm": 0.0001874695206401361,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.10376756447028383,
+            "slip_mm": 0.003766326081558954
+          },
+          {
+            "start_s": 0.5437420378242872,
+            "end_s": 1.0833333730697632,
+            "slip_mm": 0.03223099817521615
+          }
+        ]
+      }
+    },
+    "Run": {
+      "duration_s": 0.75,
+      "matching_speed_m_s": 2.3961904761904758,
+      "samples": 182,
+      "L": {
+        "max_stance_slip_mm": 0.02931244263521055,
+        "lowest_sole_mm": 0.2434547988785015,
+        "highest_sole_mm": 100.10697993575775,
+        "local_loop_seam_mm": 0.000196907885608876,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.281767955801105,
+            "slip_mm": 0.02931244263521055
+          }
+        ]
+      },
+      "R": {
+        "max_stance_slip_mm": 0.25843492573600535,
+        "lowest_sole_mm": 0.24485843619107336,
+        "highest_sole_mm": 97.87475662207268,
+        "local_loop_seam_mm": 0.0008147891338965866,
+        "planted_phases": [
+          {
+            "start_s": 0.3770718232044199,
+            "end_s": 0.6588397790055248,
+            "slip_mm": 0.25843492573600535
+          }
+        ]
+      }
+    },
+    "CrouchDown": {
+      "duration_s": 0.7916666865348816,
+      "matching_speed_m_s": 0,
+      "samples": 192,
+      "L": {
+        "max_stance_slip_mm": 0.020564296749599344,
+        "lowest_sole_mm": 0.24899273180319353,
+        "highest_sole_mm": 0.25068712585157976,
+        "local_loop_seam_mm": 0.0012693923136932257,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.7916666865348816,
+            "slip_mm": 0.020564296749599344
+          }
+        ]
+      },
+      "R": {
+        "max_stance_slip_mm": 0.018021950847389247,
+        "lowest_sole_mm": 0.24873128547872073,
+        "highest_sole_mm": 0.25169021298746563,
+        "local_loop_seam_mm": 0.0023259464085040363,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.7916666865348816,
+            "slip_mm": 0.018021950847389247
+          }
+        ]
+      }
+    },
+    "CrouchUp": {
+      "duration_s": 0.7916666865348816,
+      "matching_speed_m_s": 0,
+      "samples": 192,
+      "L": {
+        "max_stance_slip_mm": 0.02017001063867578,
+        "lowest_sole_mm": 0.2487981982005249,
+        "highest_sole_mm": 0.25040112114343205,
+        "local_loop_seam_mm": 0.0013076663745341308,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.7916666865348816,
+            "slip_mm": 0.02017001063867578
+          }
+        ]
+      },
+      "R": {
+        "max_stance_slip_mm": 0.020406469683903056,
+        "lowest_sole_mm": 0.24805308253921324,
+        "highest_sole_mm": 0.2512963477387038,
+        "local_loop_seam_mm": 0.002607508676027152,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.7916666865348816,
+            "slip_mm": 0.020406469683903056
+          }
+        ]
+      }
+    }
+  }
+}

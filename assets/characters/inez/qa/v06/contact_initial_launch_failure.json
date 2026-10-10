@@ -1,0 +1,12 @@
+{
+  "revision": "v06_contact_r01_initial_browser_launch",
+  "passed": false,
+  "failure": "Unexpected token <; Vite HTML fallback returned for the new GLB",
+  "observed_response": {
+    "http_status": 200,
+    "content_type": "text/html"
+  },
+  "cause": "Vite startup public-file cache did not include the newly generated GLB; asset writes are intentionally ignored by the watcher",
+  "resolution": "Restarted Vite, verified model/gltf-binary response, reran with final revision names",
+  "asset_regression_evaluated": false
+}

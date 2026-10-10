@@ -1,4 +1,18 @@
-# V06 pause checkpoint — 2026-10-10
+# V06 continuation checkpoint — 2026-10-10
+
+The fetched development head is `7c430b5a`. Contact interpolation in four clips
+has been corrected and applied to the default recovery GLB after actual browser,
+skin, exported deformation and matched-render QA. The original face, color,
+materials, rig and identity defaults remain intact. See
+[current contact report](docs/INEZ_V06_CONTACT_REFINEMENT.md) and
+[production report](docs/INEZ_V06_PRODUCTION_REPORT.md). The user explicitly
+requested a commit and push of this development checkpoint, including completed
+work, remaining implementation and the [next-agent prompt](docs/INEZ_NEXT_AGENT_PROMPT.md).
+No main merge is authorized. Production/likeness approval is still false. Next:
+controlled baked shading/scalp/costume fixes and original-reference review;
+licensed hair ZIP and target hardware remain missing. R02 stays held.
+
+## Previous pause checkpoint
 
 Current development progress and limitations are recorded in `docs/INEZ_V06_PRODUCTION_REPORT.md`; continuation instructions are in `docs/INEZ_NEXT_AGENT_PROMPT.md` (paths relative to repository root). Recovery color and contacts are saved; R02 likeness remains unapproved; selected Fab hair source is missing; target GPU profiling and native CORDEL integration remain pending. Prior content below is historical and must be checked against actual final V06 artifacts.
 

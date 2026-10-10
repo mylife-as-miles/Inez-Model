@@ -45,6 +45,7 @@ def arguments():
     parser.add_argument('--clip-blend', nargs='*', default=[], help='.blend files holding one retargeted action each')
     parser.add_argument('--speed', nargs='*', default=[], help='NAME=m/s matching speed of in-place clips')
     parser.add_argument('--clip-fps', type=float, default=30.0, help='frame rate the --clip-blend actions were baked at')
+    parser.add_argument('--hz', type=float, help='Sample fractional frames at this rate, including the exact authored endpoint')
     # 2 mm sits between contact (0) and the retargeter's 3 mm swing clearance,
     # so early-swing frames with the toe just off the floor are not counted.
     parser.add_argument('--band', type=float, default=0.002)
@@ -52,16 +53,25 @@ def arguments():
     return parser.parse_args(sys.argv[sys.argv.index('--')+1:])
 
 
-def audit(arm, boots, sides, sole, band, speed=0.0, fps=None):
+def audit(arm, boots, sides, sole, band, speed=0.0, fps=None, hz=None):
     action = arm.animation_data.action
-    first, last = (int(round(v)) for v in action.frame_range)
     scene = bpy.context.scene
+    fps = fps or scene.render.fps/scene.render.fps_base
+    if hz is not None:
+        if hz <= 0 or not math.isfinite(hz):
+            raise ValueError('Sampling rate must be finite and positive')
+        first, last = map(float, action.frame_range)
+        frames = np.linspace(first, last, round((last-first)*hz/fps)+1)
+    else:
+        first, last = (int(round(v)) for v in action.frame_range)
+        frames = range(first, last+1)
     lows = {'L': [], 'R': []}
     phases = {'L': [], 'R': []}
     current = {'L': None, 'R': None}
     previous = None
-    for frame in range(first, last+1):
-        scene.frame_set(frame)
+    for frame in frames:
+        frame = float(frame)
+        scene.frame_set(math.floor(frame), subframe=frame-math.floor(frame))
         depsgraph = bpy.context.evaluated_depsgraph_get()
         evaluated = boots.evaluated_get(depsgraph)
         mesh = evaluated.to_mesh()
@@ -70,7 +80,7 @@ def audit(arm, boots, sides, sole, band, speed=0.0, fps=None):
         evaluated.to_mesh_clear()
         world = np.asarray(boots.matrix_world)
         P = co.reshape(-1, 3)@world[:3, :3].T+world[:3, 3]
-        P[:, 1] -= speed*(frame-first)/(fps or scene.render.fps/scene.render.fps_base)
+        P[:, 1] -= speed*(frame-first)/fps
         for side in 'LR':
             idx = sole[side]
             k = idx[np.argmin(P[idx, 2])]
@@ -91,8 +101,11 @@ def audit(arm, boots, sides, sole, band, speed=0.0, fps=None):
         if current[side] is not None:
             phases[side].append(current[side])
     out = {'frames': [first, last], 'travel_speed_m_s': speed}
+    if hz is not None:
+        out.update({'sampling_hz': hz, 'samples': len(frames), 'duration_s': (last-first)/fps})
     for side in 'LR':
-        kept = [p for p in phases[side] if p['frames'][1]-p['frames'][0] >= 3]
+        minimum_frames = 3*fps/hz if hz is not None else 3
+        kept = [p for p in phases[side] if p['frames'][1]-p['frames'][0] >= minimum_frames-1e-6]
         out[side] = {'lowest_sole_mm': round(min(lows[side])*1000, 2), 'highest_sole_mm': round(max(lows[side])*1000, 2),
                      'planted_phases': [{'frames': p['frames'], 'slip_mm': round(p['slip_m']*1000, 2)} for p in kept],
                      'max_phase_slip_mm': round(max((p['slip_m'] for p in kept), default=0.0)*1000, 2)}
@@ -125,14 +138,14 @@ def main():
             report['clips'][name] = 'missing'
             continue
         arm.animation_data.action = bpy.data.actions[name]
-        report['clips'][name] = audit(arm, boots, sides, sole, args.band, speeds.get(name, 0.0))
+        report['clips'][name] = audit(arm, boots, sides, sole, args.band, speeds.get(name, 0.0), hz=args.hz)
         print('AUDIT', name, json.dumps({s: {k: report['clips'][name][s][k] for k in ('lowest_sole_mm', 'max_phase_slip_mm')} for s in 'LR'}))
     for path in args.clip_blend:
         with bpy.data.libraries.load(str(Path(path).resolve()), link=False) as (source, target):
             target.actions = list(source.actions)
         for action in target.actions:
             arm.animation_data.action = action
-            report['clips'][action.name] = audit(arm, boots, sides, sole, args.band, speeds.get(action.name, 0.0), args.clip_fps)
+            report['clips'][action.name] = audit(arm, boots, sides, sole, args.band, speeds.get(action.name, 0.0), args.clip_fps, args.hz)
             report['clips'][action.name]['source_blend'] = path
             print('AUDIT', action.name, json.dumps({s: {k: report['clips'][action.name][s][k] for k in ('lowest_sole_mm', 'max_phase_slip_mm')} for s in 'LR'}))
     Path(args.report).write_text(json.dumps(report, indent=2)+'\n')

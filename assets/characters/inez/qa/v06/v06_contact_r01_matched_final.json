@@ -1,0 +1,930 @@
+{
+  "revision": "v06_contact_r01_matched_final",
+  "sampling_hz": 120,
+  "lighting": "neutral",
+  "skin_mode": "existing",
+  "artistic_approval": false,
+  "models": {
+    "before": {
+      "model": "v06/inez_recovery_v06_paused.glb",
+      "sha256": "be43733f4ae63f059e4a49f5cea78d65d44f211852007ecd195543793fc81258",
+      "backend": "WebGL2",
+      "diagnostics": {
+        "threeRevision": "180",
+        "requestedMaterialMode": "existing",
+        "actualBackend": "WebGL2",
+        "skinDiffusionSupported": true,
+        "activeSkinMeshes": [
+          "Inez_ContinuousHumanMesh_UNAPPROVED_Geometry",
+          "Inez_ContinuousHumanMesh_UNAPPROVED_Geometry_1"
+        ],
+        "fallback": null,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "thickness": [
+          {
+            "mesh": "Inez_ContinuousHumanMesh_UNAPPROVED_Geometry",
+            "available": true,
+            "source": "rest-pose inward ray to opposite surface",
+            "units": "metres",
+            "animated": "vertex-carried approximation; not recomputed during deformation"
+          },
+          {
+            "mesh": "Inez_ContinuousHumanMesh_UNAPPROVED_Geometry_1",
+            "available": true,
+            "source": "rest-pose inward ray to opposite surface",
+            "units": "metres",
+            "animated": "vertex-carried approximation; not recomputed during deformation"
+          }
+        ],
+        "settings": {
+          "mode": "existing",
+          "sss": true,
+          "strength": 0.55,
+          "radius": 1,
+          "roughnessVariation": 1,
+          "microNormal": 0.15,
+          "thinTransmission": false,
+          "debug": "off",
+          "quality": "gameplay"
+        },
+        "pipeline": {
+          "size": [
+            0,
+            0
+          ],
+          "scenePasses": 0,
+          "diffusionPasses": 1,
+          "neighborSamples": 24,
+          "beautySamples": 4,
+          "estimated_target_bytes": 0,
+          "memory_note": "texture/depth allocation estimate, excludes driver overhead and asset textures",
+          "timings": {}
+        },
+        "targetHardware": {
+          "name": "Dell Precision 5540",
+          "gpu": "NVIDIA Quadro T1000",
+          "vramGB": 4,
+          "ramGB": 16,
+          "measuredHere": false,
+          "initialQuality": "gameplay"
+        },
+        "shaderFailures": [],
+        "limitations": [
+          "Visible-surface screen-space diffusion; offscreen/backside irradiance unavailable",
+          "Compact radial Gaussian cubature; not a full multilayer skin simulation",
+          "Rest-pose geometric thickness follows vertices; no animated thickness recomputation",
+          "WebGPU keeps original PBR; its SSS is unavailable",
+          "No target GPU performance measured here"
+        ]
+      },
+      "clips": {
+        "CrouchDown": {
+          "duration_s": 0.7916666865348816,
+          "matching_speed_m_s": 0,
+          "samples": 96,
+          "L": {
+            "max_stance_slip_mm": 4.154008233034584,
+            "lowest_sole_mm": -0.5775887458648591,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.7916666865348816,
+                "slip_mm": 4.154008233034584
+              }
+            ]
+          },
+          "R": {
+            "max_stance_slip_mm": 4.273954290825127,
+            "lowest_sole_mm": -0.49231297726956935,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.7916666865348816,
+                "slip_mm": 4.273954290825127
+              }
+            ]
+          }
+        },
+        "CrouchUp": {
+          "duration_s": 0.7916666865348816,
+          "matching_speed_m_s": 0,
+          "samples": 96,
+          "L": {
+            "max_stance_slip_mm": 4.000013499688082,
+            "lowest_sole_mm": -0.6461432678960372,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.7916666865348816,
+                "slip_mm": 4.000013499688082
+              }
+            ]
+          },
+          "R": {
+            "max_stance_slip_mm": 4.116238736494577,
+            "lowest_sole_mm": -0.5612128720596496,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.7916666865348816,
+                "slip_mm": 4.116238736494577
+              }
+            ]
+          }
+        },
+        "Run": {
+          "duration_s": 0.75,
+          "matching_speed_m_s": 2.3961904761904758,
+          "samples": 91,
+          "L": {
+            "max_stance_slip_mm": 1.5533521283227454,
+            "lowest_sole_mm": -0.36704484591245073,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.03333333333333333,
+                "slip_mm": 0.5017818113821627
+              },
+              {
+                "start_s": 0.05,
+                "end_s": 0.2833333333333333,
+                "slip_mm": 1.5533521283227454
+              }
+            ]
+          },
+          "R": {
+            "max_stance_slip_mm": 9.537886431201132,
+            "lowest_sole_mm": -0.7370047456056799,
+            "planted_phases": [
+              {
+                "start_s": 0.375,
+                "end_s": 0.6583333333333333,
+                "slip_mm": 9.537886431201132
+              }
+            ]
+          }
+        },
+        "Walk": {
+          "duration_s": 1.0833333730697632,
+          "matching_speed_m_s": 0.9247252747252749,
+          "samples": 131,
+          "L": {
+            "max_stance_slip_mm": 2.170430414782454,
+            "lowest_sole_mm": -1.2070641401599236,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.6416666902028597,
+                "slip_mm": 2.170430414782454
+              }
+            ]
+          },
+          "R": {
+            "max_stance_slip_mm": 3.59886733647816,
+            "lowest_sole_mm": -2.3027439873179407,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.10833333730697632,
+                "slip_mm": 0.7459927005612366
+              },
+              {
+                "start_s": 0.5416666865348816,
+                "end_s": 1.0833333730697632,
+                "slip_mm": 3.59886733647816
+              }
+            ]
+          }
+        }
+      },
+      "captures": [
+        {
+          "file": "before/face_front_rest_00.png",
+          "view": "face_front",
+          "clip": "rest",
+          "time_s": 0
+        },
+        {
+          "file": "before/body_left_CrouchDown_00.png",
+          "view": "body_left",
+          "clip": "CrouchDown",
+          "time_s": 0.1979166716337204
+        },
+        {
+          "file": "before/body_left_CrouchDown_01.png",
+          "view": "body_left",
+          "clip": "CrouchDown",
+          "time_s": 0.3958333432674408
+        },
+        {
+          "file": "before/body_left_CrouchDown_02.png",
+          "view": "body_left",
+          "clip": "CrouchDown",
+          "time_s": 0.5937500149011612
+        },
+        {
+          "file": "before/body_left_CrouchUp_03.png",
+          "view": "body_left",
+          "clip": "CrouchUp",
+          "time_s": 0.1979166716337204
+        },
+        {
+          "file": "before/body_left_CrouchUp_04.png",
+          "view": "body_left",
+          "clip": "CrouchUp",
+          "time_s": 0.3958333432674408
+        },
+        {
+          "file": "before/body_left_CrouchUp_05.png",
+          "view": "body_left",
+          "clip": "CrouchUp",
+          "time_s": 0.5937500149011612
+        },
+        {
+          "file": "before/body_left_Run_06.png",
+          "view": "body_left",
+          "clip": "Run",
+          "time_s": 0.1875
+        },
+        {
+          "file": "before/body_left_Run_07.png",
+          "view": "body_left",
+          "clip": "Run",
+          "time_s": 0.375
+        },
+        {
+          "file": "before/body_left_Run_08.png",
+          "view": "body_left",
+          "clip": "Run",
+          "time_s": 0.5625
+        },
+        {
+          "file": "before/body_left_Walk_09.png",
+          "view": "body_left",
+          "clip": "Walk",
+          "time_s": 0.2708333432674408
+        },
+        {
+          "file": "before/body_left_Walk_10.png",
+          "view": "body_left",
+          "clip": "Walk",
+          "time_s": 0.5416666865348816
+        },
+        {
+          "file": "before/body_left_Walk_11.png",
+          "view": "body_left",
+          "clip": "Walk",
+          "time_s": 0.8125000298023224
+        },
+        {
+          "file": "before/boots_CrouchDown_00.png",
+          "view": "boots",
+          "clip": "CrouchDown",
+          "time_s": 0.0989583358168602
+        },
+        {
+          "file": "before/boots_CrouchDown_01.png",
+          "view": "boots",
+          "clip": "CrouchDown",
+          "time_s": 0.2968750074505806
+        },
+        {
+          "file": "before/boots_CrouchDown_02.png",
+          "view": "boots",
+          "clip": "CrouchDown",
+          "time_s": 0.494791679084301
+        },
+        {
+          "file": "before/boots_CrouchDown_03.png",
+          "view": "boots",
+          "clip": "CrouchDown",
+          "time_s": 0.6927083507180214
+        },
+        {
+          "file": "before/boots_CrouchUp_04.png",
+          "view": "boots",
+          "clip": "CrouchUp",
+          "time_s": 0.0989583358168602
+        },
+        {
+          "file": "before/boots_CrouchUp_05.png",
+          "view": "boots",
+          "clip": "CrouchUp",
+          "time_s": 0.2968750074505806
+        },
+        {
+          "file": "before/boots_CrouchUp_06.png",
+          "view": "boots",
+          "clip": "CrouchUp",
+          "time_s": 0.494791679084301
+        },
+        {
+          "file": "before/boots_CrouchUp_07.png",
+          "view": "boots",
+          "clip": "CrouchUp",
+          "time_s": 0.6927083507180214
+        },
+        {
+          "file": "before/boots_Run_08.png",
+          "view": "boots",
+          "clip": "Run",
+          "time_s": 0.09375
+        },
+        {
+          "file": "before/boots_Run_09.png",
+          "view": "boots",
+          "clip": "Run",
+          "time_s": 0.28125
+        },
+        {
+          "file": "before/boots_Run_10.png",
+          "view": "boots",
+          "clip": "Run",
+          "time_s": 0.46875
+        },
+        {
+          "file": "before/boots_Run_11.png",
+          "view": "boots",
+          "clip": "Run",
+          "time_s": 0.65625
+        },
+        {
+          "file": "before/boots_Walk_12.png",
+          "view": "boots",
+          "clip": "Walk",
+          "time_s": 0.1354166716337204
+        },
+        {
+          "file": "before/boots_Walk_13.png",
+          "view": "boots",
+          "clip": "Walk",
+          "time_s": 0.4062500149011612
+        },
+        {
+          "file": "before/boots_Walk_14.png",
+          "view": "boots",
+          "clip": "Walk",
+          "time_s": 0.677083358168602
+        },
+        {
+          "file": "before/boots_Walk_15.png",
+          "view": "boots",
+          "clip": "Walk",
+          "time_s": 0.9479167014360428
+        }
+      ]
+    },
+    "after": {
+      "model": "v06/inez_recovery_v06_contact_r01.glb",
+      "sha256": "3bbb563b8183d8857037b0495bb3fb11c92545b7603cdca2e719b1d9787261eb",
+      "backend": "WebGL2",
+      "diagnostics": {
+        "threeRevision": "180",
+        "requestedMaterialMode": "existing",
+        "actualBackend": "WebGL2",
+        "skinDiffusionSupported": true,
+        "activeSkinMeshes": [
+          "Inez_ContinuousHumanMesh_UNAPPROVED_Geometry",
+          "Inez_ContinuousHumanMesh_UNAPPROVED_Geometry_1"
+        ],
+        "fallback": null,
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "thickness": [
+          {
+            "mesh": "Inez_ContinuousHumanMesh_UNAPPROVED_Geometry",
+            "available": true,
+            "source": "rest-pose inward ray to opposite surface",
+            "units": "metres",
+            "animated": "vertex-carried approximation; not recomputed during deformation"
+          },
+          {
+            "mesh": "Inez_ContinuousHumanMesh_UNAPPROVED_Geometry_1",
+            "available": true,
+            "source": "rest-pose inward ray to opposite surface",
+            "units": "metres",
+            "animated": "vertex-carried approximation; not recomputed during deformation"
+          }
+        ],
+        "settings": {
+          "mode": "existing",
+          "sss": true,
+          "strength": 0.55,
+          "radius": 1,
+          "roughnessVariation": 1,
+          "microNormal": 0.15,
+          "thinTransmission": false,
+          "debug": "off",
+          "quality": "gameplay"
+        },
+        "pipeline": {
+          "size": [
+            0,
+            0
+          ],
+          "scenePasses": 0,
+          "diffusionPasses": 1,
+          "neighborSamples": 24,
+          "beautySamples": 4,
+          "estimated_target_bytes": 0,
+          "memory_note": "texture/depth allocation estimate, excludes driver overhead and asset textures",
+          "timings": {}
+        },
+        "targetHardware": {
+          "name": "Dell Precision 5540",
+          "gpu": "NVIDIA Quadro T1000",
+          "vramGB": 4,
+          "ramGB": 16,
+          "measuredHere": false,
+          "initialQuality": "gameplay"
+        },
+        "shaderFailures": [],
+        "limitations": [
+          "Visible-surface screen-space diffusion; offscreen/backside irradiance unavailable",
+          "Compact radial Gaussian cubature; not a full multilayer skin simulation",
+          "Rest-pose geometric thickness follows vertices; no animated thickness recomputation",
+          "WebGPU keeps original PBR; its SSS is unavailable",
+          "No target GPU performance measured here"
+        ]
+      },
+      "clips": {
+        "CrouchDown": {
+          "duration_s": 0.7916666865348816,
+          "matching_speed_m_s": 0,
+          "samples": 96,
+          "L": {
+            "max_stance_slip_mm": 0.019764490079179544,
+            "lowest_sole_mm": 0.24742679190895056,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.7916666865348816,
+                "slip_mm": 0.019764490079179544
+              }
+            ]
+          },
+          "R": {
+            "max_stance_slip_mm": 0.018640936374656154,
+            "lowest_sole_mm": 0.24716812110041364,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.7916666865348816,
+                "slip_mm": 0.018640936374656154
+              }
+            ]
+          }
+        },
+        "CrouchUp": {
+          "duration_s": 0.7916666865348816,
+          "matching_speed_m_s": 0,
+          "samples": 96,
+          "L": {
+            "max_stance_slip_mm": 0.019736855268343786,
+            "lowest_sole_mm": 0.24719799138233278,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.7916666865348816,
+                "slip_mm": 0.019736855268343786
+              }
+            ]
+          },
+          "R": {
+            "max_stance_slip_mm": 0.02047193549654604,
+            "lowest_sole_mm": 0.24685773400425165,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.7916666865348816,
+                "slip_mm": 0.02047193549654604
+              }
+            ]
+          }
+        },
+        "Run": {
+          "duration_s": 0.75,
+          "matching_speed_m_s": 2.3961904761904758,
+          "samples": 91,
+          "L": {
+            "max_stance_slip_mm": 0.047122314704565696,
+            "lowest_sole_mm": 0.24715432430394715,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.2833333333333333,
+                "slip_mm": 0.047122314704565696
+              }
+            ]
+          },
+          "R": {
+            "max_stance_slip_mm": 0.03393471930345935,
+            "lowest_sole_mm": 0.24652964606730535,
+            "planted_phases": [
+              {
+                "start_s": 0.375,
+                "end_s": 0.6583333333333333,
+                "slip_mm": 0.03393471930345935
+              }
+            ]
+          }
+        },
+        "Walk": {
+          "duration_s": 1.0833333730697632,
+          "matching_speed_m_s": 0.9247252747252749,
+          "samples": 131,
+          "L": {
+            "max_stance_slip_mm": 0.05552439991783193,
+            "lowest_sole_mm": 0.24349702423086014,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.6416666902028597,
+                "slip_mm": 0.05552439991783193
+              }
+            ]
+          },
+          "R": {
+            "max_stance_slip_mm": 0.042751187018229136,
+            "lowest_sole_mm": 0.2466699354893992,
+            "planted_phases": [
+              {
+                "start_s": 0,
+                "end_s": 0.10000000366797814,
+                "slip_mm": 0.005116585341144676
+              },
+              {
+                "start_s": 0.5416666865348816,
+                "end_s": 1.0833333730697632,
+                "slip_mm": 0.042751187018229136
+              }
+            ]
+          }
+        }
+      },
+      "captures": [
+        {
+          "file": "after/face_front_rest_00.png",
+          "view": "face_front",
+          "clip": "rest",
+          "time_s": 0
+        },
+        {
+          "file": "after/body_left_CrouchDown_00.png",
+          "view": "body_left",
+          "clip": "CrouchDown",
+          "time_s": 0.1979166716337204
+        },
+        {
+          "file": "after/body_left_CrouchDown_01.png",
+          "view": "body_left",
+          "clip": "CrouchDown",
+          "time_s": 0.3958333432674408
+        },
+        {
+          "file": "after/body_left_CrouchDown_02.png",
+          "view": "body_left",
+          "clip": "CrouchDown",
+          "time_s": 0.5937500149011612
+        },
+        {
+          "file": "after/body_left_CrouchUp_03.png",
+          "view": "body_left",
+          "clip": "CrouchUp",
+          "time_s": 0.1979166716337204
+        },
+        {
+          "file": "after/body_left_CrouchUp_04.png",
+          "view": "body_left",
+          "clip": "CrouchUp",
+          "time_s": 0.3958333432674408
+        },
+        {
+          "file": "after/body_left_CrouchUp_05.png",
+          "view": "body_left",
+          "clip": "CrouchUp",
+          "time_s": 0.5937500149011612
+        },
+        {
+          "file": "after/body_left_Run_06.png",
+          "view": "body_left",
+          "clip": "Run",
+          "time_s": 0.1875
+        },
+        {
+          "file": "after/body_left_Run_07.png",
+          "view": "body_left",
+          "clip": "Run",
+          "time_s": 0.375
+        },
+        {
+          "file": "after/body_left_Run_08.png",
+          "view": "body_left",
+          "clip": "Run",
+          "time_s": 0.5625
+        },
+        {
+          "file": "after/body_left_Walk_09.png",
+          "view": "body_left",
+          "clip": "Walk",
+          "time_s": 0.2708333432674408
+        },
+        {
+          "file": "after/body_left_Walk_10.png",
+          "view": "body_left",
+          "clip": "Walk",
+          "time_s": 0.5416666865348816
+        },
+        {
+          "file": "after/body_left_Walk_11.png",
+          "view": "body_left",
+          "clip": "Walk",
+          "time_s": 0.8125000298023224
+        },
+        {
+          "file": "after/boots_CrouchDown_00.png",
+          "view": "boots",
+          "clip": "CrouchDown",
+          "time_s": 0.0989583358168602
+        },
+        {
+          "file": "after/boots_CrouchDown_01.png",
+          "view": "boots",
+          "clip": "CrouchDown",
+          "time_s": 0.2968750074505806
+        },
+        {
+          "file": "after/boots_CrouchDown_02.png",
+          "view": "boots",
+          "clip": "CrouchDown",
+          "time_s": 0.494791679084301
+        },
+        {
+          "file": "after/boots_CrouchDown_03.png",
+          "view": "boots",
+          "clip": "CrouchDown",
+          "time_s": 0.6927083507180214
+        },
+        {
+          "file": "after/boots_CrouchUp_04.png",
+          "view": "boots",
+          "clip": "CrouchUp",
+          "time_s": 0.0989583358168602
+        },
+        {
+          "file": "after/boots_CrouchUp_05.png",
+          "view": "boots",
+          "clip": "CrouchUp",
+          "time_s": 0.2968750074505806
+        },
+        {
+          "file": "after/boots_CrouchUp_06.png",
+          "view": "boots",
+          "clip": "CrouchUp",
+          "time_s": 0.494791679084301
+        },
+        {
+          "file": "after/boots_CrouchUp_07.png",
+          "view": "boots",
+          "clip": "CrouchUp",
+          "time_s": 0.6927083507180214
+        },
+        {
+          "file": "after/boots_Run_08.png",
+          "view": "boots",
+          "clip": "Run",
+          "time_s": 0.09375
+        },
+        {
+          "file": "after/boots_Run_09.png",
+          "view": "boots",
+          "clip": "Run",
+          "time_s": 0.28125
+        },
+        {
+          "file": "after/boots_Run_10.png",
+          "view": "boots",
+          "clip": "Run",
+          "time_s": 0.46875
+        },
+        {
+          "file": "after/boots_Run_11.png",
+          "view": "boots",
+          "clip": "Run",
+          "time_s": 0.65625
+        },
+        {
+          "file": "after/boots_Walk_12.png",
+          "view": "boots",
+          "clip": "Walk",
+          "time_s": 0.1354166716337204
+        },
+        {
+          "file": "after/boots_Walk_13.png",
+          "view": "boots",
+          "clip": "Walk",
+          "time_s": 0.4062500149011612
+        },
+        {
+          "file": "after/boots_Walk_14.png",
+          "view": "boots",
+          "clip": "Walk",
+          "time_s": 0.677083358168602
+        },
+        {
+          "file": "after/boots_Walk_15.png",
+          "view": "boots",
+          "clip": "Walk",
+          "time_s": 0.9479167014360428
+        }
+      ]
+    }
+  },
+  "errors": [],
+  "matched_cameras": {
+    "face_front": {
+      "position": [
+        0,
+        1.591950932687009,
+        5.3242506109933405
+      ],
+      "target": [
+        0,
+        1.5919509326870087,
+        0
+      ],
+      "projection": [
+        2.854861859547996,
+        0,
+        0,
+        0,
+        0,
+        3.7563971836157846,
+        0,
+        0,
+        0,
+        0,
+        -0.0200010000500025,
+        0,
+        -0.0,
+        -0.0,
+        -1.00010000500025,
+        1
+      ]
+    },
+    "body_left": {
+      "position": [
+        5.3242506109933405,
+        0.9051226038688681,
+        3.260163234305667e-16
+      ],
+      "target": [
+        0,
+        0.9051226038688678,
+        0
+      ],
+      "projection": [
+        0.7447465720559989,
+        0,
+        0,
+        0,
+        0,
+        0.979929700073683,
+        0,
+        0,
+        0,
+        0,
+        -0.0200010000500025,
+        0,
+        -0.0,
+        -0.0,
+        -1.00010000500025,
+        1
+      ]
+    },
+    "boots": {
+      "position": [
+        5.3242506109933405,
+        0.23000000000000034,
+        3.260163234305667e-16
+      ],
+      "target": [
+        0,
+        0.23,
+        0
+      ],
+      "projection": [
+        3.3513595742519957,
+        0,
+        0,
+        0,
+        0,
+        4.409683650331573,
+        0,
+        0,
+        0,
+        0,
+        -0.0200010000500025,
+        0,
+        -0.0,
+        -0.0,
+        -1.00010000500025,
+        1
+      ]
+    }
+  },
+  "checks": {
+    "no_browser_errors": true,
+    "matched_cameras": true,
+    "original_pbr_rest_portrait_identical": true,
+    "runtime_contact_below_half_mm": true,
+    "runtime_no_sampled_penetration": true,
+    "independent_evaluators_agree_within_tenth_mm": true
+  },
+  "evaluator_absolute_difference_mm": {
+    "before": {
+      "Walk": {
+        "L": {
+          "max_stance_slip_mm": 0.0033813259697503817,
+          "lowest_sole_mm": 4.992093105959938e-05
+        },
+        "R": {
+          "max_stance_slip_mm": 0.008863236274063713,
+          "lowest_sole_mm": 0.002479591430933681
+        }
+      },
+      "Run": {
+        "L": {
+          "max_stance_slip_mm": 0.002346538184189617,
+          "lowest_sole_mm": 1.1338269589544758e-05
+        },
+        "R": {
+          "max_stance_slip_mm": 0.0025656278959278467,
+          "lowest_sole_mm": 0.0024494482891616043
+        }
+      },
+      "CrouchDown": {
+        "L": {
+          "max_stance_slip_mm": 0.0017086881859071923,
+          "lowest_sole_mm": 3.525067224663392e-05
+        },
+        "R": {
+          "max_stance_slip_mm": 0.00319849885346013,
+          "lowest_sole_mm": 2.155968313155565e-05
+        }
+      },
+      "CrouchUp": {
+        "L": {
+          "max_stance_slip_mm": 0.0014852921464378888,
+          "lowest_sole_mm": 2.1665063043574406e-06
+        },
+        "R": {
+          "max_stance_slip_mm": 0.0016670201761463943,
+          "lowest_sole_mm": 2.0229186226461415e-05
+        }
+      }
+    },
+    "after": {
+      "Walk": {
+        "L": {
+          "max_stance_slip_mm": 0.004993912742640112,
+          "lowest_sole_mm": 0.0022515162514628873
+        },
+        "R": {
+          "max_stance_slip_mm": 0.012474892481126938,
+          "lowest_sole_mm": 0.0010186120859897452
+        }
+      },
+      "Run": {
+        "L": {
+          "max_stance_slip_mm": 0.005267485806256397,
+          "lowest_sole_mm": 4.1756456423541755e-05
+        },
+        "R": {
+          "max_stance_slip_mm": 0.005165471681734753,
+          "lowest_sole_mm": 0.0005977307024013223
+        }
+      },
+      "CrouchDown": {
+        "L": {
+          "max_stance_slip_mm": 0.005842250538388818,
+          "lowest_sole_mm": 0.0018938154228818616
+        },
+        "R": {
+          "max_stance_slip_mm": 0.006938261327396573,
+          "lowest_sole_mm": 0.002607158010466265
+        }
+      },
+      "CrouchUp": {
+        "L": {
+          "max_stance_slip_mm": 0.005369512219550874,
+          "lowest_sole_mm": 0.001881015036395206
+        },
+        "R": {
+          "max_stance_slip_mm": 0.007896260469068743,
+          "lowest_sole_mm": 0.0021202374387610246
+        }
+      }
+    }
+  },
+  "technical_passed": true
+}

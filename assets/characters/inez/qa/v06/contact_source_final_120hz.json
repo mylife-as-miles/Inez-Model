@@ -1,0 +1,174 @@
+{
+  "blend": "/workspace/Inez-Model/assets/characters/inez/model/v06/inez_recovery_v06_contact_r01.blend",
+  "boots_mesh": "Inez_Boots",
+  "band_m": 0.002,
+  "sole_vertices": {
+    "L": 2493,
+    "R": 2458
+  },
+  "boot_vertices": {
+    "L": 10192,
+    "R": 10186
+  },
+  "clips": {
+    "Walk": {
+      "frames": [
+        1.0,
+        66.0
+      ],
+      "travel_speed_m_s": 0.9247252747252749,
+      "sampling_hz": 120.0,
+      "samples": 131,
+      "duration_s": 1.0833333333333333,
+      "L": {
+        "lowest_sole_mm": -0.01,
+        "highest_sole_mm": 57.54,
+        "planted_phases": [
+          {
+            "frames": [
+              1.0,
+              39.5
+            ],
+            "slip_mm": 0.07
+          }
+        ],
+        "max_phase_slip_mm": 0.07
+      },
+      "R": {
+        "lowest_sole_mm": 0.01,
+        "highest_sole_mm": 59.39,
+        "planted_phases": [
+          {
+            "frames": [
+              1.0,
+              7.0
+            ],
+            "slip_mm": 0.02
+          },
+          {
+            "frames": [
+              33.5,
+              66.0
+            ],
+            "slip_mm": 0.04
+          }
+        ],
+        "max_phase_slip_mm": 0.04
+      }
+    },
+    "Run": {
+      "frames": [
+        1.0,
+        46.0
+      ],
+      "travel_speed_m_s": 2.3961904761904758,
+      "sampling_hz": 120.0,
+      "samples": 91,
+      "duration_s": 0.75,
+      "L": {
+        "lowest_sole_mm": -0.01,
+        "highest_sole_mm": 100.69,
+        "planted_phases": [
+          {
+            "frames": [
+              1.0,
+              18.0
+            ],
+            "slip_mm": 0.05
+          }
+        ],
+        "max_phase_slip_mm": 0.05
+      },
+      "R": {
+        "lowest_sole_mm": 0.01,
+        "highest_sole_mm": 98.01,
+        "planted_phases": [
+          {
+            "frames": [
+              23.5,
+              40.5
+            ],
+            "slip_mm": 0.05
+          }
+        ],
+        "max_phase_slip_mm": 0.05
+      }
+    },
+    "CrouchDown": {
+      "frames": [
+        1.0,
+        48.5
+      ],
+      "travel_speed_m_s": 0.0,
+      "sampling_hz": 120.0,
+      "samples": 96,
+      "duration_s": 0.7916666666666666,
+      "L": {
+        "lowest_sole_mm": 0.3,
+        "highest_sole_mm": 0.3,
+        "planted_phases": [
+          {
+            "frames": [
+              1.0,
+              48.5
+            ],
+            "slip_mm": 0.01
+          }
+        ],
+        "max_phase_slip_mm": 0.01
+      },
+      "R": {
+        "lowest_sole_mm": 0.22,
+        "highest_sole_mm": 0.22,
+        "planted_phases": [
+          {
+            "frames": [
+              1.0,
+              48.5
+            ],
+            "slip_mm": 0.01
+          }
+        ],
+        "max_phase_slip_mm": 0.01
+      }
+    },
+    "CrouchUp": {
+      "frames": [
+        1.0,
+        48.5
+      ],
+      "travel_speed_m_s": 0.0,
+      "sampling_hz": 120.0,
+      "samples": 96,
+      "duration_s": 0.7916666666666666,
+      "L": {
+        "lowest_sole_mm": 0.3,
+        "highest_sole_mm": 0.3,
+        "planted_phases": [
+          {
+            "frames": [
+              1.0,
+              48.5
+            ],
+            "slip_mm": 0.01
+          }
+        ],
+        "max_phase_slip_mm": 0.01
+      },
+      "R": {
+        "lowest_sole_mm": 0.22,
+        "highest_sole_mm": 0.22,
+        "planted_phases": [
+          {
+            "frames": [
+              1.0,
+              48.5
+            ],
+            "slip_mm": 0.01
+          }
+        ],
+        "max_phase_slip_mm": 0.01
+      }
+    }
+  }
+}

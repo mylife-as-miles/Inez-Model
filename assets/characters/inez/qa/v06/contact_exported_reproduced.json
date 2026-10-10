@@ -1,0 +1,141 @@
+{
+  "file": "assets/characters/inez/model/v06/inez_recovery_v06.glb",
+  "sampling_hz": 120,
+  "contact_band_m": 0.002,
+  "clips": {
+    "Walk": {
+      "duration_s": 1.0833333730697632,
+      "matching_speed_m_s": 0.9247252747252749,
+      "samples": 131,
+      "L": {
+        "max_stance_slip_mm": 2.1670490888127034,
+        "lowest_sole_mm": -1.207014219228864,
+        "highest_sole_mm": 58.338340914670155,
+        "local_loop_seam_mm": 0.00028468263648660634,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.6416666902028598,
+            "slip_mm": 2.1670490888127034
+          }
+        ]
+      },
+      "R": {
+        "max_stance_slip_mm": 3.590004100204096,
+        "lowest_sole_mm": -2.3052235787488744,
+        "highest_sole_mm": 60.552172439217834,
+        "local_loop_seam_mm": 0.0001324708717438084,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.10833333730697634,
+            "slip_mm": 0.744186164479599
+          },
+          {
+            "start_s": 0.5416666865348816,
+            "end_s": 1.0833333730697632,
+            "slip_mm": 3.590004100204096
+          }
+        ]
+      }
+    },
+    "Run": {
+      "duration_s": 0.75,
+      "matching_speed_m_s": 2.3961904761904758,
+      "samples": 91,
+      "L": {
+        "max_stance_slip_mm": 1.555698666506935,
+        "lowest_sole_mm": -0.3670335076428612,
+        "highest_sole_mm": 100.14258722088397,
+        "local_loop_seam_mm": 0.0001310902584389018,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.03333333333333333,
+            "slip_mm": 0.5017575100951917
+          },
+          {
+            "start_s": 0.05,
+            "end_s": 0.2833333333333333,
+            "slip_mm": 1.555698666506935
+          }
+        ]
+      },
+      "R": {
+        "max_stance_slip_mm": 9.54045205909706,
+        "lowest_sole_mm": -0.7345552973165183,
+        "highest_sole_mm": 99.33418558488366,
+        "local_loop_seam_mm": 0.0,
+        "planted_phases": [
+          {
+            "start_s": 0.375,
+            "end_s": 0.6583333333333333,
+            "slip_mm": 9.54045205909706
+          }
+        ]
+      }
+    },
+    "CrouchDown": {
+      "duration_s": 0.7916666865348816,
+      "matching_speed_m_s": 0,
+      "samples": 96,
+      "L": {
+        "max_stance_slip_mm": 4.152299544848677,
+        "lowest_sole_mm": -0.5775534951926125,
+        "highest_sole_mm": 0.498039199948197,
+        "local_loop_seam_mm": 0.0019565959842441734,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.7916666865348816,
+            "slip_mm": 4.152299544848677
+          }
+        ]
+      },
+      "R": {
+        "max_stance_slip_mm": 4.270755791971667,
+        "lowest_sole_mm": -0.4922914175864378,
+        "highest_sole_mm": 0.5815645509931457,
+        "local_loop_seam_mm": 0.0023991849769173703,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.7916666865348816,
+            "slip_mm": 4.270755791971667
+          }
+        ]
+      }
+    },
+    "CrouchUp": {
+      "duration_s": 0.7916666865348816,
+      "matching_speed_m_s": 0,
+      "samples": 96,
+      "L": {
+        "max_stance_slip_mm": 3.998528207541644,
+        "lowest_sole_mm": -0.6461411013897328,
+        "highest_sole_mm": 0.4040245257668383,
+        "local_loop_seam_mm": 0.0020367615891168887,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.7916666865348816,
+            "slip_mm": 3.998528207541644
+          }
+        ]
+      },
+      "R": {
+        "max_stance_slip_mm": 4.114571716318431,
+        "lowest_sole_mm": -0.5611926428734232,
+        "highest_sole_mm": 0.4872963040189419,
+        "local_loop_seam_mm": 0.0027884914899520786,
+        "planted_phases": [
+          {
+            "start_s": 0.0,
+            "end_s": 0.7916666865348816,
+            "slip_mm": 4.114571716318431
+          }
+        ]
+      }
+    }
+  }
+}

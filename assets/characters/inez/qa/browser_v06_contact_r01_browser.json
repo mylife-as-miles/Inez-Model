@@ -1,0 +1,16 @@
+{
+  "url": "http://127.0.0.1:4174/?model=v06/inez_recovery_v06_contact_r01.glb",
+  "revision": "v06_contact_r01_browser",
+  "browser": "/usr/bin/chromium",
+  "actual_model_required": true,
+  "artistic_approval": false,
+  "checks": {},
+  "screenshots": [],
+  "page_errors": [],
+  "console_errors": [],
+  "timings_s": {
+    "load_to_ready": 3.3225479125976562
+  },
+  "failure": "RuntimeError: viewer not ready: Unexpected token '<', \"<!doctype \"... is not valid JSON",
+  "technical_passed": false
+}

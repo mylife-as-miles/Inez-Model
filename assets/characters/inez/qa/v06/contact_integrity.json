@@ -1,0 +1,192 @@
+{
+  "base_commit": "7c430b5a6dff52945e3e19d2a3d36223df1c8107",
+  "original_binary_prefix_unchanged": true,
+  "non_animation_data_unchanged": true,
+  "unrelated_channels_unchanged": true,
+  "changed_channels": [
+    {
+      "clip": "CrouchDown",
+      "bone": "upperleg01.L",
+      "path": "rotation"
+    },
+    {
+      "clip": "CrouchDown",
+      "bone": "lowerleg01.L",
+      "path": "rotation"
+    },
+    {
+      "clip": "CrouchDown",
+      "bone": "foot.L",
+      "path": "rotation"
+    },
+    {
+      "clip": "CrouchDown",
+      "bone": "upperleg01.R",
+      "path": "rotation"
+    },
+    {
+      "clip": "CrouchDown",
+      "bone": "lowerleg01.R",
+      "path": "rotation"
+    },
+    {
+      "clip": "CrouchDown",
+      "bone": "foot.R",
+      "path": "rotation"
+    },
+    {
+      "clip": "CrouchUp",
+      "bone": "upperleg01.L",
+      "path": "rotation"
+    },
+    {
+      "clip": "CrouchUp",
+      "bone": "lowerleg01.L",
+      "path": "rotation"
+    },
+    {
+      "clip": "CrouchUp",
+      "bone": "foot.L",
+      "path": "rotation"
+    },
+    {
+      "clip": "CrouchUp",
+      "bone": "upperleg01.R",
+      "path": "rotation"
+    },
+    {
+      "clip": "CrouchUp",
+      "bone": "lowerleg01.R",
+      "path": "rotation"
+    },
+    {
+      "clip": "CrouchUp",
+      "bone": "foot.R",
+      "path": "rotation"
+    },
+    {
+      "clip": "Run",
+      "bone": "upperleg01.L",
+      "path": "rotation"
+    },
+    {
+      "clip": "Run",
+      "bone": "lowerleg01.L",
+      "path": "rotation"
+    },
+    {
+      "clip": "Run",
+      "bone": "foot.L",
+      "path": "rotation"
+    },
+    {
+      "clip": "Run",
+      "bone": "upperleg01.R",
+      "path": "rotation"
+    },
+    {
+      "clip": "Run",
+      "bone": "lowerleg01.R",
+      "path": "rotation"
+    },
+    {
+      "clip": "Run",
+      "bone": "foot.R",
+      "path": "rotation"
+    },
+    {
+      "clip": "Walk",
+      "bone": "upperleg01.L",
+      "path": "rotation"
+    },
+    {
+      "clip": "Walk",
+      "bone": "lowerleg01.L",
+      "path": "rotation"
+    },
+    {
+      "clip": "Walk",
+      "bone": "foot.L",
+      "path": "rotation"
+    },
+    {
+      "clip": "Walk",
+      "bone": "upperleg01.R",
+      "path": "rotation"
+    },
+    {
+      "clip": "Walk",
+      "bone": "lowerleg01.R",
+      "path": "rotation"
+    },
+    {
+      "clip": "Walk",
+      "bone": "foot.R",
+      "path": "rotation"
+    }
+  ],
+  "clip_durations_unchanged_s": {
+    "Blink": 0.2083333283662796,
+    "Crouch": 3.0,
+    "CrouchDown": 0.7916666865348816,
+    "CrouchUp": 0.7916666865348816,
+    "Idle": 3.999999761581421,
+    "LookAround": 6.0,
+    "Run": 0.75,
+    "TurnLeft": 1.2083333730697632,
+    "TurnRight": 1.2083333730697632,
+    "Walk": 1.0833333730697632,
+    "Expr_SubtleFear": 3.0,
+    "Expr_Confusion": 3.0,
+    "Expr_Anger": 2.799999952316284,
+    "Expr_Exhaustion": 4.0,
+    "Expr_IntenseFear": 2.5999999046325684,
+    "Expr_Suspicious": 3.0,
+    "Expr_Blink": 0.23999999463558197
+  },
+  "sampled_deformation_change": {
+    "CrouchDown": {
+      "max_mesh_deformation_change_mm": 0.8644998719061908,
+      "max_boot_change_mm": 0.6011509428969577,
+      "head_unchanged_mm": 0
+    },
+    "CrouchUp": {
+      "max_mesh_deformation_change_mm": 0.8633322154687965,
+      "max_boot_change_mm": 0.5989931163327573,
+      "head_unchanged_mm": 0
+    },
+    "Run": {
+      "max_mesh_deformation_change_mm": 4.769941588481862,
+      "max_boot_change_mm": 4.769941588481862,
+      "head_unchanged_mm": 0
+    },
+    "Walk": {
+      "max_mesh_deformation_change_mm": 5.686761142792924,
+      "max_boot_change_mm": 4.136754929113494,
+      "head_unchanged_mm": 0
+    }
+  },
+  "protected_files_sha256": {
+    "assets/characters/inez/source/asset_a/Inez.glb": "bffc329efed868f02f72ec7479c526bd47f812cb8a119dd9cc1964308beb34c7",
+    "assets/characters/inez/source/asset_c/Inez+segments.glb": "866854076ed4ac6178f91cd5d4e22e8142724d4d3cb2f6ef0f2a2cd8d4bc8801",
+    "assets/characters/inez/source/asset_b/Inez Facial Model.glb": "c3515428bde9d9ec34437135cc31caad872cf425e93c500731b8bbf81630c150",
+    "references/inez_portraits.jpg": "ce76f4cc025d81b5eb54b41e864c6aa53c0039b2889d607f385cbd632f6a764b",
+    "references/inez_turnaround.jpg": "9482e1a589ac7cde2da520680400e9b32c38daaddecafb7ea2badaa5b2f64d39",
+    "assets/characters/inez/model/inez_runtime_lod1.glb": "5515abd45db3ed2bffc55560e7813d5757f0a819b95aa7815aed9275f6fb5da1",
+    "assets/characters/inez/model/inez_runtime_lod2.glb": "4b7ce1b04f71d083f4005b7c31f74adc4c95070c94ba0d5fdd7239a7776b3e89",
+    "assets/characters/inez/model/inez_master.blend": "5cdb310724f98f1b2584744143f1a61e6fb0b2577658d2a70f1184eb1ecf8f62",
+    "assets/characters/inez/model/inez_master.glb": "a90adb4a13f85ba52bb6d19fa472a6157b7b8d448b396eb9d5a86b2fc737e656",
+    "assets/characters/inez/model/inez_runtime.glb": "25e9a9a172821d461f7cf91adb12b10f7c15730fc2cadc4c080605bda23129f6",
+    "assets/characters/inez/model/v06/inez_recovery_v06.blend": "cb5c511a358abf792247b3fbd0ca98db0b06bc880fd750b0768f28719ce67a0c",
+    "assets/characters/inez/model/v06/inez_color_restored.blend": "d8cf92f81d666952f97377033847514fb6b07dcd9391c7dc4ffd80e4f0ee1ab5",
+    "assets/characters/inez/model/v06/inez_v06_candidate.blend": "edf8da97da29b5a279fd176621b0805ebc29ed461c28b94cc858f05babc6058d",
+    "assets/characters/inez/model/v06/inez_v06_candidate_r02.blend": "acd5cfd45b1c56590fb4de804f82ac52d4c50b6886846a0c6f6b94816ba26812",
+    "assets/characters/inez/model/v06/textures/inez_body_albedo_tone_matched_restored_v06.png": "b5e490f2d44f79bb909d5b1956755503104613eae268878d3a0a5a759cdee69a",
+    "assets/characters/inez/model/v06/textures/inez_head_albedo_assetB_restored_v06.png": "a1fb0296af9d047a8fd74cbe7cecc41672eb33ef53f9857f93874a93ba6530a2",
+    "assets/characters/inez/model/v06/textures/Inez_Hair_FromAssetB_basecolor_restored_v06.png": "848bae594120efb1ab91d6e57f922c2b38e8b2bec44bf1d1df1188edf109068f",
+    "assets/characters/inez/model/v06/inez_v06_candidate_r02.glb": "f9c523f828f2861e088468f2bf6c42bf8479388afc497da65ab9cc16dba94cc5"
+  },
+  "protected_files_unchanged": true,
+  "production_approved": false,
+  "technical_passed": true
+}

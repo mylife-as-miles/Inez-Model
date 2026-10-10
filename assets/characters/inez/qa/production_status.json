@@ -1,5 +1,5 @@
 {
-  "label": "Inez V06 recovery: reference color restored, contact repair; likeness candidate remains unapproved",
+  "label": "Inez V06 recovery: reference color retained, runtime contact interpolation refined; likeness unapproved",
   "model_available": true,
   "production_approved": false,
   "blocker": "Production likeness pending: facial texture bands, eye shading, scalp/hair intersections and sweater details remain. V06 mouth/jaw geometry is an unpromoted candidate. Selected Fab hair package missing; CORDEL skinning/animation prerequisites not implemented.",
@@ -32,8 +32,36 @@
   "terra_status": "Blocked on licensed inputs (SMPL-H, AMASS) and a commercial licensing decision; see docs/INEZ_TERRA_INTEGRATION.md",
   "performance_measured_on_gpu": false,
   "default_lighting": "neutral",
-  "recovery_source": "model/v06/inez_recovery_v06.blend",
+  "recovery_source": "model/v06/inez_recovery_v06_contact_r01.blend",
   "likeness_candidate": "model/v06/inez_v06_candidate_r02.blend",
   "hair_source_audit": "hair/qa/asset_audit.json",
-  "skin_prototype": "WebGL2 RGB diffusion; optional, PBR default; WebGPU unavailable"
+  "skin_prototype": "WebGL2 RGB diffusion; optional, PBR default; WebGPU unavailable",
+  "recovery_reference_source": "model/v06/inez_recovery_v06.blend",
+  "browser_qa": "qa/browser_v06_contact_r01_browser_final.json",
+  "skin_qa": "qa/v06/v06_contact_r01_skin_final.json",
+  "contact_refinement": {
+    "revision": "contact_r01",
+    "scope": "six leg rotation channels in Walk, Run, CrouchDown and CrouchUp",
+    "bake_hz": 480,
+    "sole_clearance_m": 0.00025,
+    "exported_audit": "qa/v06/contact_exported_after_120hz.json",
+    "between_key_audit": "qa/v06/contact_exported_after_241hz.json",
+    "browser_audit": "qa/v06/v06_contact_r01_matched_review.json",
+    "integrity_audit": "qa/v06/contact_integrity.json",
+    "rollback_model": "model/v06/inez_recovery_v06_paused.glb",
+    "default_sha256": "3bbb563b8183d8857037b0495bb3fb11c92545b7603cdca2e719b1d9787261eb",
+    "accepted_for_development": true,
+    "production_approved": false,
+    "reproduction_audit": "qa/v06/contact_reproduction.json",
+    "default_smoke_audit": "qa/v06/contact_default_smoke.json"
+  },
+  "continuation_checkpoint": {
+    "date": "2026-10-10",
+    "base_commit": "7c430b5a6dff52945e3e19d2a3d36223df1c8107",
+    "branch": "feat/inez-v06-digital-human",
+    "commit_and_push_requested_by_user": true,
+    "main_merge_authorized": false,
+    "next_agent_prompt": "docs/INEZ_NEXT_AGENT_PROMPT.md",
+    "remaining_implementation": "docs/INEZ_V06_CONTACT_REFINEMENT.md#remaining-implementation-in-order"
+  }
 }
