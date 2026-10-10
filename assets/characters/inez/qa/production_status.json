@@ -1,14 +1,32 @@
 {
-  "label": "Assembled Inez master from the user's GLBs: rigged, animated, under QA",
-  "model_available": true,
-  "production_approved": false,
-  "blocker": "Master assembled from the user's Asset A (body/costume) and Asset B (face/hair) on the rigged production topology, with landmark face correction toward the original face panel. Rig, clips and browser checks are automated; likeness approval is not claimed. See reports/INEZ_VISUAL_QA.md.",
-  "generation_calls": 22,
-  "global_call_cap": 24,
-  "rig_animations_available": true,
-  "default_model": "inez_runtime.glb",
-  "source_models": [
-    "source/asset_a/Inez.glb",
-    "source/asset_b/Inez Facial Model.glb"
-  ]
+ "label": "Inez master from the user's GLBs: rigged, animated, packaged, browser-tested; likeness not accepted",
+ "model_available": true,
+ "production_approved": false,
+ "blocker": "Likeness below target: 3 of 7 full-weight frontal ratios within \u00b13% of the original face panel (mouth, nose and jaw wide; lower face long), skin chroma off under AgX, sweater stripes charcoal rather than navy, stiff hair shell. The three corrective passes per component allowed in this run are used up. See reports/INEZ_VISUAL_QA.md.",
+ "generation_calls": 22,
+ "global_call_cap": 24,
+ "rig_animations_available": true,
+ "default_model": "inez_runtime.glb",
+ "source_models": [
+  "source/asset_a/Inez.glb",
+  "source/asset_b/Inez Facial Model.glb",
+  "source/asset_c/Inez+segments.glb"
+ ],
+ "likeness_accepted": false,
+ "browser_technical_qa_passed": true,
+ "models": [
+  "model/inez_master.glb",
+  "model/inez_runtime.glb",
+  "model/inez_runtime_lod1.glb",
+  "model/inez_runtime_lod2.glb"
+ ],
+ "editable_master": "model/inez_master.blend",
+ "source_models_used_in_build": [
+  "source/asset_a/Inez.glb",
+  "source/asset_b/Inez Facial Model.glb"
+ ],
+ "external_clips": "animation/runtime/clips.json",
+ "terra_generated_clips": 0,
+ "terra_status": "Blocked on licensed inputs (SMPL-H, AMASS) and a commercial licensing decision; see docs/INEZ_TERRA_INTEGRATION.md",
+ "performance_measured_on_gpu": false
 }

@@ -497,6 +497,16 @@ def add_ponytail(arm, meshes, body=None):
             'span_m': span}
 
 
+def vertex_side(obj, vertex):
+    """'L' or 'R': the side whose '.L' / '.R' bone groups carry more of the vertex's weight."""
+    totals = {'L': 0.0, 'R': 0.0}
+    for g in vertex.groups:
+        name = obj.vertex_groups[g.group].name
+        if name.endswith(('.L', '.R')):
+            totals[name[-1]] += g.weight
+    return max(totals, key=totals.get) if any(totals.values()) else None
+
+
 def boot_vectors(arm, meshes, body):
     result = {}
     for side in ('L', 'R'):
@@ -505,8 +515,14 @@ def boot_vectors(arm, meshes, body):
                     and o.vertex_groups.get('foot.'+side)]
         points = []
         for obj in matching:
+            # Both boots are one mesh: keep only this side's boot, by which
+            # side's bones carry most of each vertex's weight. Taking every
+            # vertex added a phantom copy of the other boot ~20 cm to the side,
+            # harmless under pure pitch but planted instead of the real sole
+            # once the foot rolls (retargeted motion capture).
             transform = arm.matrix_world.inverted() @ obj.matrix_world
-            points.extend(transform @ v.co-foot.head_local for v in obj.data.vertices)
+            points.extend(transform @ v.co-foot.head_local for v in obj.data.vertices
+                          if vertex_side(obj, v) == side)
         if not points:
             weights = weight_maps(body, arm)
             indices = mask(weights, descendant_names(arm, 'foot.'+side), len(body.data.vertices))

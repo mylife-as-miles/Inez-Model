@@ -278,15 +278,18 @@ function refreshPose() {
 }
 // Explicit fixed steps also work while paused, for repeatable QA of real
 // mixer fades, skeleton deformation and translation. No pose is synthesized.
-function advance(seconds = 0) {
+// The lab (travel, contact tracking) steps with the mixer; { render: false }
+// skips the draw for sampling loops on slow software renderers.
+function advance(seconds = 0, { render = true } = {}) {
   if (!avatar) return false;
   let remaining = THREE.MathUtils.clamp(Number(seconds) || 0, 0, 10);
   while (remaining > .000001) {
     const delta = Math.min(remaining, 1 / 60);
     face?.restore(); updateMovement(delta); motion?.update(delta, state.locomotionSpeed);
-    face?.apply(delta, characterRoot.getWorldQuaternion(new THREE.Quaternion())); remaining -= delta;
+    face?.apply(delta, characterRoot.getWorldQuaternion(new THREE.Quaternion()));
+    lab?.update(delta, followCamera); remaining -= delta;
   }
-  characterRoot.updateMatrixWorld(true); renderFrame(); updateState(); syncAnimationUI(); return state.clipTime;
+  characterRoot.updateMatrixWorld(true); if (render) renderFrame(); updateState(); syncAnimationUI(); syncLabUI(); return state.clipTime;
 }
 function renderFrame() { renderer.render(scene, camera); }
 function followCamera(step) {

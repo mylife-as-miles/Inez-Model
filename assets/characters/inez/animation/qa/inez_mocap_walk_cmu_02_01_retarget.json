@@ -1,0 +1,373 @@
+{
+  "clip": "Mocap_Walk_CMU_02_01",
+  "source": {
+    "kind": "cmu_mocap",
+    "name": "cmu_02_01_walk",
+    "asf": "02.asf",
+    "amc": "02_01.amc",
+    "terra": false
+  },
+  "source_licence": "CMU Graphics Lab Motion Capture Database (mocap.cs.cmu.edu): free for research; may be included in commercially sold products; may not be resold directly, even in converted form. Acknowledgement: \"The data used in this project was obtained from mocap.cs.cmu.edu. The database was created with funding from NSF EIA-0196217.\"",
+  "terra_generated": false,
+  "isk_validation": {
+    "passed": true,
+    "frames": 343,
+    "frequency_hz": 120.0,
+    "errors": [],
+    "warnings": []
+  },
+  "hand_mode": "forearm",
+  "finger_curl_deg": 10.0,
+  "fps": 30.0,
+  "output_frames": 86,
+  "duration_s": 2.8333333333333335,
+  "source_frames": 343,
+  "source_duration_s": 2.85,
+  "travel_alignment_deg": -10.416626882694754,
+  "leg_scale": 0.957134210293147,
+  "root_motion": "removed (in place)",
+  "matching_speed_m_s": 1.1279353317328908,
+  "average_velocity_m_s": [
+    0.0003105524810962379,
+    -1.1279352903366089,
+    0.0
+  ],
+  "root_path_m": {
+    "source": 3.3457141394767747,
+    "source_scaled": 3.2022974607547185,
+    "inez": 3.20229695862075
+  },
+  "contact_fix": true,
+  "pelvis_height_offset_m": 0.06424364447593689,
+  "pelvis_drop_range_m": [
+    0.06424364447593689,
+    0.07323269269233346
+  ],
+  "ik_reach_error_max_m": 0.0,
+  "stance_slip_before_fix": {
+    "L": {
+      "phases": [
+        {
+          "frames": [
+            3,
+            19
+          ],
+          "slip_total_m": 0.04387800645261106,
+          "slip_max_step_m": 0.005805255252809048
+        },
+        {
+          "frames": [
+            37,
+            52
+          ],
+          "slip_total_m": 0.03673398115840153,
+          "slip_max_step_m": 0.005828011613576174
+        },
+        {
+          "frames": [
+            70,
+            72
+          ],
+          "slip_total_m": 0.009025163131415216,
+          "slip_max_step_m": 0.005009265034559796
+        },
+        {
+          "frames": [
+            74,
+            78
+          ],
+          "slip_total_m": 0.009050566565161148,
+          "slip_max_step_m": 0.0031945005184969033
+        }
+      ],
+      "max_phase_slip_m": 0.04387800645261106
+    },
+    "R": {
+      "phases": [
+        {
+          "frames": [
+            0,
+            2
+          ],
+          "slip_total_m": 0.012196081817147961,
+          "slip_max_step_m": 0.006440458638319849
+        },
+        {
+          "frames": [
+            20,
+            36
+          ],
+          "slip_total_m": 0.047459433604077825,
+          "slip_max_step_m": 0.010535163752597712
+        },
+        {
+          "frames": [
+            54,
+            67
+          ],
+          "slip_total_m": 0.04196651656944211,
+          "slip_max_step_m": 0.007259108530890248
+        }
+      ],
+      "max_phase_slip_m": 0.047459433604077825
+    }
+  },
+  "stance_slip_after_fix": {
+    "L": {
+      "phases": [
+        {
+          "frames": [
+            3,
+            19
+          ],
+          "slip_total_m": 3.207705971400241e-06,
+          "slip_max_step_m": 9.738927042463266e-07
+        },
+        {
+          "frames": [
+            37,
+            52
+          ],
+          "slip_total_m": 3.568880025332552e-06,
+          "slip_max_step_m": 1.1904983944163097e-06
+        },
+        {
+          "frames": [
+            70,
+            72
+          ],
+          "slip_total_m": 4.889434439504563e-07,
+          "slip_max_step_m": 4.777675730550706e-07
+        },
+        {
+          "frames": [
+            74,
+            78
+          ],
+          "slip_total_m": 8.975433314314672e-07,
+          "slip_max_step_m": 3.478711107352004e-07
+        }
+      ],
+      "max_phase_slip_m": 3.568880025332552e-06
+    },
+    "R": {
+      "phases": [
+        {
+          "frames": [
+            0,
+            2
+          ],
+          "slip_total_m": 3.166968705547687e-07,
+          "slip_max_step_m": 2.212101877674077e-07
+        },
+        {
+          "frames": [
+            20,
+            36
+          ],
+          "slip_total_m": 3.9055158741654915e-06,
+          "slip_max_step_m": 1.6448749226039974e-06
+        },
+        {
+          "frames": [
+            54,
+            67
+          ],
+          "slip_total_m": 5.689582469472058e-06,
+          "slip_max_step_m": 2.406618265297701e-06
+        }
+      ],
+      "max_phase_slip_m": 5.689582469472058e-06
+    }
+  },
+  "lowest_sole_z_m": -5.960464477539062e-07,
+  "planted_sole_z_range_m": [
+    -5.960464477539062e-07,
+    1.3262033462524414e-06
+  ],
+  "quaternion_norm_range": [
+    0.9999966265875512,
+    1.0000034511322455
+  ],
+  "max_rotation_step_deg": {
+    "lowerarm01.R": 5.81365335461335,
+    "finger4-2.R": 0.06596692979551529,
+    "finger2-1.L": 0.11404323323640993,
+    "finger4-3.R": 0.05178896204895131,
+    "spine04": 0.5625142149573833,
+    "upperarm01.R": 5.0380149794291205,
+    "finger3-3.R": 0.0016586314923275715,
+    "root": 3.181992308590223,
+    "finger2-2.R": 0.03199603220616154,
+    "finger5-1.R": 0.08304809948150746,
+    "neck03": 0.8004955362012742,
+    "finger4-2.L": 0.14630619656714686,
+    "finger4-1.L": 0.1386240367747261,
+    "finger3-1.L": 0.031154184443794985,
+    "finger3-3.L": 0.07318902597646308,
+    "spine02": 0.5625289477338162,
+    "finger3-2.R": 0.005780343435324784,
+    "finger2-3.L": 0.23025256004007413,
+    "spine05": 0.5625411379062415,
+    "spine03": 0.5625238983111533,
+    "lowerleg01.R": 17.152665189196494,
+    "neck01": 0.8008485423665417,
+    "foot.L": 13.967830461505919,
+    "foot.R": 16.239901104445853,
+    "finger5-3.L": 0.13897710583634806,
+    "wrist.L": 1.3630045571398737,
+    "finger5-3.R": 0.0637729849266401,
+    "finger5-1.L": 0.25694495341145646,
+    "hair.03": 4.267459088950861,
+    "finger3-2.L": 0.01773913085436357,
+    "neck02": 0.8005012049132406,
+    "finger2-1.R": 0.050948176031571514,
+    "upperleg01.R": 11.702264585325763,
+    "finger4-3.L": 0.10134955497314192,
+    "finger4-1.R": 0.053662450907777916,
+    "finger2-2.L": 0.12633614793336725,
+    "finger3-1.R": 0.018163549541598774,
+    "finger2-3.R": 0.050503155584148085,
+    "hair.04": 7.145761699934263,
+    "upperleg01.L": 12.087907661821294,
+    "hair.01": 14.368037888109225,
+    "finger5-2.L": 0.29636204028149793,
+    "head": 0.8005017868402432,
+    "hair.02": 12.5969658288512,
+    "finger5-2.R": 0.09998577697637032,
+    "upperarm01.L": 3.729275152894696,
+    "spine01": 0.5625423240873099,
+    "wrist.R": 2.0940195124916388,
+    "lowerarm01.L": 10.38287228442167,
+    "lowerleg01.L": 17.789160733343618
+  },
+  "driven_bones": [
+    "root",
+    "spine05",
+    "spine04",
+    "spine03",
+    "spine02",
+    "spine01",
+    "neck01",
+    "neck02",
+    "neck03",
+    "head",
+    "upperleg01.L",
+    "lowerleg01.L",
+    "foot.L",
+    "upperarm01.L",
+    "lowerarm01.L",
+    "wrist.L",
+    "finger2-1.L",
+    "finger2-2.L",
+    "finger2-3.L",
+    "finger3-1.L",
+    "finger3-2.L",
+    "finger3-3.L",
+    "finger4-1.L",
+    "finger4-2.L",
+    "finger4-3.L",
+    "finger5-1.L",
+    "finger5-2.L",
+    "finger5-3.L",
+    "upperleg01.R",
+    "lowerleg01.R",
+    "foot.R",
+    "upperarm01.R",
+    "lowerarm01.R",
+    "wrist.R",
+    "finger2-1.R",
+    "finger2-2.R",
+    "finger2-3.R",
+    "finger3-1.R",
+    "finger3-2.R",
+    "finger3-3.R",
+    "finger4-1.R",
+    "finger4-2.R",
+    "finger4-3.R",
+    "finger5-1.R",
+    "finger5-2.R",
+    "finger5-3.R",
+    "hair.01",
+    "hair.02",
+    "hair.03",
+    "hair.04"
+  ],
+  "missing_tracks": [],
+  "frame_count_preserved": true,
+  "gait": {
+    "source": {
+      "knee_flexion_deg_L": {
+        "stance_mean": 26.57793115084444,
+        "stance_max": 37.279372568482074,
+        "swing_max": 73.45587999773161
+      },
+      "knee_flexion_deg_R": {
+        "stance_mean": 25.269346228522743,
+        "stance_max": 37.79657639666448,
+        "swing_max": 73.03329730740765
+      },
+      "trunk_lean_deg": {
+        "mean": 1.1929932544965545,
+        "min": -1.191771542793195,
+        "max": 4.528363805039138
+      }
+    },
+    "inez": {
+      "knee_flexion_deg_L": {
+        "stance_mean": 26.42733302826517,
+        "stance_max": 42.11397603684151,
+        "swing_max": 73.57320737639523
+      },
+      "knee_flexion_deg_R": {
+        "stance_mean": 26.86570362190065,
+        "stance_max": 37.947209594981615,
+        "swing_max": 74.06968294144887
+      },
+      "trunk_lean_deg": {
+        "mean": -1.7222888287875915,
+        "min": -4.180917128911464,
+        "max": 1.4426927435743184
+      }
+    }
+  },
+  "checks": {
+    "isk_valid": true,
+    "all_driven_bones_keyed": true,
+    "unit_quaternions": true,
+    "no_rotation_step_over_30deg": true,
+    "frame_count_preserved": true,
+    "ik_reach_error_under_5mm": true,
+    "stance_slip_under_10mm_per_phase": true,
+    "no_ground_penetration_over_5mm": true,
+    "exported_clip_matches_bake": true
+  },
+  "previews": [
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/side_001.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/front_001.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/side_013.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/front_013.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/side_025.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/front_025.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/side_037.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/front_037.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/side_050.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/front_050.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/side_062.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/front_062.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/side_074.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/front_074.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/side_086.png",
+    "assets/characters/inez/animation/previews/mocap_walk_cmu_02_01/front_086.png"
+  ],
+  "output_glb": "assets/characters/inez/animation/clips/inez_mocap_walk_cmu_02_01.glb",
+  "output_bytes": 231836,
+  "exported_clip": {
+    "animations": 1,
+    "channels": 501,
+    "duration_s": 2.8666666666666667,
+    "max_keys": 86,
+    "channels_with_all_frames": 50
+  },
+  "blend": "assets/characters/inez/animation/blender/inez_mocap_walk_cmu_02_01.blend"
+}

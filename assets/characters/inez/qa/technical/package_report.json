@@ -1,0 +1,419 @@
+{
+  "animated_source": "<build>/inez_animated.blend",
+  "outputs": {
+    "inez_master.glb": {
+      "bytes": 47607600,
+      "validation": {
+        "errors": 0,
+        "warnings": 20,
+        "infos": 12
+      }
+    },
+    "inez_runtime.glb": {
+      "bytes": 30420864,
+      "level": "lod0",
+      "validation_before_meshopt": {
+        "errors": 0,
+        "warnings": 66,
+        "infos": 36
+      },
+      "validation": {
+        "errors": 0,
+        "warnings": 66,
+        "infos": 37
+      }
+    },
+    "inez_runtime_lod1.glb": {
+      "bytes": 11067016,
+      "level": "lod1",
+      "validation_before_meshopt": {
+        "errors": 0,
+        "warnings": 66,
+        "infos": 36
+      },
+      "validation": {
+        "errors": 0,
+        "warnings": 66,
+        "infos": 37
+      }
+    },
+    "inez_runtime_lod2.glb": {
+      "bytes": 5283652,
+      "level": "lod2",
+      "validation_before_meshopt": {
+        "errors": 0,
+        "warnings": 66,
+        "infos": 36
+      },
+      "validation": {
+        "errors": 0,
+        "warnings": 66,
+        "infos": 37
+      }
+    }
+  },
+  "runtime_export": {
+    "source_blend": "<build>/inez_animated.blend",
+    "levels": {
+      "lod0": {
+        "path": "<work>/inez_runtime_lod0.glb",
+        "bytes": 76200444,
+        "decimated": {
+          "Inez_Sweater": [
+            58184,
+            25999
+          ],
+          "Inez_Jeans": [
+            49994,
+            19999
+          ],
+          "Inez_Boots": [
+            39998,
+            16000
+          ],
+          "Inez_Hair": [
+            104268,
+            45000
+          ]
+        },
+        "texture_limit_px": 2048,
+        "triangles_total": 144450
+      },
+      "lod1": {
+        "path": "<work>/inez_runtime_lod1.glb",
+        "bytes": 28756424,
+        "decimated": {
+          "Inez_Sweater": [
+            58184,
+            12000
+          ],
+          "Inez_Jeans": [
+            49994,
+            9000
+          ],
+          "Inez_Boots": [
+            39998,
+            6998
+          ],
+          "Inez_Hair": [
+            104268,
+            19999
+          ]
+        },
+        "texture_limit_px": 1024,
+        "triangles_total": 85449
+      },
+      "lod2": {
+        "path": "<work>/inez_runtime_lod2.glb",
+        "bytes": 13128440,
+        "decimated": {
+          "Inez_Sweater": [
+            58184,
+            5000
+          ],
+          "Inez_Jeans": [
+            49994,
+            4000
+          ],
+          "Inez_Boots": [
+            39998,
+            2999
+          ],
+          "Inez_Hair": [
+            104268,
+            7999
+          ]
+        },
+        "texture_limit_px": 512,
+        "triangles_total": 57450
+      }
+    },
+    "unconnected_image_nodes_removed": [
+      "Inez_Hair_FromAssetB:Inez+Facial+Model_basecolor.jpg",
+      "Inez_Jeans_FromAssetA:Inez_basecolor",
+      "Inez_Sweater_FromAssetA:Inez_basecolor"
+    ],
+    "master_textures": {
+      "01_face_front_neutral.png": {
+        "file": "assets/characters/inez/references/approved/01_face_front_neutral.png",
+        "linked": true
+      },
+      "02_face_left_profile.png": {
+        "file": "assets/characters/inez/references/approved/02_face_left_profile.png",
+        "linked": true
+      },
+      "05_body_front.png": {
+        "file": "assets/characters/inez/references/approved/05_body_front.png",
+        "linked": true
+      },
+      "Inez+Facial+Model_normal.png": {
+        "file": "Inez_Facial_Model_normal.png",
+        "size": [
+          4096,
+          4096
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 5766803
+      },
+      "Inez+Facial+Model_rm.jpg": {
+        "file": "Inez_Facial_Model_rm.jpg",
+        "size": [
+          4096,
+          4096
+        ],
+        "format": "JPEG",
+        "written": "source bytes",
+        "bytes": 1842021
+      },
+      "Inez_basecolor": {
+        "file": "Inez_basecolor.jpg",
+        "size": [
+          4096,
+          4096
+        ],
+        "format": "JPEG",
+        "written": "source bytes",
+        "bytes": 5091008
+      },
+      "inez_body_albedo_tone_matched": {
+        "file": "inez_body_albedo_tone_matched.png",
+        "size": [
+          2048,
+          2048
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 3600437
+      },
+      "Inez_Hair_FromAssetB_basecolor": {
+        "file": "Inez_Hair_FromAssetB_basecolor.jpg",
+        "size": [
+          4096,
+          4096
+        ],
+        "format": "JPEG",
+        "written": "encoded",
+        "bytes": 4816643
+      },
+      "inez_head_albedo_assetB": {
+        "file": "inez_head_albedo_assetB.jpg",
+        "size": [
+          4096,
+          2048
+        ],
+        "format": "JPEG",
+        "written": "encoded",
+        "bytes": 1388196
+      },
+      "inez_head_skin_normal": {
+        "file": "inez_head_skin_normal.png",
+        "size": [
+          2048,
+          1024
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 2931916
+      },
+      "inez_head_skin_roughness": {
+        "file": "inez_head_skin_roughness.png",
+        "size": [
+          2048,
+          1024
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 1218735
+      },
+      "inez_iris_hazel_albedo_v05": {
+        "file": "inez_iris_hazel_albedo_v05.png",
+        "size": [
+          1024,
+          1024
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 686652
+      },
+      "inez_iris_normal": {
+        "file": "inez_iris_normal.png",
+        "size": [
+          512,
+          512
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 114243
+      },
+      "inez_iris_roughness": {
+        "file": "inez_iris_roughness.png",
+        "size": [
+          512,
+          512
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 5732
+      },
+      "Inez_Jeans_FromAssetA_basecolor": {
+        "file": "Inez_Jeans_FromAssetA_basecolor.jpg",
+        "size": [
+          4096,
+          4096
+        ],
+        "format": "JPEG",
+        "written": "encoded",
+        "bytes": 4215176
+      },
+      "Inez_normal": {
+        "file": "Inez_normal.png",
+        "size": [
+          4096,
+          4096
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 4863703
+      },
+      "inez_portraits.jpg": {
+        "file": "assets/characters/inez/references/original/inez_portraits.jpg",
+        "linked": true
+      },
+      "Inez_rm": {
+        "file": "Inez_rm.jpg",
+        "size": [
+          4096,
+          4096
+        ],
+        "format": "JPEG",
+        "written": "source bytes",
+        "bytes": 1652836
+      },
+      "inez_skin_normal": {
+        "file": "inez_skin_normal.png",
+        "size": [
+          2048,
+          2048
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 4162485
+      },
+      "inez_skin_roughness": {
+        "file": "inez_skin_roughness.png",
+        "size": [
+          2048,
+          2048
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 2618659
+      },
+      "Inez_Sweater_FromAssetA_basecolor": {
+        "file": "Inez_Sweater_FromAssetA_basecolor.jpg",
+        "size": [
+          4096,
+          4096
+        ],
+        "format": "JPEG",
+        "written": "encoded",
+        "bytes": 4515435
+      },
+      "inez_turnaround.jpg": {
+        "file": "assets/characters/inez/references/original/inez_turnaround.jpg",
+        "linked": true
+      },
+      "ScleraOffWhite_albedo": {
+        "file": "ScleraOffWhite_albedo.png",
+        "size": [
+          256,
+          256
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 15244
+      },
+      "ScleraOffWhite_normal": {
+        "file": "ScleraOffWhite_normal.png",
+        "size": [
+          256,
+          256
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 37060
+      },
+      "ScleraOffWhite_roughness": {
+        "file": "ScleraOffWhite_roughness.png",
+        "size": [
+          256,
+          256
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 1780
+      },
+      "Sweater_ThreeDarkBands_albedo": {
+        "file": "Sweater_ThreeDarkBands_albedo.png",
+        "size": [
+          2048,
+          2048
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 4203655
+      },
+      "Sweater_ThreeDarkBands_normal": {
+        "file": "Sweater_ThreeDarkBands_normal.png",
+        "size": [
+          2048,
+          2048
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 6010593
+      },
+      "Sweater_ThreeDarkBands_roughness": {
+        "file": "Sweater_ThreeDarkBands_roughness.png",
+        "size": [
+          2048,
+          2048
+        ],
+        "format": "PNG",
+        "written": "source bytes",
+        "bytes": 3356443
+      }
+    },
+    "master_blend": {
+      "path": "assets/characters/inez/model/inez_master.blend",
+      "bytes": 12614209
+    },
+    "master_glb_raw": {
+      "path": "<work>/inez_master_raw.glb",
+      "bytes": 47352848,
+      "triangles": {
+        "Inez_Sweater": 58184,
+        "Inez_Jeans": 49994,
+        "Inez_Boots": 39998,
+        "Inez_Hair": 104268,
+        "Inez_FineSilverNecklace": 2620,
+        "Inez_TeethUpper": 1536,
+        "Inez_TeethLower": 1536,
+        "Inez_Tongue": 1792,
+        "Inez_ContinuousHumanMesh_UNAPPROVED": 15268,
+        "Inez_Eyeball_L": 1600,
+        "Inez_Eyeball_R": 1600,
+        "Inez_Iris_L": 480,
+        "Inez_Iris_R": 480,
+        "Inez_Cornea_L": 640,
+        "Inez_Cornea_R": 640,
+        "Inez_LashesUpper_L": 1800,
+        "Inez_LashesLower_L": 900,
+        "Inez_LashesUpper_R": 1800,
+        "Inez_LashesLower_R": 900,
+        "Inez_Sweater_HoleFill": 3860
+      }
+    }
+  }
+}

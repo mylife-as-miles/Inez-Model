@@ -65,7 +65,7 @@ Controllable targets are:
 - visemes: `Viseme_AA`, `Viseme_EE`, `Viseme_OH`, `Viseme_MM`, `Viseme_FV`;
 - blinks: `Blink_L`, `Blink_R`.
 
-Lashes and tearlines carry the same control names so they follow the lids.
+The lashes carry the same control names so they follow the lids; the lower teeth and tongue follow the jaw in the visemes.
 
 **Body clips.** All are sampled at 24 fps and in place (no root translation).
 
@@ -100,7 +100,7 @@ bind pose.
 
 - base colour textures are sRGB; data maps are linear;
 - `KHR_materials_specular` is present on the hair (warm specular tint);
-- the cornea and tearline are alpha-blended (draw after opaque).
+- the corneas are alpha-blended (draw after opaque).
 
 ## Suggested CORDEL milestones using Inez
 

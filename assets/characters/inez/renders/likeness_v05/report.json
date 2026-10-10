@@ -1,0 +1,176 @@
+[
+  {
+    "label": "B_face",
+    "reference": "references/inez_turnaround.jpg",
+    "reference_box": [
+      855,
+      0,
+      1280,
+      714
+    ],
+    "candidate": "assets/characters/inez/renders/final_v05/face_yaw_p5.png",
+    "reference_pose": {
+      "yaw": -2.858600378036499,
+      "pitch": 4.580901622772217
+    },
+    "candidate_pose": {
+      "yaw": -3.208681344985962,
+      "pitch": 8.111363410949707
+    },
+    "yaw_gap_deg": 0.3500809669494629,
+    "error_over_ipd": {
+      "jawline": 0.0352,
+      "nose": 0.0115,
+      "eyes": 0.018,
+      "brows": 0.0273,
+      "lips": 0.0216,
+      "all_outlines": 0.0235
+    },
+    "sheet": "assets/characters/inez/renders/likeness_v05/likeness_B_face.png"
+  },
+  {
+    "label": "A_panel2",
+    "reference": "references/inez_portraits.jpg",
+    "reference_box": [
+      640,
+      0,
+      1280,
+      956
+    ],
+    "candidate": "assets/characters/inez/renders/final_v05/face_yaw_p18.png",
+    "reference_pose": {
+      "yaw": -12.699362754821777,
+      "pitch": 0.38797733187675476
+    },
+    "candidate_pose": {
+      "yaw": -13.662123680114746,
+      "pitch": 6.172558784484863
+    },
+    "yaw_gap_deg": 0.9627609252929688,
+    "error_over_ipd": {
+      "jawline": 0.0802,
+      "nose": 0.0127,
+      "eyes": 0.0231,
+      "brows": 0.044,
+      "lips": 0.0239,
+      "all_outlines": 0.0423
+    },
+    "sheet": "assets/characters/inez/renders/likeness_v05/likeness_A_panel2.png"
+  },
+  {
+    "label": "A_panel1",
+    "reference": "references/inez_portraits.jpg",
+    "reference_box": [
+      0,
+      0,
+      640,
+      956
+    ],
+    "candidate": "assets/characters/inez/renders/final_v05/face_three_quarter.png",
+    "reference_pose": {
+      "yaw": -25.526226043701172,
+      "pitch": 1.150342583656311
+    },
+    "candidate_pose": {
+      "yaw": -26.197237014770508,
+      "pitch": 6.362044334411621
+    },
+    "yaw_gap_deg": 0.6710109710693359,
+    "error_over_ipd": {
+      "jawline": 0.097,
+      "nose": 0.0218,
+      "eyes": 0.0337,
+      "brows": 0.0784,
+      "lips": 0.0369,
+      "all_outlines": 0.0586
+    },
+    "sheet": "assets/characters/inez/renders/likeness_v05/likeness_A_panel1.png"
+  },
+  {
+    "label": "floor_A2_vs_B",
+    "reference": "references/inez_turnaround.jpg",
+    "reference_box": [
+      855,
+      0,
+      1280,
+      714
+    ],
+    "candidate": "<scratch>/crops/A2.png",
+    "reference_pose": {
+      "yaw": -2.858600378036499,
+      "pitch": 4.580901622772217
+    },
+    "candidate_pose": {
+      "yaw": -12.699362754821777,
+      "pitch": 0.38797733187675476
+    },
+    "yaw_gap_deg": 9.840762376785278,
+    "error_over_ipd": {
+      "jawline": 0.2535,
+      "nose": 0.0366,
+      "eyes": 0.052,
+      "brows": 0.0624,
+      "lips": 0.0503,
+      "all_outlines": 0.1177
+    },
+    "sheet": "assets/characters/inez/renders/likeness_v05/likeness_floor_A2_vs_B.png"
+  },
+  {
+    "label": "assetB_vs_B",
+    "reference": "references/inez_turnaround.jpg",
+    "reference_box": [
+      855,
+      0,
+      1280,
+      714
+    ],
+    "candidate": "assets/characters/inez/renders/source_audit/asset_b/face_front.png",
+    "reference_pose": {
+      "yaw": -2.858600378036499,
+      "pitch": 4.580901622772217
+    },
+    "candidate_pose": {
+      "yaw": -0.7979390621185303,
+      "pitch": 1.3560302257537842
+    },
+    "yaw_gap_deg": 2.0606613159179688,
+    "error_over_ipd": {
+      "jawline": 0.0724,
+      "nose": 0.0196,
+      "eyes": 0.0236,
+      "brows": 0.0372,
+      "lips": 0.0381,
+      "all_outlines": 0.041
+    },
+    "sheet": "assets/characters/inez/renders/likeness_v05/likeness_assetB_vs_B.png"
+  },
+  {
+    "label": "assetA_vs_B",
+    "reference": "references/inez_turnaround.jpg",
+    "reference_box": [
+      855,
+      0,
+      1280,
+      714
+    ],
+    "candidate": "assets/characters/inez/renders/source_audit/asset_a/face_front.png",
+    "reference_pose": {
+      "yaw": -2.858600378036499,
+      "pitch": 4.580901622772217
+    },
+    "candidate_pose": {
+      "yaw": -1.0421620607376099,
+      "pitch": 5.809718132019043
+    },
+    "yaw_gap_deg": 1.8164383172988892,
+    "error_over_ipd": {
+      "jawline": 0.1107,
+      "nose": 0.0266,
+      "eyes": 0.0222,
+      "brows": 0.0394,
+      "lips": 0.0903,
+      "all_outlines": 0.0648
+    },
+    "sheet": "assets/characters/inez/renders/likeness_v05/likeness_assetA_vs_B.png"
+  }
+]

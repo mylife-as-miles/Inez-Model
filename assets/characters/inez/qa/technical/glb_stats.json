@@ -1,0 +1,927 @@
+[
+  {
+    "file": "assets/characters/inez/model/inez_master.glb",
+    "bytes": 47607600,
+    "triangles": 289896,
+    "vertices": 181411,
+    "draw_calls": 21,
+    "mesh_nodes": 20,
+    "skinned_mesh_nodes": 20,
+    "materials": 18,
+    "skins": 1,
+    "joints_per_skin": [
+      167
+    ],
+    "morph_target_names": 21,
+    "morph_targets_total": 126,
+    "animations": 17,
+    "animation_names": [
+      "Blink",
+      "Crouch",
+      "CrouchDown",
+      "CrouchUp",
+      "Idle",
+      "LookAround",
+      "Run",
+      "TurnLeft",
+      "TurnRight",
+      "Walk",
+      "Expr_SubtleFear",
+      "Expr_Confusion",
+      "Expr_Anger",
+      "Expr_Exhaustion",
+      "Expr_IntenseFear",
+      "Expr_Suspicious",
+      "Expr_Blink"
+    ],
+    "images": 23,
+    "texels": 173735936,
+    "texture_gpu_mb_compressed_estimate": 220.9,
+    "texture_gpu_mb_uncompressed_estimate": 883.7,
+    "extensions_used": [
+      "KHR_materials_specular"
+    ],
+    "textures": [
+      {
+        "image": 0,
+        "name": "Inez_normal",
+        "format": "JPEG",
+        "width": 4096,
+        "height": 4096,
+        "bytes": 876376
+      },
+      {
+        "image": 1,
+        "name": "Inez_basecolor",
+        "format": "JPEG",
+        "width": 4096,
+        "height": 4096,
+        "bytes": 5091008
+      },
+      {
+        "image": 2,
+        "name": "Inez_rm",
+        "format": "JPEG",
+        "width": 4096,
+        "height": 4096,
+        "bytes": 1652836
+      },
+      {
+        "image": 3,
+        "name": "inez_skin_normal",
+        "format": "JPEG",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 371930
+      },
+      {
+        "image": 4,
+        "name": "inez_body_albedo_tone_matched",
+        "format": "JPEG",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 288481
+      },
+      {
+        "image": 5,
+        "name": "inez_skin_roughness",
+        "format": "JPEG",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 444595
+      },
+      {
+        "image": 6,
+        "name": "inez_head_skin_normal",
+        "format": "JPEG",
+        "width": 2048,
+        "height": 1024,
+        "bytes": 239950
+      },
+      {
+        "image": 7,
+        "name": "inez_head_albedo_assetB",
+        "format": "JPEG",
+        "width": 4096,
+        "height": 2048,
+        "bytes": 1388196
+      },
+      {
+        "image": 8,
+        "name": "inez_head_skin_roughness",
+        "format": "JPEG",
+        "width": 2048,
+        "height": 1024,
+        "bytes": 205891
+      },
+      {
+        "image": 9,
+        "name": "ScleraOffWhite_normal",
+        "format": "JPEG",
+        "width": 256,
+        "height": 256,
+        "bytes": 1841
+      },
+      {
+        "image": 10,
+        "name": "ScleraOffWhite_albedo",
+        "format": "JPEG",
+        "width": 256,
+        "height": 256,
+        "bytes": 2377
+      },
+      {
+        "image": 11,
+        "name": "ScleraOffWhite_roughness",
+        "format": "JPEG",
+        "width": 256,
+        "height": 256,
+        "bytes": 1668
+      },
+      {
+        "image": 12,
+        "name": "Inez_Facial_Model_normal",
+        "format": "JPEG",
+        "width": 4096,
+        "height": 4096,
+        "bytes": 970657
+      },
+      {
+        "image": 13,
+        "name": "Inez_Hair_FromAssetB_basecolor",
+        "format": "JPEG",
+        "width": 4096,
+        "height": 4096,
+        "bytes": 4816643
+      },
+      {
+        "image": 14,
+        "name": "Inez_Facial_Model_rm",
+        "format": "JPEG",
+        "width": 4096,
+        "height": 4096,
+        "bytes": 1157948
+      },
+      {
+        "image": 15,
+        "name": "inez_iris_normal",
+        "format": "JPEG",
+        "width": 512,
+        "height": 512,
+        "bytes": 7715
+      },
+      {
+        "image": 16,
+        "name": "inez_iris_hazel_albedo_v05",
+        "format": "JPEG",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 67574
+      },
+      {
+        "image": 17,
+        "name": "inez_iris_roughness",
+        "format": "JPEG",
+        "width": 512,
+        "height": 512,
+        "bytes": 4740
+      },
+      {
+        "image": 18,
+        "name": "Inez_Jeans_FromAssetA_basecolor",
+        "format": "JPEG",
+        "width": 4096,
+        "height": 4096,
+        "bytes": 4215176
+      },
+      {
+        "image": 19,
+        "name": "Inez_Sweater_FromAssetA_basecolor",
+        "format": "JPEG",
+        "width": 4096,
+        "height": 4096,
+        "bytes": 4515435
+      },
+      {
+        "image": 20,
+        "name": "Sweater_ThreeDarkBands_normal",
+        "format": "JPEG",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 667010
+      },
+      {
+        "image": 21,
+        "name": "Sweater_ThreeDarkBands_albedo",
+        "format": "JPEG",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 480318
+      },
+      {
+        "image": 22,
+        "name": "Sweater_ThreeDarkBands_roughness",
+        "format": "JPEG",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 739664
+      }
+    ]
+  },
+  {
+    "file": "assets/characters/inez/model/inez_runtime.glb",
+    "bytes": 30420864,
+    "triangles": 144450,
+    "vertices": 99065,
+    "draw_calls": 21,
+    "mesh_nodes": 20,
+    "skinned_mesh_nodes": 20,
+    "materials": 18,
+    "skins": 20,
+    "joints_per_skin": [
+      167
+    ],
+    "morph_target_names": 21,
+    "morph_targets_total": 126,
+    "animations": 17,
+    "animation_names": [
+      "Blink",
+      "Crouch",
+      "CrouchDown",
+      "CrouchUp",
+      "Idle",
+      "LookAround",
+      "Run",
+      "TurnLeft",
+      "TurnRight",
+      "Walk",
+      "Expr_SubtleFear",
+      "Expr_Confusion",
+      "Expr_Anger",
+      "Expr_Exhaustion",
+      "Expr_IntenseFear",
+      "Expr_Suspicious",
+      "Expr_Blink"
+    ],
+    "images": 23,
+    "texels": 66781184,
+    "texture_gpu_mb_compressed_estimate": 84.9,
+    "texture_gpu_mb_uncompressed_estimate": 339.7,
+    "extensions_used": [
+      "EXT_meshopt_compression",
+      "KHR_materials_specular",
+      "KHR_mesh_quantization",
+      "KHR_texture_basisu"
+    ],
+    "textures": [
+      {
+        "image": 0,
+        "name": "lod_2048_Inez_normal",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 2121437
+      },
+      {
+        "image": 1,
+        "name": "lod_2048_Inez_basecolor",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 751250
+      },
+      {
+        "image": 2,
+        "name": "lod_2048_Inez_rm",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 2172396
+      },
+      {
+        "image": 3,
+        "name": "inez_skin_normal",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 3218311
+      },
+      {
+        "image": 4,
+        "name": "inez_body_albedo_tone_matched",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 231168
+      },
+      {
+        "image": 5,
+        "name": "inez_skin_roughness",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 2059381
+      },
+      {
+        "image": 6,
+        "name": "inez_head_skin_normal",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 1024,
+        "bytes": 1748013
+      },
+      {
+        "image": 7,
+        "name": "lod_2048_inez_head_albedo_assetB",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 1024,
+        "bytes": 281787
+      },
+      {
+        "image": 8,
+        "name": "inez_head_skin_roughness",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 1024,
+        "bytes": 996686
+      },
+      {
+        "image": 9,
+        "name": "ScleraOffWhite_normal",
+        "format": "KTX2",
+        "width": 256,
+        "height": 256,
+        "bytes": 27445
+      },
+      {
+        "image": 10,
+        "name": "ScleraOffWhite_albedo",
+        "format": "KTX2",
+        "width": 256,
+        "height": 256,
+        "bytes": 2704
+      },
+      {
+        "image": 11,
+        "name": "ScleraOffWhite_roughness",
+        "format": "KTX2",
+        "width": 256,
+        "height": 256,
+        "bytes": 727
+      },
+      {
+        "image": 12,
+        "name": "lod_2048_Inez_Facial_Model_normal",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 2058314
+      },
+      {
+        "image": 13,
+        "name": "lod_2048_Inez_Hair_FromAssetB_basecolor",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 750791
+      },
+      {
+        "image": 14,
+        "name": "lod_2048_Inez_Facial_Model_rm",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 2061244
+      },
+      {
+        "image": 15,
+        "name": "inez_iris_normal",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 77048
+      },
+      {
+        "image": 16,
+        "name": "inez_iris_hazel_albedo_v05",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 99565
+      },
+      {
+        "image": 17,
+        "name": "inez_iris_roughness",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 798
+      },
+      {
+        "image": 18,
+        "name": "lod_2048_Inez_Jeans_FromAssetA_basecolor",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 648765
+      },
+      {
+        "image": 19,
+        "name": "Sweater_ThreeDarkBands_normal",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 3739251
+      },
+      {
+        "image": 20,
+        "name": "Sweater_ThreeDarkBands_albedo",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 559453
+      },
+      {
+        "image": 21,
+        "name": "Sweater_ThreeDarkBands_roughness",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 1824458
+      },
+      {
+        "image": 22,
+        "name": "lod_2048_Inez_Sweater_FromAssetA_basecolor",
+        "format": "KTX2",
+        "width": 2048,
+        "height": 2048,
+        "bytes": 587094
+      }
+    ]
+  },
+  {
+    "file": "assets/characters/inez/model/inez_runtime_lod1.glb",
+    "bytes": 11067016,
+    "triangles": 85449,
+    "vertices": 63161,
+    "draw_calls": 21,
+    "mesh_nodes": 20,
+    "skinned_mesh_nodes": 20,
+    "materials": 18,
+    "skins": 20,
+    "joints_per_skin": [
+      167
+    ],
+    "morph_target_names": 21,
+    "morph_targets_total": 126,
+    "animations": 17,
+    "animation_names": [
+      "Blink",
+      "Crouch",
+      "CrouchDown",
+      "CrouchUp",
+      "Idle",
+      "LookAround",
+      "Run",
+      "TurnLeft",
+      "TurnRight",
+      "Walk",
+      "Expr_SubtleFear",
+      "Expr_Confusion",
+      "Expr_Anger",
+      "Expr_Exhaustion",
+      "Expr_IntenseFear",
+      "Expr_Suspicious",
+      "Expr_Blink"
+    ],
+    "images": 23,
+    "texels": 18022400,
+    "texture_gpu_mb_compressed_estimate": 22.9,
+    "texture_gpu_mb_uncompressed_estimate": 91.7,
+    "extensions_used": [
+      "EXT_meshopt_compression",
+      "KHR_materials_specular",
+      "KHR_mesh_quantization",
+      "KHR_texture_basisu"
+    ],
+    "textures": [
+      {
+        "image": 0,
+        "name": "lod_1024_Inez_normal",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 668841
+      },
+      {
+        "image": 1,
+        "name": "lod_1024_Inez_basecolor",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 215394
+      },
+      {
+        "image": 2,
+        "name": "lod_1024_Inez_rm",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 629987
+      },
+      {
+        "image": 3,
+        "name": "lod_1024_inez_skin_normal",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 841321
+      },
+      {
+        "image": 4,
+        "name": "lod_1024_inez_body_albedo_tone_matched",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 71464
+      },
+      {
+        "image": 5,
+        "name": "lod_1024_inez_skin_roughness",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 566175
+      },
+      {
+        "image": 6,
+        "name": "lod_1024_inez_head_skin_normal",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 512,
+        "bytes": 411693
+      },
+      {
+        "image": 7,
+        "name": "lod_1024_inez_head_albedo_assetB",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 512,
+        "bytes": 91866
+      },
+      {
+        "image": 8,
+        "name": "lod_1024_inez_head_skin_roughness",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 512,
+        "bytes": 285042
+      },
+      {
+        "image": 9,
+        "name": "ScleraOffWhite_normal",
+        "format": "KTX2",
+        "width": 256,
+        "height": 256,
+        "bytes": 27445
+      },
+      {
+        "image": 10,
+        "name": "ScleraOffWhite_albedo",
+        "format": "KTX2",
+        "width": 256,
+        "height": 256,
+        "bytes": 2704
+      },
+      {
+        "image": 11,
+        "name": "ScleraOffWhite_roughness",
+        "format": "KTX2",
+        "width": 256,
+        "height": 256,
+        "bytes": 727
+      },
+      {
+        "image": 12,
+        "name": "lod_1024_Inez_Facial_Model_normal",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 613670
+      },
+      {
+        "image": 13,
+        "name": "lod_1024_Inez_Hair_FromAssetB_basecolor",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 217868
+      },
+      {
+        "image": 14,
+        "name": "lod_1024_Inez_Facial_Model_rm",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 608711
+      },
+      {
+        "image": 15,
+        "name": "inez_iris_normal",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 77048
+      },
+      {
+        "image": 16,
+        "name": "inez_iris_hazel_albedo_v05",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 99565
+      },
+      {
+        "image": 17,
+        "name": "inez_iris_roughness",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 798
+      },
+      {
+        "image": 18,
+        "name": "lod_1024_Inez_Jeans_FromAssetA_basecolor",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 190202
+      },
+      {
+        "image": 19,
+        "name": "lod_1024_Sweater_ThreeDarkBands_normal",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 950126
+      },
+      {
+        "image": 20,
+        "name": "lod_1024_Sweater_ThreeDarkBands_albedo",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 161795
+      },
+      {
+        "image": 21,
+        "name": "lod_1024_Sweater_ThreeDarkBands_roughness",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 566094
+      },
+      {
+        "image": 22,
+        "name": "lod_1024_Inez_Sweater_FromAssetA_basecolor",
+        "format": "KTX2",
+        "width": 1024,
+        "height": 1024,
+        "bytes": 178277
+      }
+    ]
+  },
+  {
+    "file": "assets/characters/inez/model/inez_runtime_lod2.glb",
+    "bytes": 5283652,
+    "triangles": 57450,
+    "vertices": 42685,
+    "draw_calls": 21,
+    "mesh_nodes": 20,
+    "skinned_mesh_nodes": 20,
+    "materials": 18,
+    "skins": 20,
+    "joints_per_skin": [
+      167
+    ],
+    "morph_target_names": 21,
+    "morph_targets_total": 126,
+    "animations": 17,
+    "animation_names": [
+      "Blink",
+      "Crouch",
+      "CrouchDown",
+      "CrouchUp",
+      "Idle",
+      "LookAround",
+      "Run",
+      "TurnLeft",
+      "TurnRight",
+      "Walk",
+      "Expr_SubtleFear",
+      "Expr_Confusion",
+      "Expr_Anger",
+      "Expr_Exhaustion",
+      "Expr_IntenseFear",
+      "Expr_Suspicious",
+      "Expr_Blink"
+    ],
+    "images": 23,
+    "texels": 5046272,
+    "texture_gpu_mb_compressed_estimate": 6.4,
+    "texture_gpu_mb_uncompressed_estimate": 25.7,
+    "extensions_used": [
+      "EXT_meshopt_compression",
+      "KHR_materials_specular",
+      "KHR_mesh_quantization",
+      "KHR_texture_basisu"
+    ],
+    "textures": [
+      {
+        "image": 0,
+        "name": "lod_512_Inez_normal",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 202828
+      },
+      {
+        "image": 1,
+        "name": "lod_512_Inez_basecolor",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 73130
+      },
+      {
+        "image": 2,
+        "name": "lod_512_Inez_rm",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 184674
+      },
+      {
+        "image": 3,
+        "name": "lod_512_inez_skin_normal",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 194196
+      },
+      {
+        "image": 4,
+        "name": "lod_512_inez_body_albedo_tone_matched",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 22452
+      },
+      {
+        "image": 5,
+        "name": "lod_512_inez_skin_roughness",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 144684
+      },
+      {
+        "image": 6,
+        "name": "lod_512_inez_head_skin_normal",
+        "format": "KTX2",
+        "width": 512,
+        "height": 256,
+        "bytes": 87822
+      },
+      {
+        "image": 7,
+        "name": "lod_512_inez_head_albedo_assetB",
+        "format": "KTX2",
+        "width": 512,
+        "height": 256,
+        "bytes": 33591
+      },
+      {
+        "image": 8,
+        "name": "lod_512_inez_head_skin_roughness",
+        "format": "KTX2",
+        "width": 512,
+        "height": 256,
+        "bytes": 74900
+      },
+      {
+        "image": 9,
+        "name": "ScleraOffWhite_normal",
+        "format": "KTX2",
+        "width": 256,
+        "height": 256,
+        "bytes": 27445
+      },
+      {
+        "image": 10,
+        "name": "ScleraOffWhite_albedo",
+        "format": "KTX2",
+        "width": 256,
+        "height": 256,
+        "bytes": 2704
+      },
+      {
+        "image": 11,
+        "name": "ScleraOffWhite_roughness",
+        "format": "KTX2",
+        "width": 256,
+        "height": 256,
+        "bytes": 727
+      },
+      {
+        "image": 12,
+        "name": "lod_512_Inez_Facial_Model_normal",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 180232
+      },
+      {
+        "image": 13,
+        "name": "lod_512_Inez_Hair_FromAssetB_basecolor",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 72774
+      },
+      {
+        "image": 14,
+        "name": "lod_512_Inez_Facial_Model_rm",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 170883
+      },
+      {
+        "image": 15,
+        "name": "inez_iris_normal",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 77048
+      },
+      {
+        "image": 16,
+        "name": "lod_512_inez_iris_hazel_albedo_v05",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 40388
+      },
+      {
+        "image": 17,
+        "name": "inez_iris_roughness",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 798
+      },
+      {
+        "image": 18,
+        "name": "lod_512_Inez_Jeans_FromAssetA_basecolor",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 66297
+      },
+      {
+        "image": 19,
+        "name": "lod_512_Sweater_ThreeDarkBands_normal",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 228954
+      },
+      {
+        "image": 20,
+        "name": "lod_512_Sweater_ThreeDarkBands_albedo",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 50015
+      },
+      {
+        "image": 21,
+        "name": "lod_512_Sweater_ThreeDarkBands_roughness",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 163448
+      },
+      {
+        "image": 22,
+        "name": "lod_512_Inez_Sweater_FromAssetA_basecolor",
+        "format": "KTX2",
+        "width": 512,
+        "height": 512,
+        "bytes": 64585
+      }
+    ]
+  }
+]

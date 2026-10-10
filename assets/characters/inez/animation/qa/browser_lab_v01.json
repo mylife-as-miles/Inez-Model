@@ -1,0 +1,316 @@
+{
+  "url": "http://127.0.0.1:4173/",
+  "revision": "lab_v01",
+  "browser": "/opt/pw-browsers/chromium-1194/chrome-linux/chrome",
+  "renderer_note": "SwiftShader software WebGL; timings are not GPU performance",
+  "checks": {
+    "all_manifest_clips_loaded": true,
+    "no_unbound_tracks": true,
+    "source_labels_match_manifest": true,
+    "clips_drive_the_skeleton": true,
+    "corrected_clips_sole_slip_under_10mm": false,
+    "corrected_clips_no_floor_penetration_over_5mm": true,
+    "in_place_clips_travel_at_matching_speed": true,
+    "no_page_errors": true
+  },
+  "clips": {
+    "Mocap_Walk_CMU_02_01": {
+      "source_label": "Mocap_Walk_CMU_02_01 \u00b7 CMU mocap",
+      "expected_tag": "CMU mocap",
+      "label_ok": true,
+      "manifest_entry": {
+        "name": "Mocap_Walk_CMU_02_01",
+        "file": "animation/clips/inez_mocap_walk_cmu_02_01.glb",
+        "trajectory": "animation/runtime/inez_mocap_walk_cmu_02_01_trajectory.json",
+        "kind": "cmu_mocap",
+        "terra": false,
+        "label": "CMU motion capture 02_01 (walk), retargeted to Inez, contact-corrected",
+        "licence": "CMU mocap: commercial inclusion allowed, no resale",
+        "in_place": true,
+        "matching_speed_m_s": 1.128,
+        "report": "animation/qa/inez_mocap_walk_cmu_02_01_retarget.json"
+      },
+      "duration_s": 2.8333332538604736,
+      "samples": 84,
+      "character_travel_m": 3.1208,
+      "max_foot_motion_relative_to_character_m": 0.7812,
+      "loop_seam_foot_jump_mm": 607.2,
+      "travel_speed_m_s": 1.128,
+      "sole_contact": {
+        "phases": {
+          "L": [
+            {
+              "frames": [
+                2,
+                18
+              ],
+              "slip_mm": 13.02
+            },
+            {
+              "frames": [
+                35,
+                51
+              ],
+              "slip_mm": 8.91
+            },
+            {
+              "frames": [
+                73,
+                77
+              ],
+              "slip_mm": 0.13
+            }
+          ],
+          "R": [
+            {
+              "frames": [
+                20,
+                35
+              ],
+              "slip_mm": 0.33
+            },
+            {
+              "frames": [
+                54,
+                66
+              ],
+              "slip_mm": 0.74
+            }
+          ]
+        },
+        "lowest_sole_mm": -2.97
+      },
+      "max_sole_contact_slip_mm": 13.02,
+      "lowest_sole_mm": -2.97,
+      "toe_ball_planted_drift": {
+        "L": [
+          {
+            "frames": [
+              2,
+              18
+            ],
+            "slip_mm": 25.93
+          },
+          {
+            "frames": [
+              35,
+              51
+            ],
+            "slip_mm": 23.94
+          },
+          {
+            "frames": [
+              68,
+              80
+            ],
+            "slip_mm": 8.75
+          }
+        ],
+        "R": [
+          {
+            "frames": [
+              19,
+              34
+            ],
+            "slip_mm": 28.73
+          },
+          {
+            "frames": [
+              52,
+              67
+            ],
+            "slip_mm": 20.17
+          }
+        ]
+      },
+      "max_toe_ball_drift_mm": 28.73,
+      "lab_max_phase_slip_mm": [
+        18.3,
+        11.2
+      ],
+      "lab_min_below_floor_mm": [
+        -3,
+        -0.1
+      ],
+      "source_stick_figure_loaded": true,
+      "cpu_timing_ms": {
+        "animation_ms": 0.2843249940863397,
+        "render_ms": 75.41427219788129,
+        "lab_ms": 0.4656110412175863
+      }
+    },
+    "Mocap_Walk_CMU_02_01_Raw": {
+      "source_label": "Mocap_Walk_CMU_02_01_Raw \u00b7 CMU mocap",
+      "expected_tag": "CMU mocap",
+      "label_ok": true,
+      "manifest_entry": {
+        "name": "Mocap_Walk_CMU_02_01_Raw",
+        "file": "animation/clips/inez_mocap_walk_cmu_02_01_raw.glb",
+        "trajectory": "animation/runtime/inez_mocap_walk_cmu_02_01_raw_trajectory.json",
+        "kind": "cmu_mocap",
+        "terra": false,
+        "label": "CMU motion capture 02_01 (walk), retargeted to Inez, no contact correction (comparison)",
+        "licence": "CMU mocap: commercial inclusion allowed, no resale",
+        "in_place": true,
+        "matching_speed_m_s": 1.128,
+        "report": "animation/qa/inez_mocap_walk_cmu_02_01_raw_retarget.json"
+      },
+      "duration_s": 2.8333332538604736,
+      "samples": 84,
+      "character_travel_m": 3.1208,
+      "max_foot_motion_relative_to_character_m": 0.7492,
+      "loop_seam_foot_jump_mm": 595.0,
+      "travel_speed_m_s": 1.128,
+      "sole_contact": {
+        "phases": {
+          "L": [
+            {
+              "frames": [
+                0,
+                21
+              ],
+              "slip_mm": 94.63
+            },
+            {
+              "frames": [
+                50,
+                53
+              ],
+              "slip_mm": 28.86
+            }
+          ],
+          "R": [
+            {
+              "frames": [
+                0,
+                5
+              ],
+              "slip_mm": 91.39
+            },
+            {
+              "frames": [
+                16,
+                37
+              ],
+              "slip_mm": 101.22
+            }
+          ]
+        },
+        "lowest_sole_mm": -41.78
+      },
+      "max_sole_contact_slip_mm": 101.22,
+      "lowest_sole_mm": -41.78,
+      "toe_ball_planted_drift": {
+        "L": [
+          {
+            "frames": [
+              2,
+              20
+            ],
+            "slip_mm": 20.38
+          }
+        ],
+        "R": [
+          {
+            "frames": [
+              29,
+              32
+            ],
+            "slip_mm": 2.05
+          }
+        ]
+      },
+      "max_toe_ball_drift_mm": 20.38,
+      "lab_max_phase_slip_mm": [
+        101.9,
+        127.4
+      ],
+      "lab_min_below_floor_mm": [
+        -24.7,
+        -33.4
+      ],
+      "source_stick_figure_loaded": true,
+      "cpu_timing_ms": {
+        "animation_ms": 0.32751357770932354,
+        "render_ms": 48.802241113568186,
+        "lab_ms": 0.7711769201776297
+      }
+    }
+  },
+  "screenshots": [
+    "assets/characters/inez/renders/lab_v01/mocap_walk_cmu_02_01_1.png",
+    "assets/characters/inez/renders/lab_v01/mocap_walk_cmu_02_01_2.png",
+    "assets/characters/inez/renders/lab_v01/mocap_walk_cmu_02_01_3.png",
+    "assets/characters/inez/renders/lab_v01/mocap_walk_cmu_02_01_raw_1.png",
+    "assets/characters/inez/renders/lab_v01/mocap_walk_cmu_02_01_raw_2.png",
+    "assets/characters/inez/renders/lab_v01/mocap_walk_cmu_02_01_raw_3.png"
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "warnings": [],
+  "load_to_ready_s": 14.148855924606323,
+  "model_path": "model/inez_runtime.glb",
+  "external_clips_loaded": [
+    "Mocap_Walk_CMU_02_01",
+    "Mocap_Walk_CMU_02_01_Raw"
+  ],
+  "animation_options": [
+    {
+      "value": "rest",
+      "text": "A-pose \u00b7 exported rest"
+    },
+    {
+      "value": "automatic",
+      "text": "Automatic \u00b7 idle / walk / run"
+    },
+    {
+      "value": "Blink",
+      "text": "Blink \u00b7 procedural"
+    },
+    {
+      "value": "Crouch",
+      "text": "Crouch \u00b7 procedural"
+    },
+    {
+      "value": "CrouchDown",
+      "text": "CrouchDown \u00b7 procedural"
+    },
+    {
+      "value": "CrouchUp",
+      "text": "CrouchUp \u00b7 procedural"
+    },
+    {
+      "value": "Idle",
+      "text": "Idle \u00b7 procedural"
+    },
+    {
+      "value": "LookAround",
+      "text": "LookAround \u00b7 procedural"
+    },
+    {
+      "value": "Run",
+      "text": "Run \u00b7 procedural"
+    },
+    {
+      "value": "TurnLeft",
+      "text": "TurnLeft \u00b7 procedural"
+    },
+    {
+      "value": "TurnRight",
+      "text": "TurnRight \u00b7 procedural"
+    },
+    {
+      "value": "Walk",
+      "text": "Walk \u00b7 procedural"
+    },
+    {
+      "value": "Mocap_Walk_CMU_02_01",
+      "text": "Mocap_Walk_CMU_02_01 \u00b7 CMU mocap"
+    },
+    {
+      "value": "Mocap_Walk_CMU_02_01_Raw",
+      "text": "Mocap_Walk_CMU_02_01_Raw \u00b7 CMU mocap"
+    }
+  ],
+  "passed": false
+}

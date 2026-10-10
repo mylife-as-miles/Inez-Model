@@ -4,7 +4,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 // Animation lab: QA overlays for Inez's clips in the real viewer.
 // - external clip GLBs (armature + one action) listed in animation/runtime/clips.json,
 //   each with its source label (procedural, CMU mocap, TERRA, synthetic test);
-// - skeleton overlay, foot-contact markers with a live slide measurement,
+// - skeleton overlay, foot-contact markers with a live slip measurement on
+//   the skinned boot soles (the definition used by the Blender audits),
 //   root trail, the source motion as a stick figure beside Inez;
 // - terrain test floors (the clips are not terrain-adaptive: there is no
 //   runtime foot IK, so contact markers show the resulting float/penetration).
@@ -27,6 +28,35 @@ const PROCEDURAL = { label: 'Procedural (Blender, tools/inez/animation_build.py)
 
 function noise(x, z) {
   return Math.sin(x * 7.1 + 1.3) * Math.cos(z * 5.3 - .7) * .6 + Math.sin(x * 13.7 - z * 11.1) * .4;
+}
+
+// Sole vertices of each boot: the boots are one skinned mesh, so each vertex
+// goes to the side whose bones (names ending in L / R once sanitised) carry
+// most of its weight; the lowest 3 cm of each boot in the bind pose is kept.
+function soleVertices(avatar) {
+  let mesh;
+  avatar.traverse(node => { if (!mesh && node.isSkinnedMesh && /boot/i.test(node.name)) mesh = node; });
+  if (!mesh) return null;
+  const position = mesh.geometry.attributes.position, index = mesh.geometry.attributes.skinIndex, weight = mesh.geometry.attributes.skinWeight;
+  const bones = mesh.skeleton.bones, sides = { L: [], R: [] }, p = new THREE.Vector3();
+  avatar.updateMatrixWorld(true);
+  for (let i = 0; i < position.count; i++) {
+    const total = { L: 0, R: 0 };
+    for (let j = 0; j < 4; j++) {
+      const side = bones[index.getComponent(i, j)]?.name.slice(-1);
+      if (side === 'L' || side === 'R') total[side] += weight.getComponent(i, j);
+    }
+    if (!total.L && !total.R) continue;
+    p.fromBufferAttribute(position, i).applyMatrix4(mesh.matrixWorld);
+    sides[total.L >= total.R ? 'L' : 'R'].push([i, p.y]);
+  }
+  const result = {};
+  for (const side of ['L', 'R']) {
+    if (!sides[side].length) return null;
+    const floor = Math.min(...sides[side].map(v => v[1]));
+    result[side] = { mesh, indices: sides[side].filter(v => v[1] < floor + .03).map(v => v[0]) };
+  }
+  return result;
 }
 
 export class AnimationLab {
@@ -57,7 +87,9 @@ export class AnimationLab {
     this.stick.geometry.setAttribute('position', new THREE.Float32BufferAttribute(new Float32Array(STICK.length * 6), 3));
     this.stick.visible = false; this.stick.frustumCulled = false; characterRoot.add(this.stick);
     this.root = findBone(avatar, 'root');
+    this.soles = soleVertices(avatar);
     this.lastTime = 0;
+    this.lastClip = null;
     this.travelOrigin = null;
     this.stats = { contacts: ['-', '-'], lastPhaseSlipMm: [null, null], maxPhaseSlipMm: [0, 0], penetrationMm: [0, 0] };
   }
@@ -74,6 +106,14 @@ export class AnimationLab {
         const clip = gltf.animations[0];
         if (!clip) throw new Error('no animation in ' + entry.file);
         clip.name = entry.name;
+        // Blender writes the first baked frame at 1/fps; start the clip at 0
+        // so a loop does not hold its first pose for an extra frame.
+        const start = Math.min(...clip.tracks.map(track => track.times[0]));
+        // Tracks share their time arrays (one glTF accessor), so copy before shifting.
+        if (start > 0 && Number.isFinite(start)) {
+          for (const track of clip.tracks) { track.times = track.times.slice(); track.shift(-start); }
+          clip.resetDuration();
+        }
         const missing = clip.tracks.filter(track => !this.avatar.getObjectByName(track.name.split('.')[0])).length;
         if (missing) this.warnings.push(`${entry.name}: ${missing} tracks target bones that are not in the loaded model.`);
         this.motion.addClip(clip, { ...entry, external: true });
@@ -90,7 +130,10 @@ export class AnimationLab {
 
   source(name) { return this.sources[name] ?? (name && name !== 'rest' && name !== 'automatic' ? PROCEDURAL : null); }
 
-  set(option, value) { this.options[option] = Boolean(value); this.apply(); return this.options[option]; }
+  set(option, value) {
+    if (option === 'contacts' && value && !this.options.contacts) this.resetContacts();
+    this.options[option] = Boolean(value); this.apply(); return this.options[option];
+  }
 
   apply() {
     this.skeleton.visible = this.options.skeleton;
@@ -144,6 +187,8 @@ export class AnimationLab {
   update(delta, follow) {
     const motion = this.motion;
     const info = motion.clipInfo[motion.current] ?? {};
+    // A new clip starts its own travel run and contact history.
+    if (motion.current !== this.lastClip) { this.lastClip = motion.current; this.resetContacts(); this.travelOrigin = null; this.trailPoints = []; }
     // In-place clips with a matching speed travel at that speed (planted feet
     // then stay put in world space); the run restarts when the clip loops.
     if (this.options.travel && motion.mode === 'manual' && info.in_place && info.matching_speed_m_s > 0 && delta > 0) {
@@ -151,7 +196,7 @@ export class AnimationLab {
         if (this.travelOrigin && follow) { const back = this.travelOrigin.clone().sub(this.characterRoot.position); follow(back); }
         if (this.travelOrigin) this.characterRoot.position.copy(this.travelOrigin);
         else this.travelOrigin = this.characterRoot.position.clone();
-        for (const foot of this.feet) { foot.contact = false; foot.last = null; }
+        this.resetContacts(false);
         this.trailPoints = [];
       }
       const step = new THREE.Vector3(0, 0, 1).applyQuaternion(this.characterRoot.quaternion)
@@ -160,33 +205,73 @@ export class AnimationLab {
     } else if (this.travelOrigin && motion.mode !== 'manual') this.travelOrigin = null;
     this.lastTime = motion.time;
     this.characterRoot.updateMatrixWorld(true);
-    this.updateContacts(delta);
+    // Sole sampling costs CPU per frame: only while the contact markers are on.
+    if (this.options.contacts) this.updateContacts(delta);
     this.updateTrail();
     this.updateStick();
   }
 
+  resetContacts(clearStats = true) {
+    for (const foot of this.feet) { foot.contact = false; foot.last = null; foot.anchor = null; foot.drift = 0; foot.previous = null; }
+    if (clearStats) this.stats = { contacts: ['-', '-'], lastPhaseSlipMm: [null, null], maxPhaseSlipMm: [0, 0], penetrationMm: [0, 0] };
+  }
+
+  // Planted = the lowest sole point within 2 mm of the floor under it (the
+  // retargeter keeps swing feet at least 3 mm up). Slip per planted phase is
+  // the summed horizontal travel, frame to frame, of the sole vertex that is
+  // in contact: rolling over heel or toe moves the contact point, not the
+  // material, so it is not counted. Without boot soles (another model) it
+  // falls back to the toe ball.
   updateContacts(delta) {
+    const p = new THREE.Vector3();
     for (const [k, foot] of this.feet.entries()) {
-      const ankle = foot.ankle.getWorldPosition(new THREE.Vector3());
-      const ball = foot.ball.getWorldPosition(new THREE.Vector3());
-      const groundBall = this.heightAt(ball.x, ball.z);
-      const groundAnkle = this.heightAt(ankle.x, ankle.z);
-      const lift = Math.min(ankle.y - foot.restAnkle - groundAnkle, ball.y - foot.restBall - groundBall);
-      const speed = foot.last && delta > 0 ? Math.hypot(ball.x - foot.last.x, ball.z - foot.last.z) / delta : 0;
-      foot.last = ball.clone();
-      const contact = lift < .02 && speed < .3;
-      if (contact && !foot.contact) { foot.anchor = ball.clone(); foot.drift = 0; }
-      if (contact && foot.anchor) foot.drift = Math.max(foot.drift, Math.hypot(ball.x - foot.anchor.x, ball.z - foot.anchor.z));
-      if (!contact && foot.contact && foot.anchor) {
-        this.stats.lastPhaseSlipMm[k] = Math.round(foot.drift * 1000);
-        this.stats.maxPhaseSlipMm[k] = Math.max(this.stats.maxPhaseSlipMm[k], Math.round(foot.drift * 1000));
+      const sole = this.soles?.[foot.side];
+      let point, ground, step = 0;
+      if (sole) {
+        const { mesh, indices } = sole;
+        const now = foot.previous && foot.previous.length === indices.length * 3 ? foot.previous : new Float32Array(indices.length * 3);
+        const before = foot.previous ? now.slice() : null;
+        let best = 0, lift = Infinity;
+        mesh.skeleton.update();
+        indices.forEach((index, n) => {
+          mesh.getVertexPosition(index, p).applyMatrix4(mesh.matrixWorld);
+          now.set([p.x, p.y, p.z], 3 * n);
+          const height = p.y - this.heightAt(p.x, p.z);
+          if (height < lift) { lift = height; best = n; }
+        });
+        foot.previous = now;
+        point = new THREE.Vector3(now[3 * best], now[3 * best + 1], now[3 * best + 2]);
+        ground = this.heightAt(point.x, point.z);
+        if (before) step = Math.hypot(now[3 * best] - before[3 * best], now[3 * best + 2] - before[3 * best + 2]);
+        const contact = lift < .002;
+        if (contact && !foot.contact) foot.drift = 0;
+        else if (contact) foot.drift += step;
+        if (!contact && foot.contact) this.closePhase(k, foot);
+        foot.contact = contact;
+        this.stats.penetrationMm[k] = Math.round(Math.min(0, lift) * 10000) / 10;
+      } else {
+        point = foot.ball.getWorldPosition(new THREE.Vector3());
+        ground = this.heightAt(point.x, point.z);
+        const lift = point.y - foot.restBall - ground;
+        const speed = foot.last && delta > 0 ? Math.hypot(point.x - foot.last.x, point.z - foot.last.z) / delta : 0;
+        foot.last = point.clone();
+        const contact = lift < .02 && speed < .3;
+        if (contact && !foot.contact) { foot.anchor = point.clone(); foot.drift = 0; }
+        if (contact && foot.anchor) foot.drift = Math.max(foot.drift, Math.hypot(point.x - foot.anchor.x, point.z - foot.anchor.z));
+        if (!contact && foot.contact) this.closePhase(k, foot);
+        foot.contact = contact;
+        this.stats.penetrationMm[k] = Math.round(Math.min(0, lift) * 1000);
       }
-      foot.contact = contact;
-      this.stats.contacts[k] = contact ? 'planted' : 'swing';
-      this.stats.penetrationMm[k] = Math.round(Math.min(0, lift) * 1000);
-      foot.marker.position.set(ball.x, groundBall + .003, ball.z);
-      foot.marker.material.color.set(contact ? '#1b9e4b' : '#d33');
+      this.stats.contacts[k] = foot.contact ? 'planted' : 'swing';
+      foot.marker.position.set(point.x, ground + .003, point.z);
+      foot.marker.material.color.set(foot.contact ? '#1b9e4b' : '#d33');
     }
+  }
+
+  closePhase(k, foot) {
+    const mm = Math.round(foot.drift * 10000) / 10;
+    this.stats.lastPhaseSlipMm[k] = mm;
+    this.stats.maxPhaseSlipMm[k] = Math.max(this.stats.maxPhaseSlipMm[k], mm);
   }
 
   updateTrail() {

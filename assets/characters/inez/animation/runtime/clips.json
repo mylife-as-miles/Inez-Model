@@ -1,0 +1,29 @@
+{
+  "note": "External clips loaded by viewer/src/animation-lab.js. Each file holds the armature and one action, bound to Inez by bone name. Matching speed: move the character at this speed while an in-place clip plays.",
+  "clips": [
+    {
+      "name": "Mocap_Walk_CMU_02_01",
+      "file": "animation/clips/inez_mocap_walk_cmu_02_01.glb",
+      "trajectory": "animation/runtime/inez_mocap_walk_cmu_02_01_trajectory.json",
+      "kind": "cmu_mocap",
+      "terra": false,
+      "label": "CMU motion capture 02_01 (walk), retargeted to Inez, contact-corrected",
+      "licence": "CMU mocap: commercial inclusion allowed, no resale",
+      "in_place": true,
+      "matching_speed_m_s": 1.128,
+      "report": "animation/qa/inez_mocap_walk_cmu_02_01_retarget.json"
+    },
+    {
+      "name": "Mocap_Walk_CMU_02_01_Raw",
+      "file": "animation/clips/inez_mocap_walk_cmu_02_01_raw.glb",
+      "trajectory": "animation/runtime/inez_mocap_walk_cmu_02_01_raw_trajectory.json",
+      "kind": "cmu_mocap",
+      "terra": false,
+      "label": "CMU motion capture 02_01 (walk), retargeted to Inez, no contact correction (comparison)",
+      "licence": "CMU mocap: commercial inclusion allowed, no resale",
+      "in_place": true,
+      "matching_speed_m_s": 1.128,
+      "report": "animation/qa/inez_mocap_walk_cmu_02_01_raw_retarget.json"
+    }
+  ]
+}

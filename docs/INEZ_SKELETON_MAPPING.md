@@ -67,6 +67,9 @@ Motion reaches Inez through one hand-off format, the **intermediate skeleton (IS
 
 Inez wears boots with 4.6 cm platform soles. Their support points come from the boot mesh (`boot_vectors`), so contact is solved on her actual soles.
 
+- **Each foot uses only its own boot.** Both boots are one mesh; vertices are assigned by the side of the bones that carry their weight. Taking the whole mesh had given each foot a phantom copy of the other boot, which was planted instead of the real sole once the foot rolled.
+- **The support points are treated as rigid to `foot.L/R`.** On the mesh, about 35% of the lowest-3 cm sole vertices also carry shin weight, so the back of the sole bends slightly with the shin. Checks on the deformed mesh (`tools/inez/boot_contact_audit.py`, `tools/inez/browser_lab_qa.py`) measure the effect. Re-weighting the soles rigid to the feet is the planned fix.
+
 1. **Free solve.** Then the median floating height of planted soles becomes a constant pelvis offset. The sources' rest poses hold the feet differently from stance, so their rest pelvis height does not put Inez's soles on the floor.
 2. **Rolling no-slip plan.**
    - Each stance phase is anchored at mid-stance and integrated outward.
@@ -107,4 +110,7 @@ These are written to `animation/qa/<clip>_retarget.json`:
 - lowest sole height (penetration);
 - planted sole height range;
 - root path length (source, scaled source, Inez);
-- knee flexion (stance mean and maximum, swing maximum) and trunk lean, for source and Inez side by side.
+- knee flexion (stance mean and maximum, swing maximum) and trunk lean, for source and Inez side by side;
+- the written clip GLB read back: one animation, the baked duration, a key on every frame for every driven bone (`exported_clip_matches_bake`).
+
+Two later checks measure the deformed boots rather than the support points: `tools/inez/boot_contact_audit.py` in Blender and `tools/inez/browser_lab_qa.py` in the browser. Results are in `INEZ_ANIMATION_QA.md`.

@@ -1,4 +1,4 @@
-# GLB asset audit — the two existing Inez models
+# GLB asset audit — the user's existing Inez models
 
 Audited 2026-10-09 from the user's Google Drive folder. Both files were
 downloaded through Drive's public download endpoint (the Google Drive
@@ -121,3 +121,41 @@ channel (roughness) as unlit grey.
   eyes and cheeks, and the eye region is a dark, glossy smear.
 - **Asset B:** clean roughness. Skin is mid-grey (about 0.55–0.65), lips and
   eyes are glossier, and hair and knit are near 0.9.
+
+## Asset C: segmented model (added later)
+
+| | Asset C |
+|---|---|
+| Drive name | `Inez+segments.glb` |
+| Drive file ID | `1YxSjuSyYnQmD7ApvXdlEwn3mUh7g6KWO` |
+| Stored at | `source/asset_c/Inez+segments.glb`, read-only |
+| Bytes | 63,359,416 |
+| SHA-256 | `866854076ed4ac6178f91cd5d4e22e8142724d4d3cb2f6ef0f2a2cd8d4bc8801` |
+
+**What it is.** A Tripo export of the same full-body Inez, split into 35 mesh parts. It has:
+
+- 1,955,177 triangles;
+- one material;
+- no skeleton, skins, morph targets or animations;
+- a height of 0.979 units, so it is unscaled.
+
+Part bounds and triangle counts are in `renders/source_audit/asset_c/parts.json`, and false-colour renders of the parts are in the same folder.
+
+**How it is split.** The parts follow the clothing:
+
+- sweater body, sleeves and cuffs;
+- jeans legs;
+- boots, soles and laces;
+- hands;
+- a few hair locks.
+
+**The head.** The face, eyes, mouth and most of the hair are **one part**: `tripo_part_3`, 217,319 triangles. Only the nose and some side locks are separate islands (`head_front.png`). The eyes are sculpted closed, with the lids and lashes fused to the face. The mouth is a closed, fused surface.
+
+**Consequences:**
+
+- **It cannot blink, talk or move its hair as delivered.** A blink needs separate lids over eyeballs. Speech needs an open lip seam with a jaw, teeth and tongue behind it. Hair motion needs the hair separated from the scalp. None of that is in the file.
+- **Making it do so would mean rebuilding the face**: retopology, cutting the lids and the mouth, and adding eyes, a mouth interior and a rig. That would also replace the user's face sculpt with new work.
+- **The production master already does all three on the user's geometry.** The face is wrapped onto Asset B. The eyelids are bones and morphs over 12 mm eyeballs. The jaw has teeth, a tongue and five visemes. The ponytail has a four-bone spring chain.
+- **The segmented clothing is useful as a reference.** Its parts confirm the garment boundaries the master already uses. The master's garments are skinned transfers from Asset A, which has the same cut.
+
+**Decision.** Asset C is stored and audited but not built into the master. It would contribute nothing the master lacks, and its fused, closed-eyed head would need more rebuilding than Asset B's.

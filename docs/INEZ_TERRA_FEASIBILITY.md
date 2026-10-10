@@ -40,7 +40,7 @@ No TERRA output was produced, and none is claimed.
 | Renderer | WebGL2 by default; WebGPU on request (`WebGPURenderer`) with fallback to WebGL2 |
 | Skeleton | 167 joints: CC0 MakeHuman 163-bone humanoid (spine05–01, neck01–03, head, jaw, eyes, lids, lips, cheeks, 15 finger joints per hand, toes) plus `hair.01`–`hair.04` |
 | Rest pose | A-pose, facing −Y in Blender (+Z in glTF) |
-| Meshes | 21 skinned meshes: body, sweater, hole fill, jeans, boots, hair shell, necklace, eyes, lashes, teeth, tongue |
+| Meshes | 20 skinned mesh objects, 21 primitives (the body has two materials): body, sweater, sweater hole fill, jeans, boots, hair shell, necklace, eyeballs, irises, corneas, four lash strips, upper and lower teeth, tongue |
 | Skin weights | Four influences per vertex at runtime. The largest discarded share per vertex: body 0.30, sweater 0.265, hole fill 0.22, jeans 0.13. Measured in `rig/animation_manifest.json`. |
 | Blendshapes | 14 controls: 7 expressions, 5 visemes, 2 blinks. Plus 7 identity layers that must keep their defaults. |
 | Existing clips | `Idle`, `Walk`, `Run`, `LookAround`, `TurnLeft/Right`, `CrouchDown/Up`, `Crouch`, `Blink` (procedural, baked); seven facial clips |

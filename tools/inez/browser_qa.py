@@ -65,29 +65,48 @@ async def run(args):
                 const meshes=[], bones=[]; window.inezViewer.getAvatar().traverse(o=>{
                     if(o.isBone) bones.push(o.name);
                     if(o.isMesh) meshes.push({name:o.name,vertices:o.geometry.attributes.position.count,
-                        skinned:!!o.isSkinnedMesh,uv:!!o.geometry.attributes.uv,morphNames:Object.keys(o.morphTargetDictionary||{})});
+                        skinned:!!o.isSkinnedMesh,uv:!!o.geometry.attributes.uv,morphNames:Object.keys(o.morphTargetDictionary||{}),
+                        textured:[o.material].flat().some(m=>m&&(m.map||m.normalMap||m.roughnessMap||m.metalnessMap||m.aoMap))});
                 }); return {meshes,bones};}''')
             report['inventory'] = inventory
             body = next(m for m in inventory['meshes'] if 'ContinuousHumanMesh' in m['name'])
             report['checks']['actual_skinned_geometry_loaded'] = body['vertices'] > 1000 and len(inventory['bones']) > 100
-            report['checks']['uvs_present'] = all(m['uv'] for m in inventory['meshes'] if m['vertices'] > 0)
+            # Every textured mesh needs UVs; untextured ones (vertex-coloured
+            # teeth/tongue, plain silver necklace) are listed, not failed.
+            report['untextured_meshes_without_uv'] = [m['name'] for m in inventory['meshes'] if not m['uv'] and not m['textured']]
+            report['checks']['uvs_present'] = all(m['uv'] for m in inventory['meshes'] if m['vertices'] > 0 and m['textured'])
             names = set(report['asset_info']['animations'])
             required = {'Idle', 'Walk', 'Run', 'LookAround', 'TurnLeft', 'TurnRight', 'CrouchDown', 'Crouch', 'CrouchUp',
                         'Expr_SubtleFear', 'Expr_Confusion', 'Expr_Anger', 'Expr_Exhaustion'}
             report['missing_clips'] = sorted(required-names)
             report['checks']['required_clips_present'] = not report['missing_clips']
             indices = list(range(0, body['vertices'], max(1, body['vertices']//96)))[:97]
+            # The body exports one primitive per material and Three.js loads
+            # each as its own mesh; expressions live on the one holding the head.
+            body_parts = [m['name'] for m in inventory['meshes'] if 'ContinuousHumanMesh' in m['name']]
+            head_part = await page.evaluate('''names => {
+                const avatar=window.inezViewer.getAvatar();avatar.updateMatrixWorld(true);
+                const top=n=>{const m=avatar.getObjectByName(n);m.geometry.computeBoundingBox();
+                    return m.geometry.boundingBox.clone().applyMatrix4(m.matrixWorld).max.y;};
+                return names.reduce((a,b)=>top(b)>top(a)?b:a);
+            }''', body_parts)
+            report['head_mesh'] = head_part
             head_indices = await page.evaluate('''name => {
                 const mesh=window.inezViewer.getAvatar().getObjectByName(name),p=mesh.geometry.attributes.position;
                 const rows=[];for(let i=0;i<p.count;i++)rows.push([i,p.getY(i)]);
-                rows.sort((a,b)=>b[1]-a[1]);const head=rows.slice(0,Math.max(300,Math.floor(rows.length*.13)));
-                return head.filter((_,i)=>i%Math.max(1,Math.floor(head.length/160))===0).map(r=>r[0]).slice(0,180);
-            }''', body['name'])
+                // The head part holds only the head and neck: sample every
+                // vertex, so brows, lids and mouth are all measured.
+                rows.sort((a,b)=>b[1]-a[1]);
+                return rows.map(r=>r[0]).slice(0,8000);
+            }''', head_part)
 
-            async def sample(chosen):
+            async def sample(chosen, name=None):
                 result = await page.evaluate('({name,indices})=>window.inezViewer.sampleDeformedVertices(name,indices)',
-                                             {'name': body['name'], 'indices': chosen})
+                                             {'name': name or body['name'], 'indices': chosen})
                 return result['samples']
+
+            async def sample_head(chosen):
+                return await sample(chosen, head_part)
 
             await page.evaluate('''()=>{const v=window.inezViewer;v.pause(true);v.setAnimation('rest',{transition:0});
                 v.setExpression('Neutral');v.setViseme('none');v.setFaceControls({autoBlink:false,blinkLeft:0,blinkRight:0,jaw:0});v.resetPosition();}''')
@@ -124,11 +143,11 @@ async def run(args):
             report['checks']['animation_crossfade_has_multiple_active_clips'] = sum(float(w) > 0.01 for w in blend.values()) >= 2
             # Static expressions and the facial performance clips.
             await page.evaluate('''()=>{const v=window.inezViewer;v.pause(true);v.setAnimation('rest',{transition:0});v.setExpression('Neutral');}''')
-            neutral = await sample(head_indices)
+            neutral = await sample_head(head_indices)
             expression_report = {}
             for expression in ['Confused', 'Suspicious', 'SubtleFear', 'IntenseFear', 'Anger', 'Exhaustion']:
                 await page.evaluate('name=>window.inezViewer.setExpression(name,1)', expression)
-                posed = await sample(head_indices)
+                posed = await sample_head(head_indices)
                 change = maximum_change(neutral, posed)
                 expression_report[expression] = {'maximum_sampled_head_displacement_m': change, 'deformation_verified': change > 1e-6}
             report['expression_deformation'] = expression_report
@@ -138,7 +157,7 @@ async def run(args):
             for clip in ['Expr_SubtleFear', 'Expr_Confusion', 'Expr_Anger', 'Expr_Exhaustion']:
                 await page.evaluate('''name=>{const v=window.inezViewer;v.pause(false);v.playPerformance(name);}''', clip)
                 await page.evaluate('window.inezViewer.advance(1.0)')
-                posed = await sample(head_indices)
+                posed = await sample_head(head_indices)
                 performance[clip] = {'maximum_sampled_head_displacement_m': maximum_change(neutral, posed)}
                 morphs = await page.evaluate('window.inezViewer.getMorphInfluences()')
                 performance[clip]['identity_targets_at_default'] = all(
@@ -147,9 +166,9 @@ async def run(args):
             report['performance_clips'] = performance
             report['checks']['facial_clips_deform_and_keep_identity'] = all(
                 p['maximum_sampled_head_displacement_m'] > 1e-6 and p['identity_targets_at_default'] for p in performance.values())
-            before_controls = await sample(head_indices)
+            before_controls = await sample_head(head_indices)
             await page.evaluate('window.inezViewer.setFaceControls({blinkLeft:1,blinkRight:1,jaw:.3,eyeYaw:.1,headYaw:.1})')
-            after_controls = await sample(head_indices)
+            after_controls = await sample_head(head_indices)
             report['face_control_displacement_m'] = maximum_change(before_controls, after_controls)
             report['checks']['blink_jaw_head_controls_deform_geometry'] = report['face_control_displacement_m'] > 1e-6
             await page.evaluate('window.inezViewer.setFaceControls({blinkLeft:0,blinkRight:0,jaw:0,eyeYaw:0,headYaw:0})')

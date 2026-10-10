@@ -1,0 +1,4261 @@
+{
+  "status": "editable rig/animation prototype",
+  "production_approved": false,
+  "source_blend": "/tmp/claude-0/-home-user-Inez-Model/807a0473-44bb-56db-a70f-e43c06a1c109/scratchpad/m17/inez_master.blend",
+  "animated_blend": "<build>/inez_animated.blend",
+  "animated_glb": "<build>/inez_animated.glb",
+  "armature": "InezRig_PROTOTYPE",
+  "body": "Inez_ContinuousHumanMesh_UNAPPROVED",
+  "bone_count": 167,
+  "provisional_height_m": 1.7,
+  "fps": 24,
+  "clip_info": {
+    "Idle": {
+      "duration_s": 4.0,
+      "sample_count": 97,
+      "frame_range": [
+        1,
+        97
+      ],
+      "loop": true,
+      "maximum_ik_reach_error_m": 0.0,
+      "driven_bones": [
+        "root",
+        "spine03",
+        "spine01",
+        "neck01",
+        "head",
+        "eye.L",
+        "eye.R",
+        "upperleg01.L",
+        "lowerleg01.L",
+        "foot.L",
+        "upperarm01.L",
+        "lowerarm01.L",
+        "wrist.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "upperleg01.R",
+        "lowerleg01.R",
+        "foot.R",
+        "upperarm01.R",
+        "lowerarm01.R",
+        "wrist.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "hair.01",
+        "hair.02",
+        "hair.03",
+        "hair.04"
+      ],
+      "ponytail": "damped spring chain simulated per frame",
+      "stance_fraction": 1.0,
+      "stride_m": 0.0,
+      "matching_viewer_speed_m_s": 0.0,
+      "pelvis_drop_range_m": [
+        -0.012142857142857143,
+        -0.012142857142857143
+      ],
+      "root_motion": false
+    },
+    "Walk": {
+      "duration_s": 1.0833333333333333,
+      "sample_count": 27,
+      "frame_range": [
+        1,
+        27
+      ],
+      "loop": true,
+      "maximum_ik_reach_error_m": 0.0,
+      "driven_bones": [
+        "root",
+        "spine03",
+        "spine01",
+        "neck01",
+        "head",
+        "eye.L",
+        "eye.R",
+        "upperleg01.L",
+        "lowerleg01.L",
+        "foot.L",
+        "upperarm01.L",
+        "lowerarm01.L",
+        "wrist.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "upperleg01.R",
+        "lowerleg01.R",
+        "foot.R",
+        "upperarm01.R",
+        "lowerarm01.R",
+        "wrist.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "hair.01",
+        "hair.02",
+        "hair.03",
+        "hair.04"
+      ],
+      "ponytail": "damped spring chain simulated per frame",
+      "stance_fraction": 0.6,
+      "stride_m": 0.6010714285714286,
+      "matching_viewer_speed_m_s": 0.9247252747252749,
+      "pelvis_drop_range_m": [
+        -0.06332932299135152,
+        -0.019267380506992535
+      ],
+      "root_motion": false
+    },
+    "Run": {
+      "duration_s": 0.75,
+      "sample_count": 19,
+      "frame_range": [
+        1,
+        19
+      ],
+      "loop": true,
+      "maximum_ik_reach_error_m": 0.0,
+      "driven_bones": [
+        "root",
+        "spine03",
+        "spine01",
+        "neck01",
+        "head",
+        "eye.L",
+        "eye.R",
+        "upperleg01.L",
+        "lowerleg01.L",
+        "foot.L",
+        "upperarm01.L",
+        "lowerarm01.L",
+        "wrist.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "upperleg01.R",
+        "lowerleg01.R",
+        "foot.R",
+        "upperarm01.R",
+        "lowerarm01.R",
+        "wrist.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "hair.01",
+        "hair.02",
+        "hair.03",
+        "hair.04"
+      ],
+      "ponytail": "damped spring chain simulated per frame",
+      "stance_fraction": 0.38,
+      "stride_m": 0.6829142857142857,
+      "matching_viewer_speed_m_s": 2.3961904761904758,
+      "pelvis_drop_range_m": [
+        -0.10682654644631495,
+        -0.034958679787212614
+      ],
+      "root_motion": false
+    },
+    "LookAround": {
+      "duration_s": 6.0,
+      "sample_count": 145,
+      "frame_range": [
+        1,
+        145
+      ],
+      "loop": true,
+      "maximum_ik_reach_error_m": 0.0,
+      "driven_bones": [
+        "root",
+        "spine03",
+        "spine01",
+        "neck01",
+        "head",
+        "eye.L",
+        "eye.R",
+        "upperleg01.L",
+        "lowerleg01.L",
+        "foot.L",
+        "upperarm01.L",
+        "lowerarm01.L",
+        "wrist.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "upperleg01.R",
+        "lowerleg01.R",
+        "foot.R",
+        "upperarm01.R",
+        "lowerarm01.R",
+        "wrist.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "hair.01",
+        "hair.02",
+        "hair.03",
+        "hair.04"
+      ],
+      "ponytail": "damped spring chain simulated per frame",
+      "root_motion": false,
+      "head_yaw_deg": 38
+    },
+    "TurnLeft": {
+      "duration_s": 1.2083333333333333,
+      "sample_count": 30,
+      "frame_range": [
+        1,
+        30
+      ],
+      "loop": false,
+      "maximum_ik_reach_error_m": 0.0,
+      "driven_bones": [
+        "root",
+        "spine03",
+        "spine01",
+        "neck01",
+        "head",
+        "eye.L",
+        "eye.R",
+        "upperleg01.L",
+        "lowerleg01.L",
+        "foot.L",
+        "upperarm01.L",
+        "lowerarm01.L",
+        "wrist.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "upperleg01.R",
+        "lowerleg01.R",
+        "foot.R",
+        "upperarm01.R",
+        "lowerarm01.R",
+        "wrist.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "hair.01",
+        "hair.02",
+        "hair.03",
+        "hair.04"
+      ],
+      "ponytail": "damped spring chain simulated per frame",
+      "root_motion": false,
+      "one_shot": true,
+      "root_rotation_deg": 90,
+      "viewer": "apply the yaw to the character when the clip ends"
+    },
+    "TurnRight": {
+      "duration_s": 1.2083333333333333,
+      "sample_count": 30,
+      "frame_range": [
+        1,
+        30
+      ],
+      "loop": false,
+      "maximum_ik_reach_error_m": 0.0,
+      "driven_bones": [
+        "root",
+        "spine03",
+        "spine01",
+        "neck01",
+        "head",
+        "eye.L",
+        "eye.R",
+        "upperleg01.L",
+        "lowerleg01.L",
+        "foot.L",
+        "upperarm01.L",
+        "lowerarm01.L",
+        "wrist.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "upperleg01.R",
+        "lowerleg01.R",
+        "foot.R",
+        "upperarm01.R",
+        "lowerarm01.R",
+        "wrist.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "hair.01",
+        "hair.02",
+        "hair.03",
+        "hair.04"
+      ],
+      "ponytail": "damped spring chain simulated per frame",
+      "root_motion": false,
+      "one_shot": true,
+      "root_rotation_deg": -90,
+      "viewer": "apply the yaw to the character when the clip ends"
+    },
+    "CrouchDown": {
+      "duration_s": 0.7916666666666666,
+      "sample_count": 20,
+      "frame_range": [
+        1,
+        20
+      ],
+      "loop": false,
+      "maximum_ik_reach_error_m": 0.0,
+      "driven_bones": [
+        "root",
+        "spine03",
+        "spine01",
+        "neck01",
+        "head",
+        "eye.L",
+        "eye.R",
+        "upperleg01.L",
+        "lowerleg01.L",
+        "foot.L",
+        "upperarm01.L",
+        "lowerarm01.L",
+        "wrist.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "upperleg01.R",
+        "lowerleg01.R",
+        "foot.R",
+        "upperarm01.R",
+        "lowerarm01.R",
+        "wrist.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "hair.01",
+        "hair.02",
+        "hair.03",
+        "hair.04"
+      ],
+      "ponytail": "damped spring chain simulated per frame",
+      "one_shot": true
+    },
+    "CrouchUp": {
+      "duration_s": 0.7916666666666666,
+      "sample_count": 20,
+      "frame_range": [
+        1,
+        20
+      ],
+      "loop": false,
+      "maximum_ik_reach_error_m": 0.0,
+      "driven_bones": [
+        "root",
+        "spine03",
+        "spine01",
+        "neck01",
+        "head",
+        "eye.L",
+        "eye.R",
+        "upperleg01.L",
+        "lowerleg01.L",
+        "foot.L",
+        "upperarm01.L",
+        "lowerarm01.L",
+        "wrist.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "upperleg01.R",
+        "lowerleg01.R",
+        "foot.R",
+        "upperarm01.R",
+        "lowerarm01.R",
+        "wrist.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "hair.01",
+        "hair.02",
+        "hair.03",
+        "hair.04"
+      ],
+      "ponytail": "damped spring chain simulated per frame",
+      "one_shot": true
+    },
+    "Crouch": {
+      "duration_s": 3.0,
+      "sample_count": 73,
+      "frame_range": [
+        1,
+        73
+      ],
+      "loop": true,
+      "maximum_ik_reach_error_m": 0.0,
+      "driven_bones": [
+        "root",
+        "spine03",
+        "spine01",
+        "neck01",
+        "head",
+        "eye.L",
+        "eye.R",
+        "upperleg01.L",
+        "lowerleg01.L",
+        "foot.L",
+        "upperarm01.L",
+        "lowerarm01.L",
+        "wrist.L",
+        "finger2-1.L",
+        "finger2-2.L",
+        "finger2-3.L",
+        "finger3-1.L",
+        "finger3-2.L",
+        "finger3-3.L",
+        "finger4-1.L",
+        "finger4-2.L",
+        "finger4-3.L",
+        "finger5-1.L",
+        "finger5-2.L",
+        "finger5-3.L",
+        "upperleg01.R",
+        "lowerleg01.R",
+        "foot.R",
+        "upperarm01.R",
+        "lowerarm01.R",
+        "wrist.R",
+        "finger2-1.R",
+        "finger2-2.R",
+        "finger2-3.R",
+        "finger3-1.R",
+        "finger3-2.R",
+        "finger3-3.R",
+        "finger4-1.R",
+        "finger4-2.R",
+        "finger4-3.R",
+        "finger5-1.R",
+        "finger5-2.R",
+        "finger5-3.R",
+        "hair.01",
+        "hair.02",
+        "hair.03",
+        "hair.04"
+      ],
+      "ponytail": "damped spring chain simulated per frame",
+      "root_motion": false
+    },
+    "Blink": {
+      "duration_s": 0.20833333333333334,
+      "frame_range": [
+        1,
+        6
+      ],
+      "driven_bones": [
+        "orbicularis03.L",
+        "orbicularis03.R",
+        "orbicularis04.L",
+        "orbicularis04.R"
+      ],
+      "use": "optional additive/one-shot; do not combine with Blink morph at the same time"
+    }
+  },
+  "skin_weight_integrity": {
+    "Inez_Sweater": {
+      "skinned": true,
+      "vertex_count": 30108,
+      "weight_sum_range": [
+        0.9999999515712261,
+        1.0000000447034836
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Jeans": {
+      "skinned": true,
+      "vertex_count": 25930,
+      "weight_sum_range": [
+        0.9999999515712261,
+        1.0000000447034836
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Boots": {
+      "skinned": true,
+      "vertex_count": 20378,
+      "weight_sum_range": [
+        0.9999999590218067,
+        1.0000000409781933
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Hair": {
+      "skinned": true,
+      "vertex_count": 54093,
+      "weight_sum_range": [
+        0.9999999552965164,
+        1.000000037252903
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_FineSilverNecklace": {
+      "skinned": true,
+      "vertex_count": 1319,
+      "weight_sum_range": [
+        0.9999999571591616,
+        1.0000000447034836
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_TeethUpper": {
+      "skinned": true,
+      "vertex_count": 845,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_TeethLower": {
+      "skinned": true,
+      "vertex_count": 845,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Tongue": {
+      "skinned": true,
+      "vertex_count": 898,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_ContinuousHumanMesh_UNAPPROVED": {
+      "skinned": true,
+      "vertex_count": 7733,
+      "weight_sum_range": [
+        0.999999959487468,
+        1.0000000447034836
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Eyeball_L": {
+      "skinned": true,
+      "vertex_count": 840,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Eyeball_R": {
+      "skinned": true,
+      "vertex_count": 840,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Iris_L": {
+      "skinned": true,
+      "vertex_count": 280,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Iris_R": {
+      "skinned": true,
+      "vertex_count": 280,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Cornea_L": {
+      "skinned": true,
+      "vertex_count": 360,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Cornea_R": {
+      "skinned": true,
+      "vertex_count": 360,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_LashesUpper_L": {
+      "skinned": true,
+      "vertex_count": 1080,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_LashesLower_L": {
+      "skinned": true,
+      "vertex_count": 540,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_LashesUpper_R": {
+      "skinned": true,
+      "vertex_count": 1080,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_LashesLower_R": {
+      "skinned": true,
+      "vertex_count": 540,
+      "weight_sum_range": [
+        1.0,
+        1.0
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    },
+    "Inez_Sweater_HoleFill": {
+      "skinned": true,
+      "vertex_count": 2450,
+      "weight_sum_range": [
+        0.9999999552965164,
+        1.0000000447034836
+      ],
+      "unnormalized_or_unweighted_vertices": 0,
+      "unknown_groups": []
+    }
+  },
+  "runtime_weight_adaptation": {
+    "Inez_Sweater": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 9665,
+      "maximum_discarded_normalized_weight": 0.26523548960537613,
+      "mean_discarded_normalized_weight": 0.01894882389393192,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Jeans": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 8706,
+      "maximum_discarded_normalized_weight": 0.13107456169221876,
+      "mean_discarded_normalized_weight": 0.014157359965270969,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Boots": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Hair": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_FineSilverNecklace": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 915,
+      "maximum_discarded_normalized_weight": 0.0599863934406174,
+      "mean_discarded_normalized_weight": 0.0214963908790014,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_TeethUpper": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_TeethLower": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Tongue": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_ContinuousHumanMesh_UNAPPROVED": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 1359,
+      "maximum_discarded_normalized_weight": 0.29999999701976776,
+      "mean_discarded_normalized_weight": 0.00970025314423666,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Eyeball_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Eyeball_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Iris_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Iris_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Cornea_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Cornea_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_LashesUpper_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_LashesLower_L": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_LashesUpper_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_LashesLower_R": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 0,
+      "maximum_discarded_normalized_weight": 0.0,
+      "mean_discarded_normalized_weight": 0.0,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    },
+    "Inez_Sweater_HoleFill": {
+      "runtime_influences_per_vertex": 4,
+      "vertices_with_source_influences_above_four": 1428,
+      "maximum_discarded_normalized_weight": 0.21821822317058892,
+      "mean_discarded_normalized_weight": 0.015626672992451414,
+      "unweighted_vertices": 0,
+      "original_skin_preserved_in": "untouched source_blend"
+    }
+  },
+  "source_license": "CC0-1.0 MakeHuman asset rig/skin; model/base-source/LICENSE.ASSETS.md",
+  "weight_failures": [],
+  "face_shape_deformation": {
+    "Inez_ContinuousHumanMesh_UNAPPROVED": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 1690,
+        "maximum_displacement_m": 0.0031904059827925833
+      },
+      "Suspicious": {
+        "affected_vertices": 1893,
+        "maximum_displacement_m": 0.0015540409221296296
+      },
+      "SubtleFear": {
+        "affected_vertices": 2185,
+        "maximum_displacement_m": 0.0026766685913025387
+      },
+      "IntenseFear": {
+        "affected_vertices": 2272,
+        "maximum_displacement_m": 0.012483640078044669
+      },
+      "Anger": {
+        "affected_vertices": 2499,
+        "maximum_displacement_m": 0.0031080818442592592
+      },
+      "Exhaustion": {
+        "affected_vertices": 1919,
+        "maximum_displacement_m": 0.0017803558064262482
+      },
+      "Viseme_AA": {
+        "affected_vertices": 1297,
+        "maximum_displacement_m": 0.02669091310706928
+      },
+      "Viseme_EE": {
+        "affected_vertices": 1297,
+        "maximum_displacement_m": 0.01248364007807997
+      },
+      "Viseme_OH": {
+        "affected_vertices": 1297,
+        "maximum_displacement_m": 0.021371168614225982
+      },
+      "Viseme_MM": {
+        "affected_vertices": 927,
+        "maximum_displacement_m": 0.0009206058446446909
+      },
+      "Viseme_FV": {
+        "affected_vertices": 1005,
+        "maximum_displacement_m": 0.005347318565534001
+      },
+      "Blink_L": {
+        "affected_vertices": 329,
+        "maximum_displacement_m": 0.007608358170676578
+      },
+      "Blink_R": {
+        "affected_vertices": 329,
+        "maximum_displacement_m": 0.007022768436550888
+      }
+    },
+    "Inez_TeethLower": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Suspicious": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "SubtleFear": {
+        "affected_vertices": 845,
+        "maximum_displacement_m": 0.0025788566300551327
+      },
+      "IntenseFear": {
+        "affected_vertices": 845,
+        "maximum_displacement_m": 0.012027471885985096
+      },
+      "Anger": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Exhaustion": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_AA": {
+        "affected_vertices": 845,
+        "maximum_displacement_m": 0.025715602281012866
+      },
+      "Viseme_EE": {
+        "affected_vertices": 845,
+        "maximum_displacement_m": 0.012027471885985096
+      },
+      "Viseme_OH": {
+        "affected_vertices": 845,
+        "maximum_displacement_m": 0.020593662532236608
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 845,
+        "maximum_displacement_m": 0.005157250267035549
+      },
+      "Blink_L": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_R": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      }
+    },
+    "Inez_Tongue": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Suspicious": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "SubtleFear": {
+        "affected_vertices": 898,
+        "maximum_displacement_m": 0.0023181511396179323
+      },
+      "IntenseFear": {
+        "affected_vertices": 898,
+        "maximum_displacement_m": 0.010811585285032092
+      },
+      "Anger": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Exhaustion": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_AA": {
+        "affected_vertices": 898,
+        "maximum_displacement_m": 0.023115944284376737
+      },
+      "Viseme_EE": {
+        "affected_vertices": 898,
+        "maximum_displacement_m": 0.010811585285032092
+      },
+      "Viseme_OH": {
+        "affected_vertices": 898,
+        "maximum_displacement_m": 0.01851179984084108
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 898,
+        "maximum_displacement_m": 0.004635885501331956
+      },
+      "Blink_L": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_R": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      }
+    },
+    "Inez_LashesUpper_L": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 101,
+        "maximum_displacement_m": 0.0014352300325644332
+      },
+      "Suspicious": {
+        "affected_vertices": 1080,
+        "maximum_displacement_m": 0.0010306754257111514
+      },
+      "SubtleFear": {
+        "affected_vertices": 1080,
+        "maximum_displacement_m": 0.0010643937379934507
+      },
+      "IntenseFear": {
+        "affected_vertices": 1080,
+        "maximum_displacement_m": 0.0025036468577929924
+      },
+      "Anger": {
+        "affected_vertices": 1080,
+        "maximum_displacement_m": 0.0016611122684586986
+      },
+      "Exhaustion": {
+        "affected_vertices": 1080,
+        "maximum_displacement_m": 0.0009796729474883165
+      },
+      "Viseme_AA": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_EE": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_OH": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_L": {
+        "affected_vertices": 1080,
+        "maximum_displacement_m": 0.004186636619084677
+      },
+      "Blink_R": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "mapping_vertices_beyond_24mm": 0
+    },
+    "Inez_LashesLower_L": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Suspicious": {
+        "affected_vertices": 540,
+        "maximum_displacement_m": 0.001007604858082168
+      },
+      "SubtleFear": {
+        "affected_vertices": 540,
+        "maximum_displacement_m": 0.0003157143087078847
+      },
+      "IntenseFear": {
+        "affected_vertices": 540,
+        "maximum_displacement_m": 0.0007103571436419342
+      },
+      "Anger": {
+        "affected_vertices": 540,
+        "maximum_displacement_m": 0.0005105197986030067
+      },
+      "Exhaustion": {
+        "affected_vertices": 540,
+        "maximum_displacement_m": 0.0017465151589453095
+      },
+      "Viseme_AA": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_EE": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_OH": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_L": {
+        "affected_vertices": 540,
+        "maximum_displacement_m": 0.00746373937169644
+      },
+      "Blink_R": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "mapping_vertices_beyond_24mm": 0
+    },
+    "Inez_LashesUpper_R": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 1027,
+        "maximum_displacement_m": 0.000595949817066581
+      },
+      "Suspicious": {
+        "affected_vertices": 1027,
+        "maximum_displacement_m": 0.0009105903881544858
+      },
+      "SubtleFear": {
+        "affected_vertices": 1027,
+        "maximum_displacement_m": 0.0009577012086814107
+      },
+      "IntenseFear": {
+        "affected_vertices": 1027,
+        "maximum_displacement_m": 0.00271310393429334
+      },
+      "Anger": {
+        "affected_vertices": 1027,
+        "maximum_displacement_m": 0.0022652424143309673
+      },
+      "Exhaustion": {
+        "affected_vertices": 1027,
+        "maximum_displacement_m": 0.0009692434231493758
+      },
+      "Viseme_AA": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_EE": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_OH": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_L": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_R": {
+        "affected_vertices": 1012,
+        "maximum_displacement_m": 0.004142065997287491
+      },
+      "mapping_vertices_beyond_24mm": 0
+    },
+    "Inez_LashesLower_R": {
+      "Neutral": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Confused": {
+        "affected_vertices": 515,
+        "maximum_displacement_m": 0.0003415880374190174
+      },
+      "Suspicious": {
+        "affected_vertices": 515,
+        "maximum_displacement_m": 0.0007319743905992713
+      },
+      "SubtleFear": {
+        "affected_vertices": 515,
+        "maximum_displacement_m": 0.0003124761891218414
+      },
+      "IntenseFear": {
+        "affected_vertices": 515,
+        "maximum_displacement_m": 0.0007030714075223554
+      },
+      "Anger": {
+        "affected_vertices": 515,
+        "maximum_displacement_m": 0.00046358373964882737
+      },
+      "Exhaustion": {
+        "affected_vertices": 515,
+        "maximum_displacement_m": 0.0015859442862457714
+      },
+      "Viseme_AA": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_EE": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_OH": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_MM": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Viseme_FV": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_L": {
+        "affected_vertices": 0,
+        "maximum_displacement_m": 0.0
+      },
+      "Blink_R": {
+        "affected_vertices": 499,
+        "maximum_displacement_m": 0.0067775398728534475
+      },
+      "mapping_vertices_beyond_24mm": 0
+    }
+  },
+  "expression_morph_names": [
+    "Neutral",
+    "Confused",
+    "Suspicious",
+    "SubtleFear",
+    "IntenseFear",
+    "Anger",
+    "Exhaustion"
+  ],
+  "viseme_morph_names": [
+    "Viseme_AA",
+    "Viseme_EE",
+    "Viseme_OH",
+    "Viseme_MM",
+    "Viseme_FV"
+  ],
+  "blink_morph_names": [
+    "Blink_L",
+    "Blink_R"
+  ],
+  "identity_morph_source_defaults": {
+    "Inez_HeadFit_v01": 0.0,
+    "Inez_HeadFit_v02": 0.0,
+    "Inez_HeadFit_v03": 1.0,
+    "Inez_HeadRefine_v05": 1.0,
+    "Inez_SourceBodyFit_v05": 1.0,
+    "Inez_SourceHeadWrap_v05": 1.0,
+    "Inez_FaceCorrect_v05": 1.0
+  },
+  "preserve_identity_morphs": "Every identity layer key (head fit revisions, refinement, Asset A body fit, Asset B head wrap, face correction) retains its exact source default; v01/v02 head fits remain zero",
+  "ponytail": {
+    "status": "4 deforming bones inside the Asset B hair shell, head-blended root",
+    "bones": [
+      "hair.01",
+      "hair.02",
+      "hair.03",
+      "hair.04"
+    ],
+    "meshes": [
+      "Inez_Hair"
+    ],
+    "ponytail_vertices": 26128,
+    "span_m": 0.3721669912338257,
+    "chain_heads_arm_space": [
+      [
+        -0.005564054210583066,
+        0.10119988980282725,
+        1.7208861801828255
+      ],
+      [
+        -0.0007588297902471621,
+        0.12514986418312488,
+        1.640755746654662
+      ],
+      [
+        0.0011809460576069652,
+        0.1268901996669147,
+        1.5495959634947998
+      ],
+      [
+        0.0008072024206010592,
+        0.1542289611697197,
+        1.4592621373648595
+      ],
+      [
+        0.004079001719620414,
+        0.1557145638200711,
+        1.374453726950593
+      ]
+    ]
+  },
+  "bone_axes": {
+    "head": {
+      "gltf_bind_head": [
+        -0.005462082102894783,
+        1.6167956590652466,
+        0.008539292961359024
+      ],
+      "gltf_bind_axis_x": [
+        0.047510888427495956,
+        -0.044367365539073944,
+        0.9978850483894348
+      ],
+      "gltf_bind_axis_y": [
+        -0.028887875378131866,
+        0.9985359907150269,
+        0.045771848410367966
+      ],
+      "gltf_bind_axis_z": [
+        -0.9984585046768188,
+        -0.030995648354291916,
+        0.04616047814488411
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    },
+    "neck01": {
+      "gltf_bind_head": [
+        -0.004006020724773407,
+        1.4877735376358032,
+        -0.04428774118423462
+      ],
+      "gltf_bind_axis_x": [
+        0.055913351476192474,
+        -0.42091965675354004,
+        0.9053735136985779
+      ],
+      "gltf_bind_axis_y": [
+        0.03517713397741318,
+        0.9070610404014587,
+        0.4195306599140167
+      ],
+      "gltf_bind_axis_z": [
+        -0.9978213906288147,
+        0.008396724238991737,
+        0.06552426517009735
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    },
+    "neck02": {
+      "gltf_bind_head": [
+        -0.0019680482801049948,
+        1.5403237342834473,
+        -0.019982408732175827
+      ],
+      "gltf_bind_axis_x": [
+        0.0728173702955246,
+        -0.6103688478469849,
+        0.7887641787528992
+      ],
+      "gltf_bind_axis_y": [
+        -0.019850142300128937,
+        0.7898218035697937,
+        0.6130176186561584
+      ],
+      "gltf_bind_axis_z": [
+        -0.9971534013748169,
+        -0.060289498418569565,
+        0.045397642999887466
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    },
+    "neck03": {
+      "gltf_bind_head": [
+        -0.0027511867228895426,
+        1.5714842081069946,
+        0.004202691838145256
+      ],
+      "gltf_bind_axis_x": [
+        0.044270288199186325,
+        -0.09255289286375046,
+        0.9947233200073242
+      ],
+      "gltf_bind_axis_y": [
+        -0.05945068970322609,
+        0.9936927556991577,
+        0.09510287642478943
+      ],
+      "gltf_bind_axis_z": [
+        -0.9972547888755798,
+        -0.06334129720926285,
+        0.03848958760499954
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    },
+    "eye.L": {
+      "gltf_bind_head": [
+        0.032352790236473083,
+        1.6381338834762573,
+        0.08962813019752502
+      ],
+      "gltf_bind_axis_x": [
+        -0.09211143851280212,
+        0.9921579957008362,
+        0.08451324701309204
+      ],
+      "gltf_bind_axis_y": [
+        -0.016279011964797974,
+        -0.08636254817247391,
+        0.9961307644844055
+      ],
+      "gltf_bind_axis_z": [
+        0.9956212043762207,
+        0.09037330746650696,
+        0.024104952812194824
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    },
+    "eye.R": {
+      "gltf_bind_head": [
+        -0.03557201474905014,
+        1.6377007961273193,
+        0.09064367413520813
+      ],
+      "gltf_bind_axis_x": [
+        0.03495977818965912,
+        0.9977909922599792,
+        0.05651610344648361
+      ],
+      "gltf_bind_axis_y": [
+        0.08066457509994507,
+        -0.05918358266353607,
+        0.9949827790260315
+      ],
+      "gltf_bind_axis_z": [
+        0.9961337447166443,
+        -0.03023107908666134,
+        -0.08255589008331299
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    },
+    "jaw": {
+      "gltf_bind_head": [
+        -0.004562004469335079,
+        1.6121786832809448,
+        0.026031948626041412
+      ],
+      "gltf_bind_axis_x": [
+        -0.04321257025003433,
+        -0.46790611743927,
+        -0.8827218413352966
+      ],
+      "gltf_bind_axis_y": [
+        0.026429293677210808,
+        -0.88377445936203,
+        0.46716880798339844
+      ],
+      "gltf_bind_axis_z": [
+        -0.9987218379974365,
+        -0.0031364746391773224,
+        0.05055738985538483
+      ],
+      "quaternion_local_order": "Blender wxyz; Three.js xyzw",
+      "note": "Compose gaze in head-relative world axes, then transform through the current eye parent"
+    }
+  },
+  "deformation_samples": {
+    "Idle": {
+      "sampled_frame_count": 17,
+      "loop_ankle_error_m": 0.0,
+      "maximum_stance_boot_ground_error_m": 1.4634679246228188e-07,
+      "sample_frames": [
+        {
+          "frame": 1,
+          "phase": 0.0,
+          "body_bounds": [
+            [
+              -0.2601436972618103,
+              0.24760282039642334
+            ],
+            [
+              -0.13683545589447021,
+              0.08121520280838013
+            ],
+            [
+              0.6997827887535095,
+              1.7566885948181152
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -6.48196873953566e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081639677286148,
+                0.06582528352737427,
+                0.10477711260318756
+              ],
+              "knee": [
+                0.11161134392023087,
+                -0.02732797898352146,
+                0.47121521830558777
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -6.48196873953566e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653166472911835,
+                0.05287941172719002,
+                0.11673730611801147
+              ],
+              "knee": [
+                -0.10734274983406067,
+                -0.03770020976662636,
+                0.4955011308193207
+              ]
+            }
+          }
+        },
+        {
+          "frame": 7,
+          "phase": 0.0625,
+          "body_bounds": [
+            [
+              -0.25753524899482727,
+              0.2502022981643677
+            ],
+            [
+              -0.13545173406600952,
+              0.08222042769193649
+            ],
+            [
+              0.6997421383857727,
+              1.757317066192627
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -1.9821527530439198e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081636697053909,
+                0.06582526862621307,
+                0.10477714240550995
+              ],
+              "knee": [
+                0.11225085705518723,
+                -0.026409897953271866,
+                0.4714455008506775
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -1.9821527530439198e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653162002563477,
+                0.05287932977080345,
+                0.11673738062381744
+              ],
+              "knee": [
+                -0.10657249391078949,
+                -0.03544667735695839,
+                0.4960339069366455
+              ]
+            }
+          }
+        },
+        {
+          "frame": 13,
+          "phase": 0.125,
+          "body_bounds": [
+            [
+              -0.2553217113018036,
+              0.25240659713745117
+            ],
+            [
+              -0.13427332043647766,
+              0.08307487517595291
+            ],
+            [
+              0.6997056007385254,
+              1.757839322090149
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -1.254229573532939e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1108163520693779,
+                0.0658251941204071,
+                0.10477717220783234
+              ],
+              "knee": [
+                0.11279215663671494,
+                -0.025618623942136765,
+                0.47164109349250793
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -1.254229573532939e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653170198202133,
+                0.052879370748996735,
+                0.1167372465133667
+              ],
+              "knee": [
+                -0.10591600090265274,
+                -0.03345661610364914,
+                0.4964911937713623
+              ]
+            }
+          }
+        },
+        {
+          "frame": 19,
+          "phase": 0.1875,
+          "body_bounds": [
+            [
+              -0.2538408041000366,
+              0.2538799047470093
+            ],
+            [
+              -0.13348330557346344,
+              0.08364681154489517
+            ],
+            [
+              0.699679970741272,
+              1.758183479309082
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -1.0672556527424604e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1108163520693779,
+                0.06582524627447128,
+                0.10477709770202637
+              ],
+              "knee": [
+                0.11315349489450455,
+                -0.025083119049668312,
+                0.4717719852924347
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -1.0672556527424604e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653167217969894,
+                0.05287933349609375,
+                0.11673727631568909
+              ],
+              "knee": [
+                -0.1054752990603447,
+                -0.03208252787590027,
+                0.4968000650405884
+              ]
+            }
+          }
+        },
+        {
+          "frame": 25,
+          "phase": 0.25,
+          "body_bounds": [
+            [
+              -0.2533204257488251,
+              0.2543974220752716
+            ],
+            [
+              -0.13320526480674744,
+              0.08384798467159271
+            ],
+            [
+              0.6996704936027527,
+              1.7583034038543701
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.432069206610322e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081638932228088,
+                0.06582514941692352,
+                0.10477709770202637
+              ],
+              "knee": [
+                0.11328016221523285,
+                -0.024894174188375473,
+                0.4718179404735565
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.432069206610322e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653170943260193,
+                0.052879489958286285,
+                0.11673741042613983
+              ],
+              "knee": [
+                -0.10532023012638092,
+                -0.03159107267856598,
+                0.49690917134284973
+              ]
+            }
+          }
+        },
+        {
+          "frame": 31,
+          "phase": 0.3125,
+          "body_bounds": [
+            [
+              -0.2538408041000366,
+              0.2538799047470093
+            ],
+            [
+              -0.13348330557346344,
+              0.08364681154489517
+            ],
+            [
+              0.699679970741272,
+              1.758183479309082
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -1.0672556527424604e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1108163520693779,
+                0.06582524627447128,
+                0.10477709770202637
+              ],
+              "knee": [
+                0.11315349489450455,
+                -0.025083119049668312,
+                0.4717719852924347
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -1.0672556527424604e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653167217969894,
+                0.05287933349609375,
+                0.11673727631568909
+              ],
+              "knee": [
+                -0.1054752990603447,
+                -0.03208252787590027,
+                0.4968000650405884
+              ]
+            }
+          }
+        },
+        {
+          "frame": 37,
+          "phase": 0.375,
+          "body_bounds": [
+            [
+              -0.2553217113018036,
+              0.25240659713745117
+            ],
+            [
+              -0.13427332043647766,
+              0.08307487517595291
+            ],
+            [
+              0.6997056007385254,
+              1.757839322090149
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -1.254229573532939e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1108163520693779,
+                0.0658251941204071,
+                0.10477717220783234
+              ],
+              "knee": [
+                0.11279215663671494,
+                -0.025618623942136765,
+                0.47164109349250793
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -1.254229573532939e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653170198202133,
+                0.052879370748996735,
+                0.1167372465133667
+              ],
+              "knee": [
+                -0.10591600090265274,
+                -0.03345661610364914,
+                0.4964911937713623
+              ]
+            }
+          }
+        },
+        {
+          "frame": 43,
+          "phase": 0.4375,
+          "body_bounds": [
+            [
+              -0.25753524899482727,
+              0.2502022981643677
+            ],
+            [
+              -0.13545173406600952,
+              0.08222042769193649
+            ],
+            [
+              0.6997421383857727,
+              1.757317066192627
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -1.9821527530439198e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081636697053909,
+                0.06582526862621307,
+                0.10477714240550995
+              ],
+              "knee": [
+                0.11225085705518723,
+                -0.026409897953271866,
+                0.4714455008506775
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -1.9821527530439198e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653162002563477,
+                0.05287932977080345,
+                0.11673738062381744
+              ],
+              "knee": [
+                -0.10657249391078949,
+                -0.03544667735695839,
+                0.4960339069366455
+              ]
+            }
+          }
+        },
+        {
+          "frame": 49,
+          "phase": 0.5,
+          "body_bounds": [
+            [
+              -0.2601436972618103,
+              0.24760282039642334
+            ],
+            [
+              -0.13683545589447021,
+              0.08121520280838013
+            ],
+            [
+              0.6997827887535095,
+              1.7566885948181152
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -6.48196873953566e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081639677286148,
+                0.06582528352737427,
+                0.10477711260318756
+              ],
+              "knee": [
+                0.11161134392023087,
+                -0.02732797898352146,
+                0.47121521830558777
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -6.48196873953566e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653166472911835,
+                0.05287941172719002,
+                0.11673730611801147
+              ],
+              "knee": [
+                -0.10734274983406067,
+                -0.03770020976662636,
+                0.4955011308193207
+              ]
+            }
+          }
+        },
+        {
+          "frame": 55,
+          "phase": 0.5625,
+          "body_bounds": [
+            [
+              -0.2627481520175934,
+              0.2450042963027954
+            ],
+            [
+              -0.13821229338645935,
+              0.08021286129951477
+            ],
+            [
+              0.6998210549354553,
+              1.7560476064682007
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 8.248389349319041e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081629991531372,
+                0.06582525372505188,
+                0.10477708280086517
+              ],
+              "knee": [
+                0.11097079515457153,
+                -0.028230447322130203,
+                0.47098541259765625
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 8.248389349319041e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653170198202133,
+                0.0528794601559639,
+                0.11673744022846222
+              ],
+              "knee": [
+                -0.10810857266187668,
+                -0.039862118661403656,
+                0.494975209236145
+              ]
+            }
+          }
+        },
+        {
+          "frame": 61,
+          "phase": 0.625,
+          "body_bounds": [
+            [
+              -0.26495361328125,
+              0.24280236661434174
+            ],
+            [
+              -0.1393739879131317,
+              0.07936546951532364
+            ],
+            [
+              0.6998515129089355,
+              1.755494475364685
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -1.4634679246228188e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1108163446187973,
+                0.06582532823085785,
+                0.10477705299854279
+              ],
+              "knee": [
+                0.11042675375938416,
+                -0.02898327261209488,
+                0.4707910120487213
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -1.4634679246228188e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.1065315306186676,
+                0.05287943780422211,
+                0.1167372316122055
+              ],
+              "knee": [
+                -0.10875476896762848,
+                -0.04162894934415817,
+                0.4945342242717743
+              ]
+            }
+          }
+        },
+        {
+          "frame": 67,
+          "phase": 0.6875,
+          "body_bounds": [
+            [
+              -0.2664256989955902,
+              0.24133142828941345
+            ],
+            [
+              -0.14014746248722076,
+              0.07880053669214249
+            ],
+            [
+              0.6998705863952637,
+              1.7551196813583374
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -7.270318747032434e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1108163595199585,
+                0.06582529842853546,
+                0.10477715730667114
+              ],
+              "knee": [
+                0.11006288230419159,
+                -0.02948061376810074,
+                0.47066137194633484
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -7.270318747032434e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653164982795715,
+                0.05287955701351166,
+                0.11673729121685028
+              ],
+              "knee": [
+                -0.10918492078781128,
+                -0.04277858883142471,
+                0.4942420423030853
+              ]
+            }
+          }
+        },
+        {
+          "frame": 73,
+          "phase": 0.75,
+          "body_bounds": [
+            [
+              -0.2669423818588257,
+              0.2408151924610138
+            ],
+            [
+              -0.14041846990585327,
+              0.0786023736000061
+            ],
+            [
+              0.6998769640922546,
+              1.754987120628357
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -7.038033800199628e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081640422344208,
+                0.06582529842853546,
+                0.10477714240550995
+              ],
+              "knee": [
+                0.10993500053882599,
+                -0.02965417131781578,
+                0.47061580419540405
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -7.038033800199628e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653159022331238,
+                0.05287954956293106,
+                0.11673730611801147
+              ],
+              "knee": [
+                -0.10933561623096466,
+                -0.043176695704460144,
+                0.4941398501396179
+              ]
+            }
+          }
+        },
+        {
+          "frame": 79,
+          "phase": 0.8125,
+          "body_bounds": [
+            [
+              -0.2664256989955902,
+              0.24133142828941345
+            ],
+            [
+              -0.14014746248722076,
+              0.07880053669214249
+            ],
+            [
+              0.6998705863952637,
+              1.7551196813583374
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -7.270318747032434e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1108163595199585,
+                0.06582529842853546,
+                0.10477715730667114
+              ],
+              "knee": [
+                0.11006288230419159,
+                -0.02948061376810074,
+                0.47066137194633484
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -7.270318747032434e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653164982795715,
+                0.05287955701351166,
+                0.11673729121685028
+              ],
+              "knee": [
+                -0.10918492078781128,
+                -0.04277858883142471,
+                0.4942420423030853
+              ]
+            }
+          }
+        },
+        {
+          "frame": 85,
+          "phase": 0.875,
+          "body_bounds": [
+            [
+              -0.26495361328125,
+              0.24280236661434174
+            ],
+            [
+              -0.1393739879131317,
+              0.07936546951532364
+            ],
+            [
+              0.6998515129089355,
+              1.755494475364685
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -1.4634679246228188e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1108163446187973,
+                0.06582532823085785,
+                0.10477705299854279
+              ],
+              "knee": [
+                0.11042675375938416,
+                -0.02898327261209488,
+                0.4707910120487213
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -1.4634679246228188e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.1065315306186676,
+                0.05287943780422211,
+                0.1167372316122055
+              ],
+              "knee": [
+                -0.10875476896762848,
+                -0.04162894934415817,
+                0.4945342242717743
+              ]
+            }
+          }
+        },
+        {
+          "frame": 91,
+          "phase": 0.9375,
+          "body_bounds": [
+            [
+              -0.2627481520175934,
+              0.2450042963027954
+            ],
+            [
+              -0.13821229338645935,
+              0.08021286129951477
+            ],
+            [
+              0.6998210549354553,
+              1.7560476064682007
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 8.248389349319041e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081629991531372,
+                0.06582525372505188,
+                0.10477708280086517
+              ],
+              "knee": [
+                0.11097079515457153,
+                -0.028230447322130203,
+                0.47098541259765625
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 8.248389349319041e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653170198202133,
+                0.0528794601559639,
+                0.11673744022846222
+              ],
+              "knee": [
+                -0.10810857266187668,
+                -0.039862118661403656,
+                0.494975209236145
+              ]
+            }
+          }
+        },
+        {
+          "frame": 97,
+          "phase": 1.0,
+          "body_bounds": [
+            [
+              -0.2601436972618103,
+              0.24760282039642334
+            ],
+            [
+              -0.13683545589447021,
+              0.08121520280838013
+            ],
+            [
+              0.6997827887535095,
+              1.7566885948181152
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -6.48196873953566e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081639677286148,
+                0.06582528352737427,
+                0.10477711260318756
+              ],
+              "knee": [
+                0.11161134392023087,
+                -0.02732797898352146,
+                0.47121521830558777
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -6.48196873953566e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653166472911835,
+                0.05287941172719002,
+                0.11673730611801147
+              ],
+              "knee": [
+                -0.10734274983406067,
+                -0.03770020976662636,
+                0.4955011308193207
+              ]
+            }
+          }
+        }
+      ],
+      "clipping_review": "Numerical support/loop check only; rendered body/clothes review still required"
+    },
+    "Walk": {
+      "sampled_frame_count": 17,
+      "loop_ankle_error_m": 0.0,
+      "maximum_stance_boot_ground_error_m": 0.008683264255523682,
+      "sample_frames": [
+        {
+          "frame": 1,
+          "phase": 0.0,
+          "body_bounds": [
+            [
+              -0.26023679971694946,
+              0.24760277569293976
+            ],
+            [
+              -0.34637153148651123,
+              0.19213904440402985
+            ],
+            [
+              0.6783291101455688,
+              1.713571310043335
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -0.007905706763267517,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081581562757492,
+                -0.2347104549407959,
+                0.10502216219902039
+              ],
+              "knee": [
+                0.11169826239347458,
+                -0.18576140701770782,
+                0.47993314266204834
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -0.007905706763267517,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.1065324991941452,
+                0.25323814153671265,
+                0.12109522521495819
+              ],
+              "knee": [
+                -0.10818706452846527,
+                0.045716382563114166,
+                0.4506393373012543
+              ]
+            }
+          }
+        },
+        {
+          "frame": 3,
+          "phase": 0.07692307692307693,
+          "body_bounds": [
+            [
+              -0.25006940960884094,
+              0.25773000717163086
+            ],
+            [
+              -0.318673312664032,
+              0.16115835309028625
+            ],
+            [
+              0.6708680987358093,
+              1.7143900394439697
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.843451850116253e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1108161211013794,
+                -0.15765024721622467,
+                0.10281214118003845
+              ],
+              "knee": [
+                0.11567854881286621,
+                -0.1840440332889557,
+                0.47995227575302124
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.843451850116253e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653245449066162,
+                0.3302983343601227,
+                0.14462797343730927
+              ],
+              "knee": [
+                -0.10506561398506165,
+                0.10358814895153046,
+                0.46127864718437195
+              ]
+            }
+          }
+        },
+        {
+          "frame": 4,
+          "phase": 0.11538461538461539,
+          "body_bounds": [
+            [
+              -0.24572345614433289,
+              0.26204997301101685
+            ],
+            [
+              -0.29079243540763855,
+              0.12773172557353973
+            ],
+            [
+              0.654098391532898,
+              1.7037804126739502
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.0279270504252054e-05,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081618070602417,
+                -0.11912013590335846,
+                0.10477706789970398
+              ],
+              "knee": [
+                0.11769221723079681,
+                -0.19408705830574036,
+                0.4753006100654602
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.0279270504252054e-05,
+              "expected_sole_lift_m": 0.0008821233995662839,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653239488601685,
+                0.3644966781139374,
+                0.14691270887851715
+              ],
+              "knee": [
+                -0.10364890098571777,
+                0.13083124160766602,
+                0.4584563374519348
+              ]
+            }
+          }
+        },
+        {
+          "frame": 6,
+          "phase": 0.19230769230769232,
+          "body_bounds": [
+            [
+              -0.2397633194923401,
+              0.2679656445980072
+            ],
+            [
+              -0.21054215729236603,
+              0.070573590695858
+            ],
+            [
+              0.6713737845420837,
+              1.7266641855239868
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.0399314709939063e-05,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081627011299133,
+                -0.0420597605407238,
+                0.10477721691131592
+              ],
+              "knee": [
+                0.11880385875701904,
+                -0.13880881667137146,
+                0.4701959192752838
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.0399314709939063e-05,
+              "expected_sole_lift_m": 0.026697993635106262,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653247684240341,
+                0.31046321988105774,
+                0.1455736607313156
+              ],
+              "knee": [
+                -0.10173045843839645,
+                0.10235903412103653,
+                0.474719375371933
+              ]
+            }
+          }
+        },
+        {
+          "frame": 7,
+          "phase": 0.23076923076923078,
+          "body_bounds": [
+            [
+              -0.23849785327911377,
+              0.2692202925682068
+            ],
+            [
+              -0.16140390932559967,
+              0.06858137249946594
+            ],
+            [
+              0.6845688223838806,
+              1.7356188297271729
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.039462899323553e-05,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081632226705551,
+                -0.003529433161020279,
+                0.10477720201015472
+              ],
+              "knee": [
+                0.11882343143224716,
+                -0.10882999747991562,
+                0.4678236246109009
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.039462899323553e-05,
+              "expected_sole_lift_m": 0.04446481057990014,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653272271156311,
+                0.23321741819381714,
+                0.16272786259651184
+              ],
+              "knee": [
+                -0.10339553654193878,
+                -0.0011764364317059517,
+                0.47372135519981384
+              ]
+            }
+          }
+        },
+        {
+          "frame": 9,
+          "phase": 0.3076923076923077,
+          "body_bounds": [
+            [
+              -0.2397632598876953,
+              0.267965704202652
+            ],
+            [
+              -0.22403056919574738,
+              0.06887679547071457
+            ],
+            [
+              0.7094582319259644,
+              1.7462613582611084
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.0477815016638488e-05,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081644892692566,
+                0.07353106141090393,
+                0.10477733612060547
+              ],
+              "knee": [
+                0.11785544455051422,
+                -0.04737985134124756,
+                0.46294769644737244
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.0477815016638488e-05,
+              "expected_sole_lift_m": 0.06049294796369092,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653207451105118,
+                0.031703002750873566,
+                0.18345177173614502
+              ],
+              "knee": [
+                -0.10418321937322617,
+                -0.1613779067993164,
+                0.5216552019119263
+              ]
+            }
+          }
+        },
+        {
+          "frame": 11,
+          "phase": 0.38461538461538464,
+          "body_bounds": [
+            [
+              -0.24572335183620453,
+              0.2620498538017273
+            ],
+            [
+              -0.300322562456131,
+              0.14557455480098724
+            ],
+            [
+              0.7083991765975952,
+              1.7381353378295898
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.05922185361851e-05,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.1108165755867958,
+                0.15059158205986023,
+                0.10477744042873383
+              ],
+              "knee": [
+                0.11614281684160233,
+                -0.0035338455345481634,
+                0.4499903917312622
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.05922185361851e-05,
+              "expected_sole_lift_m": 0.0376220826658723,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653230547904968,
+                -0.1612614095211029,
+                0.15848465263843536
+              ],
+              "knee": [
+                -0.10433594882488251,
+                -0.2161797732114792,
+                0.5440316200256348
+              ]
+            }
+          }
+        },
+        {
+          "frame": 12,
+          "phase": 0.4230769230769231,
+          "body_bounds": [
+            [
+              -0.25006914138793945,
+              0.25773003697395325
+            ],
+            [
+              -0.32693660259246826,
+              0.17334353923797607
+            ],
+            [
+              0.7082005739212036,
+              1.732973575592041
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.0069595595705323e-05,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081612855195999,
+                0.18912015855312347,
+                0.10477688908576965
+              ],
+              "knee": [
+                0.1148606464266777,
+                0.0229327455163002,
+                0.44436538219451904
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.0069595595705323e-05,
+              "expected_sole_lift_m": 0.019592351643351574,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653185099363327,
+                -0.22782094776630402,
+                0.13914407789707184
+              ],
+              "knee": [
+                -0.10451794415712357,
+                -0.19771800935268402,
+                0.5274184942245483
+              ]
+            }
+          }
+        },
+        {
+          "frame": 14,
+          "phase": 0.5,
+          "body_bounds": [
+            [
+              -0.26023656129837036,
+              0.24760274589061737
+            ],
+            [
+              -0.34586870670318604,
+              0.19281524419784546
+            ],
+            [
+              0.6907749772071838,
+              1.7118160724639893
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -0.008683264255523682,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081597208976746,
+                0.26618051528930664,
+                0.10964593291282654
+              ],
+              "knee": [
+                0.1124754548072815,
+                0.05918654054403305,
+                0.4260408282279968
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -0.008683264255523682,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653191059827805,
+                -0.247655987739563,
+                0.11806559562683105
+              ],
+              "knee": [
+                -0.10745836794376373,
+                -0.19256797432899475,
+                0.5035934448242188
+              ]
+            }
+          }
+        },
+        {
+          "frame": 16,
+          "phase": 0.5769230769230769,
+          "body_bounds": [
+            [
+              -0.27038511633872986,
+              0.23746591806411743
+            ],
+            [
+              -0.31792283058166504,
+              0.16251984238624573
+            ],
+            [
+              0.6838953495025635,
+              1.7127232551574707
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -2.421438694000244e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081596463918686,
+                0.34324103593826294,
+                0.13538353145122528
+              ],
+              "knee": [
+                0.10961947590112686,
+                0.11635579913854599,
+                0.43783456087112427
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -2.421438694000244e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653166472911835,
+                -0.17059554159641266,
+                0.11499746143817902
+              ],
+              "knee": [
+                -0.11162833869457245,
+                -0.1907195895910263,
+                0.503888726234436
+              ]
+            }
+          }
+        },
+        {
+          "frame": 17,
+          "phase": 0.6153846153846154,
+          "body_bounds": [
+            [
+              -0.2747112512588501,
+              0.23313648998737335
+            ],
+            [
+              -0.2877293527126312,
+              0.12999165058135986
+            ],
+            [
+              0.6679958701133728,
+              1.7026941776275635
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 1.2352575140539557e-07,
+              "expected_sole_lift_m": 0.0008821233995662839,
+              "stance_contact": false,
+              "ankle": [
+                0.11081592738628387,
+                0.3774395287036896,
+                0.1377892643213272
+              ],
+              "knee": [
+                0.10820242762565613,
+                0.1461331844329834,
+                0.43686366081237793
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.2352575140539557e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.1065315455198288,
+                -0.1320653259754181,
+                0.116737499833107
+              ],
+              "knee": [
+                -0.11372661590576172,
+                -0.20057402551174164,
+                0.5000417232513428
+              ]
+            }
+          }
+        },
+        {
+          "frame": 19,
+          "phase": 0.6923076923076923,
+          "body_bounds": [
+            [
+              -0.2806333005428314,
+              0.22720178961753845
+            ],
+            [
+              -0.20742355287075043,
+              0.06905540078878403
+            ],
+            [
+              0.683664858341217,
+              1.7235602140426636
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.069362719543278e-08,
+              "expected_sole_lift_m": 0.026697993635106262,
+              "stance_contact": false,
+              "ankle": [
+                0.11081608384847641,
+                0.32340607047080994,
+                0.13386186957359314
+              ],
+              "knee": [
+                0.10638637095689774,
+                0.11708733439445496,
+                0.45067089796066284
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.069362719543278e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653149336576462,
+                -0.055004898458719254,
+                0.11673742532730103
+              ],
+              "knee": [
+                -0.11503994464874268,
+                -0.15012305974960327,
+                0.49429211020469666
+              ]
+            }
+          }
+        },
+        {
+          "frame": 21,
+          "phase": 0.7692307692307693,
+          "body_bounds": [
+            [
+              -0.2818889021873474,
+              0.22594226896762848
+            ],
+            [
+              -0.18162882328033447,
+              0.06560512632131577
+            ],
+            [
+              0.6910427808761597,
+              1.740404486656189
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -1.557527866680175e-07,
+              "expected_sole_lift_m": 0.057237057921615306,
+              "stance_contact": false,
+              "ankle": [
+                0.11081647872924805,
+                0.149679496884346,
+                0.16634738445281982
+              ],
+              "knee": [
+                0.10886941850185394,
+                -0.07998715341091156,
+                0.4666878879070282
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -1.557527866680175e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653156042098999,
+                0.02205551788210869,
+                0.1167372465133667
+              ],
+              "knee": [
+                -0.11472354829311371,
+                -0.0901474580168724,
+                0.4895787239074707
+              ]
+            }
+          }
+        },
+        {
+          "frame": 22,
+          "phase": 0.8076923076923077,
+          "body_bounds": [
+            [
+              -0.2806333303451538,
+              0.22720175981521606
+            ],
+            [
+              -0.22857004404067993,
+              0.07000759989023209
+            ],
+            [
+              0.6943066716194153,
+              1.7456415891647339
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 4.998400982003659e-08,
+              "expected_sole_lift_m": 0.06049294796369092,
+              "stance_contact": false,
+              "ankle": [
+                0.11081625521183014,
+                0.04464753717184067,
+                0.16964638233184814
+              ],
+              "knee": [
+                0.10887086391448975,
+                -0.14900730550289154,
+                0.4943755567073822
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 4.998400982003659e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653150826692581,
+                0.060585662722587585,
+                0.11673741042613983
+              ],
+              "knee": [
+                -0.1140102967619896,
+                -0.058480970561504364,
+                0.48745909333229065
+              ]
+            }
+          }
+        },
+        {
+          "frame": 24,
+          "phase": 0.8846153846153846,
+          "body_bounds": [
+            [
+              -0.27471134066581726,
+              0.23313654959201813
+            ],
+            [
+              -0.3022193908691406,
+              0.14306733012199402
+            ],
+            [
+              0.6946051716804504,
+              1.7386327981948853
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 2.2482709027826786e-09,
+              "expected_sole_lift_m": 0.0376220826658723,
+              "stance_contact": false,
+              "ankle": [
+                0.11081605404615402,
+                -0.14831691980361938,
+                0.14500632882118225
+              ],
+              "knee": [
+                0.10890484601259232,
+                -0.20831359922885895,
+                0.5183048844337463
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 2.2482709027826786e-09,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653141140937805,
+                0.13764595985412598,
+                0.11673736572265625
+              ],
+              "knee": [
+                -0.11215798556804657,
+                -0.015376314520835876,
+                0.47481536865234375
+              ]
+            }
+          }
+        },
+        {
+          "frame": 25,
+          "phase": 0.9230769230769231,
+          "body_bounds": [
+            [
+              -0.270385205745697,
+              0.2374659776687622
+            ],
+            [
+              -0.3280983567237854,
+              0.17178508639335632
+            ],
+            [
+              0.6948409676551819,
+              1.733750343322754
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 9.017167030833662e-07,
+              "expected_sole_lift_m": 0.019592351643351574,
+              "stance_contact": false,
+              "ankle": [
+                0.11081591248512268,
+                -0.21487544476985931,
+                0.12587031722068787
+              ],
+              "knee": [
+                0.10899269580841064,
+                -0.19137433171272278,
+                0.5032287836074829
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 9.017167030833662e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653228312730789,
+                0.17617790400981903,
+                0.11673825979232788
+              ],
+              "knee": [
+                -0.11079729348421097,
+                0.01005520299077034,
+                0.46894901990890503
+              ]
+            }
+          }
+        },
+        {
+          "frame": 27,
+          "phase": 1.0,
+          "body_bounds": [
+            [
+              -0.26023679971694946,
+              0.24760277569293976
+            ],
+            [
+              -0.34637153148651123,
+              0.19213904440402985
+            ],
+            [
+              0.6783291101455688,
+              1.713571310043335
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -0.007905706763267517,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081581562757492,
+                -0.2347104549407959,
+                0.10502216219902039
+              ],
+              "knee": [
+                0.11169826239347458,
+                -0.18576140701770782,
+                0.47993314266204834
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -0.007905706763267517,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.1065324991941452,
+                0.25323814153671265,
+                0.12109522521495819
+              ],
+              "knee": [
+                -0.10818706452846527,
+                0.045716382563114166,
+                0.4506393373012543
+              ]
+            }
+          }
+        }
+      ],
+      "clipping_review": "Numerical support/loop check only; rendered body/clothes review still required"
+    },
+    "Run": {
+      "sampled_frame_count": 17,
+      "loop_ankle_error_m": 0.0,
+      "maximum_stance_boot_ground_error_m": 0.008280979469418526,
+      "sample_frames": [
+        {
+          "frame": 1,
+          "phase": 0.0,
+          "body_bounds": [
+            [
+              -0.26057690382003784,
+              0.24760282039642334
+            ],
+            [
+              -0.46920913457870483,
+              0.07391522824764252
+            ],
+            [
+              0.7558934688568115,
+              1.667005181312561
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -0.007786513306200504,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081596463918686,
+                -0.27563202381134033,
+                0.10269084572792053
+              ],
+              "knee": [
+                0.11279945820569992,
+                -0.24315530061721802,
+                0.47938215732574463
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -0.007786513306200504,
+              "expected_sole_lift_m": 0.03302324613582755,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653253644704819,
+                0.43408679962158203,
+                0.16132155060768127
+              ],
+              "knee": [
+                -0.10851984471082687,
+                0.1530320942401886,
+                0.43089810013771057
+              ]
+            }
+          }
+        },
+        {
+          "frame": 2,
+          "phase": 0.05555555555555555,
+          "body_bounds": [
+            [
+              -0.2542300224304199,
+              0.2539225220680237
+            ],
+            [
+              -0.4616125524044037,
+              0.07142200320959091
+            ],
+            [
+              0.7973166704177856,
+              1.7040733098983765
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.2733078114688396e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.110816091299057,
+                -0.17579080164432526,
+                0.10417819023132324
+              ],
+              "knee": [
+                0.11420844495296478,
+                -0.19346243143081665,
+                0.4818436801433563
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.2733078114688396e-07,
+              "expected_sole_lift_m": 0.06105884670220245,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653270781040192,
+                0.3591698408126831,
+                0.17514187097549438
+              ],
+              "knee": [
+                -0.10788461565971375,
+                0.08449719101190567,
+                0.4512222409248352
+              ]
+            }
+          }
+        },
+        {
+          "frame": 3,
+          "phase": 0.1111111111111111,
+          "body_bounds": [
+            [
+              -0.24864086508750916,
+              0.2594759464263916
+            ],
+            [
+              -0.43720781803131104,
+              0.06991060823202133
+            ],
+            [
+              0.8125081062316895,
+              1.7098227739334106
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.0520110158249736e-05,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081619560718536,
+                -0.07594962418079376,
+                0.10477729141712189
+              ],
+              "knee": [
+                0.11597472429275513,
+                -0.16538915038108826,
+                0.4721040725708008
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.0520110158249736e-05,
+              "expected_sole_lift_m": 0.08586438791699162,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653125494718552,
+                0.24670323729515076,
+                0.20669437944889069
+              ],
+              "knee": [
+                -0.10885027796030045,
+                -0.05176573246717453,
+                0.4568506181240082
+              ]
+            }
+          }
+        },
+        {
+          "frame": 4,
+          "phase": 0.16666666666666666,
+          "body_bounds": [
+            [
+              -0.24448822438716888,
+              0.2635943293571472
+            ],
+            [
+              -0.3963385224342346,
+              0.06665607541799545
+            ],
+            [
+              0.8275988698005676,
+              1.7170754671096802
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.0338283977471292e-05,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081632971763611,
+                0.02389148622751236,
+                0.10477721691131592
+              ],
+              "knee": [
+                0.11677533388137817,
+                -0.11341279745101929,
+                0.4570087492465973
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.0338283977471292e-05,
+              "expected_sole_lift_m": 0.0997825334460888,
+              "stance_contact": false,
+              "ankle": [
+                -0.1065320372581482,
+                0.11220680177211761,
+                0.22294212877750397
+              ],
+              "knee": [
+                -0.10816405713558197,
+                -0.1629774570465088,
+                0.49851104617118835
+              ]
+            }
+          }
+        },
+        {
+          "frame": 5,
+          "phase": 0.2222222222222222,
+          "body_bounds": [
+            [
+              -0.24227750301361084,
+              0.2657839059829712
+            ],
+            [
+              -0.3392075300216675,
+              0.06982694566249847
+            ],
+            [
+              0.8217847943305969,
+              1.7184240818023682
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.070940510951914e-05,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081645637750626,
+                0.12373271584510803,
+                0.10477757453918457
+              ],
+              "knee": [
+                0.1169031485915184,
+                -0.04908095672726631,
+                0.4410116374492645
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.070940510951914e-05,
+              "expected_sole_lift_m": 0.09851682708478951,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653220862150192,
+                -0.02880747616291046,
+                0.22102490067481995
+              ],
+              "knee": [
+                -0.1067705973982811,
+                -0.24105411767959595,
+                0.5475499629974365
+              ]
+            }
+          }
+        },
+        {
+          "frame": 7,
+          "phase": 0.3333333333333333,
+          "body_bounds": [
+            [
+              -0.24448779225349426,
+              0.26359453797340393
+            ],
+            [
+              -0.40768659114837646,
+              0.07119747251272202
+            ],
+            [
+              0.7815199494361877,
+              1.697623372077942
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 3.809109330177307e-07,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081577837467194,
+                0.3234139084815979,
+                0.12114813923835754
+              ],
+              "knee": [
+                0.11585257947444916,
+                0.08908619731664658,
+                0.4178299605846405
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 3.809109330177307e-07,
+              "expected_sole_lift_m": 0.05656328628441784,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653229057788849,
+                -0.2683221101760864,
+                0.1758197844028473
+              ],
+              "knee": [
+                -0.1050596535205841,
+                -0.2836248278617859,
+                0.5649611949920654
+              ]
+            }
+          }
+        },
+        {
+          "frame": 8,
+          "phase": 0.3888888888888889,
+          "body_bounds": [
+            [
+              -0.24863965809345245,
+              0.2594764232635498
+            ],
+            [
+              -0.4452601373195648,
+              0.07093105465173721
+            ],
+            [
+              0.7529768943786621,
+              1.6765514612197876
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.00020579248666763306,
+              "expected_sole_lift_m": 0.00020514326402897704,
+              "stance_contact": false,
+              "ankle": [
+                0.11081573367118835,
+                0.4221574664115906,
+                0.14799045026302338
+              ],
+              "knee": [
+                0.11509963870048523,
+                0.15104980766773224,
+                0.4114997982978821
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.00020579248666763306,
+              "expected_sole_lift_m": 0.028826282852554553,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653244704008102,
+                -0.3357914388179779,
+                0.14621120691299438
+              ],
+              "knee": [
+                -0.10516739636659622,
+                -0.26881060004234314,
+                0.5298503041267395
+              ]
+            }
+          }
+        },
+        {
+          "frame": 9,
+          "phase": 0.4444444444444444,
+          "body_bounds": [
+            [
+              -0.2542288303375244,
+              0.2539229393005371
+            ],
+            [
+              -0.46718263626098633,
+              0.07123292982578278
+            ],
+            [
+              0.7199109196662903,
+              1.6464723348617554
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -0.005842480342835188,
+              "expected_sole_lift_m": 0.010412024393858013,
+              "stance_contact": false,
+              "ankle": [
+                0.1108156144618988,
+                0.4688832759857178,
+                0.14792612195014954
+              ],
+              "knee": [
+                0.1141444742679596,
+                0.1811920702457428,
+                0.3932371735572815
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -0.005842480342835188,
+              "expected_sole_lift_m": 0.007809238098148011,
+              "stance_contact": false,
+              "ankle": [
+                -0.1065324991941452,
+                -0.34771496057510376,
+                0.1237192302942276
+              ],
+              "knee": [
+                -0.10680101811885834,
+                -0.27483534812927246,
+                0.5062839388847351
+              ]
+            }
+          }
+        },
+        {
+          "frame": 10,
+          "phase": 0.5,
+          "body_bounds": [
+            [
+              -0.2605755925178528,
+              0.2476019263267517
+            ],
+            [
+              -0.4745393395423889,
+              0.07065530121326447
+            ],
+            [
+              0.7391976714134216,
+              1.6636745929718018
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -0.008280979469418526,
+              "expected_sole_lift_m": 0.03302324613582755,
+              "stance_contact": false,
+              "ankle": [
+                0.11081574857234955,
+                0.4470299482345581,
+                0.1506553739309311
+              ],
+              "knee": [
+                0.11283130943775177,
+                0.16952690482139587,
+                0.4074489176273346
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -0.008280979469418526,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653182864189148,
+                -0.288577139377594,
+                0.1153126060962677
+              ],
+              "knee": [
+                -0.10862287878990173,
+                -0.2515634298324585,
+                0.5029889345169067
+              ]
+            }
+          }
+        },
+        {
+          "frame": 11,
+          "phase": 0.5555555555555556,
+          "body_bounds": [
+            [
+              -0.2669123411178589,
+              0.24127551913261414
+            ],
+            [
+              -0.4670337438583374,
+              0.06874892860651016
+            ],
+            [
+              0.7872180938720703,
+              1.7025146484375
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 1.1801981600001454e-05,
+              "expected_sole_lift_m": 0.06105884670220245,
+              "stance_contact": false,
+              "ankle": [
+                0.11081579327583313,
+                0.3721127510070801,
+                0.16283440589904785
+              ],
+              "knee": [
+                0.11217671632766724,
+                0.1037629097700119,
+                0.429182767868042
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 1.1801981600001454e-05,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653167217969894,
+                -0.1887361705303192,
+                0.11620105803012848
+              ],
+              "knee": [
+                -0.11010349541902542,
+                -0.201088547706604,
+                0.5054336786270142
+              ]
+            }
+          }
+        },
+        {
+          "frame": 12,
+          "phase": 0.6111111111111112,
+          "body_bounds": [
+            [
+              -0.2724754512310028,
+              0.23570914566516876
+            ],
+            [
+              -0.4424435496330261,
+              0.0676150918006897
+            ],
+            [
+              0.8142927885055542,
+              1.7083417177200317
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 9.323230187874287e-08,
+              "expected_sole_lift_m": 0.08586438791699162,
+              "stance_contact": false,
+              "ankle": [
+                0.1108166053891182,
+                0.25964871048927307,
+                0.1932225525379181
+              ],
+              "knee": [
+                0.11330708116292953,
+                -0.03399156779050827,
+                0.4313906729221344
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 9.323230187874287e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653162747621536,
+                -0.08889485895633698,
+                0.11673745512962341
+              ],
+              "knee": [
+                -0.1120029166340828,
+                -0.1749693900346756,
+                0.49651187658309937
+              ]
+            }
+          }
+        },
+        {
+          "frame": 13,
+          "phase": 0.6666666666666666,
+          "body_bounds": [
+            [
+              -0.27659982442855835,
+              0.23157599568367004
+            ],
+            [
+              -0.39977988600730896,
+              0.067882239818573
+            ],
+            [
+              0.8378143310546875,
+              1.7159055471420288
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 2.112392394337803e-08,
+              "expected_sole_lift_m": 0.0997825334460888,
+              "stance_contact": false,
+              "ankle": [
+                0.11081653833389282,
+                0.12515120208263397,
+                0.20910538733005524
+              ],
+              "knee": [
+                0.11276938021183014,
+                -0.1479344666004181,
+                0.47059205174446106
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 2.112392394337803e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653135925531387,
+                0.01094634085893631,
+                0.11673736572265625
+              ],
+              "knee": [
+                -0.11288831382989883,
+                -0.12498484551906586,
+                0.4816341698169708
+              ]
+            }
+          }
+        },
+        {
+          "frame": 15,
+          "phase": 0.7777777777777778,
+          "body_bounds": [
+            [
+              -0.27879178524017334,
+              0.22937636077404022
+            ],
+            [
+              -0.3545733690261841,
+              0.07460901886224747
+            ],
+            [
+              0.8193219304084778,
+              1.7080790996551514
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -4.180947144050151e-08,
+              "expected_sole_lift_m": 0.08245798553726735,
+              "stance_contact": false,
+              "ankle": [
+                0.11081671714782715,
+                -0.1478777378797531,
+                0.19003255665302277
+              ],
+              "knee": [
+                0.11038327217102051,
+                -0.2741101384162903,
+                0.5464315414428711
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -4.180947144050151e-08,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.10653136670589447,
+                0.21062862873077393,
+                0.11673730611801147
+              ],
+              "knee": [
+                -0.11267445981502533,
+                0.00521099055185914,
+                0.4475441575050354
+              ]
+            }
+          }
+        },
+        {
+          "frame": 16,
+          "phase": 0.8333333333333334,
+          "body_bounds": [
+            [
+              -0.276600182056427,
+              0.23157572746276855
+            ],
+            [
+              -0.4037872850894928,
+              0.07485944032669067
+            ],
+            [
+              0.7963669300079346,
+              1.6982697248458862
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 8.576549589633942e-05,
+              "expected_sole_lift_m": 0.05656328628441778,
+              "stance_contact": false,
+              "ankle": [
+                0.11081655323505402,
+                -0.25537779927253723,
+                0.16259214282035828
+              ],
+              "knee": [
+                0.10970501601696014,
+                -0.2774621546268463,
+                0.5400388240814209
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 8.576549589633942e-05,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                -0.1065324917435646,
+                0.3104712963104248,
+                0.1315086930990219
+              ],
+              "knee": [
+                -0.11188337951898575,
+                0.0743195042014122,
+                0.4411391019821167
+              ]
+            }
+          }
+        },
+        {
+          "frame": 17,
+          "phase": 0.8888888888888888,
+          "body_bounds": [
+            [
+              -0.2724767327308655,
+              0.23570868372917175
+            ],
+            [
+              -0.4407467842102051,
+              0.07451490312814713
+            ],
+            [
+              0.7644085884094238,
+              1.6765434741973877
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": 0.0002945680171251297,
+              "expected_sole_lift_m": 0.028826282852554553,
+              "stance_contact": false,
+              "ankle": [
+                0.11081647127866745,
+                -0.3228473365306854,
+                0.13327273726463318
+              ],
+              "knee": [
+                0.10973813384771347,
+                -0.265118807554245,
+                0.5069320201873779
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": 0.0002945680171251297,
+              "expected_sole_lift_m": 0.00020514326402897446,
+              "stance_contact": false,
+              "ankle": [
+                -0.1065325140953064,
+                0.40921467542648315,
+                0.15621376037597656
+              ],
+              "knee": [
+                -0.11102360486984253,
+                0.1349967122077942,
+                0.4327125549316406
+              ]
+            }
+          }
+        },
+        {
+          "frame": 18,
+          "phase": 0.9444444444444444,
+          "body_bounds": [
+            [
+              -0.26691362261772156,
+              0.24127508699893951
+            ],
+            [
+              -0.4621545672416687,
+              0.07492346316576004
+            ],
+            [
+              0.73493492603302,
+              1.648341178894043
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -0.0040228599682450294,
+              "expected_sole_lift_m": 0.007809238098148011,
+              "stance_contact": false,
+              "ankle": [
+                0.1108158603310585,
+                -0.33477047085762024,
+                0.11100645363330841
+              ],
+              "knee": [
+                0.11119235306978226,
+                -0.2696306109428406,
+                0.4834465980529785
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -0.0040228599682450294,
+              "expected_sole_lift_m": 0.010412024393858013,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653259605169296,
+                0.4559404253959656,
+                0.15700115263462067
+              ],
+              "knee": [
+                -0.10994502156972885,
+                0.16450689733028412,
+                0.4153073728084564
+              ]
+            }
+          }
+        },
+        {
+          "frame": 19,
+          "phase": 1.0,
+          "body_bounds": [
+            [
+              -0.26057690382003784,
+              0.24760282039642334
+            ],
+            [
+              -0.46920913457870483,
+              0.07391522824764252
+            ],
+            [
+              0.7558934688568115,
+              1.667005181312561
+            ]
+          ],
+          "feet": {
+            "L": {
+              "minimum_boot_z_m": -0.007786513306200504,
+              "expected_sole_lift_m": 0.0,
+              "stance_contact": true,
+              "ankle": [
+                0.11081596463918686,
+                -0.27563202381134033,
+                0.10269084572792053
+              ],
+              "knee": [
+                0.11279945820569992,
+                -0.24315530061721802,
+                0.47938215732574463
+              ]
+            },
+            "R": {
+              "minimum_boot_z_m": -0.007786513306200504,
+              "expected_sole_lift_m": 0.03302324613582755,
+              "stance_contact": false,
+              "ankle": [
+                -0.10653253644704819,
+                0.43408679962158203,
+                0.16132155060768127
+              ],
+              "knee": [
+                -0.10851984471082687,
+                0.1530320942401886,
+                0.43089810013771057
+              ]
+            }
+          }
+        }
+      ],
+      "clipping_review": "Numerical support/loop check only; rendered body/clothes review still required"
+    },
+    "LookAround": {
+      "sampled_frame_count": 13,
+      "lowest_boot_z_range_m": [
+        -9.764698916114867e-08,
+        8.052120392676443e-08
+      ],
+      "loop_ankle_error_m": 0.0,
+      "note": "lowest boot point per sampled frame; 0 = on the ground plane"
+    },
+    "TurnLeft": {
+      "sampled_frame_count": 13,
+      "lowest_boot_z_range_m": [
+        -0.0029465053230524063,
+        0.0071051339618861675
+      ],
+      "loop_ankle_error_m": null,
+      "note": "lowest boot point per sampled frame; 0 = on the ground plane"
+    },
+    "TurnRight": {
+      "sampled_frame_count": 13,
+      "lowest_boot_z_range_m": [
+        -0.004625040106475353,
+        0.007074718363583088
+      ],
+      "loop_ankle_error_m": null,
+      "note": "lowest boot point per sampled frame; 0 = on the ground plane"
+    },
+    "CrouchDown": {
+      "sampled_frame_count": 13,
+      "lowest_boot_z_range_m": [
+        -9.188624972011894e-08,
+        2.2597741917707026e-06
+      ],
+      "loop_ankle_error_m": null,
+      "note": "lowest boot point per sampled frame; 0 = on the ground plane"
+    },
+    "CrouchUp": {
+      "sampled_frame_count": 13,
+      "lowest_boot_z_range_m": [
+        -9.188624972011894e-08,
+        2.2597741917707026e-06
+      ],
+      "loop_ankle_error_m": null,
+      "note": "lowest boot point per sampled frame; 0 = on the ground plane"
+    },
+    "Crouch": {
+      "sampled_frame_count": 13,
+      "lowest_boot_z_range_m": [
+        1.912783773150295e-06,
+        1.912783773150295e-06
+      ],
+      "loop_ankle_error_m": 0.0,
+      "note": "lowest boot point per sampled frame; 0 = on the ground plane"
+    }
+  },
+  "limitations": [
+    "A procedural bake needs rendered and browser critique before any quality claim.",
+    "Morph expressions are restrained extrapolations; original references provide neutral/tension cues only.",
+    "Teeth/tongue interiors, profile anatomy and ponytail interior remain reference unknowns.",
+    "Crossfades and movement need browser validation; clips are genuinely in place."
+  ],
+  "export_size_bytes": 149763860
+}

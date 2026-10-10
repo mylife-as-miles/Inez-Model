@@ -1,3 +1,5 @@
+> **Historical log.** This file records the reference-generation phase and the early v01–v04 builds. The current visual QA of the final model, built from the user's GLBs, is [`assets/characters/inez/reports/INEZ_VISUAL_QA.md`](../assets/characters/inez/reports/INEZ_VISUAL_QA.md).
+
 ## GitHub checkpoint — 2026-10-09
 
 Actual dressed v03 source/export and staged animation v01 now exist. Dressed rendering identified tight sweater/bust fit, incorrect shoulder stripe patches, boot/cuff skin exposure, protruding toes, a stray forearm seam, and hair crown discrepancies. These remain unapproved. Canonical Khronos GLB validation: 0 errors, 85 non-root skinned-node warnings. Chromium reached model-ready state, but screenshot capture timed out; actual browser render/animation acceptance remains pending. See `WORK_COMPLETED_AND_NEXT_STEPS.md` for current work and prioritized corrections. No final likeness pass is claimed.

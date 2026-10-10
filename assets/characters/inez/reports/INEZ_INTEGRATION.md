@@ -75,7 +75,11 @@ const idle = mixer.clipAction(clip('Idle')).play();
 **Locomotion blending.** Blend `Idle`/`Walk`/`Run` by speed. Advance `Walk`
 and `Run` by a shared phase at `speed / matching_speed`, using
 `clip_info.Walk.matching_viewer_speed_m_s` and the matching value for `Run`.
-The feet then do not slide; see `AnimationController` in the viewer.
+See `AnimationController` in the viewer. Even at the matching speed the
+procedural feet are not fully planted: the per-boot audit measures 45–49 mm
+of slip per stance phase in `Walk` and 36–69 mm in `Run`
+(`docs/INEZ_ANIMATION_QA.md`). The retargeted motion-capture walk below has
+the contact pass and is the better walk.
 
 **Turns.** Set `LoopOnce` and `clampWhenFinished`. On the mixer's `finished`
 event:
@@ -94,6 +98,16 @@ on `finished`.
 animate only morph weights. Play them on top of any body clip with their own
 action; never stop the body action for them.
 
+**External clips (retargeted motion).** Clips such as
+`animation/clips/inez_mocap_walk_cmu_02_01.glb` hold only the armature and
+one action. Load the file, take `gltf.animations[0]` and play it on the same
+mixer: tracks bind to Inez's bones by name. Shift its tracks to start at 0:
+Blender writes the first frame at 1/30 s. Copy each track's `times` before
+shifting, because tracks share one array. Move the character at the clip's
+`matching_speed_m_s` from `animation/runtime/clips.json` while it plays.
+`viewer/src/animation-lab.js` does all of this, and shows the clip's source
+(`CMU mocap`, `TERRA`, `procedural`) from the manifest.
+
 **Static expressions and lip-sync.** Add to the named targets:
 
 - expressions: `Confused`, `Suspicious`, `SubtleFear`, `IntenseFear`,
@@ -101,7 +115,7 @@ action; never stop the body action for them.
 - visemes: `Viseme_AA`, `_EE`, `_OH`, `_MM`, `_FV`;
 - blinks: `Blink_L`, `Blink_R`.
 
-Lashes and tearlines have the same names. Drive every mesh that has a target.
+The lashes, lower teeth and tongue carry the same names. Drive every mesh that has a target. The body exports as two primitives, one per material, which Three.js loads as two meshes (`..._Geometry` and `..._Geometry_1`). The facial targets move the second, the face; set the weights on both.
 
 **Gaze, head and jaw.** Rotate the `eye.L`, `eye.R`, `head` and `jaw` bones
 after `mixer.update()`, and restore them before the next update. The viewer
@@ -126,12 +140,11 @@ across levels.
 - **Colour management.** `renderer.outputColorSpace = SRGBColorSpace`. The
   viewer uses ACES filmic tone mapping.
 - **Skin, sweater, jeans and boots** are opaque.
-- **Cornea and tearline** are alpha-blended and render after opaque objects.
+- **Cornea** is alpha-blended and renders after opaque objects.
 - **Hair** uses `KHR_materials_specular` for a warm specular tint and is
   opaque (sculpted shell).
 - **Necklace** is metallic silver.
-- **Shadows.** Set `castShadow` on all meshes. The cornea and tearline
-  should not cast.
+- **Shadows.** Set `castShadow` on all meshes except the corneas.
 
 ## THREE BEDROOM hooks
 

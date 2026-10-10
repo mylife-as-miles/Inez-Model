@@ -473,6 +473,25 @@ def render_previews(scene, arm, folder, frames, count):
     return written
 
 
+def clip_summary(path):
+    """Read the written GLB back: animation count, duration, and how many
+    channels carry a key on every frame (the driven bones)."""
+    import struct
+    data = Path(path).read_bytes()
+    length = struct.unpack('<I', data[12:16])[0]
+    gltf = json.loads(data[20:20+length])
+    animations = gltf.get('animations', [])
+    counts, ends = [], []
+    for animation in animations:
+        for channel in animation['channels']:
+            accessor = gltf['accessors'][animation['samplers'][channel['sampler']]['input']]
+            counts.append(accessor['count'])
+            ends.append(accessor['max'][0])
+    top = max(counts, default=0)
+    return {'animations': len(animations), 'channels': len(counts), 'duration_s': max(ends, default=0.0),
+            'max_keys': top, 'channels_with_all_frames': sum(c == top for c in counts) if top > 2 else 0}
+
+
 def export_clip(arm, path):
     bpy.ops.object.select_all(action='DESELECT')
     arm.select_set(True)
@@ -581,9 +600,28 @@ def main():
     arm.animation_data.action = action
     if args.preview_dir:
         report['previews'] = render_previews(scene, arm, Path(args.preview_dir), len(samples), args.preview_frames)
+    # Export from a scene holding only the armature and this one action. In
+    # the full character scene the exporter's ACTIVE_ACTIONS mode also picked
+    # up the character's own actions (a 0.2 s range with a constant pose was
+    # written). The source .blend is never saved, so this is in memory only.
+    for obj in list(scene.objects):
+        if obj.type != 'ARMATURE':
+            bpy.data.objects.remove(obj, do_unlink=True)
+    for act in list(bpy.data.actions):
+        if act != action:
+            bpy.data.actions.remove(act)
+    if arm.animation_data:
+        for track in list(arm.animation_data.nla_tracks):
+            arm.animation_data.nla_tracks.remove(track)
+        arm.animation_data.action = action
     export_clip(arm, out)
     report['output_glb'] = str(out)
     report['output_bytes'] = out.stat().st_size
+    report['exported_clip'] = clip_summary(out)
+    report['checks']['exported_clip_matches_bake'] = (
+        report['exported_clip']['animations'] == 1 and
+        abs(report['exported_clip']['duration_s']-len(samples)/args.fps) < 0.5/args.fps and
+        report['exported_clip']['channels_with_all_frames'] >= len(baked['driven_bones']))
     if args.trajectory_json:
         step = max(1, int(round(args.fps/15)))
         traj = {'clip': args.name, 'fps': args.fps, 'every': step, 'frames': len(samples),
@@ -595,12 +633,6 @@ def main():
                 'contacts': [[bool(c[0]), bool(c[1])] if c is not None else [False, False] for c in contacts[::step]]}
         Path(args.trajectory_json).write_text(json.dumps(traj)+'\n')
     if args.save_blend:
-        for obj in list(scene.objects):
-            if obj.type != 'ARMATURE':
-                bpy.data.objects.remove(obj, do_unlink=True)
-        for act in list(bpy.data.actions):
-            if act != action:
-                bpy.data.actions.remove(act)
         bpy.ops.wm.save_as_mainfile(filepath=str(Path(args.save_blend).resolve()), compress=True)
         report['blend'] = args.save_blend
     Path(args.report).write_text(json.dumps(report, indent=2, default=lambda v: list(v))+'\n')
