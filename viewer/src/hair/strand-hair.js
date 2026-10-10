@@ -72,6 +72,7 @@ uniform vec3 tipColor;
 uniform vec3 specColor;
 uniform float variation;
 uniform float coverageGain;
+uniform float minCoverage;
 uniform float specR;
 uniform float specTRT;
 uniform float expR;
@@ -109,7 +110,8 @@ void main() {
   #endif
   color += ambient * albedo * RECIPROCAL_PI;
   color *= vAO;
-  gl_FragColor = vec4(color, clamp(vCoverage * coverageGain, 0.0, 1.0));
+  // sub-pixel strands far away keep a coverage floor so the hair reads dense and brown, not ashy
+  gl_FragColor = vec4(color, clamp(max(vCoverage * coverageGain, minCoverage), 0.0, 1.0));
   #include <tonemapping_fragment>
   #include <colorspace_fragment>
 }`;
@@ -157,14 +159,14 @@ export class StrandHairRuntime {
     geo.setAttribute('aMisc', new THREE.BufferAttribute(aMisc, 3));
     geo.setIndex(new THREE.BufferAttribute(tris, 1));
     const look = { rootColor: [.028, .017, .011], tipColor: [.105, .066, .043], specColor: [1, .93, .82], rootWidth: .0006, tipWidth: .00025,
-      variation: .18, coverageGain: 1.0, specR: .04, specTRT: .18, expR: 260, expTRT: 60, ...preset.strandAppearance, ...appearance };
+      variation: .18, coverageGain: 1.0, minCoverage: .5, specR: .04, specTRT: .18, expR: 260, expTRT: 60, ...preset.strandAppearance, ...appearance };
     this.material = new THREE.ShaderMaterial({
       vertexShader: VERT, fragmentShader: FRAG, lights: true, side: THREE.DoubleSide, alphaToCoverage: true,
       uniforms: THREE.UniformsUtils.merge([THREE.UniformsLib.lights, {
         guideTex: { value: null }, K: { value: K }, resolution: { value: new THREE.Vector2(1, 1) },
         rootWidth: { value: look.rootWidth }, tipWidth: { value: look.tipWidth },
         rootColor: { value: new THREE.Color(...look.rootColor) }, tipColor: { value: new THREE.Color(...look.tipColor) },
-        specColor: { value: new THREE.Color(...look.specColor) }, variation: { value: look.variation }, coverageGain: { value: look.coverageGain },
+        specColor: { value: new THREE.Color(...look.specColor) }, variation: { value: look.variation }, coverageGain: { value: look.coverageGain }, minCoverage: { value: look.minCoverage },
         specR: { value: look.specR }, specTRT: { value: look.specTRT }, expR: { value: look.expR }, expTRT: { value: look.expTRT } }])
     });
     this.material.uniforms.guideTex.value = this.texture;
