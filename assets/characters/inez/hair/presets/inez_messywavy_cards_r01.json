@@ -149,5 +149,31 @@
   "gravityMode": "head-relative",
   "teleportSpeed": 6
  },
- "tuning_notes": "Shape pull k = 1/compliance with 1 g particles: tip 5 m/N gives about 2.2 Hz sway and about 2.5 cm tip offset under a 30-degree head tilt (head-relative gravity); drag 4/s damps it. Provisional."
+ "tuning_notes": "Shape pull k = 1/compliance with 1 g particles: tip 5 m/N gives about 2.2 Hz sway and about 2.5 cm tip offset under a 30-degree head tilt (head-relative gravity); drag 4/s damps it. Provisional.",
+ "strandAppearance": {
+  "rootColor": [
+   0.018,
+   0.011,
+   0.007
+  ],
+  "tipColor": [
+   0.072,
+   0.045,
+   0.029
+  ],
+  "specColor": [
+   1,
+   0.93,
+   0.82
+  ],
+  "rootWidth": 0.0009,
+  "tipWidth": 0.0006,
+  "variation": 0.25,
+  "coverageGain": 1.3,
+  "note": "damp look as in the references: darker base, sharper and brighter primary highlight; linear RGB from the measured restored hair albedo",
+  "specR": 0.1,
+  "specTRT": 0.22,
+  "expR": 420,
+  "expTRT": 90
+ }
 }

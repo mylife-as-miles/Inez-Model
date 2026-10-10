@@ -9,6 +9,7 @@ import { AnimationLab, TERRAINS } from './animation-lab.js';
 import { DigitalHumanRegistry } from './digital-human/material-registry.js';
 import { DIGITAL_HUMAN_LIGHTS } from './digital-human/lighting/digital-human-presets.js';
 import { CardHairRuntime } from './hair/card-hair-runtime.js';
+import { StrandHairRuntime } from './hair/strand-hair.js';
 import './style.css';
 
 const $ = id => document.getElementById(id);
@@ -301,8 +302,25 @@ function advance(seconds = 0, { render = true } = {}) {
 // Hair cards that carry _HAIR_CARD/_HAIR_S/_HAIR_FREE get the per-card
 // simulation; any other model keeps its skinned (animation-only) hair.
 async function setupHair() {
-  let cards = null;
-  avatar.traverse(mesh => { if (mesh.isSkinnedMesh && mesh.geometry.attributes._hair_card) cards = mesh; });
+  let cards = null, guides = null, strands = null, skinned = null;
+  avatar.traverse(mesh => {
+    if (mesh.isSkinnedMesh && mesh.geometry.attributes._hair_card) cards = mesh;
+    if (mesh.geometry?.attributes?._hair_offset) strands = mesh;
+    if (mesh.geometry?.attributes?._hair_ref) guides = mesh;
+    if (mesh.isSkinnedMesh && !skinned) skinned = mesh;
+  });
+  if (strands && guides) {
+    try {
+      const response = await fetch(assetRoot + 'hair/presets/inez_messywavy_cards_r01.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error('hair preset HTTP ' + response.status);
+      hair = new StrandHairRuntime({ guides, strands, skinnedMesh: skinned, preset: await response.json(), findBone: name => findBone(avatar, name), renderer });
+      scene.add(hair.mesh); hair.update(0);
+      $('hair-physics').disabled = false; $('hair-physics').checked = true;
+      const d = hair.diagnostics;
+      $('hair-info').textContent = `${d.strands.toLocaleString()} strands on ${d.guides} simulated guides (${d.particles} particles, ${d.pinned} pinned) · ${d.colliders} collision proxies · ${d.simulationHz} Hz`;
+    } catch (error) { warnings.push('Strand hair unavailable: ' + error.message); hair = null; }
+    return;
+  }
   if (!cards) return;
   for (const material of [cards.material].flat()) { material.alphaToCoverage = true; material.needsUpdate = true; }
   try {

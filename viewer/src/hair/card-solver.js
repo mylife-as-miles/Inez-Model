@@ -169,6 +169,9 @@ export class CardChainSolver {
           if (e < r && e > 1e-9) { x[k] = cx + ex / e * r; x[k + 1] = cy + ey / e * r; x[k + 2] = cz + ez / e * r; this.contact[i] = 1;
             this.contactNormal[k] = ex / e; this.contactNormal[k + 1] = ey / e; this.contactNormal[k + 2] = ez / e; }
         }
+        // the push must not stretch the segment: slide back onto the length sphere
+        const fx = x[k] - x[p], fy = x[k + 1] - x[p + 1], fz = x[k + 2] - x[p + 2], f = Math.hypot(fx, fy, fz);
+        if (f > 1e-12) { x[k] = x[p] + fx / f * L; x[k + 1] = x[p + 1] + fy / f * L; x[k + 2] = x[p + 2] + fz / f * L; }
       }
     }
     for (let i = 0; i < n; i++) {

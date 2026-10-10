@@ -1,3 +1,10 @@
+# Hair checkpoint 2 — 2026-10-10
+
+The card hair (r04) was rejected by the user. Strand candidate r09: guides restyled to the reference
+ponytail, 13,300 strands grown with the user's MainHair node group, GPU strand renderer driven by 665
+simulated guides. Previous hair stays the default until the user approves. Local build only (licensed
+guides). See [hair report](docs/INEZ_HAIR_PHYSICS.md#strand-hair-from-the-users-mainhair-node-group-r09).
+
 # Hair checkpoint — 2026-10-10
 
 Ponytail MessyWavy cards fitted, rigged and simulated per card; crown ridge fixed.

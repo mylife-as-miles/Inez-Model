@@ -1,12 +1,12 @@
 {
-  "label": "Inez V06 recovery with fitted Ponytail MessyWavy hair (per-card simulation); likeness unapproved",
+  "label": "Inez V06 recovery: reference color retained, runtime contact refined; likeness unapproved",
   "model_available": true,
   "production_approved": false,
   "blocker": "Production likeness pending: eye shading, short high-ponytail style differs from the reference low ponytail (user-selected package), painted hair visible behind the ears and sweater details remain (facial diagonal bands were viewer shadow acne, fixed). V06 mouth/jaw geometry is an unpromoted candidate. Selected Fab hair fitted locally (not in public repo); CORDEL skinning/animation prerequisites not implemented.",
   "generation_calls": 22,
   "global_call_cap": 24,
   "rig_animations_available": true,
-  "default_model": "v06/inez_recovery_v06_hair_r04.glb",
+  "default_model": "v06/inez_recovery_v06.glb",
   "source_models": [
     "source/asset_a/Inez.glb",
     "source/asset_b/Inez Facial Model.glb",
@@ -74,7 +74,6 @@
     "accepted_for_development": true,
     "artistic_approval": false
   },
-  "fallback_model": "v06/inez_recovery_v06.glb",
   "hair": {
     "revision": "messywavy_r04",
     "source": "WhiteCap Ponytail MessyWavy (Fab), supplied by the repository owner 2026-10-10; entitlement not independently verified",
@@ -94,6 +93,9 @@
       "validation": "hair/qa/hair_r04_glb_validation.json"
     },
     "crown_ridge": "fixed: cards sit outside the skull; soft-edged inset scalp hides the glossy painted crown (renders/hair_r04_matched)",
-    "artistic_approval": false
+    "artistic_approval": false,
+    "status": "r04 cards rejected by the user; strand candidate r09 awaiting review; previous Asset B hair remains the default",
+    "default": false,
+    "candidate": "model/v06/inez_recovery_v06_hair_strands_r09.glb (local, git-ignored): strand hair grown with the user-supplied MainHair node group on guides restyled to the reference ponytail; awaiting user review"
   }
 }
