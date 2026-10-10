@@ -19,7 +19,8 @@ CHAR = ROOT / 'assets/characters/inez'
 async def run(args):
     out = CHAR / 'renders' / args.revision
     out.mkdir(parents=True, exist_ok=True)
-    report = {'model': args.model, 'artistic_approval': False, 'views': {}, 'errors': []}
+    report = {'model': args.model, 'artistic_approval': False, 'views': {}, 'errors': [], 'diagnostic_no_skin_normal_map': args.no_skin_normal_map,
+              'diagnostic_no_avatar_shadow_receive': args.no_shadows, 'diagnostic_shadow_normal_bias': args.shadow_normal_bias}
     async with async_playwright() as p:
         browser = await p.chromium.launch(executable_path=os.environ.get('INEZ_CHROMIUM', '/usr/bin/chromium'),
             args=['--no-sandbox', '--disable-dev-shm-usage', '--enable-unsafe-swiftshader', '--use-angle=swiftshader'])
@@ -39,6 +40,24 @@ async def run(args):
                     if(a.name==='Inez_Hair_FromAssetB') {a.color.r*=.042/.024;a.color.g*=.021/.0135;a.color.b*=.0088/.0068;}
                 }
             })''')
+        if args.no_skin_normal_map:
+            # Diagnostic only: drop the two skin materials' tangent-space normal
+            # maps in the browser (no asset is edited) to test whether contour
+            # bands come from the normal map rather than albedo or geometry.
+            await page.evaluate('''() => window.inezViewer.getAvatar().traverse(m => {
+                if(!m.isMesh) return;
+                for(const a of [m.material].flat())
+                    if(['Inez_Head_Skin_PBR','Inez_Skin_Freckles_Pores_Lips_PBR'].includes(a.name)) {a.normalMap=null;a.needsUpdate=true;}
+            })''')
+        if args.no_shadows:
+            # Diagnostic only: stop the avatar receiving shadow-map shadows
+            # (browser only) to test for self-shadowing acne on the face.
+            await page.evaluate('''() => window.inezViewer.getAvatar().traverse(m => { if(m.isMesh) { m.receiveShadow=false; for(const a of [m.material].flat()) a.needsUpdate=true; } })''')
+        if args.shadow_normal_bias is not None:
+            # Diagnostic only: offset the shadow lookup along the normal for every
+            # shadow-casting light in the scene (no viewer source is edited).
+            await page.evaluate('''b => { let s=window.inezViewer.getAvatar(); while(s.parent) s=s.parent;
+                s.traverse(o => { if(o.isLight && o.castShadow) { o.shadow.normalBias=b; o.shadow.needsUpdate=true; } }); }''', args.shadow_normal_bias)
         if args.normal_preview:
             await page.evaluate('''async () => {
                 const T=await import('/node_modules/three/build/three.module.js');
@@ -90,6 +109,9 @@ if __name__ == '__main__':
     parser.add_argument('--revision',required=True)
     parser.add_argument('--views',default='face_front,face_left,face_right,face_three_quarter,body_front,body_back')
     parser.add_argument('--match-reference',action='store_true')
+    parser.add_argument('--no-skin-normal-map',action='store_true',help='diagnostic: render the skin without its normal maps (browser only)')
+    parser.add_argument('--no-shadows',action='store_true',help='diagnostic: avatar does not receive shadow-map shadows (browser only)')
+    parser.add_argument('--shadow-normal-bias',type=float,default=None,help='diagnostic: set normalBias on shadow-casting lights (browser only)')
     parser.add_argument('--lighting',default='studio',choices=['studio','neutral','apartment','daylight','flashlight'])
     parser.add_argument('--restore-preview',action='store_true')
     parser.add_argument('--normal-preview',action='store_true')

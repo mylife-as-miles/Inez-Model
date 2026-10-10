@@ -1,0 +1,90 @@
+{
+ "revision": "shadow_acne_fix",
+ "artistic_approval": false,
+ "finding": "Diagonal contour bands on forehead/cheeks were shadow-map self-shadowing (acne) from the viewer key light, not baked albedo, morph normals or skin normal maps.",
+ "asset_changed": false,
+ "default_model": "model/v06/inez_recovery_v06.glb",
+ "default_sha256_unchanged": "3bbb563b8183d8857037b0495bb3fb11c92545b7603cdca2e719b1d9787261eb",
+ "change": "viewer/src/main.js: key.shadow.normalBias = 0.005 (key DirectionalLight, 1024^2 map over a 6 m orthographic frustum ~5.9 mm/texel, bias -0.0001 retained)",
+ "diagnostic_chain": [
+  {
+   "hypothesis": "baked albedo",
+   "test": "band-pass inspection of model/v06/textures/inez_head_albedo_assetB_restored_v06.png",
+   "result": "rejected: no diagonal streaks in the texture"
+  },
+  {
+   "hypothesis": "linear morph NORMAL summation of large identity layers",
+   "test": "tools/inez/v06_identity_normals_glb.py -> held candidate inez_recovery_v06_normals_r01.glb (not committed; regenerable), matched neutral/apartment captures",
+   "result": "rejected: bands unchanged; candidate not promoted",
+   "evidence": [
+    "qa/v06/normals_r01_patch.json",
+    "qa/v06/normals_r01_glb_validation.json",
+    "renders/v06_normals_r01_matched/compare_*.png",
+    "renders/v06_normals_r01_matched/zoom_face_*.png"
+   ]
+  },
+  {
+   "hypothesis": "skin tangent-space normal maps",
+   "test": "v06_capture.py --no-skin-normal-map (browser only)",
+   "result": "rejected: bands unchanged",
+   "evidence": [
+    "renders/v06_normals_r01_matched/zoom_face_apartment_normalmap_test.png"
+   ]
+  },
+  {
+   "hypothesis": "shadow-map acne",
+   "test": "v06_capture.py --no-shadows and --shadow-normal-bias 0.003/0.005/0.01 (browser only), identical camera/light",
+   "result": "confirmed: bands vanish without avatar shadow receive; 0.003 leaves faint bands, 0.005 removes them, 0.01 over-darkens eyes",
+   "evidence": [
+    "renders/v06_shadow_acne_fix_matched/zoom_shadow_test_face_front.png",
+    "renders/v06_shadow_acne_fix_matched/zoom_shadow_bias_sweep_face_front.png"
+   ]
+  }
+ ],
+ "matched_before_after": {
+  "before": "renders/v06_normals_r01_matched/{neutral,apartment}_before",
+  "after": "renders/v06_shadow_acne_fix_matched/{neutral,apartment}_after",
+  "views": [
+   "face_front",
+   "face_three_quarter",
+   "face_left",
+   "body_front"
+  ],
+  "mean_abs_rgb_diff_8bit": {
+   "neutral": {
+    "face_front": 0.529,
+    "face_three_quarter": 0.283,
+    "face_left": 0.12,
+    "body_front": 0.064
+   },
+   "apartment": {
+    "face_front": 0.555,
+    "face_three_quarter": 0.291,
+    "face_left": 0.096,
+    "body_front": 0.067
+   }
+  },
+  "visual_review": "bands removed in both presets; skin peach and hair medium-brown unchanged; upper-lid shadow over eyes slightly deeper; body/feet unchanged at body_front scale",
+  "comparisons": [
+   "renders/v06_shadow_acne_fix_matched/compare_neutral.png",
+   "renders/v06_shadow_acne_fix_matched/compare_apartment.png",
+   "renders/v06_shadow_acne_fix_matched/zoom_face_neutral.png",
+   "renders/v06_shadow_acne_fix_matched/zoom_face_apartment.png"
+  ]
+ },
+ "gates_after_change": {
+  "viewer_build": "pass (existing large-chunk warning)",
+  "unit_tests": "12/12",
+  "browser_qa": "qa/browser_v06_shadowfix_browser.json 14/14",
+  "skin_qa": "qa/v06/v06_shadowfix_skin.json 17/17",
+  "backend": "WebGL2 SwiftShader (CPU evidence only)"
+ },
+ "not_addressed": [
+  "pink scalp/crown ridge visible through parting",
+  "stringy curl silhouette",
+  "eye response",
+  "sweater smears/back stripe",
+  "costume interfaces",
+  "foot-contact shadow peter-panning not measured at close range"
+ ]
+}

@@ -2,7 +2,7 @@
   "label": "Inez V06 recovery: reference color retained, runtime contact interpolation refined; likeness unapproved",
   "model_available": true,
   "production_approved": false,
-  "blocker": "Production likeness pending: facial texture bands, eye shading, scalp/hair intersections and sweater details remain. V06 mouth/jaw geometry is an unpromoted candidate. Selected Fab hair package missing; CORDEL skinning/animation prerequisites not implemented.",
+  "blocker": "Production likeness pending: eye shading, scalp/crown intersections, curl silhouette and sweater details remain (facial diagonal bands were viewer shadow acne, fixed). V06 mouth/jaw geometry is an unpromoted candidate. Selected Fab hair package missing; CORDEL skinning/animation prerequisites not implemented.",
   "generation_calls": 22,
   "global_call_cap": 24,
   "rig_animations_available": true,
@@ -37,8 +37,8 @@
   "hair_source_audit": "hair/qa/asset_audit.json",
   "skin_prototype": "WebGL2 RGB diffusion; optional, PBR default; WebGPU unavailable",
   "recovery_reference_source": "model/v06/inez_recovery_v06.blend",
-  "browser_qa": "qa/browser_v06_contact_r01_browser_final.json",
-  "skin_qa": "qa/v06/v06_contact_r01_skin_final.json",
+  "browser_qa": "qa/browser_v06_shadowfix_browser.json",
+  "skin_qa": "qa/v06/v06_shadowfix_skin.json",
   "contact_refinement": {
     "revision": "contact_r01",
     "scope": "six leg rotation channels in Walk, Run, CrouchDown and CrouchUp",
@@ -63,5 +63,15 @@
     "main_merge_authorized": false,
     "next_agent_prompt": "docs/INEZ_NEXT_AGENT_PROMPT.md",
     "remaining_implementation": "docs/INEZ_V06_CONTACT_REFINEMENT.md#remaining-implementation-in-order"
+  },
+  "shading_fix": {
+    "revision": "shadow_acne_fix",
+    "report": "qa/v06/shadow_acne_fix.json",
+    "change": "viewer key light shadow.normalBias=0.005; no asset changed",
+    "held_candidates": [
+      "model/v06/inez_recovery_v06_normals_r01.glb (not committed; regenerate with tools/inez/v06_identity_normals_glb.py; did not remove bands)"
+    ],
+    "accepted_for_development": true,
+    "artistic_approval": false
   }
 }

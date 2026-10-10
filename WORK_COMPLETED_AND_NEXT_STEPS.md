@@ -1,3 +1,11 @@
+# V06 shading checkpoint — 2026-10-10
+
+Facial diagonal bands traced to viewer shadow acne and fixed with a 5 mm key-light
+shadow normal bias (viewer only; GLB unchanged). All gates re-passed. Details:
+[production report](docs/INEZ_V06_PRODUCTION_REPORT.md), `assets/characters/inez/qa/v06/shadow_acne_fix.json`.
+Next: scalp/crown ridge, curl silhouette, sweater/costume, eye response,
+original-reference review. No main merge; approval still false.
+
 # V06 continuation checkpoint — 2026-10-10
 
 The fetched development head is `7c430b5a`. Contact interpolation in four clips

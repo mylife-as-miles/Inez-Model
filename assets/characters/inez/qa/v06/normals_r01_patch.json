@@ -1,0 +1,82 @@
+{
+  "input": "assets/characters/inez/model/v06/inez_recovery_v06.glb",
+  "input_sha256": "3bbb563b8183d8857037b0495bb3fb11c92545b7603cdca2e719b1d9787261eb",
+  "mesh": "Inez_ContinuousHumanMesh_UNAPPROVED_Geometry",
+  "default_weights": {
+    "Inez_HeadFit_v01": 0.0,
+    "Inez_HeadFit_v02": 0.0,
+    "Inez_HeadFit_v03": 1.0,
+    "Inez_HeadRefine_v05": 1.0,
+    "Inez_SourceBodyFit_v05": 1.0,
+    "Inez_SourceHeadWrap_v05": 1.0,
+    "Inez_FaceCorrect_v05": 1.0,
+    "Neutral": 0.0,
+    "Confused": 0.0,
+    "Suspicious": 0.0,
+    "SubtleFear": 0.0,
+    "IntenseFear": 0.0,
+    "Anger": 0.0,
+    "Exhaustion": 0.0,
+    "Viseme_AA": 0.0,
+    "Viseme_EE": 0.0,
+    "Viseme_OH": 0.0,
+    "Viseme_MM": 0.0,
+    "Viseme_FV": 0.0,
+    "Blink_L": 0.0,
+    "Blink_R": 0.0
+  },
+  "zeroed_normal_targets": [
+    "Inez_HeadFit_v03",
+    "Inez_HeadRefine_v05",
+    "Inez_SourceBodyFit_v05",
+    "Inez_SourceHeadWrap_v05",
+    "Inez_FaceCorrect_v05"
+  ],
+  "welded_positions": 7732,
+  "primitives": [
+    {
+      "vertices": 4075,
+      "before_vs_true": {
+        "median_deg": 8.146939473530162,
+        "p95_deg": 15.057868238937239,
+        "max_deg": 47.520267625882724
+      },
+      "tangent_rebuilt_from_uv": 0,
+      "tangent_rotation_deg": {
+        "median_deg": 21.39561682610465,
+        "p95_deg": 40.641475349177284,
+        "max_deg": 85.41901484944987
+      },
+      "after_vs_true": {
+        "median_deg": 8.537736462515939e-07,
+        "p95_deg": 1.7075472925031877e-06,
+        "max_deg": 2.699869328381916e-06
+      }
+    },
+    {
+      "vertices": 4265,
+      "before_vs_true": {
+        "median_deg": 2.164897426551958,
+        "p95_deg": 10.942310343899205,
+        "max_deg": 174.55856049770426
+      },
+      "tangent_rebuilt_from_uv": 0,
+      "tangent_rotation_deg": {
+        "median_deg": 6.011394591522108,
+        "p95_deg": 23.070385719986863,
+        "max_deg": 79.57407950280832
+      },
+      "after_vs_true": {
+        "median_deg": 8.537736462515939e-07,
+        "p95_deg": 1.7075472925031877e-06,
+        "max_deg": 2.831646840510158e-06
+      }
+    }
+  ],
+  "output": "assets/characters/inez/model/v06/inez_recovery_v06_normals_r01.glb",
+  "output_sha256": "aeafd15521de371c0ca19eb3c02625a66ca988a3eafbf59067b421fbcdc5fa17",
+  "bytes_added": 234196,
+  "original_binary_prefix_preserved": true,
+  "preserved_accessor_hashes": 54,
+  "note": "Candidate only. Default model unchanged until matched-render review."
+}

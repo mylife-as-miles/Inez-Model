@@ -1,5 +1,22 @@
 # Inez V06 production recovery — current continuation checkpoint
 
+## Facial band diagnosis — 2026-10-10 (from `434b690`)
+
+Reproduced: build, 12/12 unit tests, browser 14/14, skin 17/17. The diagonal
+contour bands on Inez's forehead/cheeks were **viewer shadow-map acne** from
+the key light (1024² map over a 6 m frustum ≈ 6 mm texels, no normal offset),
+not baked albedo, morph normals or skin normal maps. Each hypothesis was tested
+with identical camera/light; see `qa/v06/shadow_acne_fix.json`. Fix: one line,
+`key.shadow.normalBias = .005` in `viewer/src/main.js`; no asset changed and the
+default GLB hash is unchanged. 0.003 leaves faint bands; 0.01 over-darkens eyes.
+Matched before/after: `renders/v06_shadow_acne_fix_matched/`. Gates after the
+change: build, 12/12, `qa/browser_v06_shadowfix_browser.json` 14/14,
+`qa/v06/v06_shadowfix_skin.json` 17/17 (SwiftShader CPU evidence only). The
+re-derived identity-normals GLB (`tools/inez/v06_identity_normals_glb.py`,
+report `qa/v06/normals_r01_patch.json`) did not change the bands and is held,
+not committed. `tools/inez/v06_capture.py` gained browser-only diagnostics:
+`--no-skin-normal-map`, `--no-shadows`, `--shadow-normal-bias`.
+
 2026-10-10 continuation from fetched commit `7c430b5a`: the four isolated
 Walk/Run/CrouchDown/CrouchUp clips now have refined runtime contact. The default
 `inez_recovery_v06.glb` equals the tested contact-r01 export, retaining the

@@ -60,6 +60,10 @@ key.castShadow = true; key.shadow.mapSize.set(1024, 1024);
 key.shadow.camera.left = key.shadow.camera.bottom = -3;
 key.shadow.camera.right = key.shadow.camera.top = 3;
 key.shadow.camera.near = .1; key.shadow.camera.far = 15; key.shadow.bias = -.0001;
+// 6 m frustum at 1024² gives ~6 mm shadow texels; without a normal offset the
+// face self-shadows into diagonal contour bands (acne). 5 mm is the smallest
+// tested offset that removes them (qa/v06/shadow_acne_fix.json).
+key.shadow.normalBias = .005;
 scene.add(hemisphere, key, key.target, fill, fill.target, rim, rim.target);
 const ground = new THREE.Mesh(new THREE.PlaneGeometry(24, 24), new THREE.MeshStandardMaterial({ color: '#b6bcc1', roughness: .95 }));
 ground.rotation.x = -Math.PI / 2; ground.position.y = -.002; ground.receiveShadow = true; scene.add(ground);
