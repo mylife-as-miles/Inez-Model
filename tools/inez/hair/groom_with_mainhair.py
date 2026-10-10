@@ -25,6 +25,10 @@ plane containing the strand). Every change is listed in the report:
   Curl                       resample 6 -> 40 points, Curl Scale 0.01 -> 8 turns (--curl-points, --curl-turns),
                              per-clump factor 0.6-1 (random ID = guide_id), Curl Shape 0.2 -> 0.005 m,
                              curl circle perpendicular to the strand (Z axis) = helix
+                             --curl-phase length: curl angle from the distance along the strand
+                             (Curl Scale = 1 / --curl-wavelength turns per metre), so a clump's
+                             strands coil in step whatever their trimmed length
+  Random Length              --length-min (default .75)
 Positions are glTF metres (+Y up); orientation does not matter to the graph.
 """
 import json
@@ -47,6 +51,9 @@ clump_root = float(opts.get('--clump-root', 4.0))
 clump_tip = float(opts.get('--clump-tip', .5))
 curl_radius = float(opts.get('--curl-radius', .005))
 curl_per = opts.get('--curl-per', 'guide')
+curl_phase = opts.get('--curl-phase', 'factor')
+curl_wavelength = float(opts.get('--curl-wavelength', .039))
+length_min = float(opts.get('--length-min', .75))
 
 bpy.ops.wm.read_factory_settings(use_empty=True)
 scene = bpy.context.scene
@@ -95,7 +102,7 @@ setv('Duplicate Elements', 'Amount', amount, 'Hair Amount')
 setv('Math.001', 1, float(opts.get('--spread', .004)), 'Spread')
 setv('Resample Curve', 'Count', 16, 'Points Count')
 N['Trim Curve'].mode = 'FACTOR'; changes.append({'node': 'Trim Curve', 'change': 'mode LENGTH -> FACTOR', 'section': 'Random Length'})
-setv('Random Value.001', 2, .75, 'Random Length'); setv('Random Value.001', 3, 1.0, 'Random Length')
+setv('Random Value.001', 2, length_min, 'Random Length'); setv('Random Value.001', 3, 1.0, 'Random Length')
 N['Object Info.001'].inputs['Object'].default_value = head_obj
 changes.append({'node': 'Object Info.001', 'change': 'object = InezHeadSurface', 'section': 'Stick To Mesh'})
 setv('Vector Math.005', 3, noise_scale, 'Noise')
@@ -114,6 +121,17 @@ if curl_per == 'guide':
     L.new(named.outputs['Attribute'], N['Random Value.004'].inputs['ID'])
     changes.append({'node': 'Random Value.004', 'change': 'ID = guide_id (was strand index): curls shared per clump', 'section': 'Curl'})
 
+if curl_phase == 'length':
+    # Curl angle from the distance along the strand (metres) instead of its
+    # 0-1 parameter: strands of a clump that Random Length trimmed differently
+    # then still coil in step (one ringlet, not frizz), and short tendrils get
+    # the same curl size as the long ponytail. Curl Scale becomes turns per metre.
+    sp = N['Spline Parameter.001']; m12 = N['Math.012']
+    for link in [l for l in L if l.from_node == sp and l.to_node == m12]:
+        to_socket = link.to_socket; L.remove(link); L.new(sp.outputs['Length'], to_socket)
+    old = N['Value'].outputs[0].default_value; N['Value'].outputs[0].default_value = 1 / curl_wavelength
+    changes.append({'node': 'Math.012', 'change': 'curl angle input Spline Parameter Factor -> Length', 'section': 'Curl'})
+    changes.append({'node': 'Value', 'label': N['Value'].label, 'from': curl_turns, 'to': 1 / curl_wavelength, 'unit': 'turns per metre', 'section': 'Curl'})
 mod = guides_obj.modifiers.new('MainHair', 'NODES'); mod.node_group = ng
 deps = bpy.context.evaluated_depsgraph_get()
 ev = guides_obj.evaluated_get(deps).data

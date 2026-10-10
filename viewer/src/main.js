@@ -313,7 +313,15 @@ async function setupHair() {
     try {
       const response = await fetch(assetRoot + 'hair/presets/inez_messywavy_cards_r01.json', { cache: 'no-store' });
       if (!response.ok) throw new Error('hair preset HTTP ' + response.status);
-      hair = new StrandHairRuntime({ guides, strands, skinnedMesh: skinned, preset: await response.json(), findBone: name => findBone(avatar, name), renderer });
+      // ?hairLook=NAME: appearance overrides from hair/looks/NAME.json (local look development)
+      const look = new URLSearchParams(location.search).get('hairLook');
+      let appearance = {};
+      if (look && /^[a-z0-9_-]+$/.test(look)) {
+        const lookResponse = await fetch(assetRoot + `hair/looks/${look}.json`, { cache: 'no-store' });
+        if (lookResponse.ok && !(lookResponse.headers.get('content-type') ?? '').includes('text/html')) appearance = await lookResponse.json();
+        else warnings.push('Hair look not found: ' + look);
+      }
+      hair = new StrandHairRuntime({ guides, strands, skinnedMesh: skinned, preset: await response.json(), findBone: name => findBone(avatar, name), renderer, appearance });
       scene.add(hair.mesh); hair.update(0);
       $('hair-physics').disabled = false; $('hair-physics').checked = true;
       const d = hair.diagnostics;

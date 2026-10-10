@@ -85,6 +85,20 @@ def qrot(q, v):
     return v + 2 * (w * c + np.cross(u, c))
 
 
+def scalp_alpha(P, T, inset, fade):
+    """Scalp patch opacity per vertex: 0 within `inset` (geodesic, along mesh
+    edges) of the patch boundary, smoothstep to 1 over the next `fade` metres."""
+    from scipy.sparse import coo_matrix
+    from scipy.sparse.csgraph import dijkstra
+    e = np.sort(np.vstack([T[:, [0, 1]], T[:, [1, 2]], T[:, [2, 0]]]), 1)
+    ue, cnt = np.unique(e, axis=0, return_counts=True)
+    elen = np.linalg.norm(P[ue[:, 0]] - P[ue[:, 1]], axis=1)
+    graph = coo_matrix((np.r_[elen, elen], (np.r_[ue[:, 0], ue[:, 1]], np.r_[ue[:, 1], ue[:, 0]])), shape=(len(P),) * 2).tocsr()
+    dist = dijkstra(graph, indices=np.unique(ue[cnt == 1]), min_only=True)
+    x = np.clip((dist - inset) / fade, 0, 1)
+    return (x * x * (3 - 2 * x)).astype(np.float32)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--glb', required=True)
@@ -242,16 +256,9 @@ def main():
     # colour, fading over --cap-fade from its hairline/nape boundary. Unlike the
     # card build it also covers the back of the head, where Inez's head texture
     # has a bare-skin patch left by the old ponytail shell.
-    from scipy.sparse import coo_matrix
-    from scipy.sparse.csgraph import dijkstra
     CPc = fit['cap_position'].astype(np.float32); head_joint = jn.index('head')
     Tsc = np.load(args.scalp)['triangles'].astype(np.int64)
-    e = np.sort(np.vstack([Tsc[:, [0, 1]], Tsc[:, [1, 2]], Tsc[:, [2, 0]]]), 1)
-    ue, cnt = np.unique(e, axis=0, return_counts=True)
-    elen = np.linalg.norm(CPc[ue[:, 0]] - CPc[ue[:, 1]], axis=1)
-    graph = coo_matrix((np.r_[elen, elen], (np.r_[ue[:, 0], ue[:, 1]], np.r_[ue[:, 1], ue[:, 0]])), shape=(len(CPc),) * 2).tocsr()
-    inset = dijkstra(graph, indices=np.unique(ue[cnt == 1]), min_only=True)
-    x = np.clip((inset - args.cap_inset) / args.cap_fade, 0, 1); cap_alpha = (x * x * (3 - 2 * x)).astype(np.float32)
+    cap_alpha = scalp_alpha(CPc, Tsc, args.cap_inset, args.cap_fade)
     cap_tris = Tsc[(cap_alpha[Tsc] > 0).any(1)].astype(np.uint32)
     j['materials'].append({'name': 'Inez_Hair_Scalp_r05', 'alphaMode': 'BLEND', 'pbrMetallicRoughness': {'baseColorFactor': [.0267, .0169, .0106, 1], 'metallicFactor': 0, 'roughnessFactor': .9}})
     cattrs = {'POSITION': accessor(glb, CPc, 'VEC3', 5126, minmax=True), 'NORMAL': accessor(glb, fit['cap_normal'].astype(np.float32), 'VEC3', 5126),
